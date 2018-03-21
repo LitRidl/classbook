@@ -1,0 +1,31 @@
+{
+  "name": "classbook",
+  "description": "Electron.js offline classbook",
+  "version": "0.0.1",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "author": "Michael Ridley @mridley",
+  "license": "ISC",
+  "devDependencies": {    
+    "electron": "^1.8.4",
+    "eslint": "^3.15.0",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.9.0"
+  },
+  "dependencies": {
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LitRidl/classbook.git"
+  },
+  "bugs": {
+    "url": "https://github.com/LitRidl/classbook/issues"
+  },
+  "homepage": "https://github.com/LitRidl/classbook#readme"
+}
