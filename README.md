@@ -68,6 +68,7 @@
 
 ## Инструкция
 Системные зависимости: `gcc, node, npm`.
-
 1. `git clone git@github.com:LitRidl/classbook.git`
-2. `...`
+2. `cd classbook`
+3. `npm i`
+4. `npm start`
