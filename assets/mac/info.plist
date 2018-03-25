@@ -7,10 +7,10 @@
     <dict>
       <key>CFBundleURLSchemes</key>
       <array>
-        <string>electron-api-demos</string>
+        <string>classbook</string>
       </array>
       <key>CFBundleURLName</key>
-      <string>Electron API Demos Protocol</string>
+      <string>Classbook Protocol</string>
     </dict>
   </array>
   <key>ElectronTeamID</key>
