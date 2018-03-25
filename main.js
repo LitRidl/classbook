@@ -3,7 +3,6 @@ const glob = require('glob')
 const fs = require('fs')
 const os = require('os')
 const { app, BrowserWindow, ipcMain, shell } = require('electron')
-const autoUpdater = require('./auto-updater')
 
 const debug = /--debug/.test(process.argv[2])
 
@@ -67,7 +66,6 @@ function initialize() {
 
   app.on('ready', () => {
     createWindow()
-    autoUpdater.initialize()
   })
 
   app.on('window-all-closed', () => {
@@ -105,10 +103,8 @@ function makeSingleInstance() {
 // Handle Squirrel on Windows startup events
 switch (process.argv[1]) {
   case '--squirrel-install':
-    autoUpdater.createShortcut(() => { app.quit() })
     break
   case '--squirrel-uninstall':
-    autoUpdater.removeShortcut(() => { app.quit() })
     break
   case '--squirrel-obsolete':
   case '--squirrel-updated':
