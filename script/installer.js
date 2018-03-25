@@ -17,13 +17,13 @@ function getInstallerConfig () {
   const outPath = path.join(rootPath, 'out')
 
   return Promise.resolve({
-    appDirectory: path.join(outPath, 'classbook-win32-ia32'),
-    exe: 'classbook.exe',
-    iconUrl: 'https://raw.githubusercontent.com/electron/electron-api-demos/master/assets/app-icon/win/app.ico',
-    loadingGif: path.join(rootPath, 'assets', 'img', 'loading.gif'),
+    appDirectory: path.join(outPath, 'Сборник по финансовой грамотности-win32-ia32'),
+    exe: 'Сборник по финансовой грамотности.exe',
+    iconUrl: path.join(rootPath, 'assets', 'app-icon', 'win', 'app.ico'),
+    loadingGif: path.join(rootPath, 'assets', 'img', 'cs.gif'),
     noMsi: true,
     outputDirectory: path.join(outPath, 'windows-installer'),
-    setupExe: 'ClassbookSetup.exe',
+    setupExe: 'Установить сборник по финграмотности.exe',
     setupIcon: path.join(rootPath, 'assets', 'app-icon', 'win', 'app.ico'),
     skipUpdateIcon: true
   })

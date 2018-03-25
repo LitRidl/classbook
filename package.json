@@ -1,8 +1,8 @@
 {
   "name": "classbook",
-  "productName": "Сборник задач по финансовой грамотности в информатике",
-  "description": "Electron.js offline classbook",
-  "version": "0.0.1",
+  "productName": "Сборник по финансовой грамотности",
+  "description": "Сборник задач по финансовой грамотности в информатике",
+  "version": "1.0.0",
   "main": "main.js",
   "private": true,
   "scripts": {
@@ -11,7 +11,7 @@
     "dev": "electron . --debug",
     "package": "npm-run-all package:*",
     "package:mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --out=out --icon=assets/app-icon/mac/app.icns --osx-sign.identity='Developer ID Application: GitHub' --extend-info=assets/mac/info.plist",
-    "package:win": "electron-packager . --overwrite --platform=win32 --arch=ia32 --out=out --icon=assets/app-icon/win/app.ico",
+    "package:win": "electron-packager . --overwrite --platform=win32 --arch=ia32 --out=out --icon=assets/app-icon/win/app.ico --asar=true --ignore=generator --ignore=node_modules --ignore=script --ignore=out --win32metadata.ProductName=\"Сборник по финграмотности\" --win32metadata.CompanyName=\"Финансовая грамотность\"",
     "package:linux": "electron-packager . --overwrite --platform=linux --arch=x64 --out=out",
     "package:sign-exe": "signcode './out/Classbook-win32-ia32/Classbook.exe' --cert ~/electron-api-demos.p12 --prompt --name 'classbook' --url 'http://electron.atom.io'",
     "package:installer": "node ./script/installer.js",
@@ -22,7 +22,7 @@
     "prepack": "check-for-leaks",
     "prepush": "check-for-leaks"
   },
-  "author": "Michael Ridley @mridley",
+  "author": "Михаил Ридли @mridley",
   "license": "ISC",
   "devDependencies": {
     "eslint": "^3.15.0",
@@ -45,9 +45,25 @@
     "standard": "^8.2.0"
   },
   "dependencies": {
-    "electron": "^1.8.4",
     "electron-settings": "^3.1.4",
     "glob": "^7.1.2"
+  },
+  "build": {
+    "appId": "com.electron.classbook",
+    "directories": {
+      "output": "dist",
+      "build": "build"
+    },
+    "win": {
+      "target": [
+        {
+          "target": "portable",
+          "arch": [
+            "ia32"
+          ]
+        }
+      ]
+    }
   },
   "repository": {
     "type": "git",
