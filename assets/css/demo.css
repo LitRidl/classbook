@@ -206,3 +206,15 @@
 .dhide {
   display: none !important;
 }
+
+.glossary-entry {
+  padding-bottom: 20px;
+}
+
+.glossary-concept {
+  ;
+}
+
+.glossary-definition {
+  margin-top: -10px;
+}

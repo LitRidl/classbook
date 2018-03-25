@@ -1,6 +1,6 @@
 from collections import defaultdict, OrderedDict
 from pprint import pprint
-from moodle_parser import questions_from_files, order_dict
+from moodle_parser import questions_from_files, order_dict, glossary_from_file
 from transliterate import translit
 import json
 import sys
@@ -67,6 +67,17 @@ def question_to_html(q):
     return task_tpl.format(q['name'], difficulty, q['topic_finances'], q['text'])
 
 
+def glossary_entry_to_html(e):
+    entry_tpl = '''        <div class="demo glossary-entry">
+            <div class="demo-wrapper">
+                <h3 class="glossary-concept">{}</h3>
+                <div class="glossary-definition">{}</div>
+            </div>
+        </div>
+'''
+    return entry_tpl.format(e['concept'], e['definition'])
+
+
 if __name__ == '__main__':
     xml_files = sys.argv[1:] or ['moodle_data/moodle_export_1.xml']
     questions = questions_from_files(*xml_files)
@@ -99,6 +110,13 @@ if __name__ == '__main__':
 
     with open('../index.html', 'w') as f:
         f.write(index)
+
+    glossary_file = 'moodle_data/glossary_data_1.xml'
+    glossary_entries = glossary_from_file(glossary_file)
+    glossary = load_template('glossary.html')
+    with open('../sections/materials/glossary.html', 'w') as f:
+        g = glossary.format('\n'.join(glossary_entry_to_html(e) for e in glossary_entries))
+        f.write(g)
 
     subsection_tpl = load_template('subsection.html')
     for grade_name, g in grades_ordered.items():

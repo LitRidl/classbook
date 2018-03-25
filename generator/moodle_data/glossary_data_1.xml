@@ -17,7 +17,7 @@
     <ENTRIES>
       <ENTRY>
         <CONCEPT>Доход</CONCEPT>
-        <DEFINITION>&lt;p&gt;Денежные средства или материальные ценности, полученные государством, физическим или юридическим лицом в результате какой-либо деятельности за определённый период времени.&lt;br&gt;&lt;/p&gt;</DEFINITION>
+        <DEFINITION>&lt;p&gt;Денежные средства или материальные ценности, полученные государством, физическим или юридическим лицом в результате какой-либо деятельности за определённый период времени.&lt;/p&gt;</DEFINITION>
         <FORMAT>1</FORMAT>
         <USEDYNALINK>0</USEDYNALINK>
         <CASESENSITIVE>0</CASESENSITIVE>
@@ -26,7 +26,7 @@
       </ENTRY>
       <ENTRY>
         <CONCEPT>Бюджет</CONCEPT>
-        <DEFINITION>&lt;p&gt;Схема доходов и расходов определённого объекта (семьи, бизнеса, организации, государства и т. д.), устанавливаемая на определённый период времени, обычно на один год.&lt;br&gt;&lt;/p&gt;</DEFINITION>
+        <DEFINITION>&lt;p&gt;Схема доходов и расходов определённого объекта (семьи, бизнеса, организации, государства и т. д.), устанавливаемая на определённый период времени, обычно на один год.&lt;/p&gt;</DEFINITION>
         <FORMAT>1</FORMAT>
         <USEDYNALINK>0</USEDYNALINK>
         <CASESENSITIVE>0</CASESENSITIVE>
@@ -35,7 +35,7 @@
       </ENTRY>
       <ENTRY>
         <CONCEPT>Тариф, или тарифный план</CONCEPT>
-        <DEFINITION>&lt;p&gt;Размер платы (цена) за услугу и условия ее приобретения.&lt;br&gt;&lt;/p&gt;</DEFINITION>
+        <DEFINITION>&lt;p&gt;Размер платы (цена) за услугу и условия ее приобретения.&lt;/p&gt;</DEFINITION>
         <FORMAT>1</FORMAT>
         <USEDYNALINK>0</USEDYNALINK>
         <CASESENSITIVE>0</CASESENSITIVE>
@@ -46,7 +46,7 @@
         <CONCEPT>Абонентская плата</CONCEPT>
         <DEFINITION>&lt;p&gt;Обязательная фиксированная плата за пользование услугой в течение
 определенного периода времени, чаще всего&amp;nbsp;– месяца. Широко применяется
-операторами связи, интернет-провайдерами.&lt;br&gt;&lt;/p&gt;</DEFINITION>
+операторами связи, интернет-провайдерами.&lt;/p&gt;</DEFINITION>
         <FORMAT>1</FORMAT>
         <USEDYNALINK>0</USEDYNALINK>
         <CASESENSITIVE>0</CASESENSITIVE>
@@ -55,7 +55,7 @@
       </ENTRY>
       <ENTRY>
         <CONCEPT>Рассрочка</CONCEPT>
-        <DEFINITION>&lt;p&gt;Выплата цены товара частями на протяжении оговоренного времени.&lt;br&gt;&lt;/p&gt;</DEFINITION>
+        <DEFINITION>&lt;p&gt;Выплата цены товара частями на протяжении оговоренного времени.&lt;/p&gt;</DEFINITION>
         <FORMAT>1</FORMAT>
         <USEDYNALINK>0</USEDYNALINK>
         <CASESENSITIVE>0</CASESENSITIVE>
@@ -64,8 +64,8 @@
       </ENTRY>
       <ENTRY>
         <CONCEPT>Однотарифный (одноставочный) электрический счетчик</CONCEPT>
-        <DEFINITION>&lt;p&gt;&lt;/p&gt;&lt;p&gt;Прибор учета, который круглосуточно суммирует потребленную
-электроэнергию. &lt;/p&gt;&lt;br&gt;</DEFINITION>
+        <DEFINITION>&lt;p&gt;Прибор учета, который круглосуточно суммирует потребленную
+электроэнергию. &lt;/p&gt;</DEFINITION>
         <FORMAT>1</FORMAT>
         <USEDYNALINK>0</USEDYNALINK>
         <CASESENSITIVE>0</CASESENSITIVE>
@@ -74,8 +74,8 @@
       </ENTRY>
       <ENTRY>
         <CONCEPT>Многотарифный электрический счетчик</CONCEPT>
-        <DEFINITION>&lt;p&gt;&lt;/p&gt;&lt;p&gt;Прибор, который раздельно считает (суммирует) потребление
-электроэнергии в разное время суток, когда электроэнергия стоит по-разному.&lt;/p&gt;&lt;br&gt;</DEFINITION>
+        <DEFINITION>&lt;p&gt;Прибор, который раздельно считает (суммирует) потребление
+электроэнергии в разное время суток, когда электроэнергия стоит по-разному.&lt;/p&gt;</DEFINITION>
         <FORMAT>1</FORMAT>
         <USEDYNALINK>0</USEDYNALINK>
         <CASESENSITIVE>0</CASESENSITIVE>
@@ -86,7 +86,7 @@
         <CONCEPT>Класс энергоэффективности электроприбора</CONCEPT>
         <DEFINITION>&lt;p&gt;Характеристика количества потребляемой электроэнергии, ее указывает
 производитель бытовой техники. Обозначается латинскими буквами от A до G, где
-А+++, А++, А+, А – классы наиболее экономичных приборов.&lt;br&gt;&lt;/p&gt;</DEFINITION>
+А+++, А++, А+, А – классы наиболее экономичных приборов.&lt;/p&gt;</DEFINITION>
         <FORMAT>1</FORMAT>
         <USEDYNALINK>0</USEDYNALINK>
         <CASESENSITIVE>0</CASESENSITIVE>
@@ -95,11 +95,11 @@
       </ENTRY>
       <ENTRY>
         <CONCEPT>Окупаемость</CONCEPT>
-        <DEFINITION>&lt;p&gt;&lt;/p&gt;&lt;p&gt;Это возможность вернуть финансовые средства, потраченные на
+        <DEFINITION>&lt;p&gt;Это возможность вернуть финансовые средства, потраченные на
 создание чего-либо, приносящего доход или позволяющего уменьшить расходы.
 Например, энергосберегающие лампы потребляют меньше электроэнергии, чем лампы
 накаливания, а значит, их покупка и установка в квартире позволит сократить
-ежемесячные платежи за электроэнергию. &lt;/p&gt;&lt;br&gt;</DEFINITION>
+ежемесячные платежи за электроэнергию. &lt;/p&gt;</DEFINITION>
         <FORMAT>1</FORMAT>
         <USEDYNALINK>0</USEDYNALINK>
         <CASESENSITIVE>0</CASESENSITIVE>
@@ -109,7 +109,7 @@
       <ENTRY>
         <CONCEPT>Срок окупаемости</CONCEPT>
         <DEFINITION>&lt;p&gt;Это время (измеряемое обычно в месяцах или годах), за которое можно
-вернуть средства, потраченные на приобретение товара.&lt;br&gt;&lt;/p&gt;</DEFINITION>
+вернуть средства, потраченные на приобретение товара.&lt;/p&gt;</DEFINITION>
         <FORMAT>1</FORMAT>
         <USEDYNALINK>0</USEDYNALINK>
         <CASESENSITIVE>0</CASESENSITIVE>
@@ -118,8 +118,8 @@
       </ENTRY>
       <ENTRY>
         <CONCEPT>Комплементарные блага</CONCEPT>
-        <DEFINITION>&lt;p&gt;&lt;/p&gt;&lt;p&gt;Дополнительные товары или услуги, которые необходимо или
-желательно приобрести при покупке определенного товара. &lt;/p&gt;&lt;br&gt;</DEFINITION>
+        <DEFINITION>&lt;p&gt;Дополнительные товары или услуги, которые необходимо или
+желательно приобрести при покупке определенного товара. &lt;/p&gt;</DEFINITION>
         <FORMAT>1</FORMAT>
         <USEDYNALINK>0</USEDYNALINK>
         <CASESENSITIVE>0</CASESENSITIVE>
@@ -128,8 +128,8 @@
       </ENTRY>
       <ENTRY>
         <CONCEPT>Полная стоимость владения</CONCEPT>
-        <DEFINITION>&lt;p&gt;&lt;/p&gt;&lt;p&gt;Стоимость товара или блага плюс все последующие обязательные
-или желательные затраты на его содержание за все время владения.&lt;/p&gt;&lt;br&gt;</DEFINITION>
+        <DEFINITION>&lt;p&gt;Стоимость товара или блага плюс все последующие обязательные
+или желательные затраты на его содержание за все время владения.&lt;/p&gt;</DEFINITION>
         <FORMAT>1</FORMAT>
         <USEDYNALINK>0</USEDYNALINK>
         <CASESENSITIVE>0</CASESENSITIVE>
@@ -139,7 +139,7 @@
       <ENTRY>
         <CONCEPT>Скидка</CONCEPT>
         <DEFINITION>&lt;p&gt;Уменьшение (снижение) установленной цены (обычно
-в процентах).&lt;br&gt;&lt;/p&gt;</DEFINITION>
+в процентах).&lt;/p&gt;</DEFINITION>
         <FORMAT>1</FORMAT>
         <USEDYNALINK>0</USEDYNALINK>
         <CASESENSITIVE>0</CASESENSITIVE>
@@ -148,9 +148,9 @@
       </ENTRY>
       <ENTRY>
         <CONCEPT>Доход (личный доход)</CONCEPT>
-        <DEFINITION>&lt;p&gt;&lt;/p&gt;&lt;p&gt;Денежная сумма, поступающих в распоряжение человека в виде
+        <DEFINITION>&lt;p&gt;Денежная сумма, поступающих в распоряжение человека в виде
 заработной платы, стипендии, гонораров, ренты от сдачи квартиры, процентов от
-вклада в банке и т.п.&lt;/p&gt;&lt;br&gt;</DEFINITION>
+вклада в банке и т.п.&lt;/p&gt;</DEFINITION>
         <FORMAT>1</FORMAT>
         <USEDYNALINK>0</USEDYNALINK>
         <CASESENSITIVE>0</CASESENSITIVE>
@@ -160,7 +160,7 @@
       <ENTRY>
         <CONCEPT>Заработная плата (оплата труда работника)</CONCEPT>
         <DEFINITION>&lt;p&gt;Вознаграждение за труд в зависимости от квалификации работника,
-сложности, количества, качества и условий выполняемой работы.&lt;br&gt;&lt;/p&gt;</DEFINITION>
+сложности, количества, качества и условий выполняемой работы.&lt;/p&gt;</DEFINITION>
         <FORMAT>1</FORMAT>
         <USEDYNALINK>0</USEDYNALINK>
         <CASESENSITIVE>0</CASESENSITIVE>
@@ -169,11 +169,11 @@
       </ENTRY>
       <ENTRY>
         <CONCEPT>Оклад (должностной оклад)</CONCEPT>
-        <DEFINITION>&lt;p&gt;&lt;/p&gt;&lt;p&gt;Размер денежной выплаты в составе заработной платы, который
+        <DEFINITION>&lt;p&gt;Размер денежной выплаты в составе заработной платы, который
 выплачивается работнику за выполнение трудовых обязанностей определённой
 сложности за установленное время. Эта выплата фиксирована, обязательна к
 выплате и является минимальной гарантией оплаты труда работника, ниже которой
-он не может получить при условии выполнения должностных обязанностей.&lt;/p&gt;&lt;br&gt;</DEFINITION>
+он не может получить при условии выполнения должностных обязанностей.&lt;/p&gt;</DEFINITION>
         <FORMAT>1</FORMAT>
         <USEDYNALINK>0</USEDYNALINK>
         <CASESENSITIVE>0</CASESENSITIVE>
@@ -182,8 +182,8 @@
       </ENTRY>
       <ENTRY>
         <CONCEPT>Премия</CONCEPT>
-        <DEFINITION>&lt;p&gt;&lt;/p&gt;&lt;p&gt;Поощрительная плата работнику за высокую квалификацию,
-перевыполнение норм выработки, за качество работы в дополнение к окладу.&lt;/p&gt;&lt;br&gt;</DEFINITION>
+        <DEFINITION>&lt;p&gt;Поощрительная плата работнику за высокую квалификацию,
+перевыполнение норм выработки, за качество работы в дополнение к окладу.&lt;/p&gt;</DEFINITION>
         <FORMAT>1</FORMAT>
         <USEDYNALINK>0</USEDYNALINK>
         <CASESENSITIVE>0</CASESENSITIVE>
@@ -192,8 +192,8 @@
       </ENTRY>
       <ENTRY>
         <CONCEPT>Выручка</CONCEPT>
-        <DEFINITION>&lt;p&gt;&lt;/p&gt;&lt;p&gt;Сумма, получаемая предпринимателем или предприятием от
-продаж результатов своего труда.&lt;/p&gt;&lt;br&gt;</DEFINITION>
+        <DEFINITION>&lt;p&gt;Сумма, получаемая предпринимателем или предприятием от
+продаж результатов своего труда.&lt;/p&gt;</DEFINITION>
         <FORMAT>1</FORMAT>
         <USEDYNALINK>0</USEDYNALINK>
         <CASESENSITIVE>0</CASESENSITIVE>
@@ -202,7 +202,7 @@
       </ENTRY>
       <ENTRY>
         <CONCEPT>Прибыль</CONCEPT>
-        <DEFINITION>&lt;p&gt;Разность между выручкой и совокупными затратами (если выручка больше).&lt;br&gt;&lt;/p&gt;</DEFINITION>
+        <DEFINITION>&lt;p&gt;Разность между выручкой и совокупными затратами (если выручка больше).&lt;/p&gt;</DEFINITION>
         <FORMAT>1</FORMAT>
         <USEDYNALINK>0</USEDYNALINK>
         <CASESENSITIVE>0</CASESENSITIVE>
@@ -211,7 +211,7 @@
       </ENTRY>
       <ENTRY>
         <CONCEPT>Убыток</CONCEPT>
-        <DEFINITION>&lt;p&gt;Разность между совокупными затратами и выручкой (если выручка меньше).&lt;br&gt;&lt;/p&gt;</DEFINITION>
+        <DEFINITION>&lt;p&gt;Разность между совокупными затратами и выручкой (если выручка меньше).&lt;/p&gt;</DEFINITION>
         <FORMAT>1</FORMAT>
         <USEDYNALINK>0</USEDYNALINK>
         <CASESENSITIVE>0</CASESENSITIVE>
@@ -220,7 +220,7 @@
       </ENTRY>
       <ENTRY>
         <CONCEPT>Функция спроса</CONCEPT>
-        <DEFINITION>&lt;p&gt;Зависимость объема продаж товара (или выручки) от цены на товар.&amp;nbsp;&lt;br&gt;&lt;/p&gt;</DEFINITION>
+        <DEFINITION>&lt;p&gt;Зависимость объема продаж товара (или выручки) от цены на товар.&amp;nbsp;&lt;/p&gt;</DEFINITION>
         <FORMAT>1</FORMAT>
         <USEDYNALINK>0</USEDYNALINK>
         <CASESENSITIVE>0</CASESENSITIVE>
@@ -229,8 +229,8 @@
       </ENTRY>
       <ENTRY>
         <CONCEPT>Сдельная оплата труда</CONCEPT>
-        <DEFINITION>&lt;p&gt;&lt;/p&gt;&lt;p&gt;Система, при которой размер заработной платы зависит от
-объема выполненной работы.&lt;/p&gt;&lt;br&gt;</DEFINITION>
+        <DEFINITION>&lt;p&gt;Система, при которой размер заработной платы зависит от
+объема выполненной работы.&lt;/p&gt;</DEFINITION>
         <FORMAT>1</FORMAT>
         <USEDYNALINK>0</USEDYNALINK>
         <CASESENSITIVE>0</CASESENSITIVE>
@@ -239,8 +239,8 @@
       </ENTRY>
       <ENTRY>
         <CONCEPT>Повременная оплата труда</CONCEPT>
-        <DEFINITION>&lt;p&gt;&lt;/p&gt;&lt;p&gt;Система, при которой заработная плата начисляется
-пропорционально затраченному рабочему времени.&lt;/p&gt;&lt;br&gt;</DEFINITION>
+        <DEFINITION>&lt;p&gt;Система, при которой заработная плата начисляется
+пропорционально затраченному рабочему времени.&lt;/p&gt;</DEFINITION>
         <FORMAT>1</FORMAT>
         <USEDYNALINK>0</USEDYNALINK>
         <CASESENSITIVE>0</CASESENSITIVE>
@@ -249,8 +249,8 @@
       </ENTRY>
       <ENTRY>
         <CONCEPT>Комбинированная оплата труда</CONCEPT>
-        <DEFINITION>&lt;p&gt;&lt;/p&gt;&lt;p&gt;Система, при которой часть заработной платы выплачивается в
-зависимости от рабочего времени, а часть зависит от объема выполненных работ. &lt;/p&gt;&lt;br&gt;</DEFINITION>
+        <DEFINITION>&lt;p&gt;Система, при которой часть заработной платы выплачивается в
+зависимости от рабочего времени, а часть зависит от объема выполненных работ. &lt;/p&gt;</DEFINITION>
         <FORMAT>1</FORMAT>
         <USEDYNALINK>0</USEDYNALINK>
         <CASESENSITIVE>0</CASESENSITIVE>
@@ -259,8 +259,8 @@
       </ENTRY>
       <ENTRY>
         <CONCEPT>Регрессивное налогообложение</CONCEPT>
-        <DEFINITION>&lt;p&gt;&lt;/p&gt;&lt;p&gt;Система налогообложения доходов, при которой ставка налога
-снижается с ростом дохода.&lt;/p&gt;&lt;br&gt;</DEFINITION>
+        <DEFINITION>&lt;p&gt;Система налогообложения доходов, при которой ставка налога
+снижается с ростом дохода.&lt;/p&gt;</DEFINITION>
         <FORMAT>1</FORMAT>
         <USEDYNALINK>0</USEDYNALINK>
         <CASESENSITIVE>0</CASESENSITIVE>
@@ -270,7 +270,7 @@
       <ENTRY>
         <CONCEPT>Прогрессивное налогообложение</CONCEPT>
         <DEFINITION>&lt;p&gt;Система налогообложения доходов, при которой ставка налога увеличивается
-по мере роста дохода.&lt;br&gt;&lt;/p&gt;</DEFINITION>
+по мере роста дохода.&lt;/p&gt;</DEFINITION>
         <FORMAT>1</FORMAT>
         <USEDYNALINK>0</USEDYNALINK>
         <CASESENSITIVE>0</CASESENSITIVE>
@@ -279,8 +279,8 @@
       </ENTRY>
       <ENTRY>
         <CONCEPT>Пропорциональное налогообложение</CONCEPT>
-        <DEFINITION>&lt;p&gt;&lt;/p&gt;&lt;p&gt;Система налогообложения доходов, при которой устанавливается
-единая ставка налога, не зависящая от размера дохода.&lt;/p&gt;&lt;br&gt;</DEFINITION>
+        <DEFINITION>&lt;p&gt;Система налогообложения доходов, при которой устанавливается
+единая ставка налога, не зависящая от размера дохода.&lt;/p&gt;</DEFINITION>
         <FORMAT>1</FORMAT>
         <USEDYNALINK>0</USEDYNALINK>
         <CASESENSITIVE>0</CASESENSITIVE>
@@ -289,8 +289,8 @@
       </ENTRY>
       <ENTRY>
         <CONCEPT>Налог на доходы физических лиц (НДФЛ, подоходный налог)</CONCEPT>
-        <DEFINITION>&lt;p&gt;&lt;/p&gt;&lt;p&gt;Налог, который уплачивается с суммы начисленной заработной
-платы работника.&lt;/p&gt;&lt;br&gt;</DEFINITION>
+        <DEFINITION>&lt;p&gt;Налог, который уплачивается с суммы начисленной заработной
+платы работника.&lt;/p&gt;</DEFINITION>
         <FORMAT>1</FORMAT>
         <USEDYNALINK>0</USEDYNALINK>
         <CASESENSITIVE>0</CASESENSITIVE>
@@ -299,7 +299,7 @@
       </ENTRY>
       <ENTRY>
         <CONCEPT>Налог на землю</CONCEPT>
-        <DEFINITION>&lt;p&gt;&lt;/p&gt;&lt;p&gt;Налог, уплачиваемый собственником земельного участка.&lt;/p&gt;&lt;br&gt;</DEFINITION>
+        <DEFINITION>&lt;p&gt;Налог, уплачиваемый собственником земельного участка.&lt;/p&gt;</DEFINITION>
         <FORMAT>1</FORMAT>
         <USEDYNALINK>0</USEDYNALINK>
         <CASESENSITIVE>0</CASESENSITIVE>
@@ -308,7 +308,7 @@
       </ENTRY>
       <ENTRY>
         <CONCEPT>Транспортный налог</CONCEPT>
-        <DEFINITION>&lt;p&gt;Налог, уплачиваемый собственником транспортного средства.&lt;br&gt;&lt;/p&gt;</DEFINITION>
+        <DEFINITION>&lt;p&gt;Налог, уплачиваемый собственником транспортного средства.&lt;/p&gt;</DEFINITION>
         <FORMAT>1</FORMAT>
         <USEDYNALINK>0</USEDYNALINK>
         <CASESENSITIVE>0</CASESENSITIVE>
@@ -317,11 +317,11 @@
       </ENTRY>
       <ENTRY>
         <CONCEPT>Налоговые вычеты</CONCEPT>
-        <DEFINITION>&lt;p&gt;&lt;/p&gt;&lt;p&gt;Это сумма, которая уменьшает размер дохода (налогооблагаемую
+        <DEFINITION>&lt;p&gt;Это сумма, которая уменьшает размер дохода (налогооблагаемую
 базу), с которого уплачивается налог. Налоговые вычеты подразделяются на
 несколько видов: социальные, стандартные, имущественные, профессиональные, от
 операций с ценными бумагами. В каждом конкретном случае их размер регулируется
-определенной статьей Налогового кодекса Российской Федерации. &lt;/p&gt;&lt;br&gt;</DEFINITION>
+определенной статьей Налогового кодекса Российской Федерации. &lt;/p&gt;</DEFINITION>
         <FORMAT>1</FORMAT>
         <USEDYNALINK>0</USEDYNALINK>
         <CASESENSITIVE>0</CASESENSITIVE>
@@ -330,7 +330,7 @@
       </ENTRY>
       <ENTRY>
         <CONCEPT>Штрафы</CONCEPT>
-        <DEFINITION>&lt;p&gt;Денежное взыскание за правое или налоговое нарушение.&lt;br&gt;&lt;/p&gt;</DEFINITION>
+        <DEFINITION>&lt;p&gt;Денежное взыскание за правое или налоговое нарушение.&lt;/p&gt;</DEFINITION>
         <FORMAT>1</FORMAT>
         <USEDYNALINK>0</USEDYNALINK>
         <CASESENSITIVE>0</CASESENSITIVE>
@@ -339,8 +339,8 @@
       </ENTRY>
       <ENTRY>
         <CONCEPT>Пени</CONCEPT>
-        <DEFINITION>&lt;p&gt;&lt;/p&gt;&lt;p&gt;Неустойка, которая устанавливается в процентах за каждый
-день просрочки от суммы неисполненного обязательства.&lt;/p&gt;&lt;br&gt;</DEFINITION>
+        <DEFINITION>&lt;p&gt;Неустойка, которая устанавливается в процентах за каждый
+день просрочки от суммы неисполненного обязательства.&lt;/p&gt;</DEFINITION>
         <FORMAT>1</FORMAT>
         <USEDYNALINK>0</USEDYNALINK>
         <CASESENSITIVE>0</CASESENSITIVE>
@@ -349,9 +349,9 @@
       </ENTRY>
       <ENTRY>
         <CONCEPT>Личный (семейный) бюджет</CONCEPT>
-        <DEFINITION>&lt;p&gt;&lt;/p&gt;&lt;p&gt;Сумма всех денежных средств, которыми человек (семья)
+        <DEFINITION>&lt;p&gt;Сумма всех денежных средств, которыми человек (семья)
 располагает в данный момент; другое значение – совокупность доходов и расходов
-в течение периода времени (месячный бюджет, годовой бюджет).&lt;/p&gt;&lt;br&gt;</DEFINITION>
+в течение периода времени (месячный бюджет, годовой бюджет).&lt;/p&gt;</DEFINITION>
         <FORMAT>1</FORMAT>
         <USEDYNALINK>0</USEDYNALINK>
         <CASESENSITIVE>0</CASESENSITIVE>
@@ -360,10 +360,10 @@
       </ENTRY>
       <ENTRY>
         <CONCEPT>Накопления (сбережения)</CONCEPT>
-        <DEFINITION>&lt;p&gt;&lt;/p&gt;&lt;p&gt;Не потраченная часть доходов, либо помещенная на банковский
+        <DEFINITION>&lt;p&gt;Не потраченная часть доходов, либо помещенная на банковский
 счет, либо хранящаяся на банковской карте или в виде наличных денег или
 переведенная в какие-то ценности (акции, коллекционные монеты, драгоценные
-металлы и т.п.).&lt;/p&gt;&lt;br&gt;</DEFINITION>
+металлы и т.п.).&lt;/p&gt;</DEFINITION>
         <FORMAT>1</FORMAT>
         <USEDYNALINK>0</USEDYNALINK>
         <CASESENSITIVE>0</CASESENSITIVE>
@@ -372,8 +372,8 @@
       </ENTRY>
       <ENTRY>
         <CONCEPT>Дефицит бюджета</CONCEPT>
-        <DEFINITION>&lt;p&gt;&lt;/p&gt;&lt;p&gt;Превышение расходов над доходами за определенный период
-(месяц, год).&lt;/p&gt;&lt;br&gt;</DEFINITION>
+        <DEFINITION>&lt;p&gt;Превышение расходов над доходами за определенный период
+(месяц, год).&lt;/p&gt;</DEFINITION>
         <FORMAT>1</FORMAT>
         <USEDYNALINK>0</USEDYNALINK>
         <CASESENSITIVE>0</CASESENSITIVE>
@@ -382,8 +382,8 @@
       </ENTRY>
       <ENTRY>
         <CONCEPT>Профицит бюджета</CONCEPT>
-        <DEFINITION>&lt;p&gt;&lt;/p&gt;&lt;p&gt;Превышение доходов над расходами за определенный период
-(месяц, год).&lt;/p&gt;&lt;br&gt;</DEFINITION>
+        <DEFINITION>&lt;p&gt;Превышение доходов над расходами за определенный период
+(месяц, год).&lt;/p&gt;</DEFINITION>
         <FORMAT>1</FORMAT>
         <USEDYNALINK>0</USEDYNALINK>
         <CASESENSITIVE>0</CASESENSITIVE>
@@ -392,9 +392,9 @@
       </ENTRY>
       <ENTRY>
         <CONCEPT>Обязательные ежемесячные расходы</CONCEPT>
-        <DEFINITION>&lt;p&gt;&lt;/p&gt;&lt;p&gt;Расходы, без которых нельзя обойтись. В них входит стоимость
+        <DEFINITION>&lt;p&gt;Расходы, без которых нельзя обойтись. В них входит стоимость
 минимального набора продуктов питания, одежды, оплата коммунальных услуг,
-расходы на транспорт, оплата кредитов или других обязательств (при наличии). &lt;/p&gt;&lt;br&gt;</DEFINITION>
+расходы на транспорт, оплата кредитов или других обязательств (при наличии). &lt;/p&gt;</DEFINITION>
         <FORMAT>1</FORMAT>
         <USEDYNALINK>0</USEDYNALINK>
         <CASESENSITIVE>0</CASESENSITIVE>
@@ -403,8 +403,8 @@
       </ENTRY>
       <ENTRY>
         <CONCEPT>Балансировка бюджета</CONCEPT>
-        <DEFINITION>&lt;p&gt;&lt;/p&gt;&lt;p&gt;Либо увеличение доходов, либо сокращение расходов с целью
-снижения дефицита средств.&lt;/p&gt;&lt;br&gt;</DEFINITION>
+        <DEFINITION>&lt;p&gt;Либо увеличение доходов, либо сокращение расходов с целью
+снижения дефицита средств.&lt;/p&gt;</DEFINITION>
         <FORMAT>1</FORMAT>
         <USEDYNALINK>0</USEDYNALINK>
         <CASESENSITIVE>0</CASESENSITIVE>
@@ -413,12 +413,12 @@
       </ENTRY>
       <ENTRY>
         <CONCEPT>Банковский вклад (депозит)</CONCEPT>
-        <DEFINITION>&lt;p&gt;&lt;/p&gt;&lt;p&gt;Сумма денег, размещенная в банке на специальном личном счете
+        <DEFINITION>&lt;p&gt;Сумма денег, размещенная в банке на специальном личном счете
 клиента. Вкладчик отдает банку свои деньги, и банк может ими пользоваться, пока
 клиент не захочет их забрать обратно, поэтому вклад можно понимать как долг
 банка перед клиентом. Обычно вклад делается на определенный срок (срочный) или
 до востребования (бессрочный), а за время, пока деньги находятся в распоряжении
-банка, он выплачивает вкладчику проценты.&lt;/p&gt;&lt;br&gt;</DEFINITION>
+банка, он выплачивает вкладчику проценты.&lt;/p&gt;</DEFINITION>
         <FORMAT>1</FORMAT>
         <USEDYNALINK>0</USEDYNALINK>
         <CASESENSITIVE>0</CASESENSITIVE>
@@ -427,12 +427,12 @@
       </ENTRY>
       <ENTRY>
         <CONCEPT>Срочный вклад</CONCEPT>
-        <DEFINITION>&lt;p&gt;&lt;/p&gt;&lt;p&gt;Вклад, размещенный в банке на определенный срок. Как
+        <DEFINITION>&lt;p&gt;Вклад, размещенный в банке на определенный срок. Как
 правило, по истечении срока вклад закрывается, в ряде случаев предусматривается
 возможность для клиента продлить вклад на тех же условиях. В большинстве
 случаев операции со срочными вкладами до истечения их срока не разрешены либо
 ограничены: нельзя снять средства, не потеряв проценты, а иногда нельзя и
-пополнить вклад. Более точно и подробно это определяется условиями вклада. &lt;/p&gt;&lt;br&gt;</DEFINITION>
+пополнить вклад. Более точно и подробно это определяется условиями вклада. &lt;/p&gt;</DEFINITION>
         <FORMAT>1</FORMAT>
         <USEDYNALINK>0</USEDYNALINK>
         <CASESENSITIVE>0</CASESENSITIVE>
@@ -441,9 +441,9 @@
       </ENTRY>
       <ENTRY>
         <CONCEPT>Вклад до востребования</CONCEPT>
-        <DEFINITION>&lt;p&gt;&lt;/p&gt;&lt;p&gt;Вклад, который можно полностью или частично снять в любой
+        <DEFINITION>&lt;p&gt;Вклад, который можно полностью или частично снять в любой
 момент. Как правило, процентная ставка по вкладам до востребования намного
-ниже, чем по срочным вкладам.&lt;/p&gt;&lt;br&gt;</DEFINITION>
+ниже, чем по срочным вкладам.&lt;/p&gt;</DEFINITION>
         <FORMAT>1</FORMAT>
         <USEDYNALINK>0</USEDYNALINK>
         <CASESENSITIVE>0</CASESENSITIVE>
@@ -452,12 +452,12 @@
       </ENTRY>
       <ENTRY>
         <CONCEPT>Процент по вкладу (процентная ставка по вкладу)</CONCEPT>
-        <DEFINITION>&lt;p&gt;&lt;/p&gt;&lt;p&gt;Сумма денег, которую банк добавляет к вкладу клиента один
+        <DEFINITION>&lt;p&gt;Сумма денег, которую банк добавляет к вкладу клиента один
 раз за определенный период, тем самым банк платит клиенту за право использовать
 его деньги. Как правило, ставка измеряется в процентах от размера вклада за
 год. При этом начислять проценты по вкладу банк может и чаще, чем раз в год.
 Это зависит от срока вклада. Обычно начисление производится ежемесячно или раз
-в три месяца.&lt;/p&gt;&lt;br&gt;</DEFINITION>
+в три месяца.&lt;/p&gt;</DEFINITION>
         <FORMAT>1</FORMAT>
         <USEDYNALINK>0</USEDYNALINK>
         <CASESENSITIVE>0</CASESENSITIVE>
@@ -466,11 +466,11 @@
       </ENTRY>
       <ENTRY>
         <CONCEPT>Вкладчик</CONCEPT>
-        <DEFINITION>&lt;p&gt;&lt;/p&gt;&lt;p&gt;Клиент банка, сделавший вклад (поместивший деньги или другие
+        <DEFINITION>&lt;p&gt;Клиент банка, сделавший вклад (поместивший деньги или другие
 ценности на депозит). Клиент и банк заключают договор, в котором подробно
 описаны все условия вклада: тип вклада, срок, передаваемая банку сумма денег
 (или других ценностей), процентная ставка, график начисления процентов,
-возможность пополнения вклада и снятия денег и пр.&lt;/p&gt;&lt;br&gt;</DEFINITION>
+возможность пополнения вклада и снятия денег и пр.&lt;/p&gt;</DEFINITION>
         <FORMAT>1</FORMAT>
         <USEDYNALINK>0</USEDYNALINK>
         <CASESENSITIVE>0</CASESENSITIVE>
@@ -479,10 +479,10 @@
       </ENTRY>
       <ENTRY>
         <CONCEPT>Капитализация банковских процентов</CONCEPT>
-        <DEFINITION>&lt;p&gt;&lt;/p&gt;&lt;p&gt;Прибавление начисленных процентов по вкладу к сумме вклада.
+        <DEFINITION>&lt;p&gt;Прибавление начисленных процентов по вкладу к сумме вклада.
 При следующем начислении процентов их сумма рассчитывается от увеличенной суммы
 вклада и снова прибавляется к сумме вклада. И так при каждом начислении
-процентов до истечения срока вклада.&lt;/p&gt;&lt;br&gt;</DEFINITION>
+процентов до истечения срока вклада.&lt;/p&gt;</DEFINITION>
         <FORMAT>1</FORMAT>
         <USEDYNALINK>0</USEDYNALINK>
         <CASESENSITIVE>0</CASESENSITIVE>
@@ -491,13 +491,13 @@
       </ENTRY>
       <ENTRY>
         <CONCEPT>Пополнение вклада или снятие средств</CONCEPT>
-        <DEFINITION>&lt;p&gt;&lt;/p&gt;&lt;p&gt;Операции, которые вкладчик может делать во время действия
+        <DEFINITION>&lt;p&gt;Операции, которые вкладчик может делать во время действия
 вклада. Очень часто условия срочных вкладов делают снятие денег невыгодным, поскольку
 в этом случае полностью или частично теряются начисленные проценты за хранение
 средств. Иногда условия вклада не допускают и его пополнение. Если клиент все
 же захочет забрать свои деньги раньше срока банк обязан вернуть вкладчику сумму
 вклада, но может применить штрафные санкции (заплатит меньше процентов, или не
-заплатит их вовсе).&lt;/p&gt;&lt;br&gt;</DEFINITION>
+заплатит их вовсе).&lt;/p&gt;</DEFINITION>
         <FORMAT>1</FORMAT>
         <USEDYNALINK>0</USEDYNALINK>
         <CASESENSITIVE>0</CASESENSITIVE>
@@ -506,7 +506,7 @@
       </ENTRY>
       <ENTRY>
         <CONCEPT>Взнос на депозит (пополнение вклада)</CONCEPT>
-        <DEFINITION>&lt;p&gt;&lt;/p&gt;&lt;p&gt;Сумма, которую вкладчик добавляет к своему вкладу. &lt;/p&gt;&lt;br&gt;</DEFINITION>
+        <DEFINITION>&lt;p&gt;Сумма, которую вкладчик добавляет к своему вкладу. &lt;/p&gt;</DEFINITION>
         <FORMAT>1</FORMAT>
         <USEDYNALINK>0</USEDYNALINK>
         <CASESENSITIVE>0</CASESENSITIVE>
@@ -515,8 +515,8 @@
       </ENTRY>
       <ENTRY>
         <CONCEPT>Риск невозврата вклада</CONCEPT>
-        <DEFINITION>&lt;p&gt;&lt;/p&gt;&lt;p&gt;Вероятность потери сбережений в результате кражи, стихийного
-бедствия, разорения банка и других непредвиденных обстоятельств. &lt;/p&gt;&lt;br&gt;</DEFINITION>
+        <DEFINITION>&lt;p&gt;Вероятность потери сбережений в результате кражи, стихийного
+бедствия, разорения банка и других непредвиденных обстоятельств. &lt;/p&gt;</DEFINITION>
         <FORMAT>1</FORMAT>
         <USEDYNALINK>0</USEDYNALINK>
         <CASESENSITIVE>0</CASESENSITIVE>
@@ -525,7 +525,7 @@
       </ENTRY>
       <ENTRY>
         <CONCEPT>Реальный доход</CONCEPT>
-        <DEFINITION>&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Сумма средств, на которую можно
+        <DEFINITION>&lt;p&gt;Сумма средств, на которую можно
 приобрести определенный набор товаров и услуг с поправкой на изменение цен.
 Реальный доход может расти или падать, даже если ваша зарплата остается
 неизменной, и наоборот, он может оставаться на одном уровне, несмотря на
@@ -533,7 +533,7 @@
 сможете купить меньшее количество этих товаров, а значит, ваш реальный доход
 уменьшится. Если же зарплата увеличится пропорционально росту цен, вы сможете
 купить на нее в точности столько же товаров, сколько и раньше, а значит, ваш
-реальный доход не изменится.&amp;nbsp; &lt;/p&gt;&lt;br&gt;&lt;br&gt;&lt;p&gt;&lt;/p&gt;</DEFINITION>
+реальный доход не изменится.&amp;nbsp; &lt;/p&gt;</DEFINITION>
         <FORMAT>1</FORMAT>
         <USEDYNALINK>0</USEDYNALINK>
         <CASESENSITIVE>0</CASESENSITIVE>
@@ -542,7 +542,7 @@
       </ENTRY>
       <ENTRY>
         <CONCEPT>Акция</CONCEPT>
-        <DEFINITION>&lt;p&gt;&lt;/p&gt;&lt;p&gt;Ценная бумага, которая выпускается компанией на продажу.
+        <DEFINITION>&lt;p&gt;Ценная бумага, которая выпускается компанией на продажу.
 Покупая акцию, человек (акционер) тем самым дает компании деньги на ее развитие
 и становится совладельцем компании (владельцем доли, соответствующей числу
 купленных акций). Купленные акции человек может в дальнейшем продать. В
@@ -550,7 +550,7 @@
 дешеветь, тем самым увеличивая или уменьшая сбережения акционера. Раз в
 определенный период компания начисляет доход по акциям, подобно тому, как банк начисляет
 проценты по вкладу. Как и в случае с банковским вкладом, высокодоходные акции,
-как правило, связаны с большим риском. &lt;/p&gt;&lt;br&gt;</DEFINITION>
+как правило, связаны с большим риском. &lt;/p&gt;</DEFINITION>
         <FORMAT>1</FORMAT>
         <USEDYNALINK>0</USEDYNALINK>
         <CASESENSITIVE>0</CASESENSITIVE>
@@ -565,7 +565,7 @@
 страховое агентство (Агентство по страхованию вкладов, или АСВ). Все банки
 платят обязательные взносы этому агентству. Из денег, полученных от банков и
 частично из бюджета&amp;nbsp;Российской Федерации, АСВ и выплачивает компенсации пострадавшим
-вкладчикам.&lt;br&gt;&lt;/p&gt;</DEFINITION>
+вкладчикам.&lt;/p&gt;</DEFINITION>
         <FORMAT>1</FORMAT>
         <USEDYNALINK>0</USEDYNALINK>
         <CASESENSITIVE>0</CASESENSITIVE>
@@ -574,14 +574,14 @@
       </ENTRY>
       <ENTRY>
         <CONCEPT>Облигация</CONCEPT>
-        <DEFINITION>&lt;p&gt;&lt;/p&gt;&lt;p&gt;Это долговая ценная бумага; она имеет номинальную стоимость,
+        <DEFINITION>&lt;p&gt;Это долговая ценная бумага; она имеет номинальную стоимость,
 по которой ее можно купить и продать. Облигация приобретается на определенный
 срок, в течение которого на сумму номинальной стоимости начисляется процентный
 доход. По окончании этого срока покупатель имеет право вернуть облигацию
 продавцу, а продавец обязуется выплатить покупателю номинальную стоимость
 облигации и сумму процентного дохода за весь срок. Этот момент называется
 погашением облигации. По сути, облигация – это долговая расписка, или
-обязательство вернуть долг с определенным вознаграждением (процентом).&lt;/p&gt;&lt;br&gt;</DEFINITION>
+обязательство вернуть долг с определенным вознаграждением (процентом).&lt;/p&gt;</DEFINITION>
         <FORMAT>1</FORMAT>
         <USEDYNALINK>0</USEDYNALINK>
         <CASESENSITIVE>0</CASESENSITIVE>
@@ -590,9 +590,9 @@
       </ENTRY>
       <ENTRY>
         <CONCEPT>Банковская карта</CONCEPT>
-        <DEFINITION>&lt;p&gt;&lt;/p&gt;&lt;p&gt;Это и сама
+        <DEFINITION>&lt;p&gt;Это и сама
 карта, и договор с банком на осуществление платежных операций банком от имени
-клиента.&lt;/p&gt;&lt;br&gt;</DEFINITION>
+клиента.&lt;/p&gt;</DEFINITION>
         <FORMAT>1</FORMAT>
         <USEDYNALINK>0</USEDYNALINK>
         <CASESENSITIVE>0</CASESENSITIVE>
@@ -601,9 +601,9 @@
       </ENTRY>
       <ENTRY>
         <CONCEPT>Дебетовая карта</CONCEPT>
-        <DEFINITION>&lt;p&gt;&lt;/p&gt;&lt;p&gt;Карта,
+        <DEFINITION>&lt;p&gt;Карта,
 привязанная к текущему депозитному счету. Обычно на дебетовые карты поступает
-заработная плата клиентов банка. &lt;/p&gt;&lt;br&gt;</DEFINITION>
+заработная плата клиентов банка. &lt;/p&gt;</DEFINITION>
         <FORMAT>1</FORMAT>
         <USEDYNALINK>0</USEDYNALINK>
         <CASESENSITIVE>0</CASESENSITIVE>
@@ -612,8 +612,8 @@
       </ENTRY>
       <ENTRY>
         <CONCEPT>Кредитная карта</CONCEPT>
-        <DEFINITION>&lt;p&gt;&lt;/p&gt;&lt;p&gt;Карта,
-привязанная к кредитному счету, по сути дела, - инструмент взятия кредита. &lt;/p&gt;&lt;br&gt;</DEFINITION>
+        <DEFINITION>&lt;p&gt;Карта,
+привязанная к кредитному счету, по сути дела, - инструмент взятия кредита. &lt;/p&gt;</DEFINITION>
         <FORMAT>1</FORMAT>
         <USEDYNALINK>0</USEDYNALINK>
         <CASESENSITIVE>0</CASESENSITIVE>
@@ -622,10 +622,10 @@
       </ENTRY>
       <ENTRY>
         <CONCEPT>Банкомат</CONCEPT>
-        <DEFINITION>&lt;p&gt;&lt;p&gt;Автомат,
+        <DEFINITION>&lt;p&gt;Автомат,
 позволяющий получить наличные со счета, привязанного к банковской карте, или
 положить деньги на счет карты, а также совершать различные платежные операции с
-картой или без нее. &lt;/p&gt;&lt;br&gt;&lt;/p&gt;</DEFINITION>
+картой или без нее. &lt;/p&gt;</DEFINITION>
         <FORMAT>1</FORMAT>
         <USEDYNALINK>0</USEDYNALINK>
         <CASESENSITIVE>0</CASESENSITIVE>
@@ -634,11 +634,11 @@
       </ENTRY>
       <ENTRY>
         <CONCEPT>Платежная система</CONCEPT>
-        <DEFINITION>&lt;p&gt;&lt;p&gt;Компания,
+        <DEFINITION>&lt;p&gt;Компания,
 осуществляющая обслуживание расчетов по банковским картам. Не следует путать
 платежную систему и банк. Платежная система напоминает «супербухгалтера»,
 учитывающего все операции с картами клиентов всех банков во всех магазинах, где
-принимается оплата картой.&lt;/p&gt;&lt;br&gt;&lt;/p&gt;</DEFINITION>
+принимается оплата картой.&lt;/p&gt;</DEFINITION>
         <FORMAT>1</FORMAT>
         <USEDYNALINK>0</USEDYNALINK>
         <CASESENSITIVE>0</CASESENSITIVE>
@@ -647,11 +647,11 @@
       </ENTRY>
       <ENTRY>
         <CONCEPT>Овердрафт</CONCEPT>
-        <DEFINITION>&lt;p&gt;&lt;p&gt;Сумма,
+        <DEFINITION>&lt;p&gt;Сумма,
 которую банк разрешает владельцу дебетовой карты потратить сверх того, что есть
 на его счете. Овердрафт – разновидность микрокредита с весьма жёсткими
 условиями. При запросе баланса карты овердрафт обычно отдельно не указывается,
-поэтому часто владельцы карт «залезают» в перерасход неосознанно.&lt;/p&gt;&lt;br&gt;&lt;/p&gt;</DEFINITION>
+поэтому часто владельцы карт «залезают» в перерасход неосознанно.&lt;/p&gt;</DEFINITION>
         <FORMAT>1</FORMAT>
         <USEDYNALINK>0</USEDYNALINK>
         <CASESENSITIVE>0</CASESENSITIVE>
@@ -660,12 +660,12 @@
       </ENTRY>
       <ENTRY>
         <CONCEPT>Банковская комиссия</CONCEPT>
-        <DEFINITION>&lt;p&gt;&lt;p&gt;Сумма,
+        <DEFINITION>&lt;p&gt;Сумма,
 которую банк списывает в свою пользу со счета клиента, когда тот получает
 наличные деньги в банкомате и при некоторых других операциях и платежах. Как
 правило, банк не берет комиссию при обслуживании «своих» карт, то есть
 выпущенных в этом же банке (или в банке-партнере). При обслуживании карт,
-выпущенных другими банками, комиссия бывает ощутимой.&lt;/p&gt;&lt;br&gt;&lt;/p&gt;</DEFINITION>
+выпущенных другими банками, комиссия бывает ощутимой.&lt;/p&gt;</DEFINITION>
         <FORMAT>1</FORMAT>
         <USEDYNALINK>0</USEDYNALINK>
         <CASESENSITIVE>0</CASESENSITIVE>
@@ -674,10 +674,10 @@
       </ENTRY>
       <ENTRY>
         <CONCEPT>Льготный период</CONCEPT>
-        <DEFINITION>&lt;p&gt;&lt;p&gt;Период, в
+        <DEFINITION>&lt;p&gt;Период, в
 течение которого клиент может погасить задолженность по кредитной карте без
 уплаты процентов. Обычно льготный период – это весь месяц, во время которого
-образовалась задолженность, плюс еще 20 дней.&lt;/p&gt;&lt;br&gt;&lt;/p&gt;</DEFINITION>
+образовалась задолженность, плюс еще 20 дней.&lt;/p&gt;</DEFINITION>
         <FORMAT>1</FORMAT>
         <USEDYNALINK>0</USEDYNALINK>
         <CASESENSITIVE>0</CASESENSITIVE>
@@ -686,7 +686,7 @@
       </ENTRY>
       <ENTRY>
         <CONCEPT>Курс валюты</CONCEPT>
-        <DEFINITION>&lt;p&gt;Цена иностранной валюты в рублях.&lt;br&gt;&lt;/p&gt;</DEFINITION>
+        <DEFINITION>&lt;p&gt;Цена иностранной валюты в рублях.&lt;/p&gt;</DEFINITION>
         <FORMAT>1</FORMAT>
         <USEDYNALINK>0</USEDYNALINK>
         <CASESENSITIVE>0</CASESENSITIVE>
@@ -696,7 +696,7 @@
       <ENTRY>
         <CONCEPT>Курс покупки</CONCEPT>
         <DEFINITION>&lt;p&gt;Цена, по которой банк покупает валюту у
-клиентов.&lt;br&gt;&lt;/p&gt;</DEFINITION>
+клиентов.&lt;/p&gt;</DEFINITION>
         <FORMAT>1</FORMAT>
         <USEDYNALINK>0</USEDYNALINK>
         <CASESENSITIVE>0</CASESENSITIVE>
@@ -705,9 +705,9 @@
       </ENTRY>
       <ENTRY>
         <CONCEPT>Курс продажи</CONCEPT>
-        <DEFINITION>&lt;p&gt;&lt;p&gt;Цена, по
+        <DEFINITION>&lt;p&gt;Цена, по
 которой банк продает валюту клиентам. Курс продажи всегда выше курса покупки.
-Таким образом, банк зарабатывает на обмене валют.&lt;/p&gt;&lt;br&gt;&lt;/p&gt;</DEFINITION>
+Таким образом, банк зарабатывает на обмене валют.&lt;/p&gt;</DEFINITION>
         <FORMAT>1</FORMAT>
         <USEDYNALINK>0</USEDYNALINK>
         <CASESENSITIVE>0</CASESENSITIVE>
@@ -716,7 +716,7 @@
       </ENTRY>
       <ENTRY>
         <CONCEPT>Заем (кредит)</CONCEPT>
-        <DEFINITION>&lt;p&gt;&lt;p&gt;Сумма денег, взятая (выданная) в долг.&lt;/p&gt;&lt;br&gt;&lt;/p&gt;</DEFINITION>
+        <DEFINITION>&lt;p&gt;Сумма денег, взятая (выданная) в долг.&lt;/p&gt;</DEFINITION>
         <FORMAT>1</FORMAT>
         <USEDYNALINK>0</USEDYNALINK>
         <CASESENSITIVE>0</CASESENSITIVE>
@@ -725,9 +725,9 @@
       </ENTRY>
       <ENTRY>
         <CONCEPT>Микрофинансовая организация (МФО)</CONCEPT>
-        <DEFINITION>&lt;p&gt;&lt;p&gt;Финансовая организация, быстро выдающая небольшие кредиты,
+        <DEFINITION>&lt;p&gt;Финансовая организация, быстро выдающая небольшие кредиты,
 обычно с очень жесткими условиями погашения и с огромной процентной
-ставкой.&amp;nbsp; &lt;/p&gt;&lt;br&gt;&lt;/p&gt;</DEFINITION>
+ставкой.&amp;nbsp; &lt;/p&gt;</DEFINITION>
         <FORMAT>1</FORMAT>
         <USEDYNALINK>0</USEDYNALINK>
         <CASESENSITIVE>0</CASESENSITIVE>
@@ -736,13 +736,13 @@
       </ENTRY>
       <ENTRY>
         <CONCEPT>Процент по кредиту (процентная ставка по кредиту)</CONCEPT>
-        <DEFINITION>&lt;p&gt;&lt;p&gt;Сумма денег, которую банк добавляет к долгу заемщика раз в
+        <DEFINITION>&lt;p&gt;Сумма денег, которую банк добавляет к долгу заемщика раз в
 определенный период за право пользования заемными деньгами и за обслуживание
 кредитного договора. Как правило, ставка измеряется в процентах от суммы
 кредита за год. При этом график начисления процентов по кредиту может быть
 различным – не обязательно раз в год. Обычно, начисление производится раз в
 месяц. Это определяется сроком кредита и другими условиями договора.
-Беспроцентный кредит (по сути – рассрочка платежа) встречается довольно редко. &lt;/p&gt;&lt;br&gt;&lt;/p&gt;</DEFINITION>
+Беспроцентный кредит (по сути – рассрочка платежа) встречается довольно редко. &lt;/p&gt;</DEFINITION>
         <FORMAT>1</FORMAT>
         <USEDYNALINK>0</USEDYNALINK>
         <CASESENSITIVE>0</CASESENSITIVE>
@@ -751,7 +751,7 @@
       </ENTRY>
       <ENTRY>
         <CONCEPT>Заемщик (должник)</CONCEPT>
-        <DEFINITION>&lt;p&gt;Клиент банка или микрофинансовой организации, взявший кредит.&lt;br&gt;&lt;/p&gt;</DEFINITION>
+        <DEFINITION>&lt;p&gt;Клиент банка или микрофинансовой организации, взявший кредит.&lt;/p&gt;</DEFINITION>
         <FORMAT>1</FORMAT>
         <USEDYNALINK>0</USEDYNALINK>
         <CASESENSITIVE>0</CASESENSITIVE>
@@ -760,8 +760,8 @@
       </ENTRY>
       <ENTRY>
         <CONCEPT>Кредитный взнос (платеж)</CONCEPT>
-        <DEFINITION>&lt;p&gt;&lt;p&gt;Сумма, которую заемщик платит для погашения кредита один раз
-в установленный период (обычно раз в месяц).&lt;/p&gt;&lt;br&gt;&lt;/p&gt;</DEFINITION>
+        <DEFINITION>&lt;p&gt;Сумма, которую заемщик платит для погашения кредита один раз
+в установленный период (обычно раз в месяц).&lt;/p&gt;</DEFINITION>
         <FORMAT>1</FORMAT>
         <USEDYNALINK>0</USEDYNALINK>
         <CASESENSITIVE>0</CASESENSITIVE>
@@ -770,9 +770,9 @@
       </ENTRY>
       <ENTRY>
         <CONCEPT>Аннуитет (аннуитетные платежи)</CONCEPT>
-        <DEFINITION>&lt;p&gt;&lt;p&gt;Это равные по сумме выплаты по кредиту за равные промежутки
+        <DEFINITION>&lt;p&gt;Это равные по сумме выплаты по кредиту за равные промежутки
 времени (месяц, квартал), которые включают в себя сумму начисленных процентов
-за кредит и сумму основного долга.&lt;/p&gt;&lt;br&gt;&lt;/p&gt;</DEFINITION>
+за кредит и сумму основного долга.&lt;/p&gt;</DEFINITION>
         <FORMAT>1</FORMAT>
         <USEDYNALINK>0</USEDYNALINK>
         <CASESENSITIVE>0</CASESENSITIVE>
@@ -781,9 +781,9 @@
       </ENTRY>
       <ENTRY>
         <CONCEPT>Дифференцированный платеж</CONCEPT>
-        <DEFINITION>&lt;p&gt;&lt;p&gt;Погашение основной суммы долга (тела кредита) равными
+        <DEFINITION>&lt;p&gt;Погашение основной суммы долга (тела кредита) равными
 частями на всем периоде кредитования с начислением процентов на оставшуюся сумму
-долга.&lt;/p&gt;&lt;br&gt;&lt;/p&gt;</DEFINITION>
+долга.&lt;/p&gt;</DEFINITION>
         <FORMAT>1</FORMAT>
         <USEDYNALINK>0</USEDYNALINK>
         <CASESENSITIVE>0</CASESENSITIVE>
@@ -792,10 +792,10 @@
       </ENTRY>
       <ENTRY>
         <CONCEPT>Досрочное погашение</CONCEPT>
-        <DEFINITION>&lt;p&gt;&lt;p&gt;Полная или частичная досрочная выплата кредита. При этом
+        <DEFINITION>&lt;p&gt;Полная или частичная досрочная выплата кредита. При этом
 заемщик выигрывает, поскольку не платит проценты за оставшийся срок. При
 заключении договора нужно внимательно изучать пункты, касающиеся возможности и
-условий досрочного погашения.&lt;/p&gt;&lt;br&gt;&lt;/p&gt;</DEFINITION>
+условий досрочного погашения.&lt;/p&gt;</DEFINITION>
         <FORMAT>1</FORMAT>
         <USEDYNALINK>0</USEDYNALINK>
         <CASESENSITIVE>0</CASESENSITIVE>
@@ -804,9 +804,9 @@
       </ENTRY>
       <ENTRY>
         <CONCEPT>Страхование</CONCEPT>
-        <DEFINITION>&lt;p&gt;&lt;p&gt;Финансовая услуга,
+        <DEFINITION>&lt;p&gt;Финансовая услуга,
 покрывающая полностью или частично ущерб в случае наступления страхового
-случая.&lt;/p&gt;&lt;br&gt;&lt;/p&gt;</DEFINITION>
+случая.&lt;/p&gt;</DEFINITION>
         <FORMAT>1</FORMAT>
         <USEDYNALINK>0</USEDYNALINK>
         <CASESENSITIVE>0</CASESENSITIVE>
@@ -815,8 +815,8 @@
       </ENTRY>
       <ENTRY>
         <CONCEPT>Страховой случай</CONCEPT>
-        <DEFINITION>&lt;p&gt;&lt;p&gt;Случай, предусмотренный договором страхования и приведший к
-потерям или упущенным доходам, подлежащим покрытию за счет страховой выплаты. &lt;/p&gt;&lt;br&gt;&lt;/p&gt;</DEFINITION>
+        <DEFINITION>&lt;p&gt;Случай, предусмотренный договором страхования и приведший к
+потерям или упущенным доходам, подлежащим покрытию за счет страховой выплаты. &lt;/p&gt;</DEFINITION>
         <FORMAT>1</FORMAT>
         <USEDYNALINK>0</USEDYNALINK>
         <CASESENSITIVE>0</CASESENSITIVE>
@@ -825,7 +825,7 @@
       </ENTRY>
       <ENTRY>
         <CONCEPT>Страховая премия</CONCEPT>
-        <DEFINITION>&lt;p&gt;Цена страхового полиса, которую уплачивает клиент.&lt;br&gt;&lt;/p&gt;</DEFINITION>
+        <DEFINITION>&lt;p&gt;Цена страхового полиса, которую уплачивает клиент.&lt;/p&gt;</DEFINITION>
         <FORMAT>1</FORMAT>
         <USEDYNALINK>0</USEDYNALINK>
         <CASESENSITIVE>0</CASESENSITIVE>
@@ -834,7 +834,7 @@
       </ENTRY>
       <ENTRY>
         <CONCEPT>Страхователь</CONCEPT>
-        <DEFINITION>&lt;p&gt;Клиент страховой компании, заключающий договор страхования.&lt;br&gt;&lt;/p&gt;</DEFINITION>
+        <DEFINITION>&lt;p&gt;Клиент страховой компании, заключающий договор страхования.&lt;/p&gt;</DEFINITION>
         <FORMAT>1</FORMAT>
         <USEDYNALINK>0</USEDYNALINK>
         <CASESENSITIVE>0</CASESENSITIVE>
@@ -843,7 +843,7 @@
       </ENTRY>
       <ENTRY>
         <CONCEPT>Страховщик (страховая компания)</CONCEPT>
-        <DEFINITION>&lt;p&gt;&lt;p&gt;Компания, оказывающая страховые услуги.&lt;/p&gt;&lt;br&gt;&lt;/p&gt;</DEFINITION>
+        <DEFINITION>&lt;p&gt;Компания, оказывающая страховые услуги.&lt;/p&gt;</DEFINITION>
         <FORMAT>1</FORMAT>
         <USEDYNALINK>0</USEDYNALINK>
         <CASESENSITIVE>0</CASESENSITIVE>
@@ -852,10 +852,10 @@
       </ENTRY>
       <ENTRY>
         <CONCEPT>Обязательное страхование</CONCEPT>
-        <DEFINITION>&lt;p&gt;&lt;p&gt;Платное или бесплатное страхование, являющееся
+        <DEFINITION>&lt;p&gt;Платное или бесплатное страхование, являющееся
 комплементарной услугой, связанной с определенным правом или благом (ОСАГО
 обязательно для автовладельца, страхование пассажиров – обязательно при
-заключении договора перевозки с авиа- или железнодорожной компанией).&lt;/p&gt;&lt;br&gt;&lt;/p&gt;</DEFINITION>
+заключении договора перевозки с авиа- или железнодорожной компанией).&lt;/p&gt;</DEFINITION>
         <FORMAT>1</FORMAT>
         <USEDYNALINK>0</USEDYNALINK>
         <CASESENSITIVE>0</CASESENSITIVE>
@@ -865,7 +865,7 @@
       <ENTRY>
         <CONCEPT>ОСАГО</CONCEPT>
         <DEFINITION>&lt;p&gt;Обязательное страхование автогражданской ответственности владельца
-автомобиля.&lt;br&gt;&lt;/p&gt;</DEFINITION>
+автомобиля.&lt;/p&gt;</DEFINITION>
         <FORMAT>1</FORMAT>
         <USEDYNALINK>0</USEDYNALINK>
         <CASESENSITIVE>0</CASESENSITIVE>
@@ -874,10 +874,10 @@
       </ENTRY>
       <ENTRY>
         <CONCEPT>Коэффициент ОСАГО</CONCEPT>
-        <DEFINITION>&lt;p&gt;&lt;p&gt;Множитель, повышающий или понижающий страховую премию в зависимости
+        <DEFINITION>&lt;p&gt;Множитель, повышающий или понижающий страховую премию в зависимости
 от стажа и возраста водителя, мощности двигателя, сезонности и региона
 эксплуатации автомобиля и классность водителя (учитывает количество лет
-страхования и число предыдущих страховых случаев).&lt;/p&gt;&lt;br&gt;&lt;/p&gt;</DEFINITION>
+страхования и число предыдущих страховых случаев).&lt;/p&gt;</DEFINITION>
         <FORMAT>1</FORMAT>
         <USEDYNALINK>0</USEDYNALINK>
         <CASESENSITIVE>0</CASESENSITIVE>
@@ -886,8 +886,8 @@
       </ENTRY>
       <ENTRY>
         <CONCEPT>Коэффициент «бонус-малус» (КБМ)</CONCEPT>
-        <DEFINITION>&lt;p&gt;&lt;p&gt;Множитель, повышающий или понижающий страховую премию в зависимости от аварийности в предыдущие
-периоды.&lt;/p&gt;&lt;br&gt;&lt;/p&gt;</DEFINITION>
+        <DEFINITION>&lt;p&gt;Множитель, повышающий или понижающий страховую премию в зависимости от аварийности в предыдущие
+периоды.&lt;/p&gt;</DEFINITION>
         <FORMAT>1</FORMAT>
         <USEDYNALINK>0</USEDYNALINK>
         <CASESENSITIVE>0</CASESENSITIVE>
@@ -896,8 +896,8 @@
       </ENTRY>
       <ENTRY>
         <CONCEPT>Страховой полис</CONCEPT>
-        <DEFINITION>&lt;p&gt;&lt;p&gt;Документ, подтверждающий факт и содержащий условия
-страхования.&lt;/p&gt;&lt;br&gt;&lt;/p&gt;</DEFINITION>
+        <DEFINITION>&lt;p&gt;Документ, подтверждающий факт и содержащий условия
+страхования.&lt;/p&gt;</DEFINITION>
         <FORMAT>1</FORMAT>
         <USEDYNALINK>0</USEDYNALINK>
         <CASESENSITIVE>0</CASESENSITIVE>
@@ -906,7 +906,7 @@
       </ENTRY>
       <ENTRY>
         <CONCEPT>Страховой риск</CONCEPT>
-        <DEFINITION>&lt;p&gt;Вероятность наступления страхового случая.&lt;br&gt;&lt;/p&gt;</DEFINITION>
+        <DEFINITION>&lt;p&gt;Вероятность наступления страхового случая.&lt;/p&gt;</DEFINITION>
         <FORMAT>1</FORMAT>
         <USEDYNALINK>0</USEDYNALINK>
         <CASESENSITIVE>0</CASESENSITIVE>
@@ -915,9 +915,9 @@
       </ENTRY>
       <ENTRY>
         <CONCEPT>Дефолт</CONCEPT>
-        <DEFINITION>&lt;p&gt;&lt;p&gt;Неспособность
+        <DEFINITION>&lt;p&gt;Неспособность
 юридического или физического лица осуществлять своевременные платежи по своим
-долговым обязательствам.&lt;/p&gt;&lt;br&gt;&lt;/p&gt;</DEFINITION>
+долговым обязательствам.&lt;/p&gt;</DEFINITION>
         <FORMAT>1</FORMAT>
         <USEDYNALINK>0</USEDYNALINK>
         <CASESENSITIVE>0</CASESENSITIVE>
@@ -926,8 +926,8 @@
       </ENTRY>
       <ENTRY>
         <CONCEPT>Персональные данные</CONCEPT>
-        <DEFINITION>&lt;p&gt;&lt;p&gt;Личная информация о физическом лице, которая может быть
-использована для совершения финансовых операций.&lt;b&gt;&lt;i&gt;&lt;/i&gt;&lt;/b&gt;&lt;/p&gt;&lt;br&gt;&lt;/p&gt;</DEFINITION>
+        <DEFINITION>&lt;p&gt;Личная информация о физическом лице, которая может быть
+использована для совершения финансовых операций.&lt;b&gt;&lt;i&gt;&lt;/i&gt;&lt;/b&gt;&lt;/p&gt;</DEFINITION>
         <FORMAT>1</FORMAT>
         <USEDYNALINK>0</USEDYNALINK>
         <CASESENSITIVE>0</CASESENSITIVE>
@@ -936,9 +936,9 @@
       </ENTRY>
       <ENTRY>
         <CONCEPT>Реструктуризация долга</CONCEPT>
-        <DEFINITION>&lt;p&gt;&lt;p&gt;Пересмотр условий кредита (суммы, сроков, размера и
+        <DEFINITION>&lt;p&gt;Пересмотр условий кредита (суммы, сроков, размера и
 периодичности выплат и пр.) в случае неспособности заемщика выплачивать долг на
-прежних условиях.&lt;/p&gt;&lt;br&gt;&lt;/p&gt;</DEFINITION>
+прежних условиях.&lt;/p&gt;</DEFINITION>
         <FORMAT>1</FORMAT>
         <USEDYNALINK>0</USEDYNALINK>
         <CASESENSITIVE>0</CASESENSITIVE>
@@ -947,8 +947,8 @@
       </ENTRY>
       <ENTRY>
         <CONCEPT>Валютный риск</CONCEPT>
-        <DEFINITION>&lt;p&gt;&lt;p&gt;Риск финансовых потерь при купле-продаже зарубежной валюты,
-связанный с вероятностью изменения курсов зарубежных валют.&lt;/p&gt;&lt;br&gt;&lt;/p&gt;</DEFINITION>
+        <DEFINITION>&lt;p&gt;Риск финансовых потерь при купле-продаже зарубежной валюты,
+связанный с вероятностью изменения курсов зарубежных валют.&lt;/p&gt;</DEFINITION>
         <FORMAT>1</FORMAT>
         <USEDYNALINK>0</USEDYNALINK>
         <CASESENSITIVE>0</CASESENSITIVE>
@@ -957,7 +957,7 @@
       </ENTRY>
       <ENTRY>
         <CONCEPT>Кредитный риск</CONCEPT>
-        <DEFINITION>&lt;p&gt;Риск невозврата или просрочки платежа по кредиту.&lt;br&gt;&lt;/p&gt;</DEFINITION>
+        <DEFINITION>&lt;p&gt;Риск невозврата или просрочки платежа по кредиту.&lt;/p&gt;</DEFINITION>
         <FORMAT>1</FORMAT>
         <USEDYNALINK>0</USEDYNALINK>
         <CASESENSITIVE>0</CASESENSITIVE>
@@ -966,8 +966,8 @@
       </ENTRY>
       <ENTRY>
         <CONCEPT>Процентный риск</CONCEPT>
-        <DEFINITION>&lt;p&gt;&lt;p&gt;Риск финансовых потерь, связанных с изменением процентных
-ставок на рынке.&lt;/p&gt;&lt;br&gt;&lt;/p&gt;</DEFINITION>
+        <DEFINITION>&lt;p&gt;Риск финансовых потерь, связанных с изменением процентных
+ставок на рынке.&lt;/p&gt;</DEFINITION>
         <FORMAT>1</FORMAT>
         <USEDYNALINK>0</USEDYNALINK>
         <CASESENSITIVE>0</CASESENSITIVE>
@@ -976,8 +976,8 @@
       </ENTRY>
       <ENTRY>
         <CONCEPT>Ценовой риск</CONCEPT>
-        <DEFINITION>&lt;p&gt;&lt;p&gt;Риск финансовых потерь, связанных с изменением рыночных цен
-на товары и услуги.&lt;/p&gt;&lt;br&gt;&lt;/p&gt;</DEFINITION>
+        <DEFINITION>&lt;p&gt;Риск финансовых потерь, связанных с изменением рыночных цен
+на товары и услуги.&lt;/p&gt;</DEFINITION>
         <FORMAT>1</FORMAT>
         <USEDYNALINK>0</USEDYNALINK>
         <CASESENSITIVE>0</CASESENSITIVE>
@@ -987,7 +987,7 @@
       <ENTRY>
         <CONCEPT>Финансовое мошенничество</CONCEPT>
         <DEFINITION>&lt;p&gt;Завладение чужими средствами с помощью обмана или введения в заблуждение
-при осуществлении финансовых услуг.&lt;br&gt;&lt;/p&gt;</DEFINITION>
+при осуществлении финансовых услуг.&lt;/p&gt;</DEFINITION>
         <FORMAT>1</FORMAT>
         <USEDYNALINK>0</USEDYNALINK>
         <CASESENSITIVE>0</CASESENSITIVE>
@@ -996,10 +996,10 @@
       </ENTRY>
       <ENTRY>
         <CONCEPT>Электронное мошенничество</CONCEPT>
-        <DEFINITION>&lt;p&gt;&lt;p&gt;Завладение чужими средствами с помощью похищения личных
+        <DEFINITION>&lt;p&gt;Завладение чужими средствами с помощью похищения личных
 данных, обмана или введения в заблуждение при проведении электронных и
 мобильных платежей, банковских операций через интернет, операций с платежными
-картами.&lt;/p&gt;&lt;br&gt;&lt;/p&gt;</DEFINITION>
+картами.&lt;/p&gt;</DEFINITION>
         <FORMAT>1</FORMAT>
         <USEDYNALINK>0</USEDYNALINK>
         <CASESENSITIVE>0</CASESENSITIVE>
@@ -1008,25 +1008,14 @@
       </ENTRY>
       <ENTRY>
         <CONCEPT>Единый социальный налог (ЕСН)</CONCEPT>
-        <DEFINITION>&lt;p&gt;&lt;p&gt;Налог, начисляемый на любые выплаты работникам, за счет
+        <DEFINITION><p><p>Налог, начисляемый на любые выплаты работникам, за счет
 которого пополняются Пенсионный фонд, фонд Социального страхования, фонд
-Медицинского страхования.&lt;/p&gt;
-
-&lt;div&gt;&lt;!--[if !supportFootnotes]--&gt;&lt;br clear=&quot;all&quot;&gt;
-
-&lt;hr align=&quot;left&quot; size=&quot;1&quot; width=&quot;33%&quot;&gt;
-
-&lt;!--[endif]--&gt;
-
-&lt;div id=&quot;ftn1&quot;&gt;
-
-&lt;p&gt;Примечание: с 2010
+Медицинского страхования.</p>
+<p>Примечание: с 2010
 года как таковой налог формально отсутствует, вместо него введен термин
-«страховые выплаты». Однако в обиходе налог сохранил свое прежнее наименование.&lt;/p&gt;
-
-&lt;/div&gt;
-
-&lt;/div&gt;&lt;br&gt;&lt;/p&gt;</DEFINITION>
+«страховые выплаты». Однако в обиходе налог сохранил свое прежнее наименование.</p>
+</div>
+</div></p></DEFINITION>
         <FORMAT>1</FORMAT>
         <USEDYNALINK>0</USEDYNALINK>
         <CASESENSITIVE>0</CASESENSITIVE>

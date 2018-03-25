@@ -120,8 +120,8 @@ def questions_from_files(*xml_files):
 def parse_glossary_entry(e):
     return {
         'concept': e.find('CONCEPT').text.strip(),
-        'definition': e.find('DEFINITION').prettify(formatter='xml').strip()
-                       .lstrip('<DEFINITION>').rstrip('</DEFINITION>').strip(),
+        'definition': html.unescape(e.find('DEFINITION').prettify(formatter='xml').strip()
+                                     .lstrip('<DEFINITION>').rstrip('</DEFINITION>').strip()),
     }
 
 
