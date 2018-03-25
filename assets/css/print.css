@@ -1,0 +1,44 @@
+@media print {
+  body {
+    background: none;
+    color: black !important;
+    font-size: 70%;
+    margin: 0; padding: 0;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  .button-pdf {
+    display: none;
+  }
+
+  .nav, button, .demo-box:before,
+  #pdf-path, header p {
+    display: none;
+  }
+
+  h2, pre, code {
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none !important;
+  }
+
+  .demo-box {
+    margin: 0 !important;
+    padding-top: 0px !important;
+    border: none !important;
+    /* Open all questions on print */
+    display: block;
+    opacity: 1;
+  }
+
+  header {
+    padding: 0 0 10px 0;
+  }
+
+  code, .support {
+    font-size: 10px;
+  }
+}

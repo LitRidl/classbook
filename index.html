@@ -1,19 +1,113 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Hello World!</title>
-  </head>
-  <body>
-    <h1>Hello World!</h1>
-    <!-- All of the Node.js APIs are available in this renderer process. -->
-    We are using Node.js <script>document.write(process.versions.node)</script>,
-    Chromium <script>document.write(process.versions.chrome)</script>,
-    and Electron <script>document.write(process.versions.electron)</script>.
+<html lang="en">
 
-    <script>
-      // You can also require other files to run in this process
-      require('./renderer.js')
-    </script>
-  </body>
+<head>
+  <meta charset="utf-8">
+
+  <link rel="stylesheet" href="vendor/font-awesome/fa-svg-with-js.css">
+
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/nativize.css">
+  <link rel="stylesheet" href="assets/css/global.css">
+  <link rel="stylesheet" href="assets/css/about.css">
+  <link rel="stylesheet" href="assets/css/nav.css">
+  <link rel="stylesheet" href="assets/css/section.css">
+  <link rel="stylesheet" href="assets/css/demo.css">
+  <link rel="stylesheet" href="assets/css/print.css">
+  <link rel="stylesheet" href="assets/css/github.css">
+
+  <link rel="import" href="sections/materials/schoolbook.html">
+  <link rel="import" href="sections/materials/toolkit.html">
+  <link rel="import" href="sections/materials/glossary.html">
+  <!-- <link rel="import" href="sections/about.html"> -->
+  <link rel="import" href="sections/grade_5-6/1-all.html">
+  <link rel="import" href="sections/grade_5-6/1-informatsionnyj-poisk-i-analiz-informatsii.html">
+  <link rel="import" href="sections/grade_5-6/1-modelirovanie.html">
+  <link rel="import" href="sections/grade_5-6/1-programmirovanie.html">
+  <link rel="import" href="sections/grade_5-6/1-elektronnye-tablitsy.html">
+  <link rel="import" href="sections/grade_7-9/2-all.html">
+  <link rel="import" href="sections/grade_7-9/2-informatsionnaja-bezopasnost'.html">
+  <link rel="import" href="sections/grade_7-9/2-informatsionnyj-poisk-i-analiz-informatsii.html">
+  <link rel="import" href="sections/grade_7-9/2-modelirovanie.html">
+  <link rel="import" href="sections/grade_7-9/2-programmirovanie.html">
+  <link rel="import" href="sections/grade_7-9/2-elektronnye-tablitsy.html">
+  <link rel="import" href="sections/grade_10-11/3-all.html">
+  <link rel="import" href="sections/grade_10-11/3-izmerenie-kolichestva-informatsii.html">
+  <link rel="import" href="sections/grade_10-11/3-informatsionnyj-poisk-i-analiz-informatsii.html">
+  <link rel="import" href="sections/grade_10-11/3-modelirovanie.html">
+  <link rel="import" href="sections/grade_10-11/3-programmirovanie.html">
+  <link rel="import" href="sections/grade_10-11/3-elektronnye-tablitsy.html">
+</head>
+
+<body>
+
+  <a id="button-pdf" class="button-pdf fa-3x"><i class="fas fa-print" data-fa-transform="shrink-8" data-fa-mask="fas fa-circle"></i></a>
+  <nav class="nav js-nav">
+
+    <header class="nav-header">
+      <img class="nav-header-icon" src="assets/img/finformatika.png"></img>
+      <h1 class="nav-title">Финформатика</h1>
+    </header>
+
+    <div class="nav-item u-category-materials">
+      <h5 class="nav-category">Полезные материалы</h5>
+      <button type="button" id="button-schoolbook" data-section="schoolbook" class="nav-button">Учебное пособие</button>
+      <button type="button" id="button-toolkit" data-section="toolkit" class="nav-button">Методическое пособие для учителей</button>
+      <button type="button" id="button-glossary" data-section="glossary" class="nav-button">Глоссарий по финансовой грамотности</button>
+    </div>
+
+    <div class="nav-item u-category-1">
+      <button type="button" id="button-1-all" data-section="1-all" class="nav-button anti-padding"><h5 class="nav-category">5-6 классы</h5></button>
+      <button type="button" id="button-1-informatsionnyj-poisk-i-analiz-informatsii" data-section="1-informatsionnyj-poisk-i-analiz-informatsii" class="nav-button">Информационный поиск и анализ информации</button>
+      <button type="button" id="button-1-modelirovanie" data-section="1-modelirovanie" class="nav-button">Моделирование</button>
+      <button type="button" id="button-1-programmirovanie" data-section="1-programmirovanie" class="nav-button">Программирование</button>
+      <button type="button" id="button-1-elektronnye-tablitsy" data-section="1-elektronnye-tablitsy" class="nav-button">Электронные таблицы</button>
+    </div>
+
+    <div class="nav-item u-category-2">
+      <button type="button" id="button-2-all" data-section="2-all" class="nav-button anti-padding"><h5 class="nav-category">7-9 классы</h5></button>
+      <button type="button" id="button-2-informatsionnaja-bezopasnost'" data-section="2-informatsionnaja-bezopasnost'" class="nav-button">Информационная безопасность</button>
+      <button type="button" id="button-2-informatsionnyj-poisk-i-analiz-informatsii" data-section="2-informatsionnyj-poisk-i-analiz-informatsii" class="nav-button">Информационный поиск и анализ информации</button>
+      <button type="button" id="button-2-modelirovanie" data-section="2-modelirovanie" class="nav-button">Моделирование</button>
+      <button type="button" id="button-2-programmirovanie" data-section="2-programmirovanie" class="nav-button">Программирование</button>
+      <button type="button" id="button-2-elektronnye-tablitsy" data-section="2-elektronnye-tablitsy" class="nav-button">Электронные таблицы</button>
+    </div>
+
+    <div class="nav-item u-category-3">
+      <button type="button" id="button-3-all" data-section="3-all" class="nav-button anti-padding"><h5 class="nav-category">10-11 классы</h5></button>
+      <button type="button" id="button-3-izmerenie-kolichestva-informatsii" data-section="3-izmerenie-kolichestva-informatsii" class="nav-button">Измерение количества информации</button>
+      <button type="button" id="button-3-informatsionnyj-poisk-i-analiz-informatsii" data-section="3-informatsionnyj-poisk-i-analiz-informatsii" class="nav-button">Информационный поиск и анализ информации</button>
+      <button type="button" id="button-3-modelirovanie" data-section="3-modelirovanie" class="nav-button">Моделирование</button>
+      <button type="button" id="button-3-programmirovanie" data-section="3-programmirovanie" class="nav-button">Программирование</button>
+      <button type="button" id="button-3-elektronnye-tablitsy" data-section="3-elektronnye-tablitsy" class="nav-button">Электронные таблицы</button>
+    </div>
+
+    <footer class="nav-footer">
+      <p>Программа разработана по заказу Министерства финансов Российской Федерации в ходе реализации совместного Проекта Российской
+        Федерации и Международного банка реконструкции и развития «Содействие повышению уровня финансовой грамотности населения
+        и развитию финансового образования в Российской Федерации»</p>
+      <!-- <button type="button" id="button-about" data-modal="about" class="nav-footer-button">About</button> -->
+      <a class="nav-footer-logo" title="Поддержка в Telegram" href="https://t.me/joinchat/FEqCF0opEek5MAQueT1DoA" aria-label="Telegram">
+        <i class="fab fa-3x fa-telegram"></i>
+      </a>
+      <a class="nav-footer-logo" title="Поддержка по E-mail" href="mailto:fingrampakk@gmail.com" aria-label="Email">
+        <i class="fas fa-3x fa-at"></i>
+      </a>
+    </footer>
+  </nav>
+
+  <main class="content js-content"></main>
+
+  <script src="vendor/font-awesome/fontawesome-all.min.js"></script>
+  <script src='vendor/MathJax.js'></script>
+
+  <script>
+    require('./assets/imports')
+    require('./assets/ex-links')
+    require('./assets/nav')
+    require('./assets/demo-btns')
+    require('./renderer-process/logics')
+  </script>
+</body>
+
 </html>

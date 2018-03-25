@@ -1,5 +1,7 @@
 .DS_Store
 
+out/
+
 *.sln
 *.swp
 *.VC.db
@@ -50,6 +52,8 @@ typings/
 *.tgz
 .yarn-integrity
 .env
+generator/ENV
+ENV
 
 .idea
 

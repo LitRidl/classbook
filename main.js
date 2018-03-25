@@ -1,60 +1,119 @@
-const electron = require('electron')
-// Module to control application life.
-const app = electron.app
-// Module to create native browser window.
-const BrowserWindow = electron.BrowserWindow
-
 const path = require('path')
-const url = require('url')
+const glob = require('glob')
+const fs = require('fs')
+const os = require('os')
+const { app, BrowserWindow, ipcMain, shell } = require('electron')
+const autoUpdater = require('./auto-updater')
 
-// Keep a global reference of the window object, if you don't, the window will
-// be closed automatically when the JavaScript object is garbage collected.
-let mainWindow
+const debug = /--debug/.test(process.argv[2])
 
-function createWindow () {
-  // Create the browser window.
-  mainWindow = new BrowserWindow({width: 800, height: 600})
+app.setName('Сборник задач по финансовой грамотности в информатике')
 
-  // and load the index.html of the app.
-  mainWindow.loadURL(url.format({
-    pathname: path.join(__dirname, 'index.html'),
-    protocol: 'file:',
-    slashes: true
-  }))
+let mainWindow = null
 
-  // Open the DevTools.
-  // mainWindow.webContents.openDevTools()
+function initialize() {
+  const shouldQuit = makeSingleInstance()
+  if (shouldQuit) return app.quit()
 
-  // Emitted when the window is closed.
-  mainWindow.on('closed', function () {
-    // Dereference the window object, usually you would store windows
-    // in an array if your app supports multi windows, this is the time
-    // when you should delete the corresponding element.
-    mainWindow = null
+  function createWindow() {
+    const windowOptions = {
+      width: 1920 * 0.7,
+      minWidth: 1080,
+      height: 1030,
+      title: app.getName(),
+      plugins: true,
+      show: false,
+    }
+
+    if (process.platform === 'linux') {
+      windowOptions.icon = path.join(__dirname, '/assets/img/finformatika.png')
+    }
+
+    mainWindow = new BrowserWindow(windowOptions)
+    mainWindow.setMenu(null)
+    mainWindow.loadURL(path.join('file://', __dirname, '/index.html'))
+
+    splash = new BrowserWindow({ width: 1400, height: 1400, transparent: true, frame: false, alwaysOnTop: true });
+    splash.loadURL(`file://${__dirname}/assets/img/cs.svg`);
+
+    mainWindow.once('ready-to-show', () => {
+      splash.destroy()
+      mainWindow.show()
+    })
+
+    // Launch fullscreen with DevTools open, usage: npm run debug
+    if (debug) {
+      mainWindow.webContents.openDevTools()
+      mainWindow.maximize()
+      require('devtron').install()
+    }
+
+    mainWindow.on('closed', () => {
+      mainWindow = null
+    })
+  }
+
+  ipcMain.on('print-to-pdf', (event) => {
+    const pdfPath = path.join(os.tmpdir(), 'fingramotnost_print.pdf')
+    const win = BrowserWindow.fromWebContents(event.sender)
+    win.webContents.printToPDF({}, (error, data) => {
+      if (error) throw error
+      fs.writeFile(pdfPath, data, (error) => {
+        if (error) throw error
+        shell.openExternal(`file://${pdfPath}`)
+      })
+    })
+  })
+
+  app.on('ready', () => {
+    createWindow()
+    autoUpdater.initialize()
+  })
+
+  app.on('window-all-closed', () => {
+    // if (process.platform !== 'darwin') {
+    //   app.quit()
+    // }
+    app.quit()
+  })
+
+  app.on('activate', () => {
+    if (mainWindow === null) {
+      createWindow()
+    }
   })
 }
 
-// This method will be called when Electron has finished
-// initialization and is ready to create browser windows.
-// Some APIs can only be used after this event occurs.
-app.on('ready', createWindow)
+// Make this app a single instance app.
+//
+// The main window will be restored and focused instead of a second window
+// opened when a person attempts to launch a second instance.
+//
+// Returns true if the current version of the app should quit instead of
+// launching.
+function makeSingleInstance() {
+  if (process.mas) return false
 
-// Quit when all windows are closed.
-app.on('window-all-closed', function () {
-  // On OS X it is common for applications and their menu bar
-  // to stay active until the user quits explicitly with Cmd + Q
-  if (process.platform !== 'darwin') {
+  return app.makeSingleInstance(() => {
+    if (mainWindow) {
+      if (mainWindow.isMinimized()) mainWindow.restore()
+      mainWindow.focus()
+    }
+  })
+}
+
+// Handle Squirrel on Windows startup events
+switch (process.argv[1]) {
+  case '--squirrel-install':
+    autoUpdater.createShortcut(() => { app.quit() })
+    break
+  case '--squirrel-uninstall':
+    autoUpdater.removeShortcut(() => { app.quit() })
+    break
+  case '--squirrel-obsolete':
+  case '--squirrel-updated':
     app.quit()
-  }
-})
-
-app.on('activate', function () {
-  // On OS X it's common to re-create a window in the app when the
-  // dock icon is clicked and there are no other windows open.
-  if (mainWindow === null) {
-    createWindow()
-  }
-})
-
-// In this file you can include the rest of your app's specific main process
-// code. You can also put them in separate files and require them here.
+    break
+  default:
+    initialize()
+}

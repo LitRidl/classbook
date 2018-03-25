@@ -1,0 +1,24 @@
+
+/* Custom Properties */
+
+:root {
+  --color:          hsl(0, 0%, 22%);
+  --color-subtle:   hsl(0, 0%, 44%);
+  --color-strong:   hsl(0, 0%, 11%);
+  --color-link:     hsl(0, 0%, 22%);
+
+  --color-border:   hsl(0, 0%, 88%);
+  --color-bg:       hsl(0, 0%, 96%);
+
+  --color-accent:   black; /* Fallback */
+}
+
+
+/* Category Colors */
+
+.u-category-materials { --color-accent: hsl(343, 52%, 49%); }
+
+.u-category-1         { --color-accent: hsl(141, 52%, 39%); }
+.u-category-2         { --color-accent: hsl(225, 44%, 38%); }
+.u-category-3         { --color-accent: hsl( 41, 60%, 54%); }
+.u-category-4         { --color-accent: hsl(  9, 60%, 54%); }
