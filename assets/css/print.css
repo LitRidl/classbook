@@ -2,14 +2,14 @@
   body {
     background: none;
     color: black !important;
-    font-size: 70%;
+    font-size: 100%;
     margin: 0; padding: 0;
   }
 
   h1 {
     font-size: 22px;
   }
-
+  
   .button-pdf {
     display: none;
   }
@@ -23,6 +23,11 @@
     padding: 0 !important;
     margin: 0 !important;
     border: none !important;
+  }
+
+  /* Needed for printing not only first page */
+  .section {
+    overflow: visible !important;
   }
 
   .demo-box {

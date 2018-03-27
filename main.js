@@ -55,7 +55,7 @@ function initialize() {
   ipcMain.on('print-to-pdf', (event) => {
     const pdfPath = path.join(os.tmpdir(), 'fingramotnost_print.pdf')
     const win = BrowserWindow.fromWebContents(event.sender)
-    win.webContents.printToPDF({}, (error, data) => {
+    mainWindow.webContents.printToPDF({ marginsType: 0, pageSize: "A4", landscape: false, printSelectionOnly: false }, (error, data) => {
       if (error) throw error
       fs.writeFile(pdfPath, data, (error) => {
         if (error) throw error

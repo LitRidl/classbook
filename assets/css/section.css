@@ -53,3 +53,9 @@
   vertical-align: middle;
   margin-right: .5em;
 }
+
+.textbook-entry {
+  font-size: 200%;
+  padding-top: 3rem;
+  line-height: 70%;
+}

@@ -118,6 +118,10 @@ if __name__ == '__main__':
         g = glossary.format('\n'.join(glossary_entry_to_html(e) for e in glossary_entries))
         f.write(g)
 
+    textbook = load_template('textbook.html')
+    with open('../sections/materials/textbook.html', 'w') as f:
+        f.write(textbook)
+
     subsection_tpl = load_template('subsection.html')
     for grade_name, g in grades_ordered.items():
         for topic in ['all'] + g['topics_informatics']:
