@@ -17,7 +17,7 @@ function getInstallerConfig () {
   const outPath = path.join(rootPath, 'out')
 
   return Promise.resolve({
-    appDirectory: path.join(outPath, 'Сборник по финансовой грамотности-win32-ia32'),
+    appDirectory: path.join(outPath, 'classbook-win32-ia32'),
     exe: 'classbook.exe',
     iconUrl: path.join(rootPath, 'assets', 'app-icon', 'win', 'app.ico'),
     loadingGif: path.join(rootPath, 'assets', 'img', 'loading.gif'),
