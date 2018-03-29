@@ -23,7 +23,7 @@ function getInstallerConfig () {
     loadingGif: path.join(rootPath, 'assets', 'img', 'installing.gif'),
     noMsi: true,
     outputDirectory: path.join(outPath, 'windows-installer'),
-    setupExe: 'Установить сборник по финграмотности.exe',
+    setupExe: 'finformatika.exe',
     setupIcon: path.join(rootPath, 'assets', 'app-icon', 'win', 'app.ico'),
     skipUpdateIcon: true,
   })
