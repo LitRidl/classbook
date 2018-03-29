@@ -32,8 +32,8 @@ function initialize() {
     mainWindow.setMenu(null)
     mainWindow.loadURL(path.join('file://', __dirname, '/index.html'))
 
-    splash = new BrowserWindow({ width: 1400, height: 1400, transparent: true, frame: false, alwaysOnTop: true });
-    splash.loadURL(`file://${__dirname}/assets/img/cs.svg`);
+    splash = new BrowserWindow({ width: 400, height: 540, transparent: true, frame: false, alwaysOnTop: true });
+    splash.loadURL(`file://${__dirname}/assets/img/loading.svg`);
 
     mainWindow.once('ready-to-show', () => {
       splash.destroy()
