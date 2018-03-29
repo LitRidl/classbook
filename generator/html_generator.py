@@ -18,9 +18,7 @@ def defaultdict_to_dict(d):
 def to_en(t):
     if t == 'all':
         return t
-    return translit(t, reversed=True).replace(' ', '-').strip().lower()
-
-#       <button type="button" id="button-2-all" data-section="2-all" class="nav-button anti-padding button-invisible"><h5 class="nav-category">7-9 классы</h5></button>
+    return translit(t, reversed=True).replace(' ', '-').replace("'", '').strip().lower()
 
 
 def gen_section(grade_name, grade):
@@ -45,7 +43,11 @@ def load_template(path):
 
 
 def filter_questions(questions, filters):
-    return [q for q in questions if all(q[k] == v for k, v in filters.items())]
+    def check(q, k, v):
+        if k == 'grade':
+            return v in q[k]
+        return q[k] == v
+    return [q for q in questions if all(check(q, k, v) for k, v in filters.items())]
 
 
 def question_to_html(q):
@@ -85,9 +87,10 @@ if __name__ == '__main__':
 
     grades = defaultdict(lambda: defaultdict(set))
     for q in questions:
-        grade = q['grade'].replace(' класс', '').strip()
-        grades[grade]['topics_finances'].add(q['topic_finances'])
-        grades[grade]['topics_informatics'].add(q['topic_informatics'])
+        for gr in q['grade']:
+            grade = gr.replace(' класс', '').strip()
+            grades[grade]['topics_finances'].add(q['topic_finances'])
+            grades[grade]['topics_informatics'].add(q['topic_informatics'])
     grades = defaultdict_to_dict(grades)
 
     grades_ordered = OrderedDict()
@@ -114,6 +117,7 @@ if __name__ == '__main__':
 
     glossary_file = 'moodle_data/glossary_data_1.xml'
     glossary_entries = glossary_from_file(glossary_file)
+    glossary_entries.sort(key=lambda k: k['concept'])
     glossary = load_template('glossary.html')
     with open('../sections/materials/glossary.html', 'w') as f:
         g = glossary.format('\n'.join(glossary_entry_to_html(e)

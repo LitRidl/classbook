@@ -18,14 +18,14 @@ function getInstallerConfig () {
 
   return Promise.resolve({
     appDirectory: path.join(outPath, 'Сборник по финансовой грамотности-win32-ia32'),
-    exe: 'Сборник по финансовой грамотности.exe',
+    exe: 'classbook.exe',
     iconUrl: path.join(rootPath, 'assets', 'app-icon', 'win', 'app.ico'),
-    loadingGif: path.join(rootPath, 'assets', 'img', 'cs.gif'),
+    loadingGif: path.join(rootPath, 'assets', 'img', 'loading.gif'),
     noMsi: true,
-    outputDirectory: path.join(outPath, 'windows-installer'),
+    outputDirectory: path.join(outPath, '.'),
     setupExe: 'Установить сборник по финграмотности.exe',
     setupIcon: path.join(rootPath, 'assets', 'app-icon', 'win', 'app.ico'),
-    skipUpdateIcon: true
+    skipUpdateIcon: true,
   })
 }
 

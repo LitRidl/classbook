@@ -1,8 +1,7 @@
 {
   "name": "classbook",
-  "productName": "Сборник по финансовой грамотности",
   "description": "Сборник задач по финансовой грамотности в информатике",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "main.js",
   "private": true,
   "scripts": {

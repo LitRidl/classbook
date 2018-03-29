@@ -54,7 +54,7 @@ def tags_classifier(question, fake_attributes=False):
     ]
 
     attributes = {
-        'grade':             fmt(random.choice(grades)) if fake_attributes else None,
+        'grade':             [fmt(random.choice(grades))] if fake_attributes else [],
         'difficulty':        fmt(random.choice(difficulties)) if fake_attributes else None,
         'topic_finances':    fmt(random.choice(topics_finances)) if fake_attributes else None,
         'topic_informatics': fmt(random.choice(topics_informatics)) if fake_attributes else None,
@@ -63,8 +63,9 @@ def tags_classifier(question, fake_attributes=False):
 
     for tag in tags:
         if tag in grades:
-            attributes['grade'] = fmt(tag)
-            attributes['_fake_attributes'].remove('grade')
+            attributes['grade'].append(fmt(tag))
+            if 'grade' in attributes['_fake_attributes']:
+                attributes['_fake_attributes'].remove('grade')
         elif tag in difficulties:
             attributes['difficulty'] = fmt(tag)
             attributes['_fake_attributes'].remove('difficulty')
