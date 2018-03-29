@@ -6,63 +6,73 @@ from collections import OrderedDict
 import sys
 
 
+def fmt(tag):
+    if 'Кл: ' in tag:
+        tag += ' класс'
+    if 'Ур: ' in tag:
+        tag += ' уровень'
+    return (tag
+            .replace('Кл: ', '')
+            .replace('Ур: ', '')
+            .replace('Фин: ', '')
+            .replace('Инф: ', ''))
+
+
 def tags_classifier(question, fake_attributes=False):
     tags = question['_tags']
     grades = [
-        '5-6 класс',
-        '7-9 класс',
-        '10-11 класс',
+        'Кл: 5-6',
+        'Кл: 7-9',
+        'Кл: 10-11',
     ]
     difficulties = [
-        'Базовый уровень',
-        'Повышенный уровень',
-        'Высокий уровень',
+        'Ур: Базовый',
+        'Ур: Повышенный',
+        'Ур: Высокий',
     ]
     topics_finances = [
-        'Бюджет',
-        'Доходы',
-        'Игры с денежными ставками',
-        'Кредиты и займы',
-        'Платежи и расчёты',
-        'Потребности и расходы',
-        'Расходы',
-        'Расчёты',
-        'Риски и финансовая безопасность',
-        'Сбережения и инвестиции',
-        'Семейный бюджет',
-        'Страхование',
+        'Фин: Доходы',
+        'Фин: Кредиты и займы',
+        'Фин: Налоги',
+        'Фин: Платежи и расчёты',
+        'Фин: Потребности и расходы',
+        'Фин: Расходы',
+        'Фин: Риски и финансовая безопасность',
+        'Фин: Сбережения и инвестиции',
+        'Фин: Семейный бюджет',
+        'Фин: Страхование',
     ]
     topics_informatics = [
-        'Измерение количества информации',
-        'Информационная безопасность',
-        'Информационный поиск и анализ информации',
-        'Использование программных систем и информационных сервисов',
-        'Моделирование',
-        'Мультимедиа',
-        'Программирование',
-        'Электронные таблицы',
+        'Инф: Измерение количества информации',
+        'Инф: Информационная безопасность',
+        'Инф: Информационный поиск и анализ информации',
+        'Инф: Моделирование',
+        'Инф: Мультимедиа',
+        'Инф: Программирование',
+        'Инф: Программные и информационные системы',
+        'Инф: Электронные таблицы',
     ]
 
     attributes = {
-        'grade':             random.choice(grades) if fake_attributes else None,
-        'difficulty':        random.choice(difficulties) if fake_attributes else None,
-        'topic_finances':    random.choice(topics_finances) if fake_attributes else None,
-        'topic_informatics': random.choice(topics_informatics) if fake_attributes else None,
+        'grade':             fmt(random.choice(grades)) if fake_attributes else None,
+        'difficulty':        fmt(random.choice(difficulties)) if fake_attributes else None,
+        'topic_finances':    fmt(random.choice(topics_finances)) if fake_attributes else None,
+        'topic_informatics': fmt(random.choice(topics_informatics)) if fake_attributes else None,
         '_fake_attributes':  ['grade', 'difficulty', 'topic_finances', 'topic_informatics']
     }
 
     for tag in tags:
         if tag in grades:
-            attributes['grade'] = tag
+            attributes['grade'] = fmt(tag)
             attributes['_fake_attributes'].remove('grade')
         elif tag in difficulties:
-            attributes['difficulty'] = tag
+            attributes['difficulty'] = fmt(tag)
             attributes['_fake_attributes'].remove('difficulty')
         elif tag in topics_finances:
-            attributes['topic_finances'] = tag
+            attributes['topic_finances'] = fmt(tag)
             attributes['_fake_attributes'].remove('topic_finances')
         elif tag in topics_informatics:
-            attributes['topic_informatics'] = tag
+            attributes['topic_informatics'] = fmt(tag)
             attributes['_fake_attributes'].remove('topic_informatics')
 
     if not fake_attributes:
@@ -76,7 +86,7 @@ def tags_classifier(question, fake_attributes=False):
 
 def parse_question(q, _id=None):
     question = {
-        'name': q.find('name').text.strip(),
+        'name': q.find('name').text.strip()[7:].strip(),
         'text': html.unescape(q.find('questiontext').find('text')
                               .prettify(formatter='xml').strip()
                               .lstrip('<text>').rstrip('</text>').strip()),
@@ -88,7 +98,48 @@ def parse_question(q, _id=None):
     return question
 
 
+links_dict = {
+    'https://1drv.ms/x/s!AkwppQEzBB-Yi3LqyPZ0Z2BQmju9': 'Энергопотребление бытовых приборов.xlsx',
+    'https://1drv.ms/x/s!AkwppQEzBB-Yi3MeyO-YKsZ5iUrC': 'Тесто для пиццы.xlsx',
+    'https://1drv.ms/x/s!AkwppQEzBB-Yi3QlRj2rMgZ2HEp1': 'Изменение цен на смартфон.xlsx',
+    'https://1drv.ms/t/s!AkwppQEzBB-Yi3U-vbgkBZSwW0qX': 'Покупка гречки.txt',
+    'https://1drv.ms/x/s!AkwppQEzBB-Yi3Zn97c2fOh1R9Vv': 'Цвет и цена мобильного.xlsx',
+    'https://1drv.ms/x/s!AkwppQEzBB-Yi3fD_QnLtW0sOwPP': 'Кэшбэк по банковской карте.xlsx',
+    'https://1drv.ms/x/s!AkwppQEzBB-Yi3gmwz48_DiT1f20': 'Поездка Москва-СПб.xlsx',
+    'https://1drv.ms/x/s!AkwppQEzBB-Yi3lwM9b5IziSabwb': 'Поездка в отпуск.xlsx',
+    'https://1drv.ms/x/s!AkwppQEzBB-Yi3rVrqN0UkDTKCM4': 'Покупка подержанного автомобиля.xlsx',
+    'https://1drv.ms/x/s!AkwppQEzBB-Yi3veWX7YSmm-AsPn': 'Цена поездки на такси.xlsx',
+    'https://1drv.ms/x/s!AkwppQEzBB-Yi3ww8Z4VhRLLo2vx': 'Салон красоты.xlsx',
+    'https://1drv.ms/x/s!AkwppQEzBB-Yi37qmEITegev1co6': 'Налог на имущество.xlsx',
+    'https://1drv.ms/x/s!AkwppQEzBB-Yi31STRw4W97_Vw16': 'Подоходный налог группы сотрудников.xlsx',
+    'https://1drv.ms/x/s!AkwppQEzBB-Yi38DvKbGd-_1j1X6': 'Анализ бюджета семьи.xlsx',
+    'https://1drv.ms/x/s!AkwppQEzBB-YjAAQSlWGOZzWx98G': 'Оценка возможностей семейного бюджета на год.xlsx',
+    'https://1drv.ms/x/s!AkwppQEzBB-YjAHnJSTqRHKmvTi5': 'Оценка возможностей семейного бюджета на 10 лет.xlsx',
+    'https://1drv.ms/x/s!AkwppQEzBB-YjAToanPYNUGTJYxj': 'Прогноз бюджета по отдельным данным.xlsx',
+    'https://1drv.ms/x/s!AkwppQEzBB-YjAKi1W_bjwbH_St1': 'Устранение кассовых разрывов без использования заемных средств.xlsx',
+    'https://1drv.ms/x/s!AkwppQEzBB-YjANfNHRSB5fmY0Bh': 'Устранение кассовых разрывов с использованием заемных средств.xlsx',
+    'https://1drv.ms/x/s!AkwppQEzBB-YjAXyvOcm0bTIHynH': 'Ставки по депозиту в рублях и долларах.xlsx',
+    'https://1drv.ms/x/s!AkwppQEzBB-YjAZrWqIKDrFDR2nu': 'Вложения в акции.xlsx',
+    'https://1drv.ms/x/s!AkwppQEzBB-YjAlPE6bX2pcu4ur8': 'Доходность по акциям.xlsx',
+    'https://1drv.ms/x/s!AkwppQEzBB-YjAcByU2MRGrR2ZXv': 'Доход от инвестиций.xlsx',
+    'https://1drv.ms/x/s!AkwppQEzBB-YjAig3acx222V2pJf': 'Инвестиции в валюту.xlsx',
+    'https://1drv.ms/x/s!AkwppQEzBB-YjAuJrBNeaZVROkyi': 'Стоимость БигМака.xlsx',
+    'https://1drv.ms/x/s!AkwppQEzBB-YjAqX7mhze_7OjFqp': 'Динамика валютного курса.xlsx',
+    'https://1drv.ms/x/s!AkwppQEzBB-YjAzekhJpNMX0HP32': 'Условия микрокредита.xlsx',
+    'https://1drv.ms/x/s!AkwppQEzBB-YjA2oYKsitj8wWRCj': 'Пользование кредитной картой.xlsx',
+    'https://1drv.ms/x/s!AkwppQEzBB-YjBE0ijXL6iNj0Byt': 'Накопительное страхование на дожитие.xlsx',
+    'https://1drv.ms/x/s!AkwppQEzBB-YjA5-9k4hrYGM5ycZ': 'Калькулятор ОСАГО.xlsx',
+    'https://1drv.ms/x/s!AkwppQEzBB-YjBIMAxHCHMY_oAI9': 'Коэффициент бонус-малус.xlsx',
+    'https://1drv.ms/x/s!AkwppQEzBB-YjA9RiTz8ylRbyO_e': 'Проверяем по таблице.xlsx'
+}
+
+
 def parse_questions(xml):
+    for link, fname in links_dict.items():
+        new_link = 'assets/finformatika.ru/attachments/{}'.format(fname)
+        xml = xml.replace(link, new_link)
+    xml = xml.replace('src="http://finformatika.ru/images/', 'src="/images/')
+    xml = xml.replace('src="/images/', 'src="assets/finformatika.ru/images/')
     soup = BeautifulSoup(xml, 'xml')
 
     soup_comments = [c.strip()for c in soup.findAll(text=lambda text: isinstance(text, Comment))

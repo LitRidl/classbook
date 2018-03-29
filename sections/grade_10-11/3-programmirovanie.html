@@ -10,11 +10,69 @@
 
         <div class="demo">
             <div class="demo-wrapper">
+                <button id="new-window-hangs-demo-toggle" class="js-container-target demo-toggle-button">Поездка на такси: универсальный калькулятор стоимости поездки
+                    <div class="demo-meta u-avoid-clicks"> Сложность: повышенная
+                        <span class="demo-meta-divider">|</span> Тема: Расходы</div>
+                </button>
+                <div class="demo-box"><p></p><p>У каждой такси-компании есть своё название и тариф. </p>
+
+<p>Напишите программу, помогающую пользователю определиться с
+выбором компании. На вход программе подаются в первой строке 3 целых числа <span lang="EN-US">s</span>, <span lang="EN-US">t</span> и <span lang="EN-US">n</span>, соответствующие протяженности маршрута в километрах,
+продолжительности маршрута в минутах и количеству рассматриваемых компаний.
+Далее для каждой из компании в отдельной строке записывается название
+(состоящее из одного слова) <!--[if !msEquation]-->\( {name}_i \)<!--[endif]-->.
+И в следующей строке 5 целых чисел <!--[if !msEquation]-->\( c_i \)<!--[endif]-->,
+<!--[if !msEquation]-->\( {fs}_i \)<!--[endif]-->,
+<!--[if !msEquation]-->\( {ft}_i \)<!--[endif]-->,
+<!--[if !msEquation]-->\( {ps}_i \)<!--[endif]-->&nbsp;<!--[if !msEquation]-->\( {pt}_i \)<!--[endif]-->,
+соответствующих стоимости подачи автомобиля, количеству включенных в стоимость
+подачи километров, количеству включенных в стоимость подачи минут, цене одного
+километра пути в рублях и цене одной минуты поездки в рублях для
+соответствующей компании. Выведите в отдельной строке название компании с самым
+выгодным для заданной поездки тарифом и в новой строке итоговую стоимость
+поездки в рублях. </p>
+
+<p class="desktop-hidden">Прикрепите файл с вашим решением (если файлов несколько, прикрепите zip-архив с этими файлами).</p></div>
+            </div>
+        </div>
+
+        <div class="demo">
+            <div class="demo-wrapper">
+                <button id="new-window-hangs-demo-toggle" class="js-container-target demo-toggle-button">Поездка на такси: выбрать маршрут
+                    <div class="demo-meta u-avoid-clicks"> Сложность: высокая
+                        <span class="demo-meta-divider">|</span> Тема: Расходы</div>
+                </button>
+                <div class="demo-box"><p>Не всегда получается вызвать такси заранее. В таком случае
+альтернатив становится мало и приходится вызывать такси, которое быстрее всего
+приедет. При посадке в такси всегда можно поинтересоваться тарифом и возможными
+маршрутами, по одному из которых таксист планирует следовать. Современные
+технологии ещё позволяют прогнозировать продолжительность поездки по заданному
+маршруту. Напишите программу, позволяющую пассажиру оперативно выбрать наиболее
+дешёвый маршрут следования. </p>
+
+<p>Программа принимает на вход в первой строке 5 целых чисел: <i><span lang="EN-US">c</span>, </i><i><span lang="EN-US">fs</span>, </i><i><span lang="EN-US">ft</span>, </i><i><span lang="EN-US">ps</span>, </i><i><span lang="EN-US">pt</span></i>, соответствующие стоимости
+посадки в такси, количеству бесплатных километров, количеству бесплатных минут,
+стоимости одного километра и стоимости одной минуты для выбранного такси. Во
+второй строке число <span lang="EN-US">n</span>,
+соответствующее количеству предлагаемых маршрутов. Далее в <span lang="EN-US">n</span> строках целые числа <!--[if !msEquation]-->\( s_i \)<!--[endif]-->&nbsp;и <!--[if !msEquation]-->\( t_i \)<!--[endif]-->&nbsp;– длина <span lang="EN-US">i</span>-го маршрута в километрах и продолжительность поездки в минутах.
+</p>
+
+<p>Выведите через пробел номер маршрута (считаем, что маршруты
+нумеруются с 1), стоимость которого будет наименьшей и значение стоимости
+данной поездки. Если маршрутов с минимальной стоимостью несколько, выберите
+менее продолжительный. Если и таких маршрутов тоже несколько, выберите тот,
+индекс которого наименьший.</p>
+<p class="desktop-hidden">Прикрепите файл с вашим решением (если файлов несколько, прикрепите zip-архив с этими файлами).</p></div>
+            </div>
+        </div>
+
+        <div class="demo">
+            <div class="demo-wrapper">
                 <button id="new-window-hangs-demo-toggle" class="js-container-target demo-toggle-button">Доставка песка самосвалами и рабочими
                     <div class="demo-meta u-avoid-clicks"> Сложность: высокая
                         <span class="demo-meta-divider">|</span> Тема: Расходы</div>
                 </button>
-                <div class="demo-box"><p></p><p></p><p></p><p>Иван Сергеевич заказывает песок для строительства дома. Поставщик
+                <div class="demo-box"><p>Иван Сергеевич заказывает песок для строительства дома. Поставщик
 песка предлагает два варианта доставки: большими и маленькими самосвалами. Цена
 доставки устанавливается за один рейс самосвала и не зависит от количества
 перевозимого песка.</p>
@@ -86,7 +144,247 @@
 
 <p>Найдите минимальную стоимость приобретения и доставки песка
 (в рублях), если для строительства дома Ивану Сергеевичу нужно купить и
-доставить на строительную площадку 45 куб.&nbsp;м песка; 95 куб.&nbsp;м песка?</p><p></p><p>Сохраните ваше решение в виде файла на любом файлообменнике и вставьте ссылку на него в поле для ответа.<br></p></div>
+доставить на строительную площадку 45 куб.&nbsp;м песка; 95 куб.&nbsp;м песка?</p>
+
+<p class="desktop-hidden">По указанию учителя прикрепите файл с вашим решением или вставьте ссылку на решение в онлайн-таблицах (OneDrive или Google Docs) с доступом на просмотр.</p></div>
+            </div>
+        </div>
+
+        <div class="demo">
+            <div class="demo-wrapper">
+                <button id="new-window-hangs-demo-toggle" class="js-container-target demo-toggle-button">Ранжирование тарифных планов
+                    <div class="demo-meta u-avoid-clicks"> Сложность: высокая
+                        <span class="demo-meta-divider">|</span> Тема: Расходы</div>
+                </button>
+                <div class="demo-box"><p>Виктор исследует тарифы интернета для нового планшета.
+Каждый тариф характеризуется ежемесячной абонентской платой в рублях <span lang="EN-US">A</span>, пакетом трафика в
+гигабайтах T, включенных в абонентскую плату (в случае отсутствия абонентской
+платы данный параметр также вводится равным 0, неизрасходованные мегабайты на
+следующий месяц не переносятся), стоимостью 1 МБ сверх трафика S, включённого в
+абонентскую плату. </p>
+
+<p>По опыту пользования друзей мобильным интернетом, Виктор
+планирует расходовать некоторое количество Мб трафика в месяц, равное <span lang="EN-US">V</span>.</p>
+
+<p>Составьте программу, принимающую на вход в первой строке
+количество тарифных планов K и планируемый расход V, и далее в K строках
+название N, характеристики A, T, S для каждого из тарифов. </p>
+
+<p>Выведите список всех тарифных планов и соответствующих
+расчетных стоимостей в порядке убывания расчетной стоимости.</p>
+
+<p class="desktop-hidden">Прикрепите файл с вашим решением (если файлов несколько, прикрепите zip-архив с этими файлами).</p></div>
+            </div>
+        </div>
+
+        <div class="demo">
+            <div class="demo-wrapper">
+                <button id="new-window-hangs-demo-toggle" class="js-container-target demo-toggle-button">Выбор оператора мобильной связи
+                    <div class="demo-meta u-avoid-clicks"> Сложность: повышенная
+                        <span class="demo-meta-divider">|</span> Тема: Расходы</div>
+                </button>
+                <div class="demo-box"><p>По наиболее крупным операторам мобильной связи вашего
+региона из доступных открытых источников информации соберите и формализуйте в
+виде базы данных следующую информацию по предлагаемым тарифам на мобильную
+связь:</p>
+
+<p></p><ul><li>Наименование оператора сотовой связи<br></li><li>Наименование тарифа<br></li><li>Стоимость тарифа<br></li><li>Пакет услуг, включаемых в тариф с указанием
+количества предоставляемых услуг.<br></li><li>Стоимость услуг оператора, не включенных в тариф<br></li><li>Условия роуминга по России<br></li></ul>
+
+<p>Перечень услуг, включаемых в базу данных, определите
+самостоятельно, но желательно, чтобы он был максимально полным. Обязательно
+должны присутствовать следующие услуги: </p>
+
+<p></p><ul><li>количество включенных в тариф минут, стоимость
+звонков на номера домашнего региона;<br></li><li>количество включенных в тариф <span lang="EN-US">SMS</span> и их стоимость сверх тарифа;<br></li><li>объем включенного в тариф интернет-трафика,
+стоимость интернет-трафика сверх тарифа.&nbsp;</li></ul><p></p>
+
+<p><!--[if !supportLists]-->1.&nbsp;&nbsp;&nbsp;&nbsp;
+<!--[endif]-->Соберите данные в электронную таблицу.</p>
+
+<p><!--[if !supportLists]-->2.&nbsp; &nbsp; &nbsp;Используя изучаемый язык программирования, напишите программу, которая для желаемого набора и количества получаемых услуг из собранной базы данных вычисляла ежемесячную стоимость услуг связи и выбирала бы наиболее подходящие тарифы операторов мобильной связи для звонков внутри домашней сети.</p>
+
+<p class="desktop-hidden">По указанию учителя прикрепите файл с вашим решением или вставьте ссылку на решение в онлайн-таблицах (OneDrive или Google Docs) с доступом на просмотр.</p></div>
+            </div>
+        </div>
+
+        <div class="demo">
+            <div class="demo-wrapper">
+                <button id="new-window-hangs-demo-toggle" class="js-container-target demo-toggle-button">Сколько можно купить сырков
+                    <div class="demo-meta u-avoid-clicks"> Сложность: повышенная
+                        <span class="demo-meta-divider">|</span> Тема: Расходы</div>
+                </button>
+                <div class="demo-box"><p>Сырок стоит х<!--[if !msEquation]-->
+рублей. Сырки
+продаются упаковками по m<!--[if !msEquation]-->
+и n<!--[if !msEquation]-->
+ 
+<!--[endif]-->&nbsp;штук. </p>
+
+<p>Напишите программу, которая получает на вход четыре целых
+числа: стоимость одного сырка, количество сырков в упаковке каждого вида
+соответственно <span lang="EN-US">m</span><span lang="EN-US"> </span>штук и <span lang="EN-US">n</span><span lang="EN-US"> </span>штук и имеющееся количество денег на покупку сырков.
+Программа должна вывести, сколько сырков (в зависимости от упаковки<!--[if !msEquation]-->&nbsp;m<!--[endif]-->&nbsp;и n<!--[if !msEquation]-->
+ 
+<!--[endif]-->) можно купить при заданной цене сырка x<!--[if !msEquation]-->
+и
+располагаемой сумме денег y для вариантов, указанных в таблице.</p><p></p><table border="1" cellspacing="0" cellpadding="0">
+ <tbody><tr>
+  <td width="64" valign="top">
+  <p align="center">Вариант</p>
+  </td>
+  <td width="87" valign="top">
+  <p align="center">Цена сырка x, руб.<!--[endif]--></p>
+  </td>
+  <td width="102" valign="top">
+  <p align="center">Сумма имеющихся денег y, руб.</p>
+  </td>
+  <td width="109" valign="top">
+  <p align="center">Количество сырков в упаковке m, шт.</p>
+  </td>
+  <td width="106" valign="top">
+  <p align="center">Количество сырков в упаковке n, шт.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width="64" valign="top">
+  <p align="right">1</p>
+  </td>
+  <td width="87" valign="top">
+  <p align="right">17,5</p>
+  </td>
+  <td width="102" valign="top">
+  <p align="right">270</p>
+  </td>
+  <td width="109" valign="top">
+  <p align="right">4</p>
+  </td>
+  <td width="106" valign="top">
+  <p align="right">6</p>
+  </td>
+ </tr>
+ <tr>
+  <td width="64" valign="top">
+  <p align="right">2</p>
+  </td>
+  <td width="87" valign="top">
+  <p align="right">19</p>
+  </td>
+  <td width="102" valign="top">
+  <p align="right">270</p>
+  </td>
+  <td width="109" valign="top">
+  <p align="right">4</p>
+  </td>
+  <td width="106" valign="top">
+  <p align="right">6</p>
+  </td>
+ </tr>
+ <tr>
+  <td width="64" valign="top">
+  <p align="right">3</p>
+  </td>
+  <td width="87" valign="top">
+  <p align="right">21</p>
+  </td>
+  <td width="102" valign="top">
+  <p align="right">330</p>
+  </td>
+  <td width="109" valign="top">
+  <p align="right">6</p>
+  </td>
+  <td width="106" valign="top">
+  <p align="right">8</p>
+  </td>
+ </tr>
+</tbody></table>
+<p class="desktop-hidden">По указанию учителя прикрепите файл с вашим решением или вставьте ссылку на решение в онлайн-таблицах (OneDrive или Google Docs) с доступом на просмотр.</p></div>
+            </div>
+        </div>
+
+        <div class="demo">
+            <div class="demo-wrapper">
+                <button id="new-window-hangs-demo-toggle" class="js-container-target demo-toggle-button">Покупка гречки
+                    <div class="demo-meta u-avoid-clicks"> Сложность: высокая
+                        <span class="demo-meta-divider">|</span> Тема: Расходы</div>
+                </button>
+                <div class="demo-box"><p>Мама дала Коле <span lang="EN-US">S</span>&nbsp;рублей и попросила купить гречневую крупу. В магазине Коля
+обнаружил гречку 4&nbsp;производителей в упаковках разного веса и по
+разным ценам:</p>
+
+<table border="1" cellspacing="0" cellpadding="0" width="467">
+ <tbody><tr>
+  <td width="99" valign="top">
+  <p align="center">Производитель</p>
+  </td>
+  <td width="177" valign="top">
+  <p align="center">Вес упаковки, г</p>
+  </td>
+  <td width="191" valign="top">
+  <p align="center">Цена за упаковку,
+  руб.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width="99" valign="top">
+  <p align="right">К</p>
+  </td>
+  <td width="177" valign="top">
+  <p align="right">800</p>
+  </td>
+  <td width="191" valign="top">
+  <p align="right">56</p>
+  </td>
+ </tr>
+ <tr>
+  <td width="99" valign="top">
+  <p align="right">Л</p>
+  </td>
+  <td width="177" valign="top">
+  <p align="right">900</p>
+  </td>
+  <td width="191" valign="top">
+  <p align="right">59</p>
+  </td>
+ </tr>
+ <tr>
+  <td width="99" valign="top">
+  <p align="right">М</p>
+  </td>
+  <td width="177" valign="top">
+  <p align="right">950</p>
+  </td>
+  <td width="191" valign="top">
+  <p align="right">65</p>
+  </td>
+ </tr>
+ <tr>
+  <td width="99" valign="top">
+  <p align="right">Н</p>
+  </td>
+  <td width="177" valign="top">
+  <p align="right">1000</p>
+  </td>
+  <td width="191" valign="top">
+  <p align="right">80</p>
+  </td>
+ </tr>
+</tbody></table>
+
+<p>Предположим, что качество продукта у всех представленных
+производителей одинаково.</p>
+
+<p>Какое максимальное количество гречки (в килограммах) сможет
+купить Коля и сколько (в рублях) заплатит за покупку?</p>
+
+<p>Для решения задачи напишите программу, считывающую из файла
+построчно для каждого производителя гречки название производителя, массу нетто
+и цену упаковки и выводящую максимально возможное количество купленной гречки.
+Название каждого производителя – одно слово, масса – целое число грамм, цена –
+целое число рублей. В самом начале файла указана сумма в рублях, которая есть у
+Коли (<a href="assets/finformatika.ru/attachments/Покупка гречки.txt" target="_blank">Пример файла</a>).</p>
+
+<p class="desktop-hidden">Прикрепите файл с вашим решением (если файлов несколько, прикрепите zip-архив с этими файлами).</p></div>
             </div>
         </div>
 
@@ -96,9 +394,10 @@
                     <div class="demo-meta u-avoid-clicks"> Сложность: высокая
                         <span class="demo-meta-divider">|</span> Тема: Расходы</div>
                 </button>
-                <div class="demo-box"><p></p><p></p><p></p><p>Для обработки земли
-дачнику необходимо приобрести лопату, тяпку, вилы и грабли. В магазине эти инструменты
-можно купить по отдельности или наборами. Цены приведены в&nbsp;таблице.</p>
+                <div class="demo-box"><p>Для обработки земли дачнику необходимо приобрести лопату,
+тяпку, вилы и грабли. В магазине эти инструменты можно купить по отдельности
+или наборами. Примеры товаров приведены в&nbsp;таблице. Считаем, что все
+представленные инструменты идентичны по свойствам.</p><p></p>
 
 <table border="1" cellspacing="0" cellpadding="0" width="97%">
  <tbody><tr>
@@ -180,470 +479,10 @@
  </tr>
 </tbody></table>
 
-<p align="left">Используя изучаемый язык программирования
-напишите программу для определения комплекта товаров, содержащего не менее
-одного вида каждого инструмента, так, чтобы суммарная стоимость покупки была
-наименьшей. Программа на вход получает наборы из 6 чисел: номер товара,
-количество лопат, количество вил, количество граблей, количество тяпок в
-товаре, стоимость товара. Если какого-то товара в наборе нет, указывается 0. В
-ответе укажите номера товаров, которые войдут в комплект.</p><p align="left"><p align="left">* Посчитайте сколько комплектов товаров нужно
-сравнить, если решать задачу методом простого перебора (обратите внимание, что
-комплекты могут состоять как из всех 6 товаров, так и из меньшего числа)? </p>
+<p align="left">1. Посчитайте, сколько комплектов товаров нужно сравнить, если решать задачу методом простого перебора (обратите внимание, что комплекты могут состоять как из всех 6 товаров, так и из меньшего числа)?&nbsp;</p><p align="left">2. Используя изучаемый язык программирования, напишите программу, которая анализирует товары магазина и рекомендует список товаров, содержащий не менее одного вида каждого инструмента, так, чтобы суммарная стоимость покупки была наименьшей. Программа на вход получает количество товаров N (0≤N≤1000), каждый из которых характеризуется 6 целочисленными параметрами: номер товара id (0≤id≤10000000), количество лопат L (0≤L≤10), количество вил V (0≤V≤10), количество граблей G (0≤G≤10), количество тяпок в товаре T (0≤T≤10), стоимость товара P (1≤P≤10000). Если какого-то товара в наборе нет, указывается 0. Программа должна выводить в первой строке номера товаров, которые войдут в список, во второй – минимальная сумма. Если списков, соответствующих минимальной сумме, несколько, выведите любой из них.</p>
 
-<p>* Внимательно изучите представленный набор товаров
-и сократите число вариантов перебора, сколько комплектов в этом случае нужно
-сравнить?</p></p><p>Сохраните ваше решение в виде файла на любом файлообменнике и вставьте ссылку на него в поле для ответа.<br></p></div>
-            </div>
-        </div>
-
-        <div class="demo">
-            <div class="demo-wrapper">
-                <button id="new-window-hangs-demo-toggle" class="js-container-target demo-toggle-button">Коэффициент "бонус-малус"
-                    <div class="demo-meta u-avoid-clicks"> Сложность: базовая
-                        <span class="demo-meta-divider">|</span> Тема: Страхование</div>
-                </button>
-                <div class="demo-box"><p></p><p>При заключении
-договора обязательного страхования гражданской ответственности владельцев
-транспортных средств (ОСАГО) страховая компания для определения стоимости
-страховки&nbsp;применяет коэффициент «бонус-малус» (КБМ)&nbsp;– коэффициент,
-влияющий на стоимость полиса (повышающий или понижающий) в зависимости от
-аварийности в предыдущие периоды.</p>
-
-<p>На сегодняшний день
-установлено 15 классов страхования водителей, предусматривающих применение
-соответствующих коэффициентов:</p>
-
-<table border="0" cellspacing="3" cellpadding="0" width="100%">
- <tbody><tr>
-  <td width="0" rowspan="2">
-  <p align="center"><b>Класс на начало годового
-  срока страхования</b></p>
-  </td>
-  <td width="0" rowspan="2">
-  <p align="center"><b>Коэффициент</b></p>
-  </td>
-  <td width="0" colspan="5">
-  <p align="center"><b>Класс по окончании
-  годового срока страхования с учетом наличия страховых случаев, произошедших в
-  период действия предыдущих договоров обязательного страхования</b></p>
-  </td>
- </tr>
- <tr>
-  <td width="0">
-  <p align="center">0<br>
-  страховых выплат</p>
-  </td>
-  <td width="0">
-  <p align="center">1<br>
-  страховая выплата</p>
-  </td>
-  <td width="0">
-  <p align="center">2<br>
-  страховые выплаты</p>
-  </td>
-  <td width="0">
-  <p align="center">3<br>
-  страховые выплаты</p>
-  </td>
-  <td width="0">
-  <p align="center">4 и более<br>
-  страховых выплат</p>
-  </td>
- </tr>
- <tr>
-  <td width="0" valign="top">
-  <p align="center">М</p>
-  </td>
-  <td width="0" valign="top">
-  <p align="center">2,45</p>
-  </td>
-  <td width="0" valign="top">
-  <p align="center">0</p>
-  </td>
-  <td width="0" valign="top">
-  <p align="center">М</p>
-  </td>
-  <td width="0" valign="top">
-  <p align="center">М</p>
-  </td>
-  <td width="0" valign="top">
-  <p align="center">М</p>
-  </td>
-  <td width="0" valign="top">
-  <p align="center">М</p>
-  </td>
- </tr>
- <tr>
-  <td width="0" valign="top">
-  <p align="center">0</p>
-  </td>
-  <td width="0" valign="top">
-  <p align="center">2,3</p>
-  </td>
-  <td width="0" valign="top">
-  <p align="center">1</p>
-  </td>
-  <td width="0" valign="top">
-  <p align="center">М</p>
-  </td>
-  <td width="0" valign="top">
-  <p align="center">М</p>
-  </td>
-  <td width="0" valign="top">
-  <p align="center">М</p>
-  </td>
-  <td width="0" valign="top">
-  <p align="center">М</p>
-  </td>
- </tr>
- <tr>
-  <td width="0" valign="top">
-  <p align="center">1</p>
-  </td>
-  <td width="0" valign="top">
-  <p align="center">1,55</p>
-  </td>
-  <td width="0" valign="top">
-  <p align="center">2</p>
-  </td>
-  <td width="0" valign="top">
-  <p align="center">М</p>
-  </td>
-  <td width="0" valign="top">
-  <p align="center">М</p>
-  </td>
-  <td width="0" valign="top">
-  <p align="center">М</p>
-  </td>
-  <td width="0" valign="top">
-  <p align="center">М</p>
-  </td>
- </tr>
- <tr>
-  <td width="0" valign="top">
-  <p align="center">2</p>
-  </td>
-  <td width="0" valign="top">
-  <p align="center">1,4</p>
-  </td>
-  <td width="0" valign="top">
-  <p align="center">3</p>
-  </td>
-  <td width="0" valign="top">
-  <p align="center">1</p>
-  </td>
-  <td width="0" valign="top">
-  <p align="center">М</p>
-  </td>
-  <td width="0" valign="top">
-  <p align="center">М</p>
-  </td>
-  <td width="0" valign="top">
-  <p align="center">М</p>
-  </td>
- </tr>
- <tr>
-  <td width="0" valign="top">
-  <p align="center">3</p>
-  </td>
-  <td width="0" valign="top">
-  <p align="center">1</p>
-  </td>
-  <td width="0" valign="top">
-  <p align="center">4</p>
-  </td>
-  <td width="0" valign="top">
-  <p align="center">1</p>
-  </td>
-  <td width="0" valign="top">
-  <p align="center">М</p>
-  </td>
-  <td width="0" valign="top">
-  <p align="center">М</p>
-  </td>
-  <td width="0" valign="top">
-  <p align="center">М</p>
-  </td>
- </tr>
- <tr>
-  <td width="0" valign="top">
-  <p align="center">4</p>
-  </td>
-  <td width="0" valign="top">
-  <p align="center">0,95</p>
-  </td>
-  <td width="0" valign="top">
-  <p align="center">5</p>
-  </td>
-  <td width="0" valign="top">
-  <p align="center">2</p>
-  </td>
-  <td width="0" valign="top">
-  <p align="center">1</p>
-  </td>
-  <td width="0" valign="top">
-  <p align="center">М</p>
-  </td>
-  <td width="0" valign="top">
-  <p align="center">М</p>
-  </td>
- </tr>
- <tr>
-  <td width="0" valign="top">
-  <p align="center">5</p>
-  </td>
-  <td width="0" valign="top">
-  <p align="center">0,9</p>
-  </td>
-  <td width="0" valign="top">
-  <p align="center">6</p>
-  </td>
-  <td width="0" valign="top">
-  <p align="center">3</p>
-  </td>
-  <td width="0" valign="top">
-  <p align="center">1</p>
-  </td>
-  <td width="0" valign="top">
-  <p align="center">М</p>
-  </td>
-  <td width="0" valign="top">
-  <p align="center">М</p>
-  </td>
- </tr>
- <tr>
-  <td width="0" valign="top">
-  <p align="center">6</p>
-  </td>
-  <td width="0" valign="top">
-  <p align="center">0,85</p>
-  </td>
-  <td width="0" valign="top">
-  <p align="center">7</p>
-  </td>
-  <td width="0" valign="top">
-  <p align="center">4</p>
-  </td>
-  <td width="0" valign="top">
-  <p align="center">2</p>
-  </td>
-  <td width="0" valign="top">
-  <p align="center">М</p>
-  </td>
-  <td width="0" valign="top">
-  <p align="center">М</p>
-  </td>
- </tr>
- <tr>
-  <td width="0" valign="top">
-  <p align="center">7</p>
-  </td>
-  <td width="0" valign="top">
-  <p align="center">0,8</p>
-  </td>
-  <td width="0" valign="top">
-  <p align="center">8</p>
-  </td>
-  <td width="0" valign="top">
-  <p align="center">4</p>
-  </td>
-  <td width="0" valign="top">
-  <p align="center">2</p>
-  </td>
-  <td width="0" valign="top">
-  <p align="center">М</p>
-  </td>
-  <td width="0" valign="top">
-  <p align="center">М</p>
-  </td>
- </tr>
- <tr>
-  <td width="0" valign="top">
-  <p align="center">8</p>
-  </td>
-  <td width="0" valign="top">
-  <p align="center">0,75</p>
-  </td>
-  <td width="0" valign="top">
-  <p align="center">9</p>
-  </td>
-  <td width="0" valign="top">
-  <p align="center">5</p>
-  </td>
-  <td width="0" valign="top">
-  <p align="center">2</p>
-  </td>
-  <td width="0" valign="top">
-  <p align="center">М</p>
-  </td>
-  <td width="0" valign="top">
-  <p align="center">М</p>
-  </td>
- </tr>
- <tr>
-  <td width="0" valign="top">
-  <p align="center">9</p>
-  </td>
-  <td width="0" valign="top">
-  <p align="center">0,7</p>
-  </td>
-  <td width="0" valign="top">
-  <p align="center">10</p>
-  </td>
-  <td width="0" valign="top">
-  <p align="center">5</p>
-  </td>
-  <td width="0" valign="top">
-  <p align="center">2</p>
-  </td>
-  <td width="0" valign="top">
-  <p align="center">1</p>
-  </td>
-  <td width="0" valign="top">
-  <p align="center">М</p>
-  </td>
- </tr>
- <tr>
-  <td width="0" valign="top">
-  <p align="center">10</p>
-  </td>
-  <td width="0" valign="top">
-  <p align="center">0,65</p>
-  </td>
-  <td width="0" valign="top">
-  <p align="center">11</p>
-  </td>
-  <td width="0" valign="top">
-  <p align="center">6</p>
-  </td>
-  <td width="0" valign="top">
-  <p align="center">3</p>
-  </td>
-  <td width="0" valign="top">
-  <p align="center">1</p>
-  </td>
-  <td width="0" valign="top">
-  <p align="center">М</p>
-  </td>
- </tr>
- <tr>
-  <td width="0" valign="top">
-  <p align="center">11</p>
-  </td>
-  <td width="0" valign="top">
-  <p align="center">0,6</p>
-  </td>
-  <td width="0" valign="top">
-  <p align="center">12</p>
-  </td>
-  <td width="0" valign="top">
-  <p align="center">6</p>
-  </td>
-  <td width="0" valign="top">
-  <p align="center">3</p>
-  </td>
-  <td width="0" valign="top">
-  <p align="center">1</p>
-  </td>
-  <td width="0" valign="top">
-  <p align="center">М</p>
-  </td>
- </tr>
- <tr>
-  <td width="0" valign="top">
-  <p align="center">12</p>
-  </td>
-  <td width="0" valign="top">
-  <p align="center">0,55</p>
-  </td>
-  <td width="0" valign="top">
-  <p align="center">13</p>
-  </td>
-  <td width="0" valign="top">
-  <p align="center">6</p>
-  </td>
-  <td width="0" valign="top">
-  <p align="center">3</p>
-  </td>
-  <td width="0" valign="top">
-  <p align="center">1</p>
-  </td>
-  <td width="0" valign="top">
-  <p align="center">М</p>
-  </td>
- </tr>
- <tr>
-  <td width="0" valign="top">
-  <p align="center">13</p>
-  </td>
-  <td width="0" valign="top">
-  <p align="center">0,5</p>
-  </td>
-  <td width="0" valign="top">
-  <p align="center">13</p>
-  </td>
-  <td width="0" valign="top">
-  <p align="center">7</p>
-  </td>
-  <td width="0" valign="top">
-  <p align="center">3</p>
-  </td>
-  <td width="0" valign="top">
-  <p align="center">1</p>
-  </td>
-  <td width="0" valign="top">
-  <p align="center">М</p>
-  </td>
- </tr>
-</tbody></table>
-
-<p>&nbsp;</p>
-
-<p>Напишите программу,
-принимающую на вход значение класса на начало годового срока страхования и
-количество страховых случаев в течение года, которая опираясь на данные из
-заданной таблицы, выводит класс по окончании годового срока страхования.</p><p>Сохраните ваше решение в виде файла на любом файлообменнике и вставьте ссылку на него в поле для ответа.<br></p><p></p></div>
-            </div>
-        </div>
-
-        <div class="demo">
-            <div class="demo-wrapper">
-                <button id="new-window-hangs-demo-toggle" class="js-container-target demo-toggle-button">Пенсионное страхование
-                    <div class="demo-meta u-avoid-clicks"> Сложность: базовая
-                        <span class="demo-meta-divider">|</span> Тема: Страхование</div>
-                </button>
-                <div class="demo-box"><p><p>В системе обязательного пенсионного страхования у работающих
-граждан формируются страховые пенсии и пенсионные накопления. Страховая пенсия гарантированно
-увеличивается государством за счет ежегодной индексации. Средства же
-накопительной пенсии инвестирует на финансовом рынке выбранный гражданином НПФ
-или УК.</p>
-
-<p>Размер страховой пенсии гражданина РФ рассчитывается по
-формуле A * B + C, где:</p>
-
-<p>А — количество пенсионных баллов; </p>
-
-<p>В — стоимость одного пенсионного балла; </p>
-
-<p>С — фиксированная выплата.</p>
-
-<p>Стоимость пенсионного балла и размер фиксированной выплаты
-ежегодно увеличиваются государством, чтобы пенсия не обесценивалась со
-временем. На 2017 год стоимость пенсионного балла — 78,58 руб., размер
-фиксированной выплаты — 4 805,11 руб.</p>
-
-<p>Напишите программу, принимающую на вход количество
-пенсионных баллов, которая вычисляет ежемесячный размер выплат на 2017 год,</p>Сохраните ваше решение в виде файла на любом файлообменнике и вставьте ссылку на него в поле для ответа.<br></p></div>
-            </div>
-        </div>
-
-        <div class="demo">
-            <div class="demo-wrapper">
-                <button id="new-window-hangs-demo-toggle" class="js-container-target demo-toggle-button">Поездка на такси: выбрать маршрут
-                    <div class="demo-meta u-avoid-clicks"> Сложность: повышенная
-                        <span class="demo-meta-divider">|</span> Тема: Расходы</div>
-                </button>
-                <div class="demo-box"><p></p><div><div><p>Не всегда получается вызвать такси заранее. В таком случае альтернатив становится мало и приходится вызывать такси, которое быстрее всего окажется рядом. При посадке в такси всегда можно поинтересоваться тарифом и возможными маршрутами, одному из которых таксист будет следовать. Современные технологии ещё позволяют прогнозировать продолжительность поездки по заданному маршруту. Помогите пассажиру оперативно выбрать наиболее дешёвый маршрут следования.</p></div><p></p><p></p><div><div><b>Входные данные</b></div><p></p><p>В первой строке строке через пробел подаются 5 целых чисел, характеризующих тариф:&nbsp;<i>c&nbsp;</i>(0 ≤&nbsp;<i>c&nbsp;</i>≤ 25)&nbsp;,&nbsp;<i>fs&nbsp;</i>(0 ≤&nbsp;<i>fs&nbsp;</i>≤ 10)&nbsp;,&nbsp;<i>ft&nbsp;</i>(0 ≤&nbsp;<i>ft&nbsp;</i>≤ 15)&nbsp;,&nbsp;<i>ps&nbsp;</i>(0 ≤&nbsp;<i>ps&nbsp;</i>≤ 25)и&nbsp;<i>pt&nbsp;</i>(0 ≤&nbsp;<i>pt&nbsp;</i>≤ 25)&nbsp;– соответственно, стоимость вызова такси, количество бесплатных километров, количество бесплатных минут, стоимость одного километра и стоимость одной минуты. Во второй строке число&nbsp;<i>n&nbsp;</i>(1 ≤&nbsp;<i>n&nbsp;</i>≤ 10&nbsp;<sup>4&nbsp;</sup>)&nbsp;, соответствующее количеству предлагаемых маршрутов. Далее в&nbsp;<i>n</i>строках целые числа&nbsp;<i>s&nbsp;</i><sub><i>i&nbsp;</i></sub>(1 ≤&nbsp;<i>s&nbsp;</i><sub><i>i&nbsp;</i></sub>≤ 200)&nbsp;и&nbsp;<i>t&nbsp;</i><sub><i>i&nbsp;</i></sub>(1 ≤&nbsp;<i>t&nbsp;</i><sub><i>i&nbsp;</i></sub>≤ 300)&nbsp;– длина&nbsp;<i>i&nbsp;</i>-го маршрута в километрах и продолжительность поездки в минутах.</p></div><p></p><p></p><div><div><b>Выходные данные</b></div><p></p><p>Выведите через пробел номер маршрута (считаем, что маршруты нумеруются с 1), стоимость которого будет наименьшей и значение стоимости данной поездки. Если маршрутов с минимальной стоимостью несколько, выберите наименее продолжительный. Если и таких маршрутов тоже несколько, выберите тот, индекс которого наименьший.</p></div></div><div><p></p></div><div><p></p></div><div><p></p></div><div><p></p></div><div><p></p></div><p>Решение данной задачи Вы можете сдать на&nbsp;<a href="http://informatics.msk.ru/mod/statements/view3.php?id=30791&amp;chapterid=113751#1" target="_blank">информатиксе</a>.</p><p>В качестве ответа вставьте ссылку на решение на информатиксе, <br>или сохраните ваше решение в виде файла на любом файлообменнике и вставьте ссылку на него.</p><p></p><p></p></div>
+<p class="desktop-hidden">Ответьте на вопрос и обоснуйте ответ.</p>
+<p class="desktop-hidden">Прикрепите файл с вашим решением (если файлов несколько, прикрепите zip-архив с этими файлами).</p></div>
             </div>
         </div>
 
@@ -653,10 +492,10 @@
                     <div class="demo-meta u-avoid-clicks"> Сложность: высокая
                         <span class="demo-meta-divider">|</span> Тема: Расходы</div>
                 </button>
-                <div class="demo-box"><p></p><p></p><p></p><p></p><p>В городском парке пять
+                <div class="demo-box"><p>В городском парке пять
 аттракционов: карусель, колесо обозрения, автодром, «Ромашка» и «Весёлый тир».
-В кассах продаются шесть видов билетов, каждый из которых позволяет посетить
-один или два аттракциона. Стоимость билетов представлена в таблице.</p>
+В кассах продаются несколько видов билетов, каждый из которых позволяет
+посетить один или два аттракциона. Примеры билетов представлены в таблице.</p><p></p>
 
 <table border="1" cellspacing="0" cellpadding="0" width="96%">
  <thead>
@@ -741,188 +580,8 @@
  </tr>
 </tbody></table>
 
-<p>Какие билеты должен купить Андрей, чтобы
-посетить все пять аттракционов и потратить не более 900 рублей? Для этого
-напишите программу, которая на вход получает наборы из 7 чисел: номер билета,
-количество поездок на аттракционе данного типа, стоимость билета. В ответе
-укажите номера билетов, которые должен купить Андрей?</p><p></p><p></p><p>Сохраните ваше решение в виде файла на любом файлообменнике и вставьте ссылку на него в поле для ответа.<br></p></div>
-            </div>
-        </div>
-
-        <div class="demo">
-            <div class="demo-wrapper">
-                <button id="new-window-hangs-demo-toggle" class="js-container-target demo-toggle-button">Покупка гречки
-                    <div class="demo-meta u-avoid-clicks"> Сложность: высокая
-                        <span class="demo-meta-divider">|</span> Тема: Расходы</div>
-                </button>
-                <div class="demo-box"><p></p><p></p><p>Мама дала Коле <span lang="EN-US">S</span>&nbsp;рублей и попросила купить гречневую крупу. В магазине Коля
-обнаружил гречку 4&nbsp;производителей в упаковках разного веса и по
-разным ценам:</p>
-
-<table border="1" cellspacing="0" cellpadding="0" width="467">
- <tbody><tr>
-  <td width="99" valign="top">
-  <p align="center">Производитель</p>
-  </td>
-  <td width="177" valign="top">
-  <p align="center">Вес упаковки, г</p>
-  </td>
-  <td width="191" valign="top">
-  <p align="center">Цена за упаковку,
-  руб.</p>
-  </td>
- </tr>
- <tr>
-  <td width="99" valign="top">
-  <p align="right">К</p>
-  </td>
-  <td width="177" valign="top">
-  <p align="right">800</p>
-  </td>
-  <td width="191" valign="top">
-  <p align="right">56</p>
-  </td>
- </tr>
- <tr>
-  <td width="99" valign="top">
-  <p align="right">Л</p>
-  </td>
-  <td width="177" valign="top">
-  <p align="right">900</p>
-  </td>
-  <td width="191" valign="top">
-  <p align="right">59</p>
-  </td>
- </tr>
- <tr>
-  <td width="99" valign="top">
-  <p align="right">М</p>
-  </td>
-  <td width="177" valign="top">
-  <p align="right">950</p>
-  </td>
-  <td width="191" valign="top">
-  <p align="right">65</p>
-  </td>
- </tr>
- <tr>
-  <td width="99" valign="top">
-  <p align="right">Н</p>
-  </td>
-  <td width="177" valign="top">
-  <p align="right">1000</p>
-  </td>
-  <td width="191" valign="top">
-  <p align="right">80</p>
-  </td>
- </tr>
-</tbody></table>
-
-<p>Предположим, что качество продукта у всех представленных
-производителей одинаково.</p>
-
-<p>Какое максимальное количество гречки (в килограммах) сможет
-купить Коля и сколько (в рублях) заплатит за покупку?</p>
-
-<p>Для решения задачи напишите программу, считывающую из файла
-построчно для каждого производителя гречки название производителя, массу нетто
-и цену упаковки и выводящую максимально возможное количество купленной гречки.
-Название каждого производителя – одно слово, масса – целое число грамм, цена –
-целое число рублей. В самом начале файла указана сумма в рублях, которая есть у
-Коли.</p><p>Сохраните ваше решение в виде файла на любом файлообменнике и вставьте ссылку на него в поле для ответа.<br></p></div>
-            </div>
-        </div>
-
-        <div class="demo">
-            <div class="demo-wrapper">
-                <button id="new-window-hangs-demo-toggle" class="js-container-target demo-toggle-button">Пополнение и снятие средств с вклада
-                    <div class="demo-meta u-avoid-clicks"> Сложность: высокая
-                        <span class="demo-meta-divider">|</span> Тема: Сбережения и инвестиции</div>
-                </button>
-                <div class="demo-box"><p></p><p></p><p></p><p></p><p></p><p></p><p>Используя изучаемый язык программирования напишите
-программу, рассчитывающую остаток суммы по вкладу при возможности его
-пополнения и снятия денежных средств.</p>
-
-<p>Вход программы:</p>
-
-<p><ul><li>Сумма вклада<br></li><li>Срок вклада в месяцах<br></li><li>Процентная ставка<br></li><li>Период начисления (капитализации) сложного
-процента<br></li></ul><!--[if !supportLists]--></p>
-
-
-
-
-
-
-
-<p>В ходе работы программы она должна для каждого месяца запрашивать
-у пользователя сумму пополнения или снятия денежных средств со вклада.</p>
-
-<p>Если запрашиваемая сумма превышает остаток средств на счете,
-программа должна вывести ‘<span lang="EN-US">STOP</span>’.
-</p>
-
-<p>Если пользователь в текущем месяце не выполняет никаких
-операций (снятия или пополнения), то для данного месяца, то вводится число
-нуль.</p><p></p><p></p>Сохраните ваше решение в виде файла на любом файлообменнике и вставьте ссылку на него в поле для ответа.<br><p></p></div>
-            </div>
-        </div>
-
-        <div class="demo">
-            <div class="demo-wrapper">
-                <button id="new-window-hangs-demo-toggle" class="js-container-target demo-toggle-button">Ранжирование тарифных планов
-                    <div class="demo-meta u-avoid-clicks"> Сложность: высокая
-                        <span class="demo-meta-divider">|</span> Тема: Расходы</div>
-                </button>
-                <div class="demo-box"><p></p><p></p><p>Виктор исследует тарифы интернета для нового планшета.
-Каждый тариф характеризуется ежемесячной абонентской платой <span lang="EN-US">A</span>, пакетом трафика в гигабайтах T,
-включенных в абонентскую плату (в случае отсутствия абонентской платы данный
-параметр также вводится равным 0, неизрасходованные мегабайты на следующий
-месяц не переносятся), стоимостью 1 МБ сверх трафика S, включённого в
-абонентскую плату. </p>
-
-<p>По опыту пользования друзей мобильным интернетом, Виктор
-планирует расходовать некоторое количество Мб трафика в месяц, равное <span lang="EN-US">V</span>.</p>
-
-<p></p><p>Составьте
-программу, принимающую на вход в первой строке количество тарифных планов K и
-планируемый расход V, И далее в K строках название N, характеристики A, T, S
-для каждого из тарифов. Выведите
-список всех тарифных планов и соответствующих расчетных стоимостей в порядке
-убывания расчетной стоимости.</p><p></p><p></p>Сохраните ваше решение в виде файла на любом файлообменнике и вставьте ссылку на него в поле для ответа.<br><p></p></div>
-            </div>
-        </div>
-
-        <div class="demo">
-            <div class="demo-wrapper">
-                <button id="new-window-hangs-demo-toggle" class="js-container-target demo-toggle-button">Расчет пенсионных баллов
-                    <div class="demo-meta u-avoid-clicks"> Сложность: базовая
-                        <span class="demo-meta-divider">|</span> Тема: Страхование</div>
-                </button>
-                <div class="demo-box"><p></p><p>В системе обязательного пенсионного страхования у работающих
-граждан формируются страховые пенсии и пенсионные накопления. Страховая пенсия гарантированно
-увеличивается государством за счет ежегодной индексации. Средства же
-накопительной пенсии инвестирует на финансовом рынке выбранный гражданином НПФ
-или УК.</p>
-
-<p></p><p>Каждый работающий человек, работодатель которого отчисляет
-страховые взносы за сотрудников, может рассчитать количество пенсионных баллов,
-которые будут учтены при формировании будущей пенсии. </p>
-
-<p>Ежегодно государством устанавливается максимальный размер
-заработной платы до вычета НДФЛ (Налога на доходы физических лиц) <span lang="EN-US">M</span>, с которой уплачиваются
-страховые взносы в обязательную пенсионную систему. В 2017 году данная цифра
-составляет 73000. Помимо данного ограничения государством вводится ограничение
-на максимальное количество баллов <span lang="EN-US">K</span>, которое можно накопить за год. В 2017 году оно равно 8,26.</p>
-
-<p>Количество накапливаемых баллов вычисляется по следующей
-формуле:</p>
-
-<p>Зарплата за месяц / Максимальный размер заработной платы * Коэффициент(=10).</p>
-
-<p>Напишите программу, принимающую на вход ежемесячный размер
-заработной платы сотрудника (до вычета НДФЛ), максимальный размер заработной
-платы N и значения M и К. Программа должна вывести количество накапливаемых
-баллов, с округлением до 2 знаков после запятой.</p><p></p>Сохраните ваше решение в виде файла на любом файлообменнике и вставьте ссылку на него в поле для ответа.<br><p></p></div>
+<p>Используя изучаемый язык программирования, напишите программу, которая анализирует билеты парка аттракционов и рекомендует список билетов, распространяющихся на все виды аттракционов таким образом, что их суммарная стоимость была наименьшей. Программа на вход получает количество видов билетов N (0≤N≤1000), каждый из которых характеризуется следующими параметрами: уникальный целый номер билета, id (0≤id≤10000000), количество доступных аттракционов C (1≤C≤2), первые буквы названия аттракционов (“R”, “O”, “K”, “A”, “T”) и целочисленная стоимость билета P (1≤P≤10000). Программа должна вывести в первой строке номера билетов, которые войдут в список. Во второй строке – минимальную сумму. Если наборов, соответствующих минимальной сумме, несколько, выведите любой из них.</p>
+<p class="desktop-hidden">Прикрепите файл с вашим решением (если файлов несколько, прикрепите zip-архив с этими файлами).</p></div>
             </div>
         </div>
 
@@ -932,116 +591,146 @@
                     <div class="demo-meta u-avoid-clicks"> Сложность: высокая
                         <span class="demo-meta-divider">|</span> Тема: Семейный бюджет</div>
                 </button>
-                <div class="demo-box"><p></p><p></p><p></p><p>Используя изучаемый язык программирования, напишите
+                <div class="demo-box"><p>Используя изучаемый язык программирования, напишите
 программу «Семейная копилка». </p>
 
 <p>Вход программы: </p>
 
-<p><ul><li>желаемая сумма накопления<br></li><li>даты и суммы периодических взносов<br></li></ul><!--[if !supportLists]--></p>
+<p></p><ul><li>желаемая сумма накопления<br></li><li>даты и суммы периодических взносов<br></li></ul><!--[if !supportLists]--><p></p>
 
 
 
 <p>Выход программы:</p>
 
-<p><ul><li>сумма накоплений на текущую дату<br></li><li>недостающая сумма до цели, либо сообщение о
+<ul><li>сумма накоплений на текущую дату<br></li><li>недостающая сумма до цели, либо сообщение о
 «Нужная сумма накоплена», либо если накоплено средств больше, программа
 сообщает размер превышения<br></li><li>срок достижения цели на основе усредненной
-статистики (по суммам и периодичности и внесения)<br></li></ul><!--[if !supportLists]--></p>
-
-
-
-
+статистики (по суммам и периодичности и внесения)<br></li></ul><!--[if !supportLists]-->
 
 <p>Если пользователь при внесении суммы достигает
-поставленной цели, программа должна его об этом уведомить.</p><p></p><p></p><p>Сохраните ваше решение в виде файла на любом файлообменнике и вставьте ссылку на него в поле для ответа.</p><br><p></p></div>
+поставленной цели, программа должна его об этом уведомить.</p>
+
+<p class="desktop-hidden">Прикрепите файл с вашим решением (если файлов несколько, прикрепите zip-архив с этими файлами).</p></div>
             </div>
         </div>
 
         <div class="demo">
             <div class="demo-wrapper">
-                <button id="new-window-hangs-demo-toggle" class="js-container-target demo-toggle-button">Сколько можно купить сырков
-                    <div class="demo-meta u-avoid-clicks"> Сложность: повышенная
-                        <span class="demo-meta-divider">|</span> Тема: Расходы</div>
+                <button id="new-window-hangs-demo-toggle" class="js-container-target demo-toggle-button">Пополнение и снятие средств с вклада
+                    <div class="demo-meta u-avoid-clicks"> Сложность: высокая
+                        <span class="demo-meta-divider">|</span> Тема: Сбережения и инвестиции</div>
                 </button>
-                <div class="demo-box"><p></p><p>Сырок стоит x&nbsp;рублей. Сырки продаются упаковками по m&nbsp;и n&nbsp;штук. Какое наибольшее число сырков можно
-купить на y&nbsp;рублей?</p>
+                <div class="demo-box"><p>Используя изучаемый язык программирования, напишите
+программу, рассчитывающую остаток суммы по вкладу при возможности его
+пополнения и снятия денежных средств.</p>
 
-<p>Напишите
-программу, которая получает на вход четыре целых числа: стоимость одного сырка,
-количество сырков в упаковке каждого вида соответственно <span lang="EN-US">m</span><span lang="EN-US"> </span>штук и <span lang="EN-US">n</span><span lang="EN-US"> </span>штук и
-имеющееся количество денег на покупку сырков. Программа должна вывести, сколько сырков (в
-зависимости от упаковки m&nbsp;и n)
-можно купить при заданной цене сырка x&nbsp;и располагаемой суммы денег y&nbsp;для
-вариантов, указанных в таблице.</p><table border="1" cellspacing="0" cellpadding="0">
- <tbody><tr>
-  <td width="64" valign="top">
-  <p align="center">Вариант</p>
-  </td>
-  <td width="87" valign="top">
-  <p align="center">Цена сырка x, руб.<!--[endif]--></p>
-  </td>
-  <td width="102" valign="top">
-  <p align="center">Сумма имеющихся денег y, руб.</p>
-  </td>
-  <td width="109" valign="top">
-  <p align="center">Количество сырков в упаковке m, шт.</p>
-  </td>
-  <td width="106" valign="top">
-  <p align="center">Количество сырков в упаковке n, шт.</p>
-  </td>
- </tr>
- <tr>
-  <td width="64" valign="top">
-  <p align="right">1</p>
-  </td>
-  <td width="87" valign="top">
-  <p align="right">17,5</p>
-  </td>
-  <td width="102" valign="top">
-  <p align="right">270</p>
-  </td>
-  <td width="109" valign="top">
-  <p align="right">4</p>
-  </td>
-  <td width="106" valign="top">
-  <p align="right">6</p>
-  </td>
- </tr>
- <tr>
-  <td width="64" valign="top">
-  <p align="right">2</p>
-  </td>
-  <td width="87" valign="top">
-  <p align="right">19</p>
-  </td>
-  <td width="102" valign="top">
-  <p align="right">270</p>
-  </td>
-  <td width="109" valign="top">
-  <p align="right">4</p>
-  </td>
-  <td width="106" valign="top">
-  <p align="right">6</p>
-  </td>
- </tr>
- <tr>
-  <td width="64" valign="top">
-  <p align="right">3</p>
-  </td>
-  <td width="87" valign="top">
-  <p align="right">21</p>
-  </td>
-  <td width="102" valign="top">
-  <p align="right">330</p>
-  </td>
-  <td width="109" valign="top">
-  <p align="right">6</p>
-  </td>
-  <td width="106" valign="top">
-  <p align="right">8</p>
-  </td>
- </tr>
-</tbody></table><br><p></p><p>Сохраните ваше решение в виде файла на любом файлообменнике и вставьте ссылку на него в поле для ответа.<br></p></div>
+<p>Вход программы:</p>
+
+<ul><li>Сумма вклада<br></li><li>Срок вклада в месяцах<br></li><li>Процентная ставка<br></li><li>Период начисления (капитализации) сложного
+процента<br></li></ul><!--[if !supportLists]-->
+
+<p>В ходе работы программы она должна для каждого месяца запрашивать
+у пользователя сумму пополнения или снятия денежных средств со вклада.</p>
+
+<p>Если запрашиваемая сумма превышает остаток средств на счете,
+программа должна вывести ‘<span lang="EN-US">STOP</span>’.
+</p>
+
+<p>Если пользователь в текущем месяце не выполняет никаких
+операций (снятия или пополнения), то для данного месяца вводится число
+нуль.</p>
+
+<p class="desktop-hidden">Прикрепите файл с вашим решением (если файлов несколько, прикрепите zip-архив с этими файлами).</p></div>
+            </div>
+        </div>
+
+        <div class="demo">
+            <div class="demo-wrapper">
+                <button id="new-window-hangs-demo-toggle" class="js-container-target demo-toggle-button">Коэффициент "бонус-малус"
+                    <div class="demo-meta u-avoid-clicks"> Сложность: базовая
+                        <span class="demo-meta-divider">|</span> Тема: Страхование</div>
+                </button>
+                <div class="demo-box"><p>При заключении
+договора обязательного страхования гражданской ответственности владельцев
+транспортных средств (ОСАГО) страховая компания для определения стоимости
+страховки&nbsp;применяет коэффициент «бонус-малус» (КБМ)&nbsp;– коэффициент,
+влияющий на стоимость полиса (повышающий или понижающий) в зависимости от
+аварийности в предыдущие периоды.</p>
+
+<p>На сегодняшний день
+установлено 15 классов страхования водителей, предусматривающих применение
+соответствующих <a href="assets/finformatika.ru/attachments/Коэффициент бонус-малус.xlsx" target="_blank">коэффициентов</a>.</p>
+
+<p>Напишите программу,
+принимающую на вход значение класса на начало годового срока страхования и
+количество страховых случаев в течение года, которая, опираясь на данные из
+заданной таблицы, выводит класс по окончании годового срока страхования.</p>
+
+<p class="desktop-hidden">Прикрепите файл с вашим решением (если файлов несколько, прикрепите zip-архив с этими файлами).</p></div>
+            </div>
+        </div>
+
+        <div class="demo">
+            <div class="demo-wrapper">
+                <button id="new-window-hangs-demo-toggle" class="js-container-target demo-toggle-button">Пенсионное страхование
+                    <div class="demo-meta u-avoid-clicks"> Сложность: базовая
+                        <span class="demo-meta-divider">|</span> Тема: Страхование</div>
+                </button>
+                <div class="demo-box"><p>В системе обязательного пенсионного страхования у работающих граждан формируются страховые пенсии и пенсионные накопления. Страховая пенсия гарантированно увеличивается государством за счет ежегодной индексации. Средства же накопительной пенсии инвестирует на финансовом рынке выбранный гражданином НПФ или УК.</p><p>Размер страховой пенсии гражданина РФ рассчитывается по формуле A * B + C, где:</p><p>А – количество пенсионных баллов;&nbsp;</p><p>В – стоимость одного пенсионного балла;&nbsp;</p><p>С – фиксированная выплата.</p><p>Стоимость пенсионного балла и размер фиксированной выплаты ежегодно увеличиваются государством, чтобы пенсия не обесценивалась со временем. На 2017 год стоимость пенсионного балла – 78,58 рублей, размер фиксированной выплаты – 4 805,11 рублей.</p><p>Напишите программу, принимающую на вход количество пенсионных баллов, которая вычисляет ежемесячный размер выплат на 2017 год.</p>
+<p class="desktop-hidden">Прикрепите файл с вашим решением (если файлов несколько, прикрепите zip-архив с этими файлами).</p></div>
+            </div>
+        </div>
+
+        <div class="demo">
+            <div class="demo-wrapper">
+                <button id="new-window-hangs-demo-toggle" class="js-container-target demo-toggle-button">Расчет пенсионных баллов
+                    <div class="demo-meta u-avoid-clicks"> Сложность: базовая
+                        <span class="demo-meta-divider">|</span> Тема: Страхование</div>
+                </button>
+                <div class="demo-box"><p>В системе обязательного пенсионного страхования у работающих граждан формируются страховые пенсии и пенсионные накопления. Страховая пенсия гарантированно увеличивается государством за счет ежегодной индексации. Средства же накопительной пенсии инвестирует на финансовом рынке выбранный гражданином НПФ или УК.</p><p>Размер страховой пенсии гражданина РФ рассчитывается по формуле A * B + C, где:</p><p>А – количество пенсионных баллов;&nbsp;</p><p>В – стоимость одного пенсионного балла;&nbsp;</p><p>С – фиксированная выплата.</p><p>Стоимость пенсионного балла и размер фиксированной выплаты ежегодно увеличиваются государством, чтобы пенсия не обесценивалась со временем. На 2017 год стоимость пенсионного балла — 78,58 рублей, размер фиксированной выплаты — 4 805,11 рублей.</p><p>Каждый работающий человек, работодатель которого отчисляет страховые взносы за сотрудников, может рассчитать количество пенсионных баллов, которые будут учтены при формировании будущей пенсии.&nbsp;</p><p>Ежегодно государством устанавливается максимальный размер заработной платы до вычета НДФЛ (Налога на доходы физических лиц) M, с которой уплачиваются страховые взносы в обязательную пенсионную систему. В 2017 году данная цифра составляет 73 000. Помимо данного ограничения государством вводится ограничение на максимальное количество баллов K, которое можно накопить за год. В 2017 году оно равно 8,26.</p><p>Количество накапливаемых баллов вычисляется по следующей формуле:</p><p>Зарплата за месяц / Максимальный размер заработной платы * Коэффициент(=10).</p><p>Напишите программу, принимающую на вход ежемесячный размер заработной платы сотрудника (до вычета НДФЛ), максимальный размер заработной платы N и значения M и К. Программа должна вывести количество накапливаемых баллов, с округлением до 2 знаков после запятой.</p>
+<p class="desktop-hidden">Прикрепите файл с вашим решением (если файлов несколько, прикрепите zip-архив с этими файлами).</p></div>
+            </div>
+        </div>
+
+        <div class="demo">
+            <div class="demo-wrapper">
+                <button id="new-window-hangs-demo-toggle" class="js-container-target demo-toggle-button">Каковы шансы
+                    <div class="demo-meta u-avoid-clicks"> Сложность: высокая
+                        <span class="demo-meta-divider">|</span> Тема: Риски и финансовая безопасность</div>
+                </button>
+                <div class="demo-box"><p>В лотерее «6 из 45» участник выбирает шесть разных чисел от
+1 до 45 (последовательность номеров значения не имеет). Во время тиража
+определяется случайная выигрышная комбинация из шести номеров. Участник
+выигрывает (получает денежный приз), если угадывает 2,3,4,5 или 6 номеров из
+выигрышной комбинации (порядок номеров значения не имеет).</p>
+
+Напишите программу, рассчитывающую вероятность
+«вытащить» 4 «счастливых» номера в лотерее «6 из 45», 3 номера в лотерее «5 из
+36», 2 номера в лотерее «4 из 20». Для расчета воспользуйтесь формулой
+сочетаний: в числителе 2 номера располагаются в комбинации из 6 позиций, в
+знаменателе – 6 номеров выбираются из 45:<p>\( P(45;6;4)=\frac{C_6^4}{C^6_{45}}\)</p>
+
+<p class="desktop-hidden">Прикрепите файл с вашим решением (если файлов несколько, прикрепите zip-архив с этими файлами).</p></div>
+            </div>
+        </div>
+
+        <div class="demo">
+            <div class="demo-wrapper">
+                <button id="new-window-hangs-demo-toggle" class="js-container-target demo-toggle-button">«Закономерности»
+                    <div class="demo-meta u-avoid-clicks"> Сложность: повышенная
+                        <span class="demo-meta-divider">|</span> Тема: Риски и финансовая безопасность</div>
+                </button>
+                <div class="demo-box"><p>В лотерее «6 из 45» участник выбирает шесть разных чисел от
+1 до 45 (последовательность номеров значения не имеет). Во время тиража
+определяется случайная выигрышная комбинация из шести чисел. Некоторые
+«знатоки» лотереи утверждают, что существуют «закономерности», когда в ряде
+последовательных тиражей одни числа выпадают в качестве «счастливых» номеров
+чаще, чем другие. Покажите, что такие выпадения совершенно случайны: напишите
+программу, строящую 300 случайных комбинаций в лотерее «6 из 45».
+Посчитайте частоту выпадения в 300 комбинациях каждого из 45 чисел. Как
+соотносится выпадение самого «частого» и самого «редкого» числа?</p>
+<p class="desktop-hidden">Ответьте на вопрос и обоснуйте ответ.</p>
+<p class="desktop-hidden">Прикрепите файл с вашим решением (если файлов несколько, прикрепите zip-архив с этими файлами).</p></div>
             </div>
         </div>
 

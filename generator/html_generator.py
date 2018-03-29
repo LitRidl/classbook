@@ -22,6 +22,7 @@ def to_en(t):
 
 #       <button type="button" id="button-2-all" data-section="2-all" class="nav-button anti-padding button-invisible"><h5 class="nav-category">7-9 классы</h5></button>
 
+
 def gen_section(grade_name, grade):
     section_tpl = '''    <div class="nav-item u-category-{0}">
       <button type="button" id="button-{0}-all" data-section="{0}-all" class="nav-button anti-padding"><h5 class="nav-category">{1} классы</h5></button>
@@ -115,7 +116,8 @@ if __name__ == '__main__':
     glossary_entries = glossary_from_file(glossary_file)
     glossary = load_template('glossary.html')
     with open('../sections/materials/glossary.html', 'w') as f:
-        g = glossary.format('\n'.join(glossary_entry_to_html(e) for e in glossary_entries))
+        g = glossary.format('\n'.join(glossary_entry_to_html(e)
+                                      for e in glossary_entries))
         f.write(g)
 
     textbook = load_template('textbook.html')
@@ -125,7 +127,8 @@ if __name__ == '__main__':
     subsection_tpl = load_template('subsection.html')
     for grade_name, g in grades_ordered.items():
         for topic in ['all'] + g['topics_informatics']:
-            filters = {'grade': '{} класс'.format(grade_name), 'topic_informatics': topic}
+            filters = {'grade': '{} класс'.format(
+                grade_name), 'topic_informatics': topic}
             if 'all' in topic:
                 del filters['topic_informatics']
             qs = filter_questions(questions, filters)

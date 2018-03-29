@@ -139,17 +139,26 @@
   border: 2px solid;
   border-radius: 4px;
   font: inherit;
-  font-size: 1.2em;
-  padding: .4em 1.2em;
+  font-size: 1.0em;
+  padding: .4em 0.6em;
   color: inherit;
   background-color: transparent;
+}
+.demo-button:after {
+  content: "Скопировать";
 }
 .demo-button:focus {
   outline: none;
   background-color: white;
 }
+.demo-button:focus:after {
+  content: "Скопировано!";
+}
 .demo-button:active {
   border-color: var(--color-border);
+}
+.demo-button:active:after {
+  content: "Скопировано!";
 }
 
 .demo-input {
@@ -192,9 +201,8 @@
 .demo-protip {
   margin-top: 2rem;
   padding: 1.5rem 2rem 2rem 2rem;
-  border: 1px solid hsla(0,0%,0%,.06);
   border-radius: 6px;
-  background: var(--color-accent) linear-gradient(hsla(0,0%,100%,.85), hsla(0,0%,100%,.85));
+  background: var(--color-subtle) linear-gradient(hsla(0,0%,100%,.85), hsla(0,0%,100%,.85));
 }
 .demo-protip h2 {
   margin: 0 0 .5rem 0;
@@ -203,7 +211,7 @@
   font-weight: 600;
 }
 
-.dhide {
+.desktop-hidden {
   display: none !important;
 }
 
@@ -217,4 +225,15 @@
 
 .glossary-definition {
   margin-top: -10px;
+}
+
+.contacts-h3 {
+  /* font-size: 1.1em;
+  line-height: 0.8em; */
+  margin-bottom: 10px;
+}
+
+.contacts-p {
+  font-size: 1.2em;
+  margin-top: 0;
 }

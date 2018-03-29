@@ -37,13 +37,6 @@
   border-bottom: 1px solid hsl(0,0%,88%);
 }
 
-.about-logo {
-  display: block;
-  margin: 0 auto;
-  width: 320px; /* TODO: Adjust asset to this size */
-  max-width: 100%;
-}
-
 .about-sections {
   max-width: 680px;
   padding: 0 var(--about-space);
