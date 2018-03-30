@@ -100,11 +100,12 @@ function makeSingleInstance() {
   })
 }
 
-// Handle Squirrel on Windows startup events
 switch (process.argv[1]) {
   case '--squirrel-install':
+    autoUpdater.createShortcut(() => { app.quit() })
     break
   case '--squirrel-uninstall':
+    autoUpdater.removeShortcut(() => { app.quit() })
     break
   case '--squirrel-obsolete':
   case '--squirrel-updated':

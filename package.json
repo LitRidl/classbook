@@ -2,7 +2,7 @@
   "name": "finformatika",
   "description": "Сборник задач по финансовой грамотности в информатике",
   "productName": "finformatika",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "main.js",
   "private": true,
   "scripts": {
@@ -47,23 +47,6 @@
   "dependencies": {
     "electron-settings": "^3.1.4",
     "glob": "^7.1.2"
-  },
-  "build": {
-    "appId": "com.electron.classbook",
-    "directories": {
-      "output": "dist",
-      "build": "build"
-    },
-    "win": {
-      "target": [
-        {
-          "target": "portable",
-          "arch": [
-            "ia32"
-          ]
-        }
-      ]
-    }
   },
   "repository": {
     "type": "git",
