@@ -34,7 +34,9 @@ exports.initialize = () => {
 exports.createShortcut = callback => {
   spawnUpdate([
     '--createShortcut',
-    path.basename(process.execPath)
+    path.basename(process.execPath),
+    '--shortcut-locations',
+    'Desktop,StartMenu'
   ], callback)
 }
 
