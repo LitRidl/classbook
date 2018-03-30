@@ -9,56 +9,26 @@ exports.initialize = () => {
 
   autoUpdater.on('checking-for-update', () => {
     state = 'checking'
-    exports.updateMenu()
   })
 
   autoUpdater.on('update-available', () => {
     state = 'checking'
-    exports.updateMenu()
   })
 
   autoUpdater.on('update-downloaded', () => {
     state = 'installed'
-    exports.updateMenu()
   })
 
   autoUpdater.on('update-not-available', () => {
     state = 'no-update'
-    exports.updateMenu()
   })
 
   autoUpdater.on('error', () => {
     state = 'no-update'
-    exports.updateMenu()
   })
 
 //   autoUpdater.setFeedURL(`https://electron-api-demos.githubapp.com/updates?version=${app.getVersion()}`)
 //   .checkForUpdates()
-}
-
-exports.updateMenu = () => {
-  if (process.mas) return
-
-  const menu = Menu.getApplicationMenu()
-  if (!menu) return
-
-  menu.items.forEach(item => {
-    if (item.submenu) {
-      item.submenu.items.forEach(item => {
-        switch (item.key) {
-          case 'checkForUpdate':
-            item.visible = state === 'no-update'
-            break
-          case 'checkingForUpdate':
-            item.visible = state === 'checking'
-            break
-          case 'restartToUpdate':
-            item.visible = state === 'installed'
-            break
-        }
-      })
-    }
-  })
 }
 
 exports.createShortcut = callback => {
@@ -66,7 +36,7 @@ exports.createShortcut = callback => {
     '--createShortcut',
     path.basename(process.execPath),
     '--shortcut-locations',
-    'StartMenu'
+    'Desktop,StartMenu'
   ], callback)
 }
 

@@ -101,6 +101,7 @@ function makeSingleInstance() {
   })
 }
 
+
 switch (process.argv[1]) {
   case '--squirrel-install':
     autoUpdater.createShortcut(() => { app.quit() })
@@ -110,6 +111,7 @@ switch (process.argv[1]) {
     break
   case '--squirrel-obsolete':
   case '--squirrel-updated':
+    autoUpdater.createShortcut(() => { app.quit() })
     app.quit()
     break
   default:
