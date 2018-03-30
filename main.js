@@ -10,6 +10,7 @@ const debug = /--debug/.test(process.argv[2])
 app.setName('Сборник задач по финансовой грамотности в информатике')
 
 let mainWindow = null
+let splash = null
 
 function initialize() {
   const shouldQuit = makeSingleInstance()
@@ -112,7 +113,7 @@ switch (process.argv[1]) {
     break
   case '--squirrel-obsolete':
   case '--squirrel-updated':
-    autoUpdater.createShortcut(() => { app.quit() })
+    autoUpdater.removeShortcut(() => { autoUpdater.createShortcut(() => { app.quit() }) })
     app.quit()
     break
   default:
