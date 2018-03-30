@@ -106,8 +106,8 @@ function makeSingleInstance() {
 
 switch (process.argv[1]) {
   case '--squirrel-install':
-    settings.deleteAll();
     autoUpdater.createShortcut(() => { app.quit() })
+    settings.deleteAll();
     app.quit();
     break
   case '--squirrel-uninstall':
@@ -121,5 +121,7 @@ switch (process.argv[1]) {
     app.quit()
     break
   default:
-    initialize()
+    autoUpdater.createShortcut(() => { app.quit() })
+    settings.deleteAll();
+    app.quit();
 }
