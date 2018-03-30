@@ -17,13 +17,13 @@ function getInstallerConfig () {
   const outPath = path.join(rootPath, 'out')
 
   return Promise.resolve({
-    appDirectory: path.join(outPath, 'classbook-win32-ia32'),
-    exe: 'classbook.exe',
+    appDirectory: path.join(outPath, 'finformatika-win32-ia32'),
+    exe: 'finformatika.exe',
     iconUrl: path.join(rootPath, 'assets', 'app-icon', 'win', 'app.ico'),
     loadingGif: path.join(rootPath, 'assets', 'img', 'installing.gif'),
     noMsi: true,
     outputDirectory: path.join(outPath, 'windows-installer'),
-    setupExe: 'finformatika.exe',
+    setupExe: 'finformatika-setup.exe',
     setupIcon: path.join(rootPath, 'assets', 'app-icon', 'win', 'app.ico'),
     skipUpdateIcon: true,
   })
