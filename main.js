@@ -2,6 +2,7 @@ const path = require('path')
 const glob = require('glob')
 const fs = require('fs')
 const os = require('os')
+const autoUpdater = require('./auto-updater')
 const { app, BrowserWindow, ipcMain, shell } = require('electron')
 
 const debug = /--debug/.test(process.argv[2])
