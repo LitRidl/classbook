@@ -4,6 +4,7 @@ const fs = require('fs')
 const os = require('os')
 const autoUpdater = require('./auto-updater')
 const { app, BrowserWindow, ipcMain, shell } = require('electron')
+const settings = require('electron-settings')
 
 const debug = /--debug/.test(process.argv[2])
 
@@ -105,14 +106,17 @@ function makeSingleInstance() {
 
 switch (process.argv[1]) {
   case '--squirrel-install':
+    settings.deleteAll();
     autoUpdater.createShortcut(() => { app.quit() })
     app.quit();
     break
   case '--squirrel-uninstall':
+    settings.deleteAll();
     autoUpdater.removeShortcut(() => { app.quit() })
     break
   case '--squirrel-obsolete':
   case '--squirrel-updated':
+    settings.deleteAll();
     autoUpdater.removeShortcut(() => { autoUpdater.createShortcut(() => { app.quit() }) })
     app.quit()
     break

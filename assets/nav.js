@@ -26,7 +26,7 @@ function handleSectionTrigger (event) {
 }
 
 function activateDefaultSection () {
-  document.getElementById('button-schoolbook').click()
+  document.getElementById('button-textbook').click()
 }
 
 function showMainContent () {
@@ -66,11 +66,12 @@ function hideAllSectionsAndDeselectButtons () {
 
 // Default to the view that was active the last time the app was open
 const sectionId = settings.get('activeSectionButtonId')
+
 if (sectionId) {
-  showMainContent()
   const section = document.getElementById(sectionId)
-  if (section) section.click()
+  if (section) {
+    section.click()
+  }
 } else {
   activateDefaultSection()
-  // displayAbout()
 }
