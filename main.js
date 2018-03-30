@@ -121,7 +121,5 @@ switch (process.argv[1]) {
     app.quit()
     break
   default:
-    autoUpdater.createShortcut(() => { app.quit() })
-    settings.deleteAll();
-    app.quit();
+    initialize()
 }
