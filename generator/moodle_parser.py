@@ -1,8 +1,9 @@
 import html
+import re
 from bs4 import BeautifulSoup, Comment
 import random
 import json
-from collections import OrderedDict
+from collections import OrderedDict, defaultdict
 import sys
 
 
@@ -19,7 +20,6 @@ def fmt(tag):
 
 
 def tags_classifier(question, fake_attributes=False):
-    tags = question['_tags']
     grades = [
         'Кл: 5-6',
         'Кл: 7-9',
@@ -52,13 +52,14 @@ def tags_classifier(question, fake_attributes=False):
         'Инф: Программные и информационные системы',
         'Инф: Электронные таблицы',
     ]
+    tags = question['_tags']
 
     attributes = {
         'grade':             [fmt(random.choice(grades))] if fake_attributes else [],
         'difficulty':        fmt(random.choice(difficulties)) if fake_attributes else None,
-        'topic_finances':    fmt(random.choice(topics_finances)) if fake_attributes else None,
-        'topic_informatics': fmt(random.choice(topics_informatics)) if fake_attributes else None,
-        '_fake_attributes':  ['grade', 'difficulty', 'topic_finances', 'topic_informatics']
+        'topics_finances':    [fmt(random.choice(topics_finances))] if fake_attributes else [],
+        'topics_informatics': [fmt(random.choice(topics_informatics))] if fake_attributes else [],
+        '_fake_attributes':  ['grade', 'difficulty', 'topics_finances', 'topics_informatics']
     }
 
     for tag in tags:
@@ -70,16 +71,17 @@ def tags_classifier(question, fake_attributes=False):
             attributes['difficulty'] = fmt(tag)
             attributes['_fake_attributes'].remove('difficulty')
         elif tag in topics_finances:
-            attributes['topic_finances'] = fmt(tag)
-            attributes['_fake_attributes'].remove('topic_finances')
+            attributes['topics_finances'].append(fmt(tag))
+            if 'topics_finances' in attributes['_fake_attributes']:
+                attributes['_fake_attributes'].remove('topics_finances')
         elif tag in topics_informatics:
-            attributes['topic_informatics'] = fmt(tag)
-            attributes['_fake_attributes'].remove('topic_informatics')
+            attributes['topics_informatics'].append(fmt(tag))
+            if 'topics_informatics' in attributes['_fake_attributes']:
+                attributes['_fake_attributes'].remove('topics_informatics')
 
     if not fake_attributes:
         if len(attributes['_fake_attributes']) > 0:
-            raise Exception(
-                "Incomplete tags for attributes: {}".format(question))
+            raise Exception("Incomplete tags for attributes: {}".format(question))
         del attributes['_fake_attributes']
 
     return attributes
@@ -88,14 +90,24 @@ def tags_classifier(question, fake_attributes=False):
 def parse_question(q, _id=None):
     question = {
         'name': q.find('name').text.strip()[7:].strip(),
+        'code': q.find('name').text.strip()[:7].strip(),
         'text': html.unescape(q.find('questiontext').find('text')
                               .prettify(formatter='xml').strip()
                               .lstrip('<text>').rstrip('</text>').strip()),
+        'type': q.get('type').strip(),
+        'answer': None,
+        'answer_tolerance': None,
         '_tags': [t.find('text').text.strip() for t in q.find('tags').find_all('tag')]
     }
     if _id:
         question['_id'] = _id
+    if question['type'] in ('shortanswer', 'numerical'):
+        question['answer'] = q.find('answer').find('text').text.strip()
+    if question['type'] == 'numerical':
+        question['answer_tolerance'] = float(q.find('answer').find('tolerance').text.strip())
+        question['answer'] = float(question['answer'])
     question.update(tags_classifier(question))
+
     return question
 
 
@@ -148,11 +160,22 @@ def parse_questions(xml):
     question_ids = [int(c.replace('question: ', ''))
                     for c in soup_comments if 'question: 0' not in c]
 
-    soup_questions = soup.find_all('question', attrs={'type': 'essay'})
+    # essay, numerical, shortanswer
+    soup_questions = soup.find_all('question', type=re.compile('essay|numerical|shortanswer'))
     questions = [parse_question(q, _id=i)
                  for i, q in enumerate(soup_questions)]
     questions = [dict(q, question_id=q_id)
                  for q_id, q in zip(question_ids, questions)]
+
+    # TREE LOGICS
+    # codes = defaultdict(list)
+    # for q in questions:
+    #     codes[q['code']].append(q)
+    # for k, v in codes.items():
+    #     pid = [q['question_id'] for q in v if q['type'] == 'essay']
+    #     for q in v:
+    #         if q['type'] != 'essay':
+    #             q['parent_id'] = pid
 
     return questions
 
@@ -161,10 +184,10 @@ def order_dict(d, order):
     return [OrderedDict(sorted(el.items(), key=lambda el: order.index(el[0]))) for el in d]
 
 
-def questions_from_files(*xml_files):
-    questions = sum([parse_questions(open(f).read()) for f in xml_files], [])
-    order = ['_id', 'question_id', 'grade', 'difficulty', 'topic_finances',
-             'topic_informatics', 'name', 'text', '_tags', '_fake_attributes']
+def questions_from_file(f):
+    questions = parse_questions(open(f).read())
+    order = ['_id', 'question_id', 'grade', 'difficulty', 'topics_finances',
+             'topics_informatics', 'name', 'text', 'type', 'answer', 'answer_tolerance', 'code', 'parent_id', '_tags', '_fake_attributes']
 
     return order_dict(questions, order)
 
@@ -182,22 +205,37 @@ def glossary_from_file(xml_file):
     return [parse_glossary_entry(e) for e in soup.find_all('ENTRY')]
 
 
-def json_to_file(data, fname):
+def json_to_file(data, fname, indent=4):
     with open(fname, 'w') as f:
-        json.dump(data, f, indent=4, ensure_ascii=False)
+        json.dump(data, f, indent=indent, ensure_ascii=False)
+
+
+def gen_index(qs):
+    import bisect
+    idx = defaultdict(lambda: defaultdict(list))
+    fields = ['grade', 'type', 'difficulty', 'topics_finances', 'topics_informatics']
+    for q in qs:
+        for field in fields:
+            if isinstance(q[field], list):
+                for v in q[field]:
+                    bisect.insort(idx[field][v], q['question_id'])
+            else:
+                v = q[field]
+                if field == 'type':
+                    v = 'Текстовая' if v == 'essay' else 'Интерактивная'
+                bisect.insort(idx[field][v], q['question_id'])
+    return idx
 
 
 if __name__ == '__main__':
-    xml_files = sys.argv[1:] or ['moodle_data/moodle_export_1.xml']
-    fname = 'moodle_data.json'
-
     print('Outputting questions to {}'.format(fname))
+    qs = questions_from_file('moodle_data/moodle_export_1.xml')
+    json_to_file(qs, 'moodle_data.json')
 
-    qs = questions_from_files(*xml_files)
-    json_to_file(qs, fname)
+    print('Outputting index file to {}'.format('questions_index.json'))
+    json_to_file(gen_index(qs), 'questions_index.json', indent=None)
 
     print('Outputting glossary to {}'.format('glossary.json'))
-
     glossary_file = 'moodle_data/glossary_data_1.xml'
     glossary = glossary_from_file(glossary_file)
     json_to_file(glossary, 'glossary.json')

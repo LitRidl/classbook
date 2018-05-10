@@ -18,7 +18,9 @@
 
 .u-category-materials { --color-accent: rgb(226, 140,  60); }
 .u-category-contacts  { --color-accent: hsl(  9, 60%, 54%); }
+.u-category-questions { --color-accent: hsl(141, 52%, 39%); }
 
 .u-category-1         { --color-accent: hsl(141, 52%, 39%); }
 .u-category-2         { --color-accent: hsl(225, 44%, 38%); }
 .u-category-3         { --color-accent: hsl(343, 52%, 49%); }
+.u-category-4         { --color-accent: rgb(226, 140,  60); }

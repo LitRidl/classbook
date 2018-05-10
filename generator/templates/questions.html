@@ -1,0 +1,42 @@
+<template class="task-template">
+    <section id="questions-section" class="section js-section u-category-questions">
+        <script>var questionsIndex = {questions_index};</script>
+        <header class="section-header">
+            <div class="section-wrapper">
+                <!-- <h1>Задачник</h1>
+                <h3>Ниже представлены фильтры, позволяющие упростить навигацию по задачам. Выбор нескольких пунктов в одной категории работает по принципу &laquo;Или&raquo;, 
+                    выбор ограничений в разных категориях &mdash; по принципу &laquo;и&raquo;.
+                </h3> -->
+                <div id="filters-box" class="filters-container">
+                    <div class="filters-column">
+                        <fieldset class="filters-group" data-filter-group="grade">
+                            <legend>Класс</legend>
+                            {filters[grade]}
+                        </fieldset>
+                        <fieldset class="filters-group" data-filter-group="difficulty">
+                            <legend>Сложность</legend>
+                            {filters[difficulty]}
+                        </fieldset>
+                        <fieldset class="filters-group" data-filter-group="type">
+                            <legend>Тип задачи</legend>
+                            {filters[type]}
+                        </fieldset>
+                    </div>
+                    <fieldset class="filters-group" data-filter-group="topics_finances">
+                        <legend>Тема</legend>
+                        {filters[topics_finances]}
+                    </fieldset>
+                    <fieldset class="filters-group" data-filter-group="topics_informatics">
+                        <legend>Раздел</legend>
+                        {filters[topics_informatics]}
+                    </fieldset>
+                </div>
+                <div id="reset-block">
+                    <span class="reset-block-item"><a id="reset-filters">Сбросить фильтры</a></span>
+                    <span><a id="reset-solutions">Сбросить результаты прорешивания</a></span>
+                </div>
+            </div>
+        </header>
+        {questions}
+    </section>
+</template>

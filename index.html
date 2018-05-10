@@ -19,29 +19,11 @@
   <link rel="import" href="sections/materials/2-schoolbook.html">
   <link rel="import" href="sections/materials/3-schoolbook.html">
 
+  <link rel="import" href="sections/questions.html">
   <link rel="import" href="sections/materials/textbook.html">
   <!-- <link rel="import" href="sections/materials/toolkit.html"> -->
   <link rel="import" href="sections/materials/glossary.html">
   <link rel="import" href="sections/contacts.html">
-  <link rel="import" href="sections/grade_5-6/1-all.html">
-  <link rel="import" href="sections/grade_5-6/1-informatsionnyj-poisk-i-analiz-informatsii.html">
-  <link rel="import" href="sections/grade_5-6/1-modelirovanie.html">
-  <link rel="import" href="sections/grade_5-6/1-programmirovanie.html">
-  <link rel="import" href="sections/grade_5-6/1-elektronnye-tablitsy.html">
-  <link rel="import" href="sections/grade_7-9/2-all.html">
-  <link rel="import" href="sections/grade_7-9/2-izmerenie-kolichestva-informatsii.html">
-  <link rel="import" href="sections/grade_7-9/2-informatsionnaja-bezopasnost.html">
-  <link rel="import" href="sections/grade_7-9/2-informatsionnyj-poisk-i-analiz-informatsii.html">
-  <link rel="import" href="sections/grade_7-9/2-modelirovanie.html">
-  <link rel="import" href="sections/grade_7-9/2-programmirovanie.html">
-  <link rel="import" href="sections/grade_7-9/2-elektronnye-tablitsy.html">
-  <link rel="import" href="sections/grade_10-11/3-all.html">
-  <link rel="import" href="sections/grade_10-11/3-izmerenie-kolichestva-informatsii.html">
-  <link rel="import" href="sections/grade_10-11/3-informatsionnaja-bezopasnost.html">
-  <link rel="import" href="sections/grade_10-11/3-informatsionnyj-poisk-i-analiz-informatsii.html">
-  <link rel="import" href="sections/grade_10-11/3-modelirovanie.html">
-  <link rel="import" href="sections/grade_10-11/3-programmirovanie.html">
-  <link rel="import" href="sections/grade_10-11/3-elektronnye-tablitsy.html">
 </head>
 
 <body>
@@ -57,44 +39,22 @@
     <div class="nav-item u-category-materials">
       <h5 class="nav-category">Полезные материалы</h5>
       <button type="button" id="button-textbook" data-section="textbook" class="nav-button">Финансы в информатике</button>
+      <!-- <button type="button" id="button-toolkit" data-section="toolkit" class="nav-button">Методическое пособие для учителей</button> -->
       <button type="button" id="button-glossary" data-section="glossary" class="nav-button">Глоссарий по финансовой грамотности</button>
       <button type="button" id="button-1-schoolbook" data-section="1-schoolbook" class="nav-button">Учебное пособие по 5-6 классам</button>
       <button type="button" id="button-2-schoolbook" data-section="2-schoolbook" class="nav-button">Учебное пособие по 7-9 классам</button>
       <button type="button" id="button-3-schoolbook" data-section="3-schoolbook" class="nav-button">Учебное пособие по 10-11 классам</button>
     </div>
 
-    <div class="nav-item u-category-1">
-      <button type="button" id="button-1-all" data-section="1-all" class="nav-button anti-padding"><h5 class="nav-category">5-6 классы</h5></button>
-      <button type="button" id="button-1-informatsionnyj-poisk-i-analiz-informatsii" data-section="1-informatsionnyj-poisk-i-analiz-informatsii" class="nav-button">Информационный поиск и анализ информации</button>
-      <button type="button" id="button-1-modelirovanie" data-section="1-modelirovanie" class="nav-button">Моделирование</button>
-      <button type="button" id="button-1-programmirovanie" data-section="1-programmirovanie" class="nav-button">Программирование</button>
-      <button type="button" id="button-1-elektronnye-tablitsy" data-section="1-elektronnye-tablitsy" class="nav-button">Электронные таблицы</button>
-    </div>
-
-    <div class="nav-item u-category-2">
-      <button type="button" id="button-2-all" data-section="2-all" class="nav-button anti-padding"><h5 class="nav-category">7-9 классы</h5></button>
-      <button type="button" id="button-2-izmerenie-kolichestva-informatsii" data-section="2-izmerenie-kolichestva-informatsii" class="nav-button">Измерение количества информации</button>
-      <button type="button" id="button-2-informatsionnaja-bezopasnost" data-section="2-informatsionnaja-bezopasnost" class="nav-button">Информационная безопасность</button>
-      <button type="button" id="button-2-informatsionnyj-poisk-i-analiz-informatsii" data-section="2-informatsionnyj-poisk-i-analiz-informatsii" class="nav-button">Информационный поиск и анализ информации</button>
-      <button type="button" id="button-2-modelirovanie" data-section="2-modelirovanie" class="nav-button">Моделирование</button>
-      <button type="button" id="button-2-programmirovanie" data-section="2-programmirovanie" class="nav-button">Программирование</button>
-      <button type="button" id="button-2-elektronnye-tablitsy" data-section="2-elektronnye-tablitsy" class="nav-button">Электронные таблицы</button>
-    </div>
-
-    <div class="nav-item u-category-3">
-      <button type="button" id="button-3-all" data-section="3-all" class="nav-button anti-padding"><h5 class="nav-category">10-11 классы</h5></button>
-      <button type="button" id="button-3-izmerenie-kolichestva-informatsii" data-section="3-izmerenie-kolichestva-informatsii" class="nav-button">Измерение количества информации</button>
-      <button type="button" id="button-3-informatsionnaja-bezopasnost" data-section="3-informatsionnaja-bezopasnost" class="nav-button">Информационная безопасность</button>
-      <button type="button" id="button-3-informatsionnyj-poisk-i-analiz-informatsii" data-section="3-informatsionnyj-poisk-i-analiz-informatsii" class="nav-button">Информационный поиск и анализ информации</button>
-      <button type="button" id="button-3-modelirovanie" data-section="3-modelirovanie" class="nav-button">Моделирование</button>
-      <button type="button" id="button-3-programmirovanie" data-section="3-programmirovanie" class="nav-button">Программирование</button>
-      <button type="button" id="button-3-elektronnye-tablitsy" data-section="3-elektronnye-tablitsy" class="nav-button">Электронные таблицы</button>
+    <div class="nav-item u-category-questions">
+      <button type="button" id="button-questions" data-section="questions" class="nav-button anti-padding"><h5 class="nav-category">Задачник</h5></button>
     </div>
 
     <div class="nav-item u-category-contacts">
       <button type="button" id="button-contacts" data-section="contacts" class="nav-button anti-padding"><h5 class="nav-category">Обратная связь</h5></button>
     </div>
     <footer class="nav-footer">
+      <!-- <button type="button" id="button-about" data-modal="about" class="nav-footer-button"><h3>Контактные данные</h3></button> -->
       <p>Программа разработана по заказу Министерства финансов Российской Федерации в ходе реализации совместного Проекта Российской
         Федерации и Международного банка реконструкции и развития «Содействие повышению уровня финансовой грамотности населения
         и развитию финансового образования в Российской Федерации»</p>

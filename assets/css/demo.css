@@ -14,7 +14,7 @@
 
 .demo-wrapper {
   position: relative;
-  max-width: 820px;
+  max-width: 840px;
   margin: 0 auto;
   padding: 0 1rem;
 }
@@ -139,25 +139,36 @@
   border: 2px solid;
   border-radius: 4px;
   font: inherit;
-  font-size: 1.0em;
-  padding: .4em 0.6em;
+  font-size: 1.2em;
+  padding: .4em 1.2em;
   color: inherit;
   background-color: transparent;
-}
-.demo-button:after {
-  content: "Скопировать";
 }
 .demo-button:focus {
   outline: none;
   background-color: white;
 }
-.demo-button:focus:after {
-  content: "Скопировано!";
-}
 .demo-button:active {
   border-color: var(--color-border);
 }
-.demo-button:active:after {
+.contacts-button {
+  font-size: 1.0em;
+  padding: .4em 0.6em;
+}
+.contacts-button:after {
+  content: "Скопировать";
+}
+.contacts-button:focus {
+  outline: none;
+  background-color: white;
+}
+.contacts-button:focus:after {
+  content: "Скопировано!";
+}
+.contacts-button:active {
+  border-color: var(--color-border);
+}
+.contacts-button:active:after {
   content: "Скопировано!";
 }
 
@@ -236,4 +247,63 @@
 .contacts-p {
   font-size: 1.2em;
   margin-top: 0;
+}
+
+/* Filters */ 
+.section-header .section-wrapper {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.filters-container {
+  display: flex;
+}
+
+.filters-column {
+  ;
+}
+
+.filter-group-item {
+  font-color: var(--color-subtle);
+  line-height: 2em;
+}
+
+.difficulty-icon {
+  /* Better use default font color, not accent */
+  /* color: var(--color-accent) */
+}
+
+.filters-group {
+  border: 1px groove;
+}
+
+.filters-group legend {
+  text-align: center;
+  font-size: 120%;
+}
+
+.checker-result {
+  text-align: center;
+  font-weight: 500;
+  font-size: 200%;
+  margin-bottom: 0;
+  margin-top: 10px;
+}
+
+.checker-result .fa-check {
+  color: green;
+}
+
+.checker-result .fa-times {
+  color: red;
+}
+
+#reset-block {
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 6px;
+}
+
+.reset-block-item {
+  width: 150px;
 }

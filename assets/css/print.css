@@ -30,6 +30,10 @@
     overflow: visible !important;
   }
 
+  .section-header {
+    display: none;
+  }
+
   .demo-box {
     margin: 0 !important;
     padding-top: 0px !important;
