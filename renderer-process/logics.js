@@ -146,7 +146,7 @@ for (let i = 0; i < checkerButtons.length; ++i) {
   });
 }
 
-const interactions = storage('modified-state');
+const interactions = storage('modified-state') || [];
 for (let i = 0; i < interactions.length; ++i) {
   modifySubmits(interactions[i]);
 }
