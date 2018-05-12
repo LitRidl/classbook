@@ -1,8 +1,8 @@
 const { ipcRenderer, clipboard } = require('electron')
 
-const printPDFBtn = document.getElementById('button-pdf');
-printPDFBtn.addEventListener('click', (event) => {
-  ipcRenderer.send('print-to-pdf')
+const pdfBtn = document.getElementById('button-pdf');
+pdfBtn.addEventListener('click', (event) => {
+  ipcRenderer.send('print-to-pdf');
 });
 
 const siteBtn = document.getElementById('copy-site')
@@ -98,24 +98,26 @@ filtersBox.addEventListener('change', (event) => {
       q.style.display = 'none';
     }
   }
+  event.stopPropagation();
 });
 
 const modifySubmits = (questionId, firstTime, lastOk) => {
   const success = storage(`success-${questionId}`);
   const attempts = storage(`attempts-${questionId}`);
 
-  let html = 'Нет попыток решения';
+  let html = '<i class="fas fa-edit"></i> Нет попыток решения';
   if (success) {
-    html = `Задача решена с ${attempts} попыт${attempts == 1? 'ки' : 'ок'}`;
+    html = `<i class="fas fa-check"></i> Задача решена с ${attempts} попыт${attempts == 1? 'ки' : 'ок'}`;
   } else if (attempts > 0) {
-    html = `Задача не решена с ${attempts} попыт${attempts == 1? 'ки' : 'ок'}`;
+    html = `<i class="fas fa-times"></i> Задача не решена с ${attempts} попыт${attempts == 1? 'ки' : 'ок'}`;
   }
   document.getElementById(`solution-${questionId}`).innerHTML = html;
 
   if (firstTime) {
     const resNode = document.getElementById(`checker-result-${questionId}`);
     resNode.innerHTML = lastOk? '<i class="fas fa-check"></i> Правильный ответ!' : '<i class="fas fa-times"></i> Неправильный ответ!';
-    resNode.style.display = '';
+    resNode.innerHTML += '<div class="checker-micro">(нажмите чтобы скрыть)</div>';
+    document.getElementById(`checker-result-${questionId}`).style.display = '';
   }
 };
 
@@ -135,7 +137,7 @@ for (let i = 0; i < checkerButtons.length; ++i) {
     }
 
     let ok = answerUser == data.answer;
-    if (data.questionType == 'numerical') {
+    if (data.questionType === 'numerical') {
       ok = check_float(answerUser, data.answer, data.tolerance);
     }
     storage(successKey, success || ok);
@@ -143,6 +145,7 @@ for (let i = 0; i < checkerButtons.length; ++i) {
     const state = union(new Set(storage('modified-state') || []), new Set([+data.questionId]));
     storage('modified-state', [...state]);
     modifySubmits(data.questionId, true, ok);
+    event.stopPropagation();
   });
 }
 
@@ -162,13 +165,31 @@ document.getElementById('reset-filters').addEventListener('click', (event) => {
 });
 
 document.getElementById('reset-solutions').addEventListener('click', (event) => {
-  localStorage.clear();
+  Object.keys(localStorage)
+        .filter((k) => k.startsWith('success-') || k.startsWith('attempts-'))
+        .map((k) => localStorage.removeItem(k));
+  
   const checkerResults = document.getElementsByClassName('checker-result');
   for (let i = 0; i < checkerResults.length; ++i) {
     checkerResults[i].style.display = 'none';
   }
   const solutionHistories = document.getElementsByClassName('solution-history');
   for (let i = 0; i < solutionHistories.length; ++i) {
-    solutionHistories[i].innerText = 'Нет попыток решения';
+    solutionHistories[i].innerText = '<i class="fas fa-edit"></i> Нет попыток решения';
   }
+  const answerInputs = document.getElementsByClassName('checker-input');
+  for (let i = 0; i < answerInputs.length; ++i) {
+    answerInputs[i].value = '';
+  }
+  event.stopPropagation();
 });
+
+const checkerResults = document.getElementsByClassName('checker-result');
+for (let i = 0; i < checkerResults.length; ++i) {
+  const b = checkerResults[i];
+  b.addEventListener('click', (event) => {
+    event.currentTarget.style.display = 'none';
+    const id = +event.currentTarget.id.replace('checker-result-', '');
+    document.getElementById(`check-input-${id}`).value = '';
+  });
+}

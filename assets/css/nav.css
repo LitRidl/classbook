@@ -12,7 +12,7 @@
 }
 
 .button-pdf {
-  position: absolute;
+  position: fixed;
   bottom: 10px;
   right: 20px;
   outline: none;

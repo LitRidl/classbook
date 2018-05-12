@@ -20,6 +20,12 @@ function handleSectionTrigger (event) {
   const sectionId = `${event.target.dataset.section}-section`
   document.getElementById(sectionId).classList.add('is-shown')
 
+  if (sectionId == 'textbook-section' || sectionId == 'questions-section' || sectionId == 'glossary-section') {
+    document.getElementById('button-pdf').style.display = '';
+  } else {
+    document.getElementById('button-pdf').style.display = 'none';
+  }
+
   // Save currently active button in localStorage
   const buttonId = event.target.getAttribute('id')
   settings.set('activeSectionButtonId', buttonId)
@@ -65,13 +71,15 @@ function hideAllSectionsAndDeselectButtons () {
 // }
 
 // Default to the view that was active the last time the app was open
-const sectionId = settings.get('activeSectionButtonId')
+const sectionBtnId = settings.get('activeSectionButtonId')
 
-if (sectionId) {
-  const section = document.getElementById(sectionId)
-  if (section) {
-    section.click()
+if (sectionBtnId) {
+  const sectionBtn = document.getElementById(sectionBtnId)
+  if (sectionBtn) {
+    sectionBtn.click();
+  } else {
+    activateDefaultSection(); // TODO: check stability
   }
 } else {
-  activateDefaultSection()
+  activateDefaultSection();
 }

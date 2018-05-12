@@ -290,12 +290,27 @@
   margin-top: 10px;
 }
 
-.checker-result .fa-check {
+.fa-check {
   color: green;
 }
 
-.checker-result .fa-times {
-  color: red;
+.fa-times {
+  color: hsl(  9, 60%, 54%);
+  margin-right: 2px;
+  /* padding-bottom: 1px; */
+}
+
+.fa-edit {
+  color: rgb(226, 140,  60);
+  padding-bottom: 1px;
+}
+
+.checker-micro {
+  font-size: 45%;
+  color: var(--color-subtle) !important;
+  text-align: center;
+  padding-bottom: 0;jjj
+  margin-bottom: 0;
 }
 
 #reset-block {

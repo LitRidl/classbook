@@ -63,13 +63,13 @@ def question_to_html(q):
             <div class="demo-wrapper">
                 <button id="new-window-hangs-demo-toggle" class="js-container-target demo-toggle-button">{q[name]}
                     <div class="demo-meta u-avoid-clicks"> 
-                        Сложность: {difficulty}
-                        <span class="demo-meta-divider">|</span> {grade_word}: {grade}
-                        {interact}
+                        {difficulty}
+                        <span class="demo-meta-divider">|</span> {grade} классы
+                        <span class="demo-meta-divider">|</span> {sections}
+                        <span class="demo-meta-divider">|</span> {topics}
                     </div>
                     <div class="demo-meta u-avoid-clicks"> 
-                        {section_word}: {sections}
-                        <span class="demo-meta-divider">|</span> {topic_word}: {topics}
+                        {interact}
                     </div>
                 </button>
                 <div class="demo-box">
@@ -80,13 +80,16 @@ def question_to_html(q):
         </div>
 '''
     checker_tpl = '''
-                    <div class="demo-controls">
-                        <input class="demo-input" id="check-input-{question_id}" placeholder="Введите ответ"></input>
+                    <div class="demo-controls checker-controls">
+                        <input class="demo-input checker-input" id="check-input-{question_id}" placeholder="Введите ответ"></input>
                         <button class="demo-button checker-button" id="check-button-{question_id}" data-question-id="{question_id}" data-question-type="{q_type}" data-answer="{answer}" data-tolerance="{tolerance}">Проверить</button>
                     </div>
-                    <p id="checker-result-{question_id}" class="checker-result" onclick="this.style.display='none'"></p>
+                    <p id="checker-result-{question_id}" class="checker-result"></p>
 '''
-
+    interact_tpl = '''
+                            Интерактивная задача 
+                            <span class="demo-meta-divider">|</span> <span id="solution-{question_id}" class="solution-history"><i class="far fa-edit"></i> Нет попыток решения</span>
+'''
     qtype = 'Текст' if q['type'] == 'essay' else 'Интерактив'
     ans = q['answer'] or 'null'
     tol = q['answer_tolerance'] or 'null'
@@ -97,7 +100,7 @@ def question_to_html(q):
     k = lambda v: ['5-6 класс', '7-9 класс', '10-11 класс'].index(v)
     grade = ', '.join(v.replace(' класс', '') for v in sorted(q['grade'], key=k)) if len(q['grade']) > 0 else 'не назначен'
     gword = 'Класс' if len(q['grade']) <= 1 else 'Классы'
-    interact = '' if q['type'] == 'essay' else '<span class="demo-meta-divider">|</span> <span id="solution-{}" class="solution-history">{}</span>'.format(q['question_id'], 'Нет попыток решения')
+    interact = 'Текстовая задача' if q['type'] == 'essay' else interact_tpl.format(question_id=q['question_id'])
     checker = '' if q['type'] == 'essay' else checker_tpl.format(question_id=q['question_id'], answer=ans, tolerance=tol, q_type=q['type'])
     return task_tpl.format(q=q, qtype=qtype, difficulty=difficulty_icons[q['difficulty']], interact=interact, checker=checker,
                            topic_word=tword, topics=fin, section_word=iword, sections=inf, grade=grade, grade_word=gword)
@@ -154,7 +157,8 @@ def difficulty_order(d):
 
 if __name__ == '__main__':
     questions = questions_from_file('moodle_data/moodle_export_1.xml')
-    order = lambda q: (grade_order(q['grade']), len(q['grade']), difficulty_order(q['difficulty']), q['topics_informatics'], q['topics_finances'], q['type'], q['name'])
+    order = lambda q: (grade_order(q['grade']), len(q['grade']), difficulty_order(q['difficulty']), q['topics_informatics'], q['topics_finances'], q['name'], q['type'])
+    questions.sort(key=lambda q: q['name'])
     questions.sort(key=order)
     questions_index = gen_index(questions)
     # grades = defaultdict(lambda: defaultdict(set))
