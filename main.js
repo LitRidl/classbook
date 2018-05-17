@@ -24,9 +24,9 @@ function initialize() {
       height: 1030,
       title: app.getName(),
       plugins: true,
-      // webPreferences: {
-      //   devTools: false,
-      // },
+      webPreferences: {
+        devTools: false,
+      },
       show: false,
     }
 
@@ -36,7 +36,7 @@ function initialize() {
 
     mainWindow = new BrowserWindow(windowOptions)
     mainWindow.setMenu(null)
-    // mainWindow.webContents.on("devtools-opened", () => { mainWindow.webContents.closeDevTools(); });
+    mainWindow.webContents.on("devtools-opened", () => { mainWindow.webContents.closeDevTools(); });
     mainWindow.loadURL(path.join('file://', __dirname, '/index.html'))
 
     splash = new BrowserWindow({ width: 400, height: 540, transparent: true, frame: false, alwaysOnTop: true });
