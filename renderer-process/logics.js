@@ -186,10 +186,20 @@ document.getElementById('reset-solutions').addEventListener('click', (event) => 
 
 const checkerResults = document.getElementsByClassName('checker-result');
 for (let i = 0; i < checkerResults.length; ++i) {
-  const b = checkerResults[i];
-  b.addEventListener('click', (event) => {
+  checkerResults[i].addEventListener('click', (event) => {
     event.currentTarget.style.display = 'none';
     const id = +event.currentTarget.id.replace('checker-result-', '');
     document.getElementById(`check-input-${id}`).value = '';
+  });
+}
+
+const checkerInput = document.getElementsByClassName('checker-input');
+for (let i = 0; i < checkerInput.length; ++i) {
+  checkerInput[i].addEventListener('keyup', (event) => {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+      const id = +event.currentTarget.id.replace('check-input-', '');
+        document.getElementById(`check-button-${id}`).click();
+    }
   });
 }
