@@ -3,7 +3,7 @@ const glob = require('glob')
 const fs = require('fs')
 const os = require('os')
 const autoUpdater = require('./auto-updater')
-const { app, BrowserWindow, ipcMain, shell } = require('electron')
+const { app, BrowserWindow, ipcMain, shell, dialog } = require('electron')
 const settings = require('electron-settings')
 
 const debug = /--debug/.test(process.argv[2])
@@ -69,7 +69,40 @@ function initialize() {
         shell.openExternal(`file://${pdfPath}`)
       })
     })
-  })
+  });
+
+  ipcMain.on('save-dialog', (event, url) => {
+    const srcPath = url;
+    const saveFile = (filename, data) => {
+      fs.writeFile(filename, data, (error) => {
+        if (error) {
+          dialog.showErrorBox(
+              'Ошибка при сохранении',
+              `Детализация ошибки: ${error.message}`,
+          );
+        }
+      });
+    };
+    const options = {
+      title: 'Сохранить файл задачи',
+      defaultPath: path.basename(srcPath),
+      filters: [
+        { name: 'Все файлы', extensions: ['*'] },
+        { name: 'Таблицы', extensions: ['xlsx'] },
+        { name: 'Текстовые файлы', extensions: ['txt'] },
+      ],
+    };
+    dialog.showSaveDialog(options, (filename) => {
+      if (filename === undefined) {
+        return;
+      }
+      event.sender.send('saved-file', filename);
+      fs.readFile(srcPath, (err, data) => {
+        saveFile(filename, data);
+      });
+    });
+  });
+  
 
   app.on('ready', () => {
     createWindow()
