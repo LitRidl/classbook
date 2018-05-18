@@ -175,7 +175,7 @@ document.getElementById('reset-solutions').addEventListener('click', (event) => 
   }
   const solutionHistories = document.getElementsByClassName('solution-history');
   for (let i = 0; i < solutionHistories.length; ++i) {
-    solutionHistories[i].innerText = '<i class="fas fa-edit"></i> Нет попыток решения';
+    solutionHistories[i].innerHTML = '<i class="fas fa-edit"></i> Нет попыток решения';
   }
   const answerInputs = document.getElementsByClassName('checker-input');
   for (let i = 0; i < answerInputs.length; ++i) {
