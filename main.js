@@ -81,6 +81,7 @@ function initialize() {
               `Детализация ошибки: ${error.message}`,
           );
         }
+        shell.showItemInFolder(filename);
       });
     };
     const options = {
