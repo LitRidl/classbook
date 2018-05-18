@@ -88,7 +88,7 @@ def question_to_html(q):
 '''
     interact_tpl = '''
                             Интерактивная задача 
-                            <span class="demo-meta-divider">|</span> <span id="solution-{question_id}" class="solution-history"><i class="far fa-edit"></i> Нет попыток решения</span>
+                            <span class="demo-meta-divider">|</span> <span id="solution-{question_id}" class="solution-history"><i class="fas fa-edit"></i> Нет попыток решения</span>
 '''
     qtype = 'Текст' if q['type'] == 'essay' else 'Интерактив'
     ans = q['answer'] or 'null'

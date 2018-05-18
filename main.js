@@ -60,19 +60,19 @@ function initialize() {
   }
 
   ipcMain.on('print-to-pdf', (event) => {
-    const pdfPath = path.join(os.tmpdir(), 'fingramotnost_print.pdf')
-    const win = BrowserWindow.fromWebContents(event.sender)
-    mainWindow.webContents.printToPDF({ marginsType: 0, pageSize: "A4", landscape: false, printSelectionOnly: false }, (error, data) => {
-      if (error) throw error
+    const pdfPath = path.join(os.tmpdir(), 'fingramotnost_print.pdf');
+    // const win = BrowserWindow.fromWebContents(event.sender);
+    mainWindow.webContents.printToPDF({ marginsType: 0, pageSize: 'A4', landscape: false, printSelectionOnly: false }, (error, data) => {
+      if (error) throw error;
       fs.writeFile(pdfPath, data, (error) => {
-        if (error) throw error
-        shell.openExternal(`file://${pdfPath}`)
-      })
-    })
+        if (error) throw error;
+        shell.openExternal(`file://${pdfPath}`);
+      });
+    });
   });
 
   ipcMain.on('save-dialog', (event, url) => {
-    const srcPath = url;
+    const srcPath = path.join(__dirname, url);
     const saveFile = (filename, data) => {
       fs.writeFile(filename, data, (error) => {
         if (error) {
@@ -88,9 +88,9 @@ function initialize() {
       title: 'Сохранить файл задачи',
       defaultPath: path.basename(srcPath),
       filters: [
-        { name: 'Все файлы', extensions: ['*'] },
         { name: 'Таблицы', extensions: ['xlsx'] },
         { name: 'Текстовые файлы', extensions: ['txt'] },
+        { name: 'Все файлы', extensions: ['*'] },
       ],
     };
     dialog.showSaveDialog(options, (filename) => {
