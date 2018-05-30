@@ -28,11 +28,18 @@ const storage = (key, value) => {
   }
 };
 
-const check_float = (answer, correct, tolerance) => {
+const checkFloat = (answer, correct, tolerance) => {
   if (tolerance == 'null') {
     return +answer == +correct;
   }
   return (+answer >= +correct - +tolerance) && (+answer <= +correct + +tolerance);
+};
+
+const numberPlural = (n, titles) => {  
+  const cases = [2, 0, 1, 1, 1, 2];
+  if (n == 0)
+    return titles[2];
+  return titles[(n % 100 > 4 && n % 100 < 20)? 2 : cases[(n % 10 < 5)? n % 10 : 5]];  
 };
 
 const union = (setA, setB) => {
@@ -98,6 +105,12 @@ filtersBox.addEventListener('change', (event) => {
       q.style.display = 'none';
     }
   }
+
+  const filtered = questions.size;
+  const total = allQuestionsIdx.length;
+  const totalTpl = genTotalsTpl(filtered, total);
+  document.getElementById('totals-label').innerHTML = totalTpl;
+
   event.stopPropagation();
 });
 
@@ -138,7 +151,7 @@ for (let i = 0; i < checkerButtons.length; ++i) {
 
     let ok = answerUser == data.answer;
     if (data.questionType === 'numerical') {
-      ok = check_float(answerUser, data.answer, data.tolerance);
+      ok = checkFloat(answerUser, data.answer, data.tolerance);
     }
     storage(successKey, success || ok);
 
@@ -154,6 +167,12 @@ for (let i = 0; i < interactions.length; ++i) {
   modifySubmits(interactions[i]);
 }
 
+const genTotalsTpl = (filtered, total) => {
+  const filteredWord = numberPlural(filtered, ['Показана', 'Показаны', 'Показано']);
+  const tasksWord = numberPlural(filtered, ['задача', 'задачи', 'задач']);
+  return `${filteredWord} <span class="total-filtered">${filtered}</span> ${tasksWord} из <span class="total-all">${total}</span>`;
+};
+
 document.getElementById('reset-filters').addEventListener('click', (event) => {
   const checkboxes = filtersBox.getElementsByTagName('input');
   for (let i = 0; i < checkboxes.length; ++i) {
@@ -162,6 +181,12 @@ document.getElementById('reset-filters').addEventListener('click', (event) => {
   for (let i = 0; i < questionElements.length; ++i) {
     questionElements[i].style.display = '';
   }
+
+  const filtered = allQuestionsIdx.length;
+  const total = allQuestionsIdx.length;
+  const totalTpl = genTotalsTpl(filtered, total);
+  document.getElementById('totals-label').innerHTML = totalTpl;
+
 });
 
 document.getElementById('reset-solutions').addEventListener('click', (event) => {

@@ -209,7 +209,7 @@ if __name__ == '__main__':
         qi = json.dumps(questions_index, ensure_ascii=False)
         filters = filters_to_html(questions_index)
         tasks = '\n'.join(question_to_html(q) for q in questions)
-        f.write(questions_tpl.format(questions_index=qi, filters=filters, questions=tasks))
+        f.write(questions_tpl.format(questions_index=qi, filters=filters, questions=tasks, questions_qty=len(questions)))
     
     # for grade_name, g in grades_ordered.items():
     #     for topic in ['all'] + g['topics_informatics']:
