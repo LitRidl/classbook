@@ -7,6 +7,7 @@ const { app, BrowserWindow, ipcMain, shell, dialog } = require('electron')
 const settings = require('electron-settings')
 
 const debug = /--debug/.test(process.argv[2])
+const enableDevTools = true
 
 app.setName('Сборник задач по финансовой грамотности в информатике')
 
@@ -25,7 +26,7 @@ function initialize() {
       title: app.getName(),
       plugins: true,
       webPreferences: {
-        devTools: false,
+        devTools: enableDevTools,
       },
       show: false,
     }
@@ -36,7 +37,9 @@ function initialize() {
 
     mainWindow = new BrowserWindow(windowOptions)
     mainWindow.setMenu(null)
-    mainWindow.webContents.on("devtools-opened", () => { mainWindow.webContents.closeDevTools(); });
+    if (!enableDevTools) {
+      mainWindow.webContents.on("devtools-opened", () => { mainWindow.webContents.closeDevTools(); });
+    }
     mainWindow.loadURL(path.join('file://', __dirname, '/index.html'))
 
     splash = new BrowserWindow({ width: 400, height: 540, transparent: true, frame: false, alwaysOnTop: true });

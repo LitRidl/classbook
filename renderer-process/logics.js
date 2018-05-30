@@ -116,7 +116,7 @@ const modifySubmits = (questionId, firstTime, lastOk) => {
   if (firstTime) {
     const resNode = document.getElementById(`checker-result-${questionId}`);
     resNode.innerHTML = lastOk? '<i class="fas fa-check"></i> Правильный ответ!' : '<i class="fas fa-times"></i> Неправильный ответ!';
-    resNode.innerHTML += '<div class="checker-micro">(нажмите чтобы скрыть)</div>';
+    resNode.innerHTML += '<div class="checker-micro">(очистить поле ответа)</div>';
     document.getElementById(`checker-result-${questionId}`).style.display = '';
   }
 };

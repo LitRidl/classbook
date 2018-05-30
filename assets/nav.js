@@ -3,10 +3,6 @@ const settings = require('electron-settings')
 document.body.addEventListener('click', (event) => {
   if (event.target.dataset.section) {
     handleSectionTrigger(event)
-  } else if (event.target.dataset.modal) {
-    handleModalTrigger(event)
-  } else if (event.target.classList.contains('modal-hide')) {
-    hideAllModals()
   }
 })
 
@@ -20,7 +16,7 @@ function handleSectionTrigger (event) {
   const sectionId = `${event.target.dataset.section}-section`
   document.getElementById(sectionId).classList.add('is-shown')
 
-  if (sectionId == 'textbook-section' || sectionId == 'questions-section' || sectionId == 'glossary-section') {
+  if (sectionId == 'usermanual-section' || sectionId == 'textbook-section' || sectionId == 'questions-section' || sectionId == 'glossary-section') {
     document.getElementById('button-pdf').style.display = '';
   } else {
     document.getElementById('button-pdf').style.display = 'none';
@@ -40,19 +36,6 @@ function showMainContent () {
   document.querySelector('.js-content').classList.add('is-shown')
 }
 
-function handleModalTrigger (event) {
-  hideAllModals()
-  const modalId = `${event.target.dataset.modal}-modal`
-  document.getElementById(modalId).classList.add('is-shown')
-}
-
-function hideAllModals () {
-  const modals = document.querySelectorAll('.modal.is-shown')
-  Array.prototype.forEach.call(modals, (modal) => {
-    modal.classList.remove('is-shown')
-  })
-  showMainContent()
-}
 
 function hideAllSectionsAndDeselectButtons () {
   const sections = document.querySelectorAll('.js-section.is-shown')
@@ -66,9 +49,6 @@ function hideAllSectionsAndDeselectButtons () {
   })
 }
 
-// function displayAbout () {
-//   document.querySelector('#about-modal').classList.add('is-shown')
-// }
 
 // Default to the view that was active the last time the app was open
 const sectionBtnId = settings.get('activeSectionButtonId')

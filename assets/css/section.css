@@ -13,6 +13,7 @@
   /* Hide */
   pointer-events: none;
   visibility: hidden;
+  display: none;
   opacity: 0;
   transform: translateX(-20px);
   transition: visibility 0s .12s linear , opacity .12s ease-in, transform .12s ease-in;
@@ -20,6 +21,7 @@
 .section.is-shown {
   pointer-events: auto;
   visibility: visible;
+  display: block;
   opacity: 1;
   transform: translateX(0);
   transition: visibility 0s 0s linear , opacity .36s ease-out, transform .36s ease-out;

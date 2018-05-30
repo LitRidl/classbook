@@ -326,3 +326,19 @@
 .solution-history {
   font-weight: 700;
 }
+
+
+.usermanual-h1 {
+  /* color: var(--color); */
+  margin-bottom: 3px !important;
+}
+
+.usermanual-h2 {
+  /* color: var(--color); */
+  margin-bottom: 0 !important;
+  font-weight: 500;
+}
+
+.usermanual-first-p {
+  margin-top: 2px;
+}

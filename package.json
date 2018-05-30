@@ -2,7 +2,7 @@
   "name": "finformatika",
   "description": "Сборник задач по финансовой грамотности в информатике",
   "productName": "finformatika",
-  "version": "2.0.3",
+  "version": "2.1.0",
   "main": "main.js",
   "private": true,
   "scripts": {
