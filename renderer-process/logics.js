@@ -215,6 +215,7 @@ for (let i = 0; i < checkerResults.length; ++i) {
     event.currentTarget.style.display = 'none';
     const id = +event.currentTarget.id.replace('checker-result-', '');
     document.getElementById(`check-input-${id}`).value = '';
+    document.getElementById(`check-input-${id}`).focus();
   });
 }
 
