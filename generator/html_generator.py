@@ -1,6 +1,6 @@
 from collections import defaultdict, OrderedDict
 from pprint import pprint
-from moodle_parser import questions_from_file, order_dict, glossary_from_file, gen_index
+from moodle_parser import questions_from_file, order_dict, glossary_from_file, gen_index, json_to_file
 from transliterate import translit
 import json
 import sys
@@ -210,7 +210,12 @@ if __name__ == '__main__':
         filters = filters_to_html(questions_index)
         tasks = '\n'.join(question_to_html(q) for q in questions)
         f.write(questions_tpl.format(questions_index=qi, filters=filters, questions=tasks, questions_qty=len(questions)))
-    
+
+    with open('../sections/questions_data.js', 'w') as f:
+        qs = {q['question_id']: q for q in questions}
+        qi = json.dumps(qs, ensure_ascii=False, indent=None)
+        f.write('window.questionsData = {}\n'.format(qi))
+
     # for grade_name, g in grades_ordered.items():
     #     for topic in ['all'] + g['topics_informatics']:
     #         filters = {'grade': '{} класс'.format(
