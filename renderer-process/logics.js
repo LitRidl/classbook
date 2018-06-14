@@ -246,10 +246,13 @@ const generateStatsBody = (() => {
         topicQuestions[topic] = [];
       }
       topicQuestions[topic].push(q);
-      topicQuestions[topic].sort();
+      topicQuestions[topic].sort((l, r) => {
+        const sL = storage(`success-${l.question_id}`);
+        const sR = storage(`success-${r.question_id}`);
+        return -(sL - sR) || l.name.localeCompare(r.name);
+      });
     }
   }
-
   const body = [];
   // For order consistency
   let totalG = 0;
@@ -311,13 +314,13 @@ const generateStatsBody = (() => {
   const solvedWord = numberPlural(solvedG, ['решена', 'решены', 'решено']);
   const solvingWord = numberPlural(solvingG, ['решается', 'решаются', 'решается']);
   const stats = `Всего ${totalG} ${totalWord}: ${solvedG} ${solvedWord}, ${solvingG} ${solvingWord}.`; //, ${notSolved} не решалась)`;
-  const avgTries = (1.0 * triesSumG / solvedG).toFixed(1).replace('.', ',');
-  const avgDifficulty = (1.0 * difficultySumG / solvedG).toFixed(1).replace('.', ',');
+  const avgTries = (solvedG != 0) ? ('— ' + (1.0 * triesSumG / solvedG).toFixed(1).replace('.', ',')) : 'неизвестно';
+  const avgDifficulty = (solvedG != 0) ? ('— ' + (1.0 * difficultySumG / solvedG).toFixed(1).replace('.', ',')) : 'неизвестна';
   if (body.length > 0) {
     return [
       { text: stats, style: 'globalStats' },
-      { text: `Средняя сложность решённых задач — ${avgDifficulty}.`, style: 'globalStats' },
-      { text: `Среднее количество попыток для решённых задач — ${avgTries}.`, style: 'globalStats', margin: [0, 0, 0, 5] },
+      { text: `Средняя сложность решённых задач ${avgDifficulty}.`, style: 'globalStats' },
+      { text: `Среднее количество попыток для решённых задач ${avgTries}.`, style: 'globalStats', margin: [0, 0, 0, 5] },
       {
         layout: 'noBorders',
         table: {
