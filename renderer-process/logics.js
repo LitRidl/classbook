@@ -100,7 +100,7 @@ const updateQuestionsShownStats = (filtered, total) => {
   document.getElementById("totals-label").innerHTML = totalTpl;
 };
 
-const userChangedFiltersHandler = (event) => {
+const userChangedFiltersHandler = () => {
   let questions = new Set(allQuestionsIdx);
   for (let g = 0; g < checkboxGroups.length; ++g) {
     let questionsLocal = new Set();
@@ -146,10 +146,11 @@ const loadFiltersStateToHtml = () => {
 };
 
 loadFiltersStateToHtml(); // MUST go before onChange handler!!! otherwise infinite recursion
+userChangedFiltersHandler();
 
 // User clicked filter checkboxes
-filtersBox.addEventListener('change', event => {
-  userChangedFiltersHandler(event);
+filtersBox.addEventListener('change', (event) => {
+  userChangedFiltersHandler();
   persistFiltersState();
   event.stopPropagation();
 });
