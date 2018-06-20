@@ -1,6 +1,6 @@
 <template class="task-template">
     <section id="questions-section" class="section js-section u-category-questions">
-        <script>var questionsIndex = {questions_index};</script>
+        <script>var dataVersion = '{data_version}'; var questionsIndex = {questions_index};</script>
         <header class="section-header">
             <div class="section-wrapper">
                 <!-- <h1>Задачник</h1>
@@ -33,11 +33,17 @@
                 </div>
                 <div id="totals-block">
                     <span id="totals-label">Показано <span class="total-filtered">{questions_qty}</span> задач из <span class="total-all">{questions_qty}</span></span>
+                    <span id="reset-block">
+                        <span class="reset-block-item"><a id="reset-filters">Сбросить фильтры</a></span>
+                        <span class="reset-block-item"><a id="reset-solutions">Сбросить результаты прорешивания</a></span>
+                    </span>
                 </div>
-                <div id="reset-block">
+                <!-- <div id="reset-block">
                     <span class="reset-block-item"><a id="reset-filters">Сбросить фильтры</a></span>
                     <span class="reset-block-item"><a id="reset-solutions">Сбросить результаты прорешивания</a></span>
-                    <span class="reset-block-item"><a id="download-stats">Скачать статистику решений</a></span>
+                </div> -->
+                <div id="download-block">
+                    <button class="reset-block-item demo-button"><span id="download-stats">Выгрузить отчёт об успешности работы на текущий момент</span></button>
                 </div>
             </div>
         </header>

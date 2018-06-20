@@ -6,6 +6,8 @@ import json
 import sys
 
 
+DATA_VERSION = '00.00.01'
+
 difficulty_icons = {
     "Базовый уровень":    '<span title="Базовая"    class="difficulty-icon"><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></span>',
     "Повышенный уровень": '<span title="Повышенная" class="difficulty-icon"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></span>',
@@ -121,7 +123,7 @@ def glossary_entry_to_html(e):
 def filters_to_html(qs_index):
     filter_tpl = '''
                             <div class="filter-group-item">
-                                <input type="checkbox" id="{id}" name="{group}" value="{value}">
+                                <input type="checkbox" id="{id}" class="filter-item-input" name="{group}" value="{value}">
                                 <label for="{id}">{label}</label>
                             </div>
 '''
@@ -209,7 +211,8 @@ if __name__ == '__main__':
         qi = json.dumps(questions_index, ensure_ascii=False)
         filters = filters_to_html(questions_index)
         tasks = '\n'.join(question_to_html(q) for q in questions)
-        f.write(questions_tpl.format(questions_index=qi, filters=filters, questions=tasks, questions_qty=len(questions)))
+        f.write(questions_tpl.format(questions_index=qi, filters=filters, questions=tasks, questions_qty=len(questions), data_version=DATA_VERSION))
+        print('dataVersion = {}'.format(DATA_VERSION))
 
     with open('../sections/questions_data.js', 'w') as f:
         qs = {q['question_id']: q for q in questions}

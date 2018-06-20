@@ -1,23 +1,9 @@
 const { ipcRenderer, clipboard } = require("electron");
 require("pdfmake");
 
-const pdfBtn = document.getElementById("button-pdf");
-pdfBtn.addEventListener("click", event => {
-  ipcRenderer.send("print-to-pdf");
-});
-
-const siteBtn = document.getElementById("copy-site");
-siteBtn.addEventListener("click", () => {
-  clipboard.writeText(document.getElementById("contacts-site").innerText);
-});
-
-const emailBtn = document.getElementById("copy-email");
-emailBtn.addEventListener("click", () => {
-  clipboard.writeText(document.getElementById("contacts-email").innerText);
-});
-
-// Real logics
-
+/* ------------- */
+/* Common logics */
+/* ------------- */
 const storage = (key, value) => {
   if (value === undefined) {
     let item = localStorage.getItem(key);
@@ -61,8 +47,29 @@ function intersection(setA, setB) {
   return intersection;
 }
 
-// DATA MODEL
-// const questionsData (in html)
+
+/* ---------------- */
+/* Contacts buttons */
+/* ---------------- */
+const pdfBtn = document.getElementById("button-pdf");
+pdfBtn.addEventListener("click", event => {
+  ipcRenderer.send("print-to-pdf");
+});
+
+const siteBtn = document.getElementById("copy-site");
+siteBtn.addEventListener("click", () => {
+  clipboard.writeText(document.getElementById("contacts-site").innerText);
+});
+
+const emailBtn = document.getElementById("copy-email");
+emailBtn.addEventListener("click", () => {
+  clipboard.writeText(document.getElementById("contacts-email").innerText);
+});
+
+/* ---------------- */
+/*    Data model    */
+/* ---------------- */
+// const questionsData, dataVersion, questionsIndex (in html)
 const questionElements = document.getElementsByClassName("question");
 const allQuestions = {};
 const allQuestionsIdx = [];
@@ -73,32 +80,39 @@ for (let i = 0; i < questionElements.length; ++i) {
 }
 allQuestionsIdx.sort();
 
-const filtersBox = document.getElementById("filters-box");
-const fieldsets = filtersBox.getElementsByTagName("fieldset");
+
+/* ----------------- */
+/* Filter checkboxes */
+/* ----------------- */
+const filtersBox = document.getElementById('filters-box');
+const fieldsets = filtersBox.getElementsByTagName('fieldset');
 
 const checkboxGroups = [];
 for (let i = 0; i < fieldsets.length; i++) {
-  const cbs = fieldsets[i].getElementsByTagName("input");
+  const cbs = fieldsets[i].getElementsByTagName('input');
   checkboxGroups.push(cbs);
 }
 
-filtersBox.addEventListener("change", event => {
-  let questions = new Set(allQuestionsIdx);
+const updateQuestionsShownStats = (filtered, total) => {
+  const filteredWord = numberPlural(filtered, ['Показана', 'Показаны', 'Показано']);
+  const tasksWord = numberPlural(filtered, ['задача', 'задачи', 'задач']);
+  const totalTpl = `${filteredWord} <span class="total-filtered">${filtered}</span> ${tasksWord} из <span class="total-all">${total}</span>`;
+  document.getElementById("totals-label").innerHTML = totalTpl;
+};
 
+const userChangedFiltersHandler = (event) => {
+  let questions = new Set(allQuestionsIdx);
   for (let g = 0; g < checkboxGroups.length; ++g) {
     let questionsLocal = new Set();
-    let hasChecked = false;
+    let groupHasCheckedFilter = false;
     for (let i = 0; i < checkboxGroups[g].length; ++i) {
       const cb = checkboxGroups[g][i];
       if (cb.checked) {
-        hasChecked = true;
-        questionsLocal = union(
-          questionsLocal,
-          new Set(questionsIndex[cb.name][cb.value])
-        );
+        groupHasCheckedFilter = true;
+        questionsLocal = union(questionsLocal, new Set(questionsIndex[cb.name][cb.value]));
       }
     }
-    if (hasChecked) {
+    if (groupHasCheckedFilter) {
       questions = intersection(questions, questionsLocal);
     }
   }
@@ -106,21 +120,65 @@ filtersBox.addEventListener("change", event => {
   for (let i = 0; i < questionElements.length; ++i) {
     const q = questionElements[i];
     if (questions.has(+q.dataset.questionId)) {
-      q.style.display = "";
+      q.style.display = '';
     } else {
-      q.style.display = "none";
+      q.style.display = 'none';
     }
   }
+  updateQuestionsShownStats(questions.size, allQuestionsIdx.length);
+};
 
-  const filtered = questions.size;
-  const total = allQuestionsIdx.length;
-  const totalTpl = genTotalsTpl(filtered, total);
-  document.getElementById("totals-label").innerHTML = totalTpl;
 
+const persistFiltersState = () => {
+  const filterCheckboxes = document.getElementsByClassName('filter-item-input');
+  const filtersChecked = {};
+  for (let i = 0; i < filterCheckboxes.length; ++i) {
+    filtersChecked[filterCheckboxes[i].id] = filterCheckboxes[i].checked;
+  }
+  storage('filters-checked', filtersChecked);
+};
+
+const loadFiltersStateToHtml = () => {
+  const filtersChecked = storage('filters-checked') || {};
+  Object.entries(filtersChecked).forEach(([filterId, isChecked]) => {
+    document.getElementById(filterId).checked = isChecked;
+  });
+};
+
+loadFiltersStateToHtml(); // MUST go before onChange handler!!! otherwise infinite recursion
+
+// User clicked filter checkboxes
+filtersBox.addEventListener('change', event => {
+  userChangedFiltersHandler(event);
+  persistFiltersState();
   event.stopPropagation();
 });
 
-const modifySubmits = (questionId, firstTime, lastOk) => {
+
+// Reset filters function
+const resetFilters = () => {
+  const checkboxes = filtersBox.getElementsByTagName('input');
+  for (let i = 0; i < checkboxes.length; ++i) {
+    checkboxes[i].checked = false;
+  }
+  for (let i = 0; i < questionElements.length; ++i) {
+    questionElements[i].style.display = '';
+  }
+  persistFiltersState();
+  updateQuestionsShownStats(allQuestionsIdx.length, allQuestionsIdx.length);
+};
+
+// User clicked filters reset
+document.getElementById('reset-filters').addEventListener('click', event => {
+  resetFilters();
+  event.stopPropagation();
+});
+
+
+/* ----------------- */
+/*  Modify submits   */
+/* ----------------- */
+const setQuestionAttemptStatusHtml = (questionId, afterSubmitClicked, lastOk) => {
   const success = storage(`success-${questionId}`);
   const attempts = storage(`attempts-${questionId}`);
 
@@ -136,7 +194,7 @@ const modifySubmits = (questionId, firstTime, lastOk) => {
   }
   document.getElementById(`solution-${questionId}`).innerHTML = html;
 
-  if (firstTime) {
+  if (afterSubmitClicked) {
     const resNode = document.getElementById(`checker-result-${questionId}`);
     resNode.innerHTML = lastOk
       ? '<i class="fas fa-check"></i> Правильный ответ!'
@@ -147,93 +205,140 @@ const modifySubmits = (questionId, firstTime, lastOk) => {
   }
 };
 
-const checkerButtons = document.getElementsByClassName("checker-button");
-for (let i = 0; i < checkerButtons.length; ++i) {
-  const b = checkerButtons[i];
-  b.addEventListener("click", event => {
+
+/* ---------------------- */
+/* Handle clicking Submit */
+/* ---------------------- */
+const submitSolutionButtons = document.getElementsByClassName('checker-button');
+for (let i = 0; i < submitSolutionButtons.length; ++i) {
+  const b = submitSolutionButtons[i];
+  b.addEventListener('click', event => {
     const data = event.target.dataset;
-    const answerUser = event.target.parentElement
-      .getElementsByTagName("input")[0]
-      .value.trim();
+    const answerUser = event.target.parentElement.getElementsByTagName('input')[0].value.trim();
 
     const successKey = `success-${data.questionId}`;
-    const success = storage(successKey);
+    const successInThePast = storage(successKey);
 
-    if (success === false || success == null) {
+    if (successInThePast === false || successInThePast == null) {
       const attemtpsKey = `attempts-${data.questionId}`;
       storage(attemtpsKey, (storage(attemtpsKey) || 0) + 1);
     }
 
-    let ok = answerUser == data.answer;
-    if (data.questionType === "numerical") {
-      ok = checkFloat(answerUser, data.answer, data.tolerance);
+    let solutionIsCorrect = (answerUser == data.answer);
+    if (data.questionType === 'numerical') {
+      solutionIsCorrect = checkFloat(answerUser, data.answer, data.tolerance);
     }
-    storage(successKey, success || ok);
+    storage(successKey, successInThePast || solutionIsCorrect);
 
-    const state = union(
-      new Set(storage("modified-state") || []),
-      new Set([+data.questionId])
-    );
-    storage("modified-state", [...state]);
-    modifySubmits(data.questionId, true, ok);
+    const questionsWithAttempts = union(new Set(storage('questions-with-attempts') || []), new Set([+data.questionId]));
+    storage('questions-with-attempts', [...questionsWithAttempts]);
+    setQuestionAttemptStatusHtml(data.questionId, true, solutionIsCorrect); // afterSubmitClicked = true
     event.stopPropagation();
   });
 }
 
-const interactions = storage("modified-state") || [];
-for (let i = 0; i < interactions.length; ++i) {
-  modifySubmits(interactions[i]);
-}
 
-const genTotalsTpl = (filtered, total) => {
-  const filteredWord = numberPlural(filtered, [
-    "Показана",
-    "Показаны",
-    "Показано",
-  ]);
-  const tasksWord = numberPlural(filtered, ["задача", "задачи", "задач"]);
-  return `${filteredWord} <span class="total-filtered">${filtered}</span> ${tasksWord} из <span class="total-all">${total}</span>`;
+/* ----------------------- */
+/* Loading from LS to HTML */
+/* ----------------------- */
+const loadAttemptsToHtml = () => {
+  const submittedTasks = storage('questions-with-attempts') || [];
+  for (let i = 0; i < submittedTasks.length; ++i) {
+    setQuestionAttemptStatusHtml(submittedTasks[i]);
+  }
+};
+// Extract all attempts from LS and set html
+loadAttemptsToHtml();
+
+
+/* ----------------- */
+/* Filter checkboxes */
+/* ----------------- */
+const resetSolutions = () => {
+  Object.keys(localStorage).filter(k => k.startsWith('success-') || k.startsWith('attempts-')).map(k => localStorage.removeItem(k));
+  localStorage.removeItem('questions-with-attempts');
+  localStorage.removeItem('data-version');
+  localStorage.removeItem('filters-checked');
+
+  const afterSubmitAttemptResult = document.getElementsByClassName('checker-result');
+  for (let i = 0; i < afterSubmitAttemptResult.length; ++i) {
+    afterSubmitAttemptResult[i].style.display = 'none';
+  }
+  const solutionHistories = document.getElementsByClassName('solution-history');
+  for (let i = 0; i < solutionHistories.length; ++i) {
+    solutionHistories[i].innerHTML = '<i class="fas fa-edit"></i> Нет попыток решения'; // REFACTOR
+  }
+  const answerInputs = document.getElementsByClassName('checker-input');
+  for (let i = 0; i < answerInputs.length; ++i) {
+    answerInputs[i].value = '';
+  }
 };
 
-document.getElementById("reset-filters").addEventListener("click", event => {
-  const checkboxes = filtersBox.getElementsByTagName("input");
-  for (let i = 0; i < checkboxes.length; ++i) {
-    checkboxes[i].checked = false;
-  }
-  for (let i = 0; i < questionElements.length; ++i) {
-    questionElements[i].style.display = "";
-  }
-
-  const filtered = allQuestionsIdx.length;
-  const total = allQuestionsIdx.length;
-  const totalTpl = genTotalsTpl(filtered, total);
-  document.getElementById("totals-label").innerHTML = totalTpl;
+// User clicks Reset All Solutions
+document.getElementById('reset-solutions').addEventListener('click', event => {
+  resetSolutions();
 });
 
-document.getElementById("reset-solutions").addEventListener("click", event => {
-  Object.keys(localStorage)
-    .filter(k => k.startsWith("success-") || k.startsWith("attempts-"))
-    .map(k => localStorage.removeItem(k));
-  localStorage.removeItem('modified-state');
+/* ---------------------------------------------------------- */
+/* Purging LS if old or empty data version + set data version */
+/* ---------------------------------------------------------- */
+const purgeDataIfOldVersion = () => {
+  if (!storage('data-version') || (storage('data-version') != dataVersion)) {
+    resetSolutions();
+    resetFilters(); // TODO: filters persistence
+  }
+  // const good = true;
+  // const questionsWithAttempts = storage('questions-with-attempts') || [];
+  // for (let i = 0; i < questionsWithAttempts.length; ++i) {
+  //   if (!storage(`success-${questionsWithAttempts[i]}`) || storage(`attempts-${questionsWithAttempts[i]}`) == null) {
+  //     good = false;
+  //   }
+  // }
+  // if (!good) {
+  //   resetSolutions();
+  //   resetFilters(); // TODO: filters persistence
+  // }
+  storage('data-version', dataVersion);
+};
+purgeDataIfOldVersion();
 
-  const checkerResults = document.getElementsByClassName("checker-result");
-  for (let i = 0; i < checkerResults.length; ++i) {
-    checkerResults[i].style.display = "none";
-  }
-  const solutionHistories = document.getElementsByClassName("solution-history");
-  for (let i = 0; i < solutionHistories.length; ++i) {
-    solutionHistories[i].innerHTML =
-      '<i class="fas fa-edit"></i> Нет попыток решения';
-  }
-  const answerInputs = document.getElementsByClassName("checker-input");
-  for (let i = 0; i < answerInputs.length; ++i) {
-    answerInputs[i].value = "";
-  }
-  event.stopPropagation();
-});
 
+/* -------------------------------------- */
+/* When user clicks on attempt to hide it */
+/* -------------------------------------- */
+const afterSubmitAttemptResult = document.getElementsByClassName('checker-result');
+for (let i = 0; i < afterSubmitAttemptResult.length; ++i) {
+  afterSubmitAttemptResult[i].addEventListener('click', event => {
+    event.currentTarget.style.display = 'none';
+    const id = +event.currentTarget.id.replace('checker-result-', '');
+    document.getElementById(`check-input-${id}`).value = '';
+    document.getElementById(`check-input-${id}`).focus();
+  });
+}
+
+/* ------------------------------------- */
+/* Submit attempt when user clicks Enter */
+/* ------------------------------------- */
+const checkerInput = document.getElementsByClassName('checker-input');
+for (let i = 0; i < checkerInput.length; ++i) {
+  checkerInput[i].addEventListener('keyup', event => {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+      const id = +event.currentTarget.id.replace('check-input-', '');
+      document.getElementById(`check-button-${id}`).click();
+    }
+  });
+}
+
+
+// DIFFERENT BLOCK, REPORTING ONLY
+
+
+/* ------------------------------ */
+/* Generating statistical reports */
+/* ------------------------------ */
 const generateStatsBody = (() => {
-  const questionIds = storage('modified-state') || [];
+  const questionIds = storage('questions-with-attempts') || [];
   questionIds.sort();
 
   const topicQuestions = {};
@@ -291,9 +396,11 @@ const generateStatsBody = (() => {
       const stats = ` (${total} ${totalWord}: ${solved} ${solvedWord}, ${solving} ${solvingWord})`; //, ${notSolved} не решалась)`;
       body.push([{ colSpan: 3, text: [{ text: allTopics[topicIdx], style: 'topicName' }, { text: stats, style: 'topicStats' }], margin: [0, 10, 0, 2] }, '', '']);
       for (let qIdx = 0; qIdx < qs.length; ++qIdx) {
+        if (storage(`success-${q.question_id}`) === null || storage(`attempts-${q.question_id}`) === null) {
+          continue;
+        }
         const q = qs[qIdx];
         const name = q.name;
-        // const difficulty = { 'Базовый уровень': '★☆☆', 'Повышенный уровень': '★★☆', 'Высокий уровень': '★★★' }[q.difficulty] || 'Сложность неизвестна'; \uf005
         const bStar = { text: '\uf005', font: 'fas' };
         const wStar = { text: '\uf005', font: 'far' };
         const difficulty = ({
@@ -423,25 +530,3 @@ document.getElementById('download-stats').addEventListener('click', event => {
 
   pdfMake.createPdf(generatePdf(momentStr, uuid)).download(`Финграмотность, ${momentStr.replace(':', '-')}.pdf`);
 });
-
-
-const checkerResults = document.getElementsByClassName('checker-result');
-for (let i = 0; i < checkerResults.length; ++i) {
-  checkerResults[i].addEventListener('click', event => {
-    event.currentTarget.style.display = 'none';
-    const id = +event.currentTarget.id.replace('checker-result-', '');
-    document.getElementById(`check-input-${id}`).value = '';
-    document.getElementById(`check-input-${id}`).focus();
-  });
-}
-
-const checkerInput = document.getElementsByClassName('checker-input');
-for (let i = 0; i < checkerInput.length; ++i) {
-  checkerInput[i].addEventListener('keyup', event => {
-    event.preventDefault();
-    if (event.keyCode === 13) {
-      const id = +event.currentTarget.id.replace('check-input-', '');
-      document.getElementById(`check-button-${id}`).click();
-    }
-  });
-}

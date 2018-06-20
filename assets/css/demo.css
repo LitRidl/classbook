@@ -309,17 +309,24 @@
   font-size: 45%;
   color: var(--color-subtle) !important;
   text-align: center;
-  padding-bottom: 0;jjj
+  padding-bottom: 0;
   margin-bottom: 0;
 }
 
 #reset-block {
-  display: flex;
   margin-top: 10px;
+  margin-bottom: 6px;
+  margin-left: 15px;
+}
+
+#download-block {
+  display: flex;
+  margin-top: 5px;
   margin-bottom: 6px;
 }
 
 .reset-block-item {
+  margin-top: 10px;
   margin-right: 15px;
 }
 
