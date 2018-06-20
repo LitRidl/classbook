@@ -397,10 +397,10 @@ const generateStatsBody = (() => {
       const stats = ` (${total} ${totalWord}: ${solved} ${solvedWord}, ${solving} ${solvingWord})`; //, ${notSolved} не решалась)`;
       body.push([{ colSpan: 3, text: [{ text: allTopics[topicIdx], style: 'topicName' }, { text: stats, style: 'topicStats' }], margin: [0, 10, 0, 2] }, '', '']);
       for (let qIdx = 0; qIdx < qs.length; ++qIdx) {
+        const q = qs[qIdx];
         if (storage(`success-${q.question_id}`) === null || storage(`attempts-${q.question_id}`) === null) {
           continue;
         }
-        const q = qs[qIdx];
         const name = q.name;
         const bStar = { text: '\uf005', font: 'fas' };
         const wStar = { text: '\uf005', font: 'far' };
