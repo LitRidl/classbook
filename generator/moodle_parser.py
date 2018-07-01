@@ -210,7 +210,22 @@ def questions_from_file(f):
     order = ['_id', 'question_id', 'grade', 'difficulty', 'topics_finances',
              'topics_informatics', 'name', 'text', 'type', 'answer', 'answer_tolerance', 'code', 'task_type', '_tags', '_fake_attributes']
 
-    return order_dict(questions, order)
+    qs = order_dict(questions, order)
+
+    idx = 1
+    for q in qs:
+        res = q['text']
+        if 'ftn1' in q['text']:
+            res = res.replace('ftn1', 'ftn{}'.format(idx))
+            res = res.replace('ftnref1', 'ftnref{}'.format(idx))
+            idx += 1
+            if 'ftn2' in q['text']:
+                res = res.replace('ftn2', 'ftn{}'.format(idx))
+                res = res.replace('ftnref2', 'ftnref{}'.format(idx))
+                idx += 1
+            q['text'] = res
+
+    return qs
 
 
 def parse_glossary_entry(e):
