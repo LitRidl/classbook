@@ -6,7 +6,7 @@ import json
 import sys
 
 
-DATA_VERSION = '00.00.01'
+DATA_VERSION = '00.00.04'
 
 difficulty_icons = {
     "Базовый уровень":    '<span title="Базовая"    class="difficulty-icon"><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></span>',
@@ -121,6 +121,9 @@ def glossary_entry_to_html(e):
 
 
 def filters_to_html(qs_index):
+    topics_finances_order = ['Расходы', 'Доходы', 'Семейный бюджет', 'Сбережения и инвестиции', 'Платежи и расчёты', 'Кредиты и займы', 'Страхование', 'Риски и финансовая безопасность']
+    topics_informatics_order = ['Информация и информационные процессы', 'Алгоритмизация и программирование', 'Моделирование и формализация', 'Обработка числовых данных в электр. таблицах', 'Измерение количества информации', 'Информационная безопасность']
+    type_order = ['Интерактивная', 'Текстовая']
     filter_tpl = '''
                             <div class="filter-group-item">
                                 <input type="checkbox" id="{id}" class="filter-item-input" name="{group}" value="{value}">
@@ -130,12 +133,19 @@ def filters_to_html(qs_index):
     
     filters = defaultdict(str)
     for field in qs_index.keys():
-        for i, v in enumerate(qs_index[field].keys()):
+        keys = qs_index[field].keys()
+        if field == 'topics_finances':
+            keys = [topic for topic in topics_finances_order if topic in keys]
+        elif field == 'topics_informatics':
+            keys = [topic for topic in topics_informatics_order if topic in keys]
+        elif field == 'type':
+            keys = [task_type for task_type in type_order if task_type in keys]
+        for i, v in enumerate(keys):
             raw_v = v
             if field == 'difficulty':
                 v = difficulty_icons[v]
             elif field == 'type':
-                v = 'Интерактив' if v == 'Интерактивная' else 'Текст'
+                v = 'Интерактив' if v == 'Интерактивная' else 'Текст' # TODO автоматизированная vs ручная
             filters[field] += filter_tpl.format(id="filter-{}-{}".format(field, i + 1), group=field, label=v, value=raw_v)
 
     return filters
