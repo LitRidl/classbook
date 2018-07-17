@@ -4,6 +4,9 @@ from moodle_parser import questions_from_file, order_dict, glossary_from_file, g
 from transliterate import translit
 import json
 import sys
+import os
+from openpyxl import load_workbook
+from os.path import join
 
 
 DATA_VERSION = '00.00.04'
@@ -63,7 +66,7 @@ def question_to_html(q):
     task_tpl = '''
         <div class="question demo" id="question-{q[question_id]}" data-question-id="{q[question_id]}" data-code="{q[code]}" data-question-type="{qtype}">
             <div class="demo-wrapper">
-                <button id="new-window-hangs-demo-toggle" class="js-container-target demo-toggle-button">{q[name]}
+                <button id="new-window-hangs-demo-toggle" class="js-container-target demo-toggle-button">{q[code]} {q[name]}
                     <div class="demo-meta u-avoid-clicks"> 
                         {difficulty}
                         <span class="demo-meta-divider">|</span> {grade} классы
@@ -167,12 +170,41 @@ def difficulty_order(d):
     return 3
 
 
+def list_excel_files(only_names=False):
+    filenames = []
+    for root, _, files in os.walk('../assets/finformatika.ru/files/'):
+        filenames += [join(root, name) for name in files if name.endswith('.xlsx')]
+    return [os.path.basename(fn) for fn in filenames] if only_names else filenames
+
+
+def filename_to_code(fname):
+    fname = os.path.basename(fname).rstrip('.xlsx')
+    return '{}.{}.{}.{}'.format(fname[0], fname[1], fname[2], fname[3:])
+
+
+def is_excel_interactive(fname):
+    wb = load_workbook(fname)
+    return any('(решение)' in ws for ws in wb.sheetnames)
+
+
 if __name__ == '__main__':
     questions = questions_from_file('moodle_data/moodle_export_1.xml')
     order = lambda q: (grade_order(q['grade']), len(q['grade']), difficulty_order(q['difficulty']), q['topics_informatics'], q['topics_finances'], q['name'], q['type'])
     questions.sort(key=lambda q: q['name'])
     questions.sort(key=order)
+
+    # TODO: test this more!!!
+    fnames = list_excel_files()
+    for q in questions:
+        fname = None
+        for f in fnames:
+            if filename_to_code(f) in q['code']:
+                fname = f
+                break
+        q['excel_interactive'] = is_excel_interactive(fname) if fname else False
+
     questions_index = gen_index(questions)
+
     # grades = defaultdict(lambda: defaultdict(set))
     # for q in questions:
     #     for gr in q['grade']:

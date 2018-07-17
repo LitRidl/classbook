@@ -249,7 +249,7 @@ def json_to_file(data, fname, indent=4):
 def gen_index(qs):
     import bisect
     idx = defaultdict(lambda: defaultdict(list))
-    fields = ['grade', 'type', 'difficulty', 'topics_finances', 'topics_informatics', 'task_type']
+    fields = ['grade', 'type', 'difficulty', 'topics_finances', 'topics_informatics', 'task_type', 'excel_interactive']
     for q in qs:
         for field in fields:
             if isinstance(q[field], list):
