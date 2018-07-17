@@ -359,6 +359,7 @@ const generateStatsBody = (() => {
       });
     }
   }
+
   const body = [];
   // For order consistency
   let totalG = 0;
@@ -366,7 +367,7 @@ const generateStatsBody = (() => {
   let solvingG = 0;
   let triesSumG = 0.0;
   let difficultySumG = 0.0;
-  const allTopics = ['Программирование', 'Электронные таблицы', 'Информационный поиск и анализ информации', 'Моделирование', 'Измерение количества информации', 'Информационная безопасность'];
+  const allTopics = ['Информация и информационные процессы', 'Алгоритмизация и программирование', 'Моделирование и формализация', 'Обработка числовых данных в электр. таблицах', 'Измерение количества информации', 'Информационная безопасность']
   for (let topicIdx = 0; topicIdx < allTopics.length; ++topicIdx) {
     if (topicQuestions.hasOwnProperty(allTopics[topicIdx])) {
       const qs = topicQuestions[allTopics[topicIdx]];
