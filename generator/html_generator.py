@@ -9,7 +9,7 @@ from openpyxl import load_workbook
 from os.path import join
 
 
-DATA_VERSION = '00.00.04'
+DATA_VERSION = '00.00.05'
 
 difficulty_icons = {
     "Базовый уровень":    '<span title="Базовая"    class="difficulty-icon"><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></span>',

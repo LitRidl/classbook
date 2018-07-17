@@ -1,5 +1,15 @@
-const { ipcRenderer, clipboard } = require('electron');
+const { ipcRenderer, clipboard, remote } = require('electron');
+
 require('pdfmake');
+
+// SEARCH BOX
+const searchInPage = require('electron-in-page-search').default;
+const inPageSearch = searchInPage(remote.getCurrentWebContents());
+
+document.getElementById('butt').addEventListener('click', () => {
+  inPageSearch.openSearchWindow();
+});
+
 
 /* ------------- */
 /* Common logics */
