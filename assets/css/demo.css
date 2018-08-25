@@ -290,6 +290,37 @@
   margin-top: 10px;
 }
 
+.checker-input-file {
+  width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+/* .checker-input-file + label {
+  font-size: 1.25em;
+  font-weight: 700;
+  color: white;
+  background-color: black;
+  display: inline-block;
+}
+
+.checker-input-file:focus + label,
+.checker-input-file + label:hover {
+  background-color: red;
+} */
+
+.checker-input-file + label {
+	cursor: pointer;
+}
+
+/* .checker-input-file:focus + label {
+	outline: 1px dotted #000;
+	outline: -webkit-focus-ring-color auto 5px;
+} */
+
 .fa-check {
   color: green;
 }

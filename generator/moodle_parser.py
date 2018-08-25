@@ -5,6 +5,10 @@ import random
 import json
 from collections import OrderedDict, defaultdict
 import sys
+import os
+from openpyxl import load_workbook
+from os.path import join
+
 
 
 def fmt(tag):
@@ -205,12 +209,55 @@ def order_dict(d, order):
     return [OrderedDict(sorted(el.items(), key=lambda el: order.index(el[0]))) for el in d]
 
 
+
+def list_excel_files(only_names=False):
+    filenames = []
+    for root, _, files in os.walk('../assets/files/excel/'):
+        filenames += [join(root, name) for name in files if name.endswith('.xlsx')]
+    return [os.path.basename(fn) for fn in filenames] if only_names else filenames
+
+
+def filename_to_code(fname):
+    fname = os.path.basename(fname).rstrip('.xlsx')
+    return '{}.{}.{}.{}'.format(fname[0], fname[1], fname[2], fname[3:])
+
+
+def is_excel_interactive(fname):
+    wb = load_workbook(fname)
+    return any('(решение)' in ws for ws in wb.sheetnames)
+
+
+
 def questions_from_file(f):
     questions = parse_questions(open(f).read())
     order = ['_id', 'question_id', 'grade', 'difficulty', 'topics_finances',
-             'topics_informatics', 'name', 'text', 'type', 'answer', 'answer_tolerance', 'code', 'task_type', '_tags', '_fake_attributes']
+             'topics_informatics', 'name', 'text', 'type', 'answer', 'answer_tolerance', 'code', 'task_type', 'excel_interactive', '_tags', '_fake_attributes']
+
+    fnames = list_excel_files()
+    fnames_used = []
+    for q in questions:
+        fname = None
+        for f in fnames:
+            if filename_to_code(f) == q['code']:
+                fname = f
+                break
+        if fname and is_excel_interactive(fname) and q['type'] == 'essay':
+            fnames_used.append(fname)
+            q['excel_interactive'] = True
+            q['task_type'] = 'Тип: Excel-задача'
+            q['type'] = 'excel'
+        else:
+            q['excel_interactive'] = False
 
     qs = order_dict(questions, order)
+
+    # fnames.extend(fnames_used)
+    # fnames.sort()
+    # print(fnames)
+    # print('Fnames: {}'.format(len(fnames)))
+    # print('Qs: {}'.format(len([q for q in qs if q['excel_interactive']])))
+    # print('Tts: {}'.format(len([q for q in qs if q['task_type'] == 'Тип: Excel-задача'])))
+    # print('Ts: {}'.format(len([q for q in qs if q['type'] == 'excel'])))
 
     idx = 1
     for q in qs:
@@ -258,7 +305,10 @@ def gen_index(qs):
             else:
                 v = q[field]
                 if field == 'type':
-                    v = 'Текстовая' if v == 'essay' else 'Интерактивная'
+                    if v == 'excel':
+                        v = 'Excel'
+                    else:
+                        v = 'Текст' if v == 'essay' else 'Интерактив'
                 bisect.insort(idx[field][v], q['question_id'])
     return idx
 

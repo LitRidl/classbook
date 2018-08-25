@@ -4,6 +4,7 @@ require('pdfmake');
 
 // SEARCH BOX
 const searchInPage = require('electron-in-page-search').default;
+
 const inPageSearch = searchInPage(remote.getCurrentWebContents());
 
 document.getElementById('butt').addEventListener('click', () => {
@@ -11,24 +12,56 @@ document.getElementById('butt').addEventListener('click', () => {
 });
 
 
+// EXCEL block
+const Excel = require('exceljs');
+
+window.handleFiles = (files) => {
+  for (let i = 0, f; f = files[i]; ++i) {
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      const buf = e.target.result;
+      console.log(buf);
+      const wb = new Excel.Workbook();
+      wb.xlsx.load(buf).then(() => {
+        let foundSolution = false;
+        wb.eachSheet((ws, wsId) => {
+          if (ws.name.includes('(решение)')) {
+            console.log(ws.getCell('C1').value.result, ws.getCell('C1').value.result === 'решена');
+            foundSolution = true;
+          }
+        });
+        console.log(foundSolution);
+        // const ws2 = wb.getWorksheet('Расход электроэнергии');
+        // console.log(ws2.getCell('D13').value.result);
+      }).catch((reason) => {
+        console.log(reason);
+      });
+    };
+    reader.readAsArrayBuffer(f);
+  }
+};
+
+
 /* ------------- */
 /* Common logics */
 /* ------------- */
 const storage = (key, value) => {
   if (value === undefined) {
-    let item = localStorage.getItem(key);
+    const item = localStorage.getItem(key);
     return item === null ? null : JSON.parse(item);
-  } 
-    localStorage.setItem(key, JSON.stringify(value));
-    return value;
-  
+  }
+  localStorage.setItem(key, JSON.stringify(value));
+  return value;
 };
 
 const checkFloat = (answer, correct, tolerance) => {
-  if (tolerance == 'null') {
-    return +answer == +correct;
+  const a = +(typeof answer === 'string' ? answer.replace(',', '.') : answer);
+  const c = +(typeof correct === 'string' ? correct.replace(',', '.') : correct);
+  const t = +(typeof tolerance === 'string' ? tolerance.replace(',', '.') : tolerance);
+  if (tolerance === 'null') {
+    return a === c;
   }
-  return +answer >= +correct - +tolerance && +answer <= +correct + +tolerance;
+  return a >= c - t && a <= c + t;
 };
 
 const numberPlural = (n, titles) => {
@@ -40,21 +73,21 @@ const numberPlural = (n, titles) => {
 };
 
 const union = (setA, setB) => {
-  let union = new Set(setA);
+  const united = new Set(setA);
   for (const elem of setB) {
-    union.add(elem);
+    united.add(elem);
   }
-  return union;
+  return united;
 };
 
 function intersection(setA, setB) {
-  let intersection = new Set();
+  const intersected = new Set();
   for (const elem of setB) {
     if (setA.has(elem)) {
-      intersection.add(elem);
+      intersected.add(elem);
     }
   }
-  return intersection;
+  return intersected;
 }
 
 
