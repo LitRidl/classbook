@@ -8,7 +8,7 @@ import os
 from os.path import join
 
 
-DATA_VERSION = '00.00.06'
+DATA_VERSION = '00.00.07'
 
 difficulty_icons = {
     "Базовый уровень":    '<span title="Базовая"    class="difficulty-icon"><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></span>',
