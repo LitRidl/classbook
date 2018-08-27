@@ -1,22 +1,21 @@
-const path = require('path')
-const glob = require('glob')
-const fs = require('fs')
-const os = require('os')
-const autoUpdater = require('./auto-updater')
-const { app, BrowserWindow, ipcMain, shell, dialog } = require('electron')
-const settings = require('electron-settings')
+const path = require('path');
+const fs = require('fs');
+const os = require('os');
+const autoUpdater = require('./auto-updater');
+const { app, BrowserWindow, ipcMain, shell, dialog } = require('electron');
+const settings = require('electron-settings');
 
-const debug = /--debug/.test(process.argv[2])
-const enableDevTools = true
+const debug = /--debug/.test(process.argv[2]);
+const enableDevTools = true;
 
-app.setName('Сборник задач по финансовой грамотности в информатике')
+app.setName('Сборник задач по финансовой грамотности в информатике');
 
-let mainWindow = null
-let splash = null
+let mainWindow = null;
+let splash = null;
 
 function initialize() {
-  const shouldQuit = makeSingleInstance()
-  if (shouldQuit) return app.quit()
+  const shouldQuit = makeSingleInstance();
+  if (shouldQuit) return app.quit();
 
   function createWindow() {
     const windowOptions = {
@@ -29,37 +28,38 @@ function initialize() {
         devTools: enableDevTools,
       },
       show: false,
-    }
+    };
 
     if (process.platform === 'linux') {
-      windowOptions.icon = path.join(__dirname, '/assets/img/finformatika.png')
+      windowOptions.icon = path.join(__dirname, '/assets/img/finformatika.png');
     }
 
-    mainWindow = new BrowserWindow(windowOptions)
-    mainWindow.setMenu(null)
+    mainWindow = new BrowserWindow(windowOptions);
+    mainWindow.setMenu(null);
     if (!enableDevTools) {
-      mainWindow.webContents.on("devtools-opened", () => { mainWindow.webContents.closeDevTools(); });
+      mainWindow.webContents.on('devtools-opened', () => { mainWindow.webContents.closeDevTools(); });
     }
-    mainWindow.loadURL(path.join('file://', __dirname, '/index.html'))
-
-    splash = new BrowserWindow({ width: 400, height: 540, transparent: true, frame: false, alwaysOnTop: true });
+    mainWindow.loadURL(path.join('file://', __dirname, '/index.html'));
+    
+    // width: 400 * 2, height: 540 * 2,
+    splash = new BrowserWindow({ transparent: true, frame: false, alwaysOnTop: true });
     splash.loadURL(`file://${__dirname}/assets/img/loading.svg`);
 
     mainWindow.once('ready-to-show', () => {
-      splash.destroy()
-      mainWindow.show()
-    })
+      splash.destroy();
+      mainWindow.show();
+    });
 
     // Launch fullscreen with DevTools open, usage: npm run debug
     if (debug) {
-      mainWindow.webContents.openDevTools()
-      mainWindow.maximize()
-      require('devtron').install()
+      mainWindow.webContents.openDevTools();
+      mainWindow.maximize();
+      require('devtron').install();
     }
 
     mainWindow.on('closed', () => {
-      mainWindow = null
-    })
+      mainWindow = null;
+    });
   }
 
   ipcMain.on('print-to-pdf', (event) => {
@@ -106,24 +106,24 @@ function initialize() {
       });
     });
   });
-  
+
 
   app.on('ready', () => {
-    createWindow()
-  })
+    createWindow();
+  });
 
   app.on('window-all-closed', () => {
     // if (process.platform !== 'darwin') {
     //   app.quit()
     // }
-    app.quit()
-  })
+    app.quit();
+  });
 
   app.on('activate', () => {
     if (mainWindow === null) {
-      createWindow()
+      createWindow();
     }
-  })
+  });
 }
 
 // Make this app a single instance app.
@@ -134,31 +134,31 @@ function initialize() {
 // Returns true if the current version of the app should quit instead of
 // launching.
 function makeSingleInstance() {
-  if (process.mas) return false
+  if (process.mas) return false;
 
   return app.makeSingleInstance(() => {
     if (mainWindow) {
-      if (mainWindow.isMinimized()) mainWindow.restore()
-      mainWindow.focus()
+      if (mainWindow.isMinimized()) mainWindow.restore();
+      mainWindow.focus();
     }
-  })
+  });
 }
 
 
 switch (process.argv[1]) {
   case '--squirrel-install':
     settings.deleteAll();
-    autoUpdater.createShortcut(() => { app.quit() })
-    break
+    autoUpdater.createShortcut(() => { app.quit(); });
+    break;
   case '--squirrel-uninstall':
     settings.deleteAll();
-    autoUpdater.removeShortcut(() => { app.quit() })
-    break
+    autoUpdater.removeShortcut(() => { app.quit(); });
+    break;
   case '--squirrel-obsolete':
   case '--squirrel-updated':
     settings.deleteAll();
-    autoUpdater.removeShortcut(() => { autoUpdater.createShortcut(() => { app.quit() }) })
-    break
+    autoUpdater.removeShortcut(() => { autoUpdater.createShortcut(() => { app.quit(); }); });
+    break;
   default:
-    initialize()
+    initialize();
 }

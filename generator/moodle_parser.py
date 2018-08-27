@@ -178,6 +178,7 @@ def parse_questions(xml):
     # xml = xml.replace('href="/attachments/', 'href="assets/finformatika.ru/attachments/')
     xml = xml.replace('href="http://finformatika.ru/', 'download href="assets/finformatika.ru/')
     xml = xml.replace('src="http://finformatika.ru/', 'src="assets/finformatika.ru/')
+    xml = xml.replace('src="/images/', 'src="http://finformatika.ru/images/')
     soup = BeautifulSoup(xml, 'xml')
 
     soup_comments = [c.strip()for c in soup.findAll(text=lambda text: isinstance(text, Comment))
