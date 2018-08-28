@@ -40,7 +40,6 @@ function initialize() {
 
     const handler = () => {
       mainWindow.webContents.send('pressedCtrlF');
-      console.log('You pressed ctrl & F!');
     }
     electronLocalshortcut.register(mainWindow, 'Ctrl+F', handler);
     electronLocalshortcut.register(mainWindow, 'Cmd+F', handler);

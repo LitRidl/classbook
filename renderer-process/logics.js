@@ -2,6 +2,7 @@ const { ipcRenderer, clipboard, remote } = require('electron');
 const Excel = require('exceljs');
 const searchInPage = require('electron-in-page-search').default;
 require('pdfmake');
+const settings = require('electron-settings');
 
 
 /* ------------- */
@@ -348,9 +349,11 @@ for (let i = 0; i < checkerInput.length; ++i) {
 // /////////////////////////////////////// //
 // SEARCH BOX
 
-const inPageSearch = searchInPage(remote.getCurrentWebContents());
+window.inPageSearch = searchInPage(remote.getCurrentWebContents());
 const searchWindowHandler = () => {
-  inPageSearch.openSearchWindow();
+  if (settings.get('activeSectionButtonId') === 'button-questions') {
+    window.inPageSearch.openSearchWindow();
+  }
 };
 document.getElementById('button-search').addEventListener('click', searchWindowHandler);
 ipcRenderer.on('pressedCtrlF', searchWindowHandler);
