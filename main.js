@@ -4,6 +4,7 @@ const os = require('os');
 const autoUpdater = require('./auto-updater');
 const { app, BrowserWindow, ipcMain, shell, dialog } = require('electron');
 const electronLocalshortcut = require('electron-localshortcut');
+const settings = require('electron-settings');
 
 const debug = /--debug/.test(process.argv[2]);
 const enableDevTools = true;
