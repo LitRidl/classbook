@@ -6,9 +6,13 @@ import json
 import sys
 import os
 from os.path import join
+import htmlmin
 
+def minify(html):
+    return htmlmin.minify(html, remove_comments=True, remove_empty_space=False, 
+                          remove_all_empty_space=False, pre_tags=(u'pre', u'textarea'))
 
-DATA_VERSION = '00.00.07'
+DATA_VERSION = '00.00.08'
 
 difficulty_icons = {
     "Базовый уровень":    '<span title="Базовая"    class="difficulty-icon"><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></span>',
@@ -210,16 +214,17 @@ if __name__ == '__main__':
 
     questions_tpl = load_template('questions.html')
     with open('../sections/questions.html', 'w') as f:
-        idx_rev_str = json.dumps(questions_idx_rev, ensure_ascii=False)
+        idx_rev_str = json.dumps(questions_idx_rev, ensure_ascii=False, separators=(',',':'))
         filters = filters_to_html(questions_idx_rev)
-        tasks = '\n'.join(question_to_html(q) for q in questions)
-        f.write(questions_tpl.format(questions_index=idx_rev_str, filters=filters, questions=tasks, questions_qty=len(questions), data_version=DATA_VERSION))
+        tasks = ''.join(question_to_html(q) for q in questions)
+        res = questions_tpl.format(questions_index=idx_rev_str, filters=filters, questions=tasks, questions_qty=len(questions), data_version=DATA_VERSION)
+        f.write(minify(res))
         print('dataVersion = {}'.format(DATA_VERSION))
 
     with open('../sections/questions_data.js', 'w') as f:
         question_idx = {q['question_id']: q for q in questions}
-        question_idx_str = json.dumps(question_idx, ensure_ascii=False, indent=None)
-        f.write('window.questionsData = {}\n'.format(question_idx_str))
+        question_idx_str = json.dumps(question_idx, ensure_ascii=False, indent=None, separators=(',',':'))
+        f.write('window.questionsData={}\n'.format(question_idx_str))
     
     # old2()
 

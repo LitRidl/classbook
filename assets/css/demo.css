@@ -272,11 +272,6 @@
   line-height: 2em;
 }
 
-.difficulty-icon {
-  /* Better use default font color, not accent */
-  /* color: var(--color-accent) */
-}
-
 .filters-group {
   border: 1px groove;
 }
@@ -303,19 +298,6 @@
 	z-index: -1;
 }
 
-/* .checker-input-file + label {
-  font-size: 1.25em;
-  font-weight: 700;
-  color: white;
-  background-color: black;
-  display: inline-block;
-}
-
-.checker-input-file:focus + label,
-.checker-input-file + label:hover {
-  background-color: red;
-} */
-
 .checker-input-file + label {
   cursor: pointer;
   
@@ -332,11 +314,6 @@
   /* color: inherit; */
   /* background-color: transparent; */
 }
-
-/* .checker-input-file:focus + label {
-	outline: 1px dotted #000;
-	outline: -webkit-focus-ring-color auto 5px;
-} */
 
 .fa-check {
   color: green;

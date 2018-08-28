@@ -1,7 +1,7 @@
-const shell = require('electron').shell
-const {ipcRenderer} = require('electron')
+const shell = require('electron').shell;
+const { ipcRenderer } = require('electron');
 
-const links = document.querySelectorAll('a[href]')
+const links = document.querySelectorAll('a[href]');
 
 Array.prototype.forEach.call(links, (link) => {
   const url = link.getAttribute('href');

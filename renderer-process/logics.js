@@ -98,11 +98,12 @@ for (let i = 0; i < fieldsets.length; i++) {
   checkboxGroups.push(cbs);
 }
 
+const totalsLabel = document.getElementById('totals-label');
 const updateQuestionsShownStats = (filtered, total) => {
   const filteredWord = numberPlural(filtered, ['Показана', 'Показаны', 'Показано']);
   const tasksWord = numberPlural(filtered, ['задача', 'задачи', 'задач']);
   const totalTpl = `${filteredWord} <span class="total-filtered">${filtered}</span> ${tasksWord} из <span class="total-all">${total}</span>`;
-  document.getElementById('totals-label').innerHTML = totalTpl;
+  totalsLabel.innerHTML = totalTpl;
 };
 
 const userChangedFiltersHandler = () => {
@@ -202,11 +203,11 @@ const setQuestionAttemptStatusHtml = (questionId, afterSubmitClicked, lastOk) =>
 
   if (afterSubmitClicked) {
     const resNode = document.getElementById(`checker-result-${questionId}`);
-    resNode.innerHTML = lastOk
+    var contents = lastOk
       ? '<i class="fas fa-check"></i> Правильный ответ!'
       : '<i class="fas fa-times"></i> Неправильный ответ!';
-    resNode.innerHTML +=
-      '<div class="checker-micro">(очистить поле ответа)</div>';
+    contents += '<div class="checker-micro">(нажмите чтобы очистить поле ответа)</div>';
+    resNode.innerHTML = contents;
     document.getElementById(`checker-result-${questionId}`).style.display = '';
   }
 };
@@ -215,32 +216,33 @@ const setQuestionAttemptStatusHtml = (questionId, afterSubmitClicked, lastOk) =>
 /* ---------------------- */
 /* Handle clicking Submit */
 /* ---------------------- */
+const submitSolutionButtonClicked = (event) => {
+  const data = event.target.dataset;
+  const answerUser = event.target.parentElement.getElementsByTagName('input')[0].value.trim();
+
+  const successKey = `success-${data.questionId}`;
+  const successInThePast = storage(successKey);
+
+  if (successInThePast === false || successInThePast == null) {
+    const attemtpsKey = `attempts-${data.questionId}`;
+    storage(attemtpsKey, (storage(attemtpsKey) || 0) + 1);
+  }
+
+  let solutionIsCorrect = (answerUser == data.answer);
+  if (data.questionType === 'numerical') {
+    solutionIsCorrect = checkFloat(answerUser, data.answer, data.tolerance);
+  }
+  storage(successKey, successInThePast || solutionIsCorrect);
+
+  const questionsWithAttempts = union(new Set(storage('questions-with-attempts') || []), new Set([+data.questionId]));
+  storage('questions-with-attempts', [...questionsWithAttempts]);
+  setQuestionAttemptStatusHtml(data.questionId, true, solutionIsCorrect); // afterSubmitClicked = true
+  event.stopPropagation();
+};
 const submitSolutionButtons = document.getElementsByClassName('checker-button');
 for (let i = 0; i < submitSolutionButtons.length; ++i) {
   const b = submitSolutionButtons[i];
-  b.addEventListener('click', (event) => {
-    const data = event.target.dataset;
-    const answerUser = event.target.parentElement.getElementsByTagName('input')[0].value.trim();
-
-    const successKey = `success-${data.questionId}`;
-    const successInThePast = storage(successKey);
-
-    if (successInThePast === false || successInThePast == null) {
-      const attemtpsKey = `attempts-${data.questionId}`;
-      storage(attemtpsKey, (storage(attemtpsKey) || 0) + 1);
-    }
-
-    let solutionIsCorrect = (answerUser == data.answer);
-    if (data.questionType === 'numerical') {
-      solutionIsCorrect = checkFloat(answerUser, data.answer, data.tolerance);
-    }
-    storage(successKey, successInThePast || solutionIsCorrect);
-
-    const questionsWithAttempts = union(new Set(storage('questions-with-attempts') || []), new Set([+data.questionId]));
-    storage('questions-with-attempts', [...questionsWithAttempts]);
-    setQuestionAttemptStatusHtml(data.questionId, true, solutionIsCorrect); // afterSubmitClicked = true
-    event.stopPropagation();
-  });
+  b.addEventListener('click', submitSolutionButtonClicked);
 }
 
 
@@ -260,21 +262,21 @@ loadAttemptsToHtml();
 /* ----------------- */
 /* Filter checkboxes */
 /* ----------------- */
+const solutionHistories = document.getElementsByClassName('solution-history');
+const answerInputs = document.getElementsByClassName('checker-input');
+const afterSubmitAttemptResult = document.getElementsByClassName('checker-result');
 const resetSolutions = () => {
   Object.keys(localStorage).filter(k => k.startsWith('success-') || k.startsWith('attempts-')).map(k => localStorage.removeItem(k));
   localStorage.removeItem('questions-with-attempts');
   localStorage.removeItem('data-version');
   localStorage.removeItem('filters-checked');
 
-  const afterSubmitAttemptResult = document.getElementsByClassName('checker-result');
   for (let i = 0; i < afterSubmitAttemptResult.length; ++i) {
     afterSubmitAttemptResult[i].style.display = 'none';
   }
-  const solutionHistories = document.getElementsByClassName('solution-history');
   for (let i = 0; i < solutionHistories.length; ++i) {
     solutionHistories[i].innerHTML = '<i class="fas fa-edit"></i> Нет попыток решения'; // REFACTOR
   }
-  const answerInputs = document.getElementsByClassName('checker-input');
   for (let i = 0; i < answerInputs.length; ++i) {
     answerInputs[i].value = '';
   }
@@ -312,30 +314,32 @@ purgeDataIfOldVersion();
 /* -------------------------------------- */
 /* When user clicks on attempt to hide it */
 /* -------------------------------------- */
-const afterSubmitAttemptResult = document.getElementsByClassName('checker-result');
+// const afterSubmitAttemptResult = document.getElementsByClassName('checker-result');
+const afterSubmitAttemptResultClicked = (event) => {
+  event.currentTarget.style.display = 'none';
+  const id = +event.currentTarget.id.replace('checker-result-', '');
+  if (document.getElementById(`check-input-${id}`)) {
+    document.getElementById(`check-input-${id}`).value = '';
+    document.getElementById(`check-input-${id}`).focus();
+  }
+};
 for (let i = 0; i < afterSubmitAttemptResult.length; ++i) {
-  afterSubmitAttemptResult[i].addEventListener('click', (event) => {
-    event.currentTarget.style.display = 'none';
-    const id = +event.currentTarget.id.replace('checker-result-', '');
-    if (document.getElementById(`check-input-${id}`)) {
-      document.getElementById(`check-input-${id}`).value = '';
-      document.getElementById(`check-input-${id}`).focus();
-    }
-  });
+  afterSubmitAttemptResult[i].addEventListener('click', afterSubmitAttemptResultClicked);
 }
 
 /* ------------------------------------- */
 /* Submit attempt when user clicks Enter */
 /* ------------------------------------- */
 const checkerInput = document.getElementsByClassName('checker-input');
+const checkerInputPressed = (event) => {
+  event.preventDefault();
+  if (event.keyCode === 13) {
+    const id = +event.currentTarget.id.replace('check-input-', '');
+    document.getElementById(`check-button-${id}`).click();
+  }
+};
 for (let i = 0; i < checkerInput.length; ++i) {
-  checkerInput[i].addEventListener('keyup', (event) => {
-    event.preventDefault();
-    if (event.keyCode === 13) {
-      const id = +event.currentTarget.id.replace('check-input-', '');
-      document.getElementById(`check-button-${id}`).click();
-    }
-  });
+  checkerInput[i].addEventListener('keyup', checkerInputPressed);
 }
 
 
@@ -353,61 +357,62 @@ document.getElementById('butt').addEventListener('click', () => {
 // EXCEL block
 
 
+const excelSubmitButtonChanged = (e) => {
+  e.stopPropagation();
+  const data = e.target.dataset;
+  let solutionSheetFound = true;
+  document.getElementById(`checker-result-${data.questionId}`).style.display = 'none';
+  const f = e.target.files[0];
+  if (!f) {
+    return;
+  }
+  const reader = new FileReader();
+  reader.onload = (re) => {
+    const wb = new Excel.Workbook();
+    wb.xlsx.load(re.target.result).then(() => {
+      solutionSheetFound = false;
+      let solutionIsCorrect = false;
+      wb.eachSheet((ws, wsId) => {
+        if (ws.name.includes('(решение)')) {
+          solutionSheetFound = true;
+          solutionIsCorrect = ws.getCell('C1').value.result === 'решена';
+        }
+      });
+
+      if (!solutionSheetFound) {
+        throw Error('Некорректный формат файла');
+      }
+
+      const successKey = `success-${data.questionId}`;
+      const successInThePast = storage(successKey);
+      if (successInThePast === false || successInThePast == null) {
+        const attemtpsKey = `attempts-${data.questionId}`;
+        storage(attemtpsKey, (storage(attemtpsKey) || 0) + 1);
+      }
+
+      storage(successKey, successInThePast || solutionIsCorrect);
+
+      const questionsWithAttempts = union(new Set(storage('questions-with-attempts') || []), new Set([+data.questionId]));
+      storage('questions-with-attempts', [...questionsWithAttempts]);
+      setQuestionAttemptStatusHtml(data.questionId, true, solutionIsCorrect); // afterSubmitClicked = true
+
+      // const ws2 = wb.getWorksheet('Расход электроэнергии');
+      // console.log(ws2.getCell('D13').value.result);
+    }).catch((reason) => {
+      const resNode = document.getElementById(`checker-result-${data.questionId}`);
+      resNode.innerHTML = '<i class="fas fa-times"></i> Ошибка при чтении файла!';
+      if (!solutionSheetFound) {
+        resNode.innerHTML = '<i class="fas fa-times"></i> Файл не соответсвует условию!';
+      }
+      resNode.innerHTML += '<div class="checker-micro">(нажмите чтобы скрыть ошибку)</div>';
+      document.getElementById(`checker-result-${data.questionId}`).style.display = '';
+    });
+  };
+  reader.readAsArrayBuffer(f);
+};
 const excelSubmitButtons = document.getElementsByClassName('checker-input-file');
 for (let i = 0; i < excelSubmitButtons.length; ++i) {
-  excelSubmitButtons[i].addEventListener('change', (e) => {
-    e.stopPropagation();
-    const data = e.target.dataset;
-    let solutionSheetFound = true;
-    document.getElementById(`checker-result-${data.questionId}`).style.display = 'none';
-    const f = e.target.files[0];
-    if (!f) {
-      return;
-    }
-    const reader = new FileReader();
-    reader.onload = (re) => {
-      const wb = new Excel.Workbook();
-      wb.xlsx.load(re.target.result).then(() => {
-        solutionSheetFound = false;
-        let solutionIsCorrect = false;
-        wb.eachSheet((ws, wsId) => {
-          if (ws.name.includes('(решение)')) {
-            solutionSheetFound = true;
-            solutionIsCorrect = ws.getCell('C1').value.result === 'решена';
-          }
-        });
-
-        if (!solutionSheetFound) {
-          throw Error('Некорректный формат файла');
-        }
-
-        const successKey = `success-${data.questionId}`;
-        const successInThePast = storage(successKey);
-        if (successInThePast === false || successInThePast == null) {
-          const attemtpsKey = `attempts-${data.questionId}`;
-          storage(attemtpsKey, (storage(attemtpsKey) || 0) + 1);
-        }
-
-        storage(successKey, successInThePast || solutionIsCorrect);
-
-        const questionsWithAttempts = union(new Set(storage('questions-with-attempts') || []), new Set([+data.questionId]));
-        storage('questions-with-attempts', [...questionsWithAttempts]);
-        setQuestionAttemptStatusHtml(data.questionId, true, solutionIsCorrect); // afterSubmitClicked = true
-
-        // const ws2 = wb.getWorksheet('Расход электроэнергии');
-        // console.log(ws2.getCell('D13').value.result);
-      }).catch((reason) => {
-        const resNode = document.getElementById(`checker-result-${data.questionId}`);
-        resNode.innerHTML = '<i class="fas fa-times"></i> Ошибка при чтении файла!';
-        if (!solutionSheetFound) {
-          resNode.innerHTML = '<i class="fas fa-times"></i> Файл не соответсвует условию!';
-        }
-        resNode.innerHTML += '<div class="checker-micro">(скрыть ошибку)</div>';
-        document.getElementById(`checker-result-${data.questionId}`).style.display = '';
-      });
-    };
-    reader.readAsArrayBuffer(f);
-  });
+  excelSubmitButtons[i].addEventListener('change', excelSubmitButtonChanged);
 }
 
 
@@ -454,10 +459,9 @@ const generateStatsBody = (() => {
       let total = 0;
       let solved = 0;
       let solving = 0;
-      let notSolved = 0;
       for (let qIdx = 0; qIdx < qs.length; ++qIdx) {
         const q = qs[qIdx];
-        if (q.type == 'numerical') {
+        if (q.type === 'numerical' || q.type === 'excel') {
           ++total;
           if (storage(`success-${q.question_id}`)) {
             ++solved;
@@ -465,8 +469,6 @@ const generateStatsBody = (() => {
             difficultySumG += { 'Базовый уровень': 1, 'Повышенный уровень': 2, 'Высокий уровень': 3 }[q.difficulty] || 1;
           } else if (storage(`attempts-${q.question_id}`) > 0) {
             ++solving;
-          } else {
-            ++notSolved; // NOT WORKING!!!
           }
         }
       }

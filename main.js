@@ -31,7 +31,7 @@ function initialize() {
     };
 
     if (process.platform === 'linux') {
-      windowOptions.icon = path.join(__dirname, '/assets/img/finformatika.png');
+      windowOptions.icon = path.join(__dirname, '/assets/app-icon/png/1024.png');
     }
 
     mainWindow = new BrowserWindow(windowOptions);

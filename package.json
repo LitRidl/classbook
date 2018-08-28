@@ -2,7 +2,7 @@
   "name": "finformatika",
   "description": "Сборник задач по финансовой грамотности в информатике",
   "productName": "finformatika",
-  "version": "3.0.2",
+  "version": "3.1.1",
   "main": "main.js",
   "private": true,
   "scripts": {
@@ -10,9 +10,9 @@
     "start": "electron .",
     "dev": "electron . --debug",
     "package": "npm-run-all package:*",
-    "package:mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --out=out --icon=assets/app-icon/mac/app.icns --osx-sign.identity='Developer ID Application: GitHub' --extend-info=assets/mac/info.plist",
-    "package:win": "electron-packager . --overwrite --platform=win32 --arch=ia32 --out=out --icon=assets/app-icon/win/app.ico --asar=true --ignore=generator --ignore=node_modules --ignore=script --ignore=out --win32metadata.ProductName=\"finformatika\" --win32metadata.CompanyName=\"Финансовая грамотность\"",
-    "package:linux": "electron-packager . --overwrite --platform=linux --arch=x64 --out=out",
+    "package:mac": "electron-packager . --overwrite --platform=darwin --prune=true --arch=x64 --out=out --icon=assets/app-icon/mac/app.icns --ignore=generator --ignore=node_modules --ignore=README.md --ignore=.gitignore --ignore=.eslintrc --prune=true --ignore=script --ignore=out --osx-sign.identity='Developer ID Application: GitHub' --extend-info=assets/mac/info.plist",
+    "package:win": "electron-packager . --overwrite --platform=win32 --arch=ia32 --out=out --icon=assets/app-icon/win/app.ico --asar=true --ignore=generator --ignore=node_modules --ignore=README.md --ignore=.gitignore --ignore=.eslintrc --prune=true --ignore=script --ignore=out --win32metadata.ProductName=\"finformatika\" --win32metadata.CompanyName=\"Финансовая грамотность\"",
+    "package:linux": "electron-packager . --overwrite --prune=true --ignore=generator --ignore=node_modules --ignore=README.md --ignore=.gitignore --ignore=.eslintrc --prune=true --ignore=script --ignore=out --platform=linux --icon=assets/icons/png/1024.png --arch=x64 --out=out",
     "package:sign-exe": "signcode './out/Classbook-win32-ia32/Classbook.exe' --cert ~/electron-api-demos.p12 --prompt --name 'classbook' --url 'http://electron.atom.io'",
     "package:installer": "node ./script/installer.js",
     "package:sign-installer": "signcode './rm -rout/windows-installer/ClassbookSetup.exe' --cert ~/electron-api-demos.p12 --prompt --name 'classbook' --url 'http://electron.atom.io'",
@@ -42,13 +42,13 @@
     "rimraf": "^2.5.2",
     "signcode": "^0.5.0",
     "spectron": "^3.8.0",
-    "standard": "^8.2.0"
+    "standard": "^8.2.0",
+    "electron-icon-maker": "0.0.4"
   },
   "dependencies": {
     "electron-in-page-search": "^1.3.2",
     "electron-settings": "^3.1.4",
     "exceljs": "^1.5.1",
-    "glob": "^7.1.2",
     "pdfmake": "^0.1.36"
   },
   "repository": {
