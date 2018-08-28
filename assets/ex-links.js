@@ -11,7 +11,7 @@ Array.prototype.forEach.call(links, (link) => {
       shell.openExternal(url);
     });
   }
-  if (url.indexOf('assets/finformatika.ru/attachments') >= 0) {
+  if (url.indexOf('assets/finformatika.ru/attachments') >= 0 || url.indexOf('assets/files/excel') >= 0) {
     link.addEventListener('click', (e) => {
       e.preventDefault();
       ipcRenderer.send('save-dialog', url);
