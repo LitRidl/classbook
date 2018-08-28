@@ -22,6 +22,7 @@ function initialize() {
       width: 1920 * 0.7,
       minWidth: 1080,
       height: 1030,
+      minHeight: 700,
       title: app.getName(),
       plugins: true,
       webPreferences: {
@@ -74,8 +75,10 @@ function initialize() {
     const pdfPath = path.join(os.tmpdir(), 'fingramotnost_print.pdf');
     // const win = BrowserWindow.fromWebContents(event.sender);
     mainWindow.webContents.printToPDF({ marginsType: 0, pageSize: 'A4', landscape: false, printSelectionOnly: false }, (error, data) => {
+      event.sender.send('hideSpinner');
       if (error) throw error;
       fs.writeFile(pdfPath, data, (error) => {
+        event.sender.send('hideSpinner');
         if (error) throw error;
         shell.openExternal(`file://${pdfPath}`);
       });

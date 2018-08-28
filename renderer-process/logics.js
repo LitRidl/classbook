@@ -52,12 +52,14 @@ function intersection(setA, setB) {
   return intersected;
 }
 
+const spinner = document.getElementById('spinner');
 
 /* ---------------- */
 /* Contacts buttons */
 /* ---------------- */
 const pdfBtn = document.getElementById('button-pdf');
 pdfBtn.addEventListener('click', (event) => {
+  spinner.style.display = 'block';
   ipcRenderer.send('print-to-pdf');
 });
 
@@ -350,8 +352,13 @@ const inPageSearch = searchInPage(remote.getCurrentWebContents());
 const searchWindowHandler = () => {
   inPageSearch.openSearchWindow();
 };
-document.getElementById('butt').addEventListener('click', searchWindowHandler);
+document.getElementById('button-search').addEventListener('click', searchWindowHandler);
 ipcRenderer.on('pressedCtrlF', searchWindowHandler);
+
+
+ipcRenderer.on('hideSpinner', () => {
+  spinner.style.display = 'none';
+});
 
 
 // /////////////////////////////////////// //
@@ -578,7 +585,9 @@ const generatePdf = (momentStr, uuid) => {
 };
 
 
-document.getElementById('download-stats').addEventListener('click', (event) => {
+document.getElementById('button-report').addEventListener('click', (event) => {
+  spinner.style.display = 'block';
+  console.log('f');
   pdfMake.fonts = {
     fas: {
       normal: 'fas.ttf',
@@ -613,5 +622,7 @@ document.getElementById('download-stats').addEventListener('click', (event) => {
   const momentStr = `${formatterDate.format(moment).replace(' г.', '')} в ${formatterTime.format(moment)}`;
   const uuid = uuid4char();
 
-  pdfMake.createPdf(generatePdf(momentStr, uuid)).download(`Финграмотность, ${momentStr.replace(':', '-')}.pdf`);
+  pdfMake.createPdf(generatePdf(momentStr, uuid)).download(`Финграмотность, ${momentStr.replace(':', '-')}.pdf`, () => {
+    spinner.style.display = 'none';
+  });
 });

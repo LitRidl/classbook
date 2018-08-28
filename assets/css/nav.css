@@ -20,6 +20,54 @@
   z-index: 1000;
 }
 
+.button-search {
+  position: fixed;
+  bottom: 120px;
+  right: 20px;
+  outline: none;
+  border: none;
+  z-index: 1000;
+}
+
+.button-report {
+  position: fixed;
+  bottom: 65px;
+  right: 20px;
+  outline: none;
+  border: none;
+  z-index: 1000;
+}
+
+#MathJax_Message {
+  display: none !important;
+}
+
+.spinner {
+  display: none;
+  background-color: rgba(256, 256, 256, 0.9);
+  border-radius: 30px;
+  padding: 30px 50px;
+  box-sizing: content-box;
+  width: 300px;
+  position: absolute; 
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  z-index: 1500;
+  text-align: center;
+}
+
+.spinner-icon {
+  display: block;
+  left: 50%;
+}
+
+.spinner-text {
+  box-sizing: content-box;
+  font-size: 3rem;
+  text-align: center;
+}
+
 .nav.is-shown {
   visibility: visible;
   opacity: 1;

@@ -10,8 +10,18 @@
     font-size: 22px;
   }
   
-  .button-pdf {
+  .button-pdf, 
+  .button-search,
+  .button-report {
     display: none;
+  }
+
+  .search-active {
+    display: none;
+  }
+
+  #spinner {
+    display: none !important;
   }
 
   .checker-controls, 
