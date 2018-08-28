@@ -347,10 +347,11 @@ for (let i = 0; i < checkerInput.length; ++i) {
 // SEARCH BOX
 
 const inPageSearch = searchInPage(remote.getCurrentWebContents());
-
-document.getElementById('butt').addEventListener('click', () => {
+const searchWindowHandler = () => {
   inPageSearch.openSearchWindow();
-});
+};
+document.getElementById('butt').addEventListener('click', searchWindowHandler);
+ipcRenderer.on('pressedCtrlF', searchWindowHandler);
 
 
 // /////////////////////////////////////// //
@@ -373,7 +374,7 @@ const excelSubmitButtonChanged = (e) => {
       solutionSheetFound = false;
       let solutionIsCorrect = false;
       wb.eachSheet((ws, wsId) => {
-        if (ws.name.includes('(решение)')) {
+        if (ws.name.includes(window.questionsData[+data.questionId].excel_table_name)) {
           solutionSheetFound = true;
           solutionIsCorrect = ws.getCell('C1').value.result === 'решена';
         }
@@ -406,6 +407,9 @@ const excelSubmitButtonChanged = (e) => {
       }
       resNode.innerHTML += '<div class="checker-micro">(нажмите чтобы скрыть ошибку)</div>';
       document.getElementById(`checker-result-${data.questionId}`).style.display = '';
+    }).finally(() => {
+      e.target.type = '';
+      e.target.type = 'file';
     });
   };
   reader.readAsArrayBuffer(f);

@@ -225,14 +225,18 @@ def filename_to_code(fname):
 
 def is_excel_interactive(fname):
     wb = load_workbook(fname)
-    return any('(решение)' in ws for ws in wb.sheetnames)
+    ws_name = None
+    for ws in wb.sheetnames:
+        if '(решение)' in ws:
+            ws_name = ws
+    return ws_name
 
 
 
 def questions_from_file(f):
     questions = parse_questions(open(f).read())
     order = ['_id', 'question_id', 'grade', 'difficulty', 'topics_finances',
-             'topics_informatics', 'name', 'text', 'type', 'answer', 'answer_tolerance', 'code', 'task_type', 'excel_interactive', '_tags', '_fake_attributes']
+             'topics_informatics', 'name', 'text', 'type', 'answer', 'answer_tolerance', 'code', 'task_type', 'excel_table_name', '_tags', '_fake_attributes']
 
     fnames = list_excel_files()
     fnames_used = []
@@ -244,11 +248,11 @@ def questions_from_file(f):
                 break
         if fname and is_excel_interactive(fname) and q['type'] == 'essay':
             fnames_used.append(fname)
-            q['excel_interactive'] = True
+            q['excel_table_name'] = is_excel_interactive(fname)
             q['task_type'] = 'Тип: Excel-задача'
             q['type'] = 'excel'
         else:
-            q['excel_interactive'] = False
+            q['excel_table_name'] = None
 
     qs = order_dict(questions, order)
 
@@ -256,7 +260,7 @@ def questions_from_file(f):
     # fnames.sort()
     # print(fnames)
     # print('Fnames: {}'.format(len(fnames)))
-    # print('Qs: {}'.format(len([q for q in qs if q['excel_interactive']])))
+    # print('Qs: {}'.format(len([q for q in qs if q['excel_table_name']])))
     # print('Tts: {}'.format(len([q for q in qs if q['task_type'] == 'Тип: Excel-задача'])))
     # print('Ts: {}'.format(len([q for q in qs if q['type'] == 'excel'])))
 
@@ -297,7 +301,7 @@ def json_to_file(data, fname, indent=4):
 def gen_index(qs):
     import bisect
     idx = defaultdict(lambda: defaultdict(list))
-    fields = ['grade', 'type', 'difficulty', 'topics_finances', 'topics_informatics', 'task_type', 'excel_interactive']
+    fields = ['grade', 'type', 'difficulty', 'topics_finances', 'topics_informatics', 'task_type', 'excel_table_name']
     for q in qs:
         for field in fields:
             if isinstance(q[field], list):

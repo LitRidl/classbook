@@ -3,7 +3,7 @@ const fs = require('fs');
 const os = require('os');
 const autoUpdater = require('./auto-updater');
 const { app, BrowserWindow, ipcMain, shell, dialog } = require('electron');
-const settings = require('electron-settings');
+const electronLocalshortcut = require('electron-localshortcut');
 
 const debug = /--debug/.test(process.argv[2]);
 const enableDevTools = true;
@@ -36,6 +36,14 @@ function initialize() {
 
     mainWindow = new BrowserWindow(windowOptions);
     mainWindow.setMenu(null);
+
+    const handler = () => {
+      mainWindow.webContents.send('pressedCtrlF');
+      console.log('You pressed ctrl & F!');
+    }
+    electronLocalshortcut.register(mainWindow, 'Ctrl+F', handler);
+    electronLocalshortcut.register(mainWindow, 'Cmd+F', handler);
+
     if (!enableDevTools) {
       mainWindow.webContents.on('devtools-opened', () => { mainWindow.webContents.closeDevTools(); });
     }
