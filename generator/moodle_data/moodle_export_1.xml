@@ -5111,7 +5111,7 @@ if (msoBrowserCheck())
 <!-- question: 1016  -->
   <question type="essay">
     <name>
-      <text>1.1.1.8.01 Стоимость колодца</text>
+      <text>1.1.1.8 Стоимость колодца</text>
     </name>
     <questiontext format="html">
       <text><![CDATA[<p></p><p></p><!--[if !supportAnnotations]-->
@@ -5202,7 +5202,7 @@ if (msoBrowserCheck())
 на следующих условиях: за первый метр он заплатит им Х рублей, а за каждый
 следующий метр – на Y рублей больше, чем за предыдущий. </p>
 
-<p><b>Задание</b></p>
+<p><b>Задание 1</b></p>
 
 <p><!--[if !supportLists]--></p><!--[if !supportAnnotations]-->
 
@@ -5301,7 +5301,7 @@ if (msoBrowserCheck())
 <!--[endif]-->Постройте график зависимости стоимости колодца
 от его глубины.</p><div><div><div id="_com_2" language="JavaScript" onmouseover="msoCommentShow('_anchor_2','_com_2')" onmouseout="msoCommentHide('_com_2')">
 
-<p>&nbsp;</p>
+<p>&nbsp;<p><b>Задание 2</b></p><p></p><p>1.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;На графике представлена диаграмма стоимости колодца в зависимости от глубины. Пользуясь графиком, определите, какова стоимость колодца глубиной 5 метров, 11 метров, 16 метро?</p><p>2.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Пользуясь графиком, определите стоимость первого метра, а так же на сколько рублей каждый следующий метр дороже, чем предыдущий?</p><div><div><div id="_com_1" language="JavaScript"><p><img src="http://finformatika.ru/images/graphic_electricity.png" alt="" width="901" height="846" role="presentation"><br></p></div></div><div><div id="_com_3" language="JavaScript"></div></div></div><p></p><div><div><div id="_com_2" language="JavaScript"></div></div></div><br></p>
 
 <!--[if !supportAnnotations]--></div>
 
@@ -5342,593 +5342,24 @@ if (msoBrowserCheck())
     </tags>
   </question>
 
-<!-- question: 1017  -->
-  <question type="essay">
-    <name>
-      <text>1.1.1.8.02 Стоимость колодца</text>
-    </name>
-    <questiontext format="html">
-      <text><![CDATA[<p></p><p>Хозяин договорился с рабочими, что они выкопают ему колодец
-на следующих условиях: за первый метр он заплатит им Х рублей, а за каждый
-следующий метр – на Y рублей больше, чем за предыдущий. </p>
-
-<p><!--[if !supportAnnotations]-->
-
-<script language="JavaScript"><!--
-function msoCommentShow(anchor_id, com_id)
-{
-	if(msoBrowserCheck()) 
-		{
-		c = document.all(com_id);
-		a = document.all(anchor_id);
-		if (null != c && null == c.length && null != a && null == a.length)
-			{
-			var cw = c.offsetWidth;
-			var ch = c.offsetHeight;
-			var aw = a.offsetWidth;
-			var ah = a.offsetHeight;
-			var x  = a.offsetLeft;
-			var y  = a.offsetTop;
-			var el = a;
-			while (el.tagName != "BODY") 
-				{
-				el = el.offsetParent;
-				x = x + el.offsetLeft;
-				y = y + el.offsetTop;
-				}
-			var bw = document.body.clientWidth;
-			var bh = document.body.clientHeight;
-			var bsl = document.body.scrollLeft;
-			var bst = document.body.scrollTop;
-			if (x + cw + ah / 2 > bw + bsl && x + aw - ah / 2 - cw >= bsl ) 
-				{ c.style.left = x + aw - ah / 2 - cw; }
-			else 
-				{ c.style.left = x + ah / 2; }
-			if (y + ch + ah / 2 > bh + bst && y + ah / 2 - ch >= bst ) 
-				{ c.style.top = y + ah / 2 - ch; }
-			else 
-				{ c.style.top = y + ah / 2; }
-			c.style.visibility = "visible";
-}	}	}
-function msoCommentHide(com_id) 
-{
-	if(msoBrowserCheck())
-		{
-		c = document.all(com_id);
-		if (null != c && null == c.length)
-		{
-		c.style.visibility = "hidden";
-		c.style.left = -1000;
-		c.style.top = -1000;
-		} } 
-}
-function msoBrowserCheck()
-{
-	ms = navigator.appVersion.indexOf("MSIE");
-	vers = navigator.appVersion.substring(ms + 5, ms + 6);
-	ie4 = (ms > 0) && (parseInt(vers) >= 4);
-	return ie4;
-}
-if (msoBrowserCheck())
-{
-	document.styleSheets.dynCom.addRule(".msocomanchor","background: infobackground");
-	document.styleSheets.dynCom.addRule(".msocomoff","display: none");
-	document.styleSheets.dynCom.addRule(".msocomtxt","visibility: hidden");
-	document.styleSheets.dynCom.addRule(".msocomtxt","position: absolute");
-	document.styleSheets.dynCom.addRule(".msocomtxt","top: -1000");
-	document.styleSheets.dynCom.addRule(".msocomtxt","left: -1000");
-	document.styleSheets.dynCom.addRule(".msocomtxt","width: 33%");
-	document.styleSheets.dynCom.addRule(".msocomtxt","background: infobackground");
-	document.styleSheets.dynCom.addRule(".msocomtxt","color: infotext");
-	document.styleSheets.dynCom.addRule(".msocomtxt","border-top: 1pt solid threedlightshadow");
-	document.styleSheets.dynCom.addRule(".msocomtxt","border-right: 2pt solid threedshadow");
-	document.styleSheets.dynCom.addRule(".msocomtxt","border-bottom: 2pt solid threedshadow");
-	document.styleSheets.dynCom.addRule(".msocomtxt","border-left: 1pt solid threedlightshadow");
-	document.styleSheets.dynCom.addRule(".msocomtxt","padding: 3pt 3pt 3pt 3pt");
-	document.styleSheets.dynCom.addRule(".msocomtxt","z-index: 100");
-}
-// --></script>
-<!--[endif]-->
-
-
-
-
-
-
-
-</p><p><b>Задание</b></p>
-
-<p><!--[if !supportLists]--></p><!--[if !supportAnnotations]-->
-
-<script language="JavaScript"><!--
-function msoCommentShow(anchor_id, com_id)
-{
-	if(msoBrowserCheck()) 
-		{
-		c = document.all(com_id);
-		a = document.all(anchor_id);
-		if (null != c && null == c.length && null != a && null == a.length)
-			{
-			var cw = c.offsetWidth;
-			var ch = c.offsetHeight;
-			var aw = a.offsetWidth;
-			var ah = a.offsetHeight;
-			var x  = a.offsetLeft;
-			var y  = a.offsetTop;
-			var el = a;
-			while (el.tagName != "BODY") 
-				{
-				el = el.offsetParent;
-				x = x + el.offsetLeft;
-				y = y + el.offsetTop;
-				}
-			var bw = document.body.clientWidth;
-			var bh = document.body.clientHeight;
-			var bsl = document.body.scrollLeft;
-			var bst = document.body.scrollTop;
-			if (x + cw + ah / 2 > bw + bsl && x + aw - ah / 2 - cw >= bsl ) 
-				{ c.style.left = x + aw - ah / 2 - cw; }
-			else 
-				{ c.style.left = x + ah / 2; }
-			if (y + ch + ah / 2 > bh + bst && y + ah / 2 - ch >= bst ) 
-				{ c.style.top = y + ah / 2 - ch; }
-			else 
-				{ c.style.top = y + ah / 2; }
-			c.style.visibility = "visible";
-}	}	}
-function msoCommentHide(com_id) 
-{
-	if(msoBrowserCheck())
-		{
-		c = document.all(com_id);
-		if (null != c && null == c.length)
-		{
-		c.style.visibility = "hidden";
-		c.style.left = -1000;
-		c.style.top = -1000;
-		} } 
-}
-function msoBrowserCheck()
-{
-	ms = navigator.appVersion.indexOf("MSIE");
-	vers = navigator.appVersion.substring(ms + 5, ms + 6);
-	ie4 = (ms > 0) && (parseInt(vers) >= 4);
-	return ie4;
-}
-if (msoBrowserCheck())
-{
-	document.styleSheets.dynCom.addRule(".msocomanchor","background: infobackground");
-	document.styleSheets.dynCom.addRule(".msocomoff","display: none");
-	document.styleSheets.dynCom.addRule(".msocomtxt","visibility: hidden");
-	document.styleSheets.dynCom.addRule(".msocomtxt","position: absolute");
-	document.styleSheets.dynCom.addRule(".msocomtxt","top: -1000");
-	document.styleSheets.dynCom.addRule(".msocomtxt","left: -1000");
-	document.styleSheets.dynCom.addRule(".msocomtxt","width: 33%");
-	document.styleSheets.dynCom.addRule(".msocomtxt","background: infobackground");
-	document.styleSheets.dynCom.addRule(".msocomtxt","color: infotext");
-	document.styleSheets.dynCom.addRule(".msocomtxt","border-top: 1pt solid threedlightshadow");
-	document.styleSheets.dynCom.addRule(".msocomtxt","border-right: 2pt solid threedshadow");
-	document.styleSheets.dynCom.addRule(".msocomtxt","border-bottom: 2pt solid threedshadow");
-	document.styleSheets.dynCom.addRule(".msocomtxt","border-left: 1pt solid threedlightshadow");
-	document.styleSheets.dynCom.addRule(".msocomtxt","padding: 3pt 3pt 3pt 3pt");
-	document.styleSheets.dynCom.addRule(".msocomtxt","z-index: 100");
-}
-// --></script>
-<!--[endif]-->
-
-
-
-
-
-
-
-<p><!--[if !supportLists]-->1.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<!--[endif]-->На графике представлена диаграмма стоимости
-колодца в зависимости от глубины. Пользуясь графиком, определите, какова
-стоимость колодца глубиной 5 метров, 11 метров, 16 метро?</p>
-
-<p><!--[if !supportLists]-->2.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<!--[endif]-->Пользуясь графиком, определите стоимость первого
-метра, а так же на сколько рублей каждый следующий метр дороже, чем предыдущий?</p>
-
-<div><!--[if !supportAnnotations]-->
-
-<div><div id="_com_1" language="JavaScript" onmouseover="msoCommentShow('_anchor_1','_com_1')" onmouseout="msoCommentHide('_com_1')"><p><img src="http://finformatika.ru/images/graphic_electricity.png" alt="" width="901" height="846" role="presentation" class="img-responsive atto_image_button_text-bottom"><br></p></div></div><div><div id="_com_3" language="JavaScript" onmouseover="msoCommentShow('_anchor_3','_com_3')" onmouseout="msoCommentHide('_com_3')">
-
-<!--[if !supportAnnotations]--></div>
-
-<!--[endif]--></div>
-
-</div><p></p><div><div><div id="_com_2" language="JavaScript" onmouseover="msoCommentShow('_anchor_2','_com_2')" onmouseout="msoCommentHide('_com_2')">
-
-<!--[if !supportAnnotations]--></div>
-
-<!--[endif]--></div>
-
-</div><br><p></p>
-
-<br><p></p>
-
-<p class="desktop-hidden">По указанию учителя прикрепите файл с вашим решением или вставьте ссылку на решение в онлайн-таблицах (OneDrive или Google Docs) с доступом на просмотр.</p>]]></text>
-    </questiontext>
-    <generalfeedback format="html">
-      <text></text>
-    </generalfeedback>
-    <defaultgrade>1.0000000</defaultgrade>
-    <penalty>0.0000000</penalty>
-    <hidden>0</hidden>
-    <responseformat>plain</responseformat>
-    <responserequired>0</responserequired>
-    <responsefieldlines>5</responsefieldlines>
-    <attachments>1</attachments>
-    <attachmentsrequired>0</attachmentsrequired>
-    <graderinfo format="html">
-      <text></text>
-    </graderinfo>
-    <responsetemplate format="html">
-      <text></text>
-    </responsetemplate>
-    <tags>
-      <tag><text>Инф: 1. Информация и информационные процессы</text>
-</tag>
-      <tag><text>Кл: 1. 5-6</text>
-</tag>
-      <tag><text>Тип: 2. Ручная</text>
-</tag>
-      <tag><text>Ур: 1. Базовый</text>
-</tag>
-      <tag><text>Фин: 1. Расходы</text>
-</tag>
-    </tags>
-  </question>
-
 <!-- question: 1036  -->
   <question type="essay">
     <name>
-      <text>1.2.1.10.01 Сколько стоит колодец</text>
+      <text>1.2.1.10 Сколько стоит колодец</text>
     </name>
     <questiontext format="html">
       <text><![CDATA[<p></p><p>Хозяин договорился с рабочими, что они выкопают ему колодец
 на следующих условиях: за первый метр он заплатит им Х рублей, а за каждый
 следующий метр — на Y рублей больше, чем за предыдущий, глубина колодца <span lang="EN-US">H</span> метров.</p>
 
-<p><b>Задание</b></p>
+<p><b>Задание 1</b></p>
 
 <p>Хозяин участка предварительно прикинул стоимость работ,
 зная, что глубина колодца равна 9 метрам, а первый метр стоит 1600 рублей и
 каждый следующий на 700 рублей дороже предыдущего. По его подсчетам, он
 предполагал заплатить не более 15&nbsp;000 рублей. Однако, рабочие назвали
 другую сумму, которая отличается от предположений хозяина участка. Чьи расчеты
-были верны? Вычислите точную стоимость работ для данного случая.</p><br><p></p>
-
-<p class="desktop-hidden">По указанию учителя прикрепите файл с вашим решением или вставьте ссылку на решение в онлайн-таблицах (OneDrive или Google Docs) с доступом на просмотр.</p>]]></text>
-    </questiontext>
-    <generalfeedback format="html">
-      <text></text>
-    </generalfeedback>
-    <defaultgrade>1.0000000</defaultgrade>
-    <penalty>0.0000000</penalty>
-    <hidden>0</hidden>
-    <responseformat>plain</responseformat>
-    <responserequired>0</responserequired>
-    <responsefieldlines>5</responsefieldlines>
-    <attachments>1</attachments>
-    <attachmentsrequired>0</attachmentsrequired>
-    <graderinfo format="html">
-      <text></text>
-    </graderinfo>
-    <responsetemplate format="html">
-      <text></text>
-    </responsetemplate>
-    <tags>
-      <tag><text>Инф: 2. Алгоритмизация и программирование</text>
-</tag>
-      <tag><text>Кл: 1. 5-6</text>
-</tag>
-      <tag><text>Тип: 2. Ручная</text>
-</tag>
-      <tag><text>Ур: 3. Высокий</text>
-</tag>
-      <tag><text>Фин: 1. Расходы</text>
-</tag>
-    </tags>
-  </question>
-
-<!-- question: 1037  -->
-  <question type="essay">
-    <name>
-      <text>1.2.1.10.02 Сколько стоит колодец</text>
-    </name>
-    <questiontext format="html">
-      <text><![CDATA[<p></p><p>Хозяин договорился с рабочими, что они выкопают ему колодец
-на следующих условиях: за первый метр он заплатит им Х рублей, а за каждый
-следующий метр — на Y рублей больше, чем за предыдущий, глубина колодца <span lang="EN-US">H</span> метров.</p>
-
-<p><b>Задание</b><br></p>
-
-<p>В текстовом документе создайте блок-схему «Калькулятор
-стоимости колодца», принимающую на вход значения X, Y – стоимость в рублях
-первого метра и сумму, на которую стоимость каждого следующего метра колодца
-больше, чем стоимость предыдущего и глубину колодца в метрах H и выводящую
-стоимость строительства данного колодца в рублях.</p><br><p></p>
-
-<p class="desktop-hidden">По указанию учителя прикрепите файл с вашим решением или вставьте ссылку на решение в онлайн-таблицах (OneDrive или Google Docs) с доступом на просмотр.</p>]]></text>
-    </questiontext>
-    <generalfeedback format="html">
-      <text></text>
-    </generalfeedback>
-    <defaultgrade>1.0000000</defaultgrade>
-    <penalty>0.0000000</penalty>
-    <hidden>0</hidden>
-    <responseformat>plain</responseformat>
-    <responserequired>0</responserequired>
-    <responsefieldlines>5</responsefieldlines>
-    <attachments>1</attachments>
-    <attachmentsrequired>0</attachmentsrequired>
-    <graderinfo format="html">
-      <text></text>
-    </graderinfo>
-    <responsetemplate format="html">
-      <text></text>
-    </responsetemplate>
-    <tags>
-      <tag><text>Инф: 2. Алгоритмизация и программирование</text>
-</tag>
-      <tag><text>Кл: 1. 5-6</text>
-</tag>
-      <tag><text>Тип: 2. Ручная</text>
-</tag>
-      <tag><text>Ур: 3. Высокий</text>
-</tag>
-      <tag><text>Фин: 1. Расходы</text>
-</tag>
-    </tags>
-  </question>
-
-<!-- question: 1038  -->
-  <question type="essay">
-    <name>
-      <text>1.2.1.10.03 Сколько стоит колодец</text>
-    </name>
-    <questiontext format="html">
-      <text><![CDATA[<p></p><p>Хозяин договорился с рабочими, что они выкопают ему колодец
-на следующих условиях: за первый метр он заплатит им Х рублей, а за каждый
-следующий метр — на Y рублей больше, чем за предыдущий, глубина колодца <span lang="EN-US">H</span> метров.</p>
-
-<p><b>Задание</b><br></p>
-
-<p>Сколько потребуется заплатить рабочим, которые выкопают
-колодец глубиной 17 метров, при стоимости первого метра 1300 рублей и
-увеличении стоимости каждого следующего метра на 900 рублей?</p><br><p></p>
-
-<p class="desktop-hidden">По указанию учителя прикрепите файл с вашим решением или вставьте ссылку на решение в онлайн-таблицах (OneDrive или Google Docs) с доступом на просмотр.</p>]]></text>
-    </questiontext>
-    <generalfeedback format="html">
-      <text></text>
-    </generalfeedback>
-    <defaultgrade>1.0000000</defaultgrade>
-    <penalty>0.0000000</penalty>
-    <hidden>0</hidden>
-    <responseformat>plain</responseformat>
-    <responserequired>0</responserequired>
-    <responsefieldlines>5</responsefieldlines>
-    <attachments>1</attachments>
-    <attachmentsrequired>0</attachmentsrequired>
-    <graderinfo format="html">
-      <text></text>
-    </graderinfo>
-    <responsetemplate format="html">
-      <text></text>
-    </responsetemplate>
-    <tags>
-      <tag><text>Инф: 2. Алгоритмизация и программирование</text>
-</tag>
-      <tag><text>Кл: 1. 5-6</text>
-</tag>
-      <tag><text>Тип: 2. Ручная</text>
-</tag>
-      <tag><text>Ур: 3. Высокий</text>
-</tag>
-      <tag><text>Фин: 1. Расходы</text>
-</tag>
-    </tags>
-  </question>
-
-<!-- question: 1039  -->
-  <question type="essay">
-    <name>
-      <text>1.2.1.10.04 Сколько стоит колодец</text>
-    </name>
-    <questiontext format="html">
-      <text><![CDATA[<p></p><p>Хозяин договорился с рабочими, что они выкопают ему колодец
-на следующих условиях: за первый метр он заплатит им Х рублей, а за каждый
-следующий метр — на Y рублей больше, чем за предыдущий, глубина колодца <span lang="EN-US">H</span> метров.</p>
-
-<p><b>Задание</b><br></p>
-
-<p>Установите соответствие между элементами блок-схемы и
-словесным описанием этих действий.</p><img src="http://finformatika.ru/images/12110.png" alt="" width="693" height="405" role="presentation" class="img-responsive atto_image_button_text-bottom"><br><br><p></p>
-
-<p class="desktop-hidden">По указанию учителя прикрепите файл с вашим решением или вставьте ссылку на решение в онлайн-таблицах (OneDrive или Google Docs) с доступом на просмотр.</p>]]></text>
-    </questiontext>
-    <generalfeedback format="html">
-      <text></text>
-    </generalfeedback>
-    <defaultgrade>1.0000000</defaultgrade>
-    <penalty>0.0000000</penalty>
-    <hidden>0</hidden>
-    <responseformat>plain</responseformat>
-    <responserequired>0</responserequired>
-    <responsefieldlines>5</responsefieldlines>
-    <attachments>1</attachments>
-    <attachmentsrequired>0</attachmentsrequired>
-    <graderinfo format="html">
-      <text></text>
-    </graderinfo>
-    <responsetemplate format="html">
-      <text></text>
-    </responsetemplate>
-    <tags>
-      <tag><text>Инф: 2. Алгоритмизация и программирование</text>
-</tag>
-      <tag><text>Кл: 1. 5-6</text>
-</tag>
-      <tag><text>Тип: 2. Ручная</text>
-</tag>
-      <tag><text>Ур: 3. Высокий</text>
-</tag>
-      <tag><text>Фин: 1. Расходы</text>
-</tag>
-    </tags>
-  </question>
-
-<!-- question: 1040  -->
-  <question type="essay">
-    <name>
-      <text>1.2.1.10.05 Сколько стоит колодец</text>
-    </name>
-    <questiontext format="html">
-      <text><![CDATA[<p></p><p>Хозяин договорился с рабочими, что они выкопают ему колодец
-на следующих условиях: за первый метр он заплатит им Х рублей, а за каждый
-следующий метр — на Y рублей больше, чем за предыдущий, глубина колодца <span lang="EN-US">H</span> метров.</p><p><b>Минипроект</b></p>
-
-<p></p><!--[if !supportAnnotations]-->
-
-<script language="JavaScript"><!--
-function msoCommentShow(anchor_id, com_id)
-{
-	if(msoBrowserCheck()) 
-		{
-		c = document.all(com_id);
-		a = document.all(anchor_id);
-		if (null != c && null == c.length && null != a && null == a.length)
-			{
-			var cw = c.offsetWidth;
-			var ch = c.offsetHeight;
-			var aw = a.offsetWidth;
-			var ah = a.offsetHeight;
-			var x  = a.offsetLeft;
-			var y  = a.offsetTop;
-			var el = a;
-			while (el.tagName != "BODY") 
-				{
-				el = el.offsetParent;
-				x = x + el.offsetLeft;
-				y = y + el.offsetTop;
-				}
-			var bw = document.body.clientWidth;
-			var bh = document.body.clientHeight;
-			var bsl = document.body.scrollLeft;
-			var bst = document.body.scrollTop;
-			if (x + cw + ah / 2 > bw + bsl && x + aw - ah / 2 - cw >= bsl ) 
-				{ c.style.left = x + aw - ah / 2 - cw; }
-			else 
-				{ c.style.left = x + ah / 2; }
-			if (y + ch + ah / 2 > bh + bst && y + ah / 2 - ch >= bst ) 
-				{ c.style.top = y + ah / 2 - ch; }
-			else 
-				{ c.style.top = y + ah / 2; }
-			c.style.visibility = "visible";
-}	}	}
-function msoCommentHide(com_id) 
-{
-	if(msoBrowserCheck())
-		{
-		c = document.all(com_id);
-		if (null != c && null == c.length)
-		{
-		c.style.visibility = "hidden";
-		c.style.left = -1000;
-		c.style.top = -1000;
-		} } 
-}
-function msoBrowserCheck()
-{
-	ms = navigator.appVersion.indexOf("MSIE");
-	vers = navigator.appVersion.substring(ms + 5, ms + 6);
-	ie4 = (ms > 0) && (parseInt(vers) >= 4);
-	return ie4;
-}
-if (msoBrowserCheck())
-{
-	document.styleSheets.dynCom.addRule(".msocomanchor","background: infobackground");
-	document.styleSheets.dynCom.addRule(".msocomoff","display: none");
-	document.styleSheets.dynCom.addRule(".msocomtxt","visibility: hidden");
-	document.styleSheets.dynCom.addRule(".msocomtxt","position: absolute");
-	document.styleSheets.dynCom.addRule(".msocomtxt","top: -1000");
-	document.styleSheets.dynCom.addRule(".msocomtxt","left: -1000");
-	document.styleSheets.dynCom.addRule(".msocomtxt","width: 33%");
-	document.styleSheets.dynCom.addRule(".msocomtxt","background: infobackground");
-	document.styleSheets.dynCom.addRule(".msocomtxt","color: infotext");
-	document.styleSheets.dynCom.addRule(".msocomtxt","border-top: 1pt solid threedlightshadow");
-	document.styleSheets.dynCom.addRule(".msocomtxt","border-right: 2pt solid threedshadow");
-	document.styleSheets.dynCom.addRule(".msocomtxt","border-bottom: 2pt solid threedshadow");
-	document.styleSheets.dynCom.addRule(".msocomtxt","border-left: 1pt solid threedlightshadow");
-	document.styleSheets.dynCom.addRule(".msocomtxt","padding: 3pt 3pt 3pt 3pt");
-	document.styleSheets.dynCom.addRule(".msocomtxt","z-index: 100");
-}
-// --></script>
-<!--[endif]-->
-
-
-
-
-
-
-
-<p>В текстовом документе создайте блок-схему «Калькулятор
-стоимости колодца», принимающую на вход значения <span lang="EN-US">X</span>, <span lang="EN-US">Y</span> и глубину колодца в метрах <span lang="EN-US">H</span> и выводящую стоимость строительства
-данного колодца в рублях. <b><i>Алгоритм вычисления стоимости колодца не
-должен использовать конструкцию «Повторение».</i></b><i></i></p>
-
-<p><b>Тема проекта: Построение алгоритма
-вычисления стоимости колодца по условию задачи без использования конструкции
-«Повторение».</b><b></b></p>
-
-<p><b>Цель:</b>
-построить блок-схему алгоритма вычисления стоимости колодца по правилам,
-изложенным в условии задачи, без использования конструкции «Повторение».</p>
-
-<p><b>Задачи</b>
-(детализация действий по достижению цели):</p>
-
-<p><!--[if !supportLists]-->1.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<!--[endif]-->Для выполнения задания взять следующие значения <span lang="EN-US">X</span> = 1800, <span lang="EN-US">Y</span>= 1300, <span lang="EN-US">H</span> = 40. </p>
-
-<p><!--[if !supportLists]-->2.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<!--[endif]-->Построить таблицу стоимости колодца для глубины
-от 1 до Н метров. Вычислить и записать в таблицу стоимость рытья колодца.</p>
-
-<p>Замечание: выбрать удобную форму
-расположения таблицы (по горизонтали или по вертикали).</p>
-
-<p><!--[if !supportLists]-->3.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<!--[endif]-->Добавить в таблицу строку для записи формул
-вычисления стоимости каждого следующего метра.</p>
-
-<p><!--[if !supportLists]-->4.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<!--[endif]-->Сравнить и проанализировать формулы вычисления
-стоимости. Сформулировать предположение об общей формуле вычисления стоимости
-колодца без использования конструкции «Повторение».</p>
-
-<p><!--[if !supportLists]-->5.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<!--[endif]-->Выполнить вычисление по сконструированной
-формуле.</p>
-
-<p><!--[if !supportLists]-->6.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<!--[endif]-->Выполнить вычисления по алгоритму с использованием
-конструкции «Повторение».</p>
-
-<p><!--[if !supportLists]-->7.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<!--[endif]-->Сравнить результаты вычислений.</p>
-
-<p><!--[if !supportLists]-->8.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<!--[endif]-->Создать блок-схему решения задачи без
-использования конструкции «Повторение».</p>
-
-<p><!--[if !supportLists]-->9.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<!--[endif]-->Подготовить презентацию и рассказать классу о
-проделанной работе и полученных результатах.</p><p><br></p><p></p>
+были верны? Вычислите точную стоимость работ для данного случая.</p><p><b>Задание 2</b><br></p><p>В текстовом документе создайте блок-схему «Калькулятор стоимости колодца», принимающую на вход значения X, Y – стоимость в рублях первого метра и сумму, на которую стоимость каждого следующего метра колодца больше, чем стоимость предыдущего и глубину колодца в метрах H и выводящую стоимость строительства данного колодца в рублях.</p><p><b>Задание 3</b><br></p><p>Сколько потребуется заплатить рабочим, которые выкопают колодец глубиной 17 метров, при стоимости первого метра 1300 рублей и увеличении стоимости каждого следующего метра на 900 рублей?</p><p><p><b>Задание 4</b><br></p><p>Установите соответствие между элементами блок-схемы и словесным описанием этих действий.</p><img src="http://finformatika.ru/images/12110.png" alt="" width="693" height="405" role="presentation"><br></p><p><b>Минипроект</b></p><p></p><p>В текстовом документе создайте блок-схему «Калькулятор стоимости колодца», принимающую на вход значения&nbsp;<span lang="EN-US">X</span>,&nbsp;<span lang="EN-US">Y</span>&nbsp;и глубину колодца в метрах&nbsp;<span lang="EN-US">H</span>&nbsp;и выводящую стоимость строительства данного колодца в рублях.&nbsp;<b><i>Алгоритм вычисления стоимости колодца не должен использовать конструкцию «Повторение».</i></b><i></i></p><p><b>Тема проекта: Построение алгоритма вычисления стоимости колодца по условию задачи без использования конструкции «Повторение».</b><b></b></p><p><b>Цель:</b>&nbsp;построить блок-схему алгоритма вычисления стоимости колодца по правилам, изложенным в условии задачи, без использования конструкции «Повторение».</p><p><b>Задачи</b>&nbsp;(детализация действий по достижению цели):</p><p>1.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Для выполнения задания взять следующие значения&nbsp;<span lang="EN-US">X</span>&nbsp;= 1800,&nbsp;<span lang="EN-US">Y</span>= 1300,&nbsp;<span lang="EN-US">H</span>&nbsp;= 40.&nbsp;</p><p>2.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Построить таблицу стоимости колодца для глубины от 1 до Н метров. Вычислить и записать в таблицу стоимость рытья колодца.</p><p>Замечание: выбрать удобную форму расположения таблицы (по горизонтали или по вертикали).</p><p>3.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Добавить в таблицу строку для записи формул вычисления стоимости каждого следующего метра.</p><p>4.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Сравнить и проанализировать формулы вычисления стоимости. Сформулировать предположение об общей формуле вычисления стоимости колодца без использования конструкции «Повторение».</p><p>5.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Выполнить вычисление по сконструированной формуле.</p><p>6.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Выполнить вычисления по алгоритму с использованием конструкции «Повторение».</p><p>7.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Сравнить результаты вычислений.</p><p>8.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Создать блок-схему решения задачи без использования конструкции «Повторение».</p><p>9.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Подготовить презентацию и рассказать классу о проделанной работе и полученных результатах.</p><br><p></p>
 
 <p class="desktop-hidden">По указанию учителя прикрепите файл с вашим решением или вставьте ссылку на решение в онлайн-таблицах (OneDrive или Google Docs) с доступом на просмотр.</p>]]></text>
     </questiontext>
@@ -6196,7 +5627,7 @@ if (msoBrowserCheck())
 <!-- question: 1019  -->
   <question type="essay">
     <name>
-      <text>1.2.1.2.01 Песок для строительства дома</text>
+      <text>1.2.1.2 Песок для строительства дома</text>
     </name>
     <questiontext format="html">
       <text><![CDATA[<p></p><p>Иван Сергеевич заказывает песок для строительства дома.
@@ -6317,7 +5748,7 @@ if (msoBrowserCheck())
 
 
 
-<p><b>Задание</b></p>
+<p><b>Задание 1</b></p>
 
 <p>Составьте алгоритм расчета стоимости приобретения и доставки
 песка в зависимости от необходимого количества песка. Представьте алгоритм в графической
@@ -6330,338 +5761,7 @@ if (msoBrowserCheck())
 
 <div><!--[if !supportAnnotations]-->
 
-<br><div><div id="_com_1" language="JavaScript" onmouseover="msoCommentShow('_anchor_1','_com_1')" onmouseout="msoCommentHide('_com_1')">
-
-<!--[if !supportAnnotations]--></div>
-
-<!--[endif]--></div>
-
-</div><br><p></p>
-
-<p class="desktop-hidden">По указанию учителя прикрепите файл с вашим решением или вставьте ссылку на решение в онлайн-таблицах (OneDrive или Google Docs) с доступом на просмотр.</p>]]></text>
-    </questiontext>
-    <generalfeedback format="html">
-      <text></text>
-    </generalfeedback>
-    <defaultgrade>1.0000000</defaultgrade>
-    <penalty>0.0000000</penalty>
-    <hidden>0</hidden>
-    <responseformat>plain</responseformat>
-    <responserequired>0</responserequired>
-    <responsefieldlines>5</responsefieldlines>
-    <attachments>1</attachments>
-    <attachmentsrequired>0</attachmentsrequired>
-    <graderinfo format="html">
-      <text></text>
-    </graderinfo>
-    <responsetemplate format="html">
-      <text></text>
-    </responsetemplate>
-    <tags>
-      <tag><text>Инф: 2. Алгоритмизация и программирование</text>
-</tag>
-      <tag><text>Кл: 1. 5-6</text>
-</tag>
-      <tag><text>Тип: 2. Ручная</text>
-</tag>
-      <tag><text>Ур: 2. Повышенный</text>
-</tag>
-      <tag><text>Фин: 1. Расходы</text>
-</tag>
-    </tags>
-  </question>
-
-<!-- question: 1020  -->
-  <question type="essay">
-    <name>
-      <text>1.2.1.2.02 Песок для строительства дома</text>
-    </name>
-    <questiontext format="html">
-      <text><![CDATA[<p></p><p>Иван Сергеевич заказывает песок для строительства дома.
-Поставщик песка предлагает вариант доставки: большими самосвалами. Цена
-доставки устанавливается за один рейс самосвала и не зависит от количества
-перевозимого песка.</p>
-
-<table border="1" cellspacing="0" cellpadding="0" width="611">
- <tbody><tr>
-  <td width="143" valign="top">
-  <p>Вид самосвала</p>
-  </td>
-  <td width="148" valign="top">
-  <p>Максимальная вместимость, куб. м</p>
-  </td>
-  <td width="181" valign="top">
-  <p>Цена доставки самосвалом, один рейс, <span lang="EN-US">D</span> руб.</p>
-  </td>
-  <td width="138" valign="top">
-  <p>Цена песка за 1 куб. м, <span lang="EN-US">P</span><span lang="EN-US"> </span>руб.</p>
-  </td>
- </tr>
- <tr>
-  <td width="143" valign="top">
-  <p>Большой</p>
-  </td>
-  <td width="148" valign="top">
-  <p>10</p>
-  </td>
-  <td width="181" valign="top">
-  <p>8500</p>
-  </td>
-  <td width="138" valign="top">
-  <p>500</p>
-  </td>
- </tr>
-</tbody></table><br><p></p><p></p><p><b>Задание</b></p>
-
-<p><!--[if !supportAnnotations]-->
-
-<script language="JavaScript"><!--
-function msoCommentShow(anchor_id, com_id)
-{
-	if(msoBrowserCheck()) 
-		{
-		c = document.all(com_id);
-		a = document.all(anchor_id);
-		if (null != c && null == c.length && null != a && null == a.length)
-			{
-			var cw = c.offsetWidth;
-			var ch = c.offsetHeight;
-			var aw = a.offsetWidth;
-			var ah = a.offsetHeight;
-			var x  = a.offsetLeft;
-			var y  = a.offsetTop;
-			var el = a;
-			while (el.tagName != "BODY") 
-				{
-				el = el.offsetParent;
-				x = x + el.offsetLeft;
-				y = y + el.offsetTop;
-				}
-			var bw = document.body.clientWidth;
-			var bh = document.body.clientHeight;
-			var bsl = document.body.scrollLeft;
-			var bst = document.body.scrollTop;
-			if (x + cw + ah / 2 > bw + bsl && x + aw - ah / 2 - cw >= bsl ) 
-				{ c.style.left = x + aw - ah / 2 - cw; }
-			else 
-				{ c.style.left = x + ah / 2; }
-			if (y + ch + ah / 2 > bh + bst && y + ah / 2 - ch >= bst ) 
-				{ c.style.top = y + ah / 2 - ch; }
-			else 
-				{ c.style.top = y + ah / 2; }
-			c.style.visibility = "visible";
-}	}	}
-function msoCommentHide(com_id) 
-{
-	if(msoBrowserCheck())
-		{
-		c = document.all(com_id);
-		if (null != c && null == c.length)
-		{
-		c.style.visibility = "hidden";
-		c.style.left = -1000;
-		c.style.top = -1000;
-		} } 
-}
-function msoBrowserCheck()
-{
-	ms = navigator.appVersion.indexOf("MSIE");
-	vers = navigator.appVersion.substring(ms + 5, ms + 6);
-	ie4 = (ms > 0) && (parseInt(vers) >= 4);
-	return ie4;
-}
-if (msoBrowserCheck())
-{
-	document.styleSheets.dynCom.addRule(".msocomanchor","background: infobackground");
-	document.styleSheets.dynCom.addRule(".msocomoff","display: none");
-	document.styleSheets.dynCom.addRule(".msocomtxt","visibility: hidden");
-	document.styleSheets.dynCom.addRule(".msocomtxt","position: absolute");
-	document.styleSheets.dynCom.addRule(".msocomtxt","top: -1000");
-	document.styleSheets.dynCom.addRule(".msocomtxt","left: -1000");
-	document.styleSheets.dynCom.addRule(".msocomtxt","width: 33%");
-	document.styleSheets.dynCom.addRule(".msocomtxt","background: infobackground");
-	document.styleSheets.dynCom.addRule(".msocomtxt","color: infotext");
-	document.styleSheets.dynCom.addRule(".msocomtxt","border-top: 1pt solid threedlightshadow");
-	document.styleSheets.dynCom.addRule(".msocomtxt","border-right: 2pt solid threedshadow");
-	document.styleSheets.dynCom.addRule(".msocomtxt","border-bottom: 2pt solid threedshadow");
-	document.styleSheets.dynCom.addRule(".msocomtxt","border-left: 1pt solid threedlightshadow");
-	document.styleSheets.dynCom.addRule(".msocomtxt","padding: 3pt 3pt 3pt 3pt");
-	document.styleSheets.dynCom.addRule(".msocomtxt","z-index: 100");
-}
-// --></script>
-<!--[endif]-->
-
-
-
-
-
-
-
-</p><p>Установите соответствие между шагами алгоритма в графической
-форме (элементы блок-схемы) и словесным описанием шагов расчета стоимости приобретения
-и доставки песка в зависимости от необходимого количества песка.</p>
-
-<div><img src="http://finformatika.ru/images/1212.png" alt="" width="693" height="389" role="presentation" class="img-responsive atto_image_button_text-bottom"><br></div><br><p></p>
-
-<p class="desktop-hidden">По указанию учителя прикрепите файл с вашим решением или вставьте ссылку на решение в онлайн-таблицах (OneDrive или Google Docs) с доступом на просмотр.</p>]]></text>
-    </questiontext>
-    <generalfeedback format="html">
-      <text></text>
-    </generalfeedback>
-    <defaultgrade>1.0000000</defaultgrade>
-    <penalty>0.0000000</penalty>
-    <hidden>0</hidden>
-    <responseformat>plain</responseformat>
-    <responserequired>0</responserequired>
-    <responsefieldlines>5</responsefieldlines>
-    <attachments>1</attachments>
-    <attachmentsrequired>0</attachmentsrequired>
-    <graderinfo format="html">
-      <text></text>
-    </graderinfo>
-    <responsetemplate format="html">
-      <text></text>
-    </responsetemplate>
-    <tags>
-      <tag><text>Инф: 2. Алгоритмизация и программирование</text>
-</tag>
-      <tag><text>Кл: 1. 5-6</text>
-</tag>
-      <tag><text>Тип: 2. Ручная</text>
-</tag>
-      <tag><text>Ур: 2. Повышенный</text>
-</tag>
-      <tag><text>Фин: 1. Расходы</text>
-</tag>
-    </tags>
-  </question>
-
-<!-- question: 1021  -->
-  <question type="essay">
-    <name>
-      <text>1.2.1.2.03 Песок для строительства дома</text>
-    </name>
-    <questiontext format="html">
-      <text><![CDATA[<p></p><p>Иван Сергеевич заказывает песок для строительства дома.
-Поставщик песка предлагает вариант доставки: большими самосвалами. Цена
-доставки устанавливается за один рейс самосвала и не зависит от количества
-перевозимого песка.</p>
-
-<table border="1" cellspacing="0" cellpadding="0" width="611">
- <tbody><tr>
-  <td width="143" valign="top">
-  <p>Вид самосвала</p>
-  </td>
-  <td width="148" valign="top">
-  <p>Максимальная вместимость, куб. м</p>
-  </td>
-  <td width="181" valign="top">
-  <p>Цена доставки самосвалом, один рейс, <span lang="EN-US">D</span> руб.</p>
-  </td>
-  <td width="138" valign="top">
-  <p>Цена песка за 1 куб. м, <span lang="EN-US">P</span><span lang="EN-US"> </span>руб.</p>
-  </td>
- </tr>
- <tr>
-  <td width="143" valign="top">
-  <p>Большой</p>
-  </td>
-  <td width="148" valign="top">
-  <p>10</p>
-  </td>
-  <td width="181" valign="top">
-  <p>8500</p>
-  </td>
-  <td width="138" valign="top">
-  <p>500</p>
-  </td>
- </tr>
-</tbody></table><br><p></p><p></p><p><b>Задание</b></p>
-
-<p>Продумайте структуру таблицы для вычисления стоимости
-приобретения и доставки песка в количестве от 10 кубометров до 100 кубометров с
-шагом 5 кубометров. Создайте таблицу и заполните соответствующими числовыми
-значениями.</p><br><p></p>
-
-<p class="desktop-hidden">По указанию учителя прикрепите файл с вашим решением или вставьте ссылку на решение в онлайн-таблицах (OneDrive или Google Docs) с доступом на просмотр.</p>]]></text>
-    </questiontext>
-    <generalfeedback format="html">
-      <text></text>
-    </generalfeedback>
-    <defaultgrade>1.0000000</defaultgrade>
-    <penalty>0.0000000</penalty>
-    <hidden>0</hidden>
-    <responseformat>plain</responseformat>
-    <responserequired>0</responserequired>
-    <responsefieldlines>5</responsefieldlines>
-    <attachments>1</attachments>
-    <attachmentsrequired>0</attachmentsrequired>
-    <graderinfo format="html">
-      <text></text>
-    </graderinfo>
-    <responsetemplate format="html">
-      <text></text>
-    </responsetemplate>
-    <tags>
-      <tag><text>Инф: 2. Алгоритмизация и программирование</text>
-</tag>
-      <tag><text>Кл: 1. 5-6</text>
-</tag>
-      <tag><text>Тип: 2. Ручная</text>
-</tag>
-      <tag><text>Ур: 2. Повышенный</text>
-</tag>
-      <tag><text>Фин: 1. Расходы</text>
-</tag>
-    </tags>
-  </question>
-
-<!-- question: 1022  -->
-  <question type="essay">
-    <name>
-      <text>1.2.1.2.04 Песок для строительства дома</text>
-    </name>
-    <questiontext format="html">
-      <text><![CDATA[<p></p><p>Иван Сергеевич заказывает песок для строительства дома.
-Поставщик песка предлагает вариант доставки: большими самосвалами. Цена
-доставки устанавливается за один рейс самосвала и не зависит от количества
-перевозимого песка.</p>
-
-<table border="1" cellspacing="0" cellpadding="0" width="611">
- <tbody><tr>
-  <td width="143" valign="top">
-  <p>Вид самосвала</p>
-  </td>
-  <td width="148" valign="top">
-  <p>Максимальная вместимость, куб. м</p>
-  </td>
-  <td width="181" valign="top">
-  <p>Цена доставки самосвалом, один рейс, <span lang="EN-US">D</span> руб.</p>
-  </td>
-  <td width="138" valign="top">
-  <p>Цена песка за 1 куб. м, <span lang="EN-US">P</span><span lang="EN-US"> </span>руб.</p>
-  </td>
- </tr>
- <tr>
-  <td width="143" valign="top">
-  <p>Большой</p>
-  </td>
-  <td width="148" valign="top">
-  <p>10</p>
-  </td>
-  <td width="181" valign="top">
-  <p>8500</p>
-  </td>
-  <td width="138" valign="top">
-  <p>500</p>
-  </td>
- </tr>
-</tbody></table><br><p></p><p></p><p><b>Задание</b></p>
-
-<p>Используя информацию из таблицы к варианту 3, найдите
-минимальную стоимость приобретения и доставки песка (в рублях), если для
-строительства дома Ивану Сергеевичу нужно купить и доставить на строительную
-площадку 45 куб. м песка; 95 куб. м песка?</p><br><p></p>
+<p><b>Задание 2</b></p><p></p><p>Установите соответствие между шагами алгоритма в графической форме (элементы блок-схемы) и словесным описанием шагов расчета стоимости приобретения и доставки песка в зависимости от необходимого количества песка.</p><div><img src="http://finformatika.ru/images/1212.png" alt="" width="693" height="389" role="presentation"><br></div><br><p><b>Задание 3</b></p><p>Продумайте структуру таблицы для вычисления стоимости приобретения и доставки песка в количестве от 10 кубометров до 100 кубометров с шагом 5 кубометров. Создайте таблицу и заполните соответствующими числовыми значениями.</p><p><b>Задание 4</b></p><p>Используя информацию из таблицы к варианту 3, найдите минимальную стоимость приобретения и доставки песка (в рублях), если для строительства дома Ивану Сергеевичу нужно купить и доставить на строительную площадку 45 куб. м песка; 95 куб. м песка?</p></div><p></p>
 
 <p class="desktop-hidden">По указанию учителя прикрепите файл с вашим решением или вставьте ссылку на решение в онлайн-таблицах (OneDrive или Google Docs) с доступом на просмотр.</p>]]></text>
     </questiontext>
@@ -6699,7 +5799,7 @@ if (msoBrowserCheck())
 <!-- question: 1023  -->
   <question type="essay">
     <name>
-      <text>1.2.1.3.01 Скидки на детскую обувь</text>
+      <text>1.2.1.3 Скидки на детскую обувь</text>
     </name>
     <questiontext format="html">
       <text><![CDATA[<p></p><p>Многодетная семья с четырьмя детьми (все мальчики) планирует
@@ -6710,7 +5810,7 @@ if (msoBrowserCheck())
 дающая право на получение скидки размером <span lang="EN-US">D</span> % на любую обувь. Родители также
 подобрали там подходящую обувь по цене <span lang="EN-US">Y</span> рублей за пару.&nbsp; </p>
 
-<p><b>Задание</b></p>
+<p><b>Задание 1</b></p>
 
 <p>&nbsp;Вычислите стоимость
 покупки в каждом из двух магазинов, если стоимость одной пары обуви в магазине
@@ -6719,226 +5819,7 @@ if (msoBrowserCheck())
 
 <p><i>Сопутствующее
 задание (согласование окончаний в числительных): прочитайте вслух фразу из
-условия задачи «стоимость пары обуви равна 3380 рублям». </i></p><br><p></p>
-
-<p class="desktop-hidden">По указанию учителя прикрепите файл с вашим решением или вставьте ссылку на решение в онлайн-таблицах (OneDrive или Google Docs) с доступом на просмотр.</p>]]></text>
-    </questiontext>
-    <generalfeedback format="html">
-      <text></text>
-    </generalfeedback>
-    <defaultgrade>1.0000000</defaultgrade>
-    <penalty>0.0000000</penalty>
-    <hidden>0</hidden>
-    <responseformat>plain</responseformat>
-    <responserequired>0</responserequired>
-    <responsefieldlines>5</responsefieldlines>
-    <attachments>1</attachments>
-    <attachmentsrequired>0</attachmentsrequired>
-    <graderinfo format="html">
-      <text></text>
-    </graderinfo>
-    <responsetemplate format="html">
-      <text></text>
-    </responsetemplate>
-    <tags>
-      <tag><text>Инф: 2. Алгоритмизация и программирование</text>
-</tag>
-      <tag><text>Кл: 1. 5-6</text>
-</tag>
-      <tag><text>Тип: 2. Ручная</text>
-</tag>
-      <tag><text>Ур: 2. Повышенный</text>
-</tag>
-      <tag><text>Фин: 1. Расходы</text>
-</tag>
-    </tags>
-  </question>
-
-<!-- question: 1024  -->
-  <question type="essay">
-    <name>
-      <text>1.2.1.3.02 Скидки на детскую обувь</text>
-    </name>
-    <questiontext format="html">
-      <text><![CDATA[<p></p><p>Многодетная семья с четырьмя детьми (все мальчики) планирует
-купить обувь в период распродаж. В обувном магазине «А» проводится акция
-«Каждая третья пара обуви– в подарок!». Здесь родителям понравились ботинки по
-цене <span lang="EN-US">X</span> рублей за пару. В магазине «Б»
-никаких акций не проходит, но у семьи есть дисконтная карта этого магазина,
-дающая право на получение скидки размером <span lang="EN-US">D</span> % на любую обувь. Родители также
-подобрали там подходящую обувь по цене <span lang="EN-US">Y</span> рублей за пару.&nbsp; </p>
-
-<p><b>Задание</b><br></p>
-
-<p>В каком магазине и на сколько рублей покупка четырех пар
-ботинок обойдется дешевле, если:</p>
-
-<p>X = 3380 руб., Y = 3000 руб., <span lang="EN-US">D</span> =15.</p><br><p></p>
-
-<p class="desktop-hidden">По указанию учителя прикрепите файл с вашим решением или вставьте ссылку на решение в онлайн-таблицах (OneDrive или Google Docs) с доступом на просмотр.</p>]]></text>
-    </questiontext>
-    <generalfeedback format="html">
-      <text></text>
-    </generalfeedback>
-    <defaultgrade>1.0000000</defaultgrade>
-    <penalty>0.0000000</penalty>
-    <hidden>0</hidden>
-    <responseformat>plain</responseformat>
-    <responserequired>0</responserequired>
-    <responsefieldlines>5</responsefieldlines>
-    <attachments>1</attachments>
-    <attachmentsrequired>0</attachmentsrequired>
-    <graderinfo format="html">
-      <text></text>
-    </graderinfo>
-    <responsetemplate format="html">
-      <text></text>
-    </responsetemplate>
-    <tags>
-      <tag><text>Инф: 2. Алгоритмизация и программирование</text>
-</tag>
-      <tag><text>Кл: 1. 5-6</text>
-</tag>
-      <tag><text>Тип: 2. Ручная</text>
-</tag>
-      <tag><text>Ур: 2. Повышенный</text>
-</tag>
-      <tag><text>Фин: 1. Расходы</text>
-</tag>
-    </tags>
-  </question>
-
-<!-- question: 1025  -->
-  <question type="essay">
-    <name>
-      <text>1.2.1.3.03 Скидки на детскую обувь</text>
-    </name>
-    <questiontext format="html">
-      <text><![CDATA[<p></p><p>Многодетная семья с четырьмя детьми (все мальчики) планирует
-купить обувь в период распродаж. В обувном магазине «А» проводится акция
-«Каждая третья пара обуви– в подарок!». Здесь родителям понравились ботинки по
-цене <span lang="EN-US">X</span> рублей за пару. В магазине «Б»
-никаких акций не проходит, но у семьи есть дисконтная карта этого магазина,
-дающая право на получение скидки размером <span lang="EN-US">D</span> % на любую обувь. Родители также
-подобрали там подходящую обувь по цене <span lang="EN-US">Y</span> рублей за пару.&nbsp; </p>
-
-<p><b>Задание</b><br></p>
-
-<p>В каком магазине и на сколько рублей покупка четырех пар
-ботинок обойдется дешевле, если:</p>
-
-<p>X = 3380 руб., Y = 3000 руб., <span lang="EN-US">D</span> =20.</p><br><p></p>
-
-<p class="desktop-hidden">По указанию учителя прикрепите файл с вашим решением или вставьте ссылку на решение в онлайн-таблицах (OneDrive или Google Docs) с доступом на просмотр.</p>]]></text>
-    </questiontext>
-    <generalfeedback format="html">
-      <text></text>
-    </generalfeedback>
-    <defaultgrade>1.0000000</defaultgrade>
-    <penalty>0.0000000</penalty>
-    <hidden>0</hidden>
-    <responseformat>plain</responseformat>
-    <responserequired>0</responserequired>
-    <responsefieldlines>5</responsefieldlines>
-    <attachments>1</attachments>
-    <attachmentsrequired>0</attachmentsrequired>
-    <graderinfo format="html">
-      <text></text>
-    </graderinfo>
-    <responsetemplate format="html">
-      <text></text>
-    </responsetemplate>
-    <tags>
-      <tag><text>Инф: 2. Алгоритмизация и программирование</text>
-</tag>
-      <tag><text>Кл: 1. 5-6</text>
-</tag>
-      <tag><text>Тип: 2. Ручная</text>
-</tag>
-      <tag><text>Ур: 2. Повышенный</text>
-</tag>
-      <tag><text>Фин: 1. Расходы</text>
-</tag>
-    </tags>
-  </question>
-
-<!-- question: 1027  -->
-  <question type="essay">
-    <name>
-      <text>1.2.1.3.04 Скидки на детскую обувь</text>
-    </name>
-    <questiontext format="html">
-      <text><![CDATA[<p></p><p>Многодетная семья с четырьмя детьми (все мальчики) планирует
-купить обувь в период распродаж. В обувном магазине «А» проводится акция
-«Каждая третья пара обуви– в подарок!». Здесь родителям понравились ботинки по
-цене <span lang="EN-US">X</span> рублей за пару. В магазине «Б»
-никаких акций не проходит, но у семьи есть дисконтная карта этого магазина,
-дающая право на получение скидки размером <span lang="EN-US">D</span> % на любую обувь. Родители также
-подобрали там подходящую обувь по цене <span lang="EN-US">Y</span> рублей за пару.&nbsp; </p>
-
-<p><b>Задание</b><br></p>
-
-<p><!--[if !supportLists]-->1.&nbsp;Продумайте структуру таблицы для вычисления
-стоимости покупки от 1 до 12 пар обуви в магазинах «А» и «Б». </p>
-
-<p><!--[if !supportLists]-->2.&nbsp;Заполните таблицу, учитывая, что размер скидки
-во втором магазине равен 15 процентов.</p>
-
-<p><!--[if !supportLists]-->3.&nbsp;Используя таблицу, определите, как изменится
-стоимость покупки, если папа решит купить пару обуви и для себя.</p><br><p></p>
-
-<p class="desktop-hidden">По указанию учителя прикрепите файл с вашим решением или вставьте ссылку на решение в онлайн-таблицах (OneDrive или Google Docs) с доступом на просмотр.</p>]]></text>
-    </questiontext>
-    <generalfeedback format="html">
-      <text></text>
-    </generalfeedback>
-    <defaultgrade>1.0000000</defaultgrade>
-    <penalty>0.0000000</penalty>
-    <hidden>0</hidden>
-    <responseformat>plain</responseformat>
-    <responserequired>0</responserequired>
-    <responsefieldlines>5</responsefieldlines>
-    <attachments>1</attachments>
-    <attachmentsrequired>0</attachmentsrequired>
-    <graderinfo format="html">
-      <text></text>
-    </graderinfo>
-    <responsetemplate format="html">
-      <text></text>
-    </responsetemplate>
-    <tags>
-      <tag><text>Инф: 2. Алгоритмизация и программирование</text>
-</tag>
-      <tag><text>Кл: 1. 5-6</text>
-</tag>
-      <tag><text>Тип: 2. Ручная</text>
-</tag>
-      <tag><text>Ур: 2. Повышенный</text>
-</tag>
-      <tag><text>Фин: 1. Расходы</text>
-</tag>
-    </tags>
-  </question>
-
-<!-- question: 1026  -->
-  <question type="essay">
-    <name>
-      <text>1.2.1.3.05 Скидки на детскую обувь</text>
-    </name>
-    <questiontext format="html">
-      <text><![CDATA[<p></p><p>Многодетная семья с четырьмя детьми (все мальчики) планирует
-купить обувь в период распродаж. В обувном магазине «А» проводится акция
-«Каждая третья пара обуви– в подарок!». Здесь родителям понравились ботинки по
-цене <span lang="EN-US">X</span> рублей за пару. В магазине «Б»
-никаких акций не проходит, но у семьи есть дисконтная карта этого магазина,
-дающая право на получение скидки размером <span lang="EN-US">D</span> % на любую обувь. Родители также
-подобрали там подходящую обувь по цене <span lang="EN-US">Y</span> рублей за пару.&nbsp; </p>
-
-<p><b>Задание</b><br></p>
-
-<p>Запишите формулы для вычисления стоимости покупки в каждом
-из двух магазинов, используя буквенные выражения и буквенные переменные,
-заданные в условии задачи.</p><br><p></p>
+условия задачи «стоимость пары обуви равна 3380 рублям». </i></p><p><b>Задание 2</b><br></p><p>В каком магазине и на сколько рублей покупка четырех пар ботинок обойдется дешевле, если:</p><p>X = 3380 руб., Y = 3000 руб.,&nbsp;<span lang="EN-US">D</span>&nbsp;=15.</p><p><b>Задание 3</b><br></p><p>В каком магазине и на сколько рублей покупка четырех пар ботинок обойдется дешевле, если:</p><p>X = 3380 руб., Y = 3000 руб.,&nbsp;<span lang="EN-US">D</span>&nbsp;=20.</p><p><b>Задание 4</b><br></p><p>1.&nbsp;Продумайте структуру таблицы для вычисления стоимости покупки от 1 до 12 пар обуви в магазинах «А» и «Б».&nbsp;</p><p>2.&nbsp;Заполните таблицу, учитывая, что размер скидки во втором магазине равен 15 процентов.</p><p>3.&nbsp;Используя таблицу, определите, как изменится стоимость покупки, если папа решит купить пару обуви и для себя.</p><p><b>Задание 5</b><br></p><p>Запишите формулы для вычисления стоимости покупки в каждом из двух магазинов, используя буквенные выражения и буквенные переменные, заданные в условии задачи.</p><br><p></p>
 
 <p class="desktop-hidden">По указанию учителя прикрепите файл с вашим решением или вставьте ссылку на решение в онлайн-таблицах (OneDrive или Google Docs) с доступом на просмотр.</p>]]></text>
     </questiontext>
@@ -6976,7 +5857,7 @@ if (msoBrowserCheck())
 <!-- question: 1028  -->
   <question type="essay">
     <name>
-      <text>1.2.1.4.01 Сезонная распродажа обуви</text>
+      <text>1.2.1.4 Сезонная распродажа обуви</text>
     </name>
     <questiontext format="html">
       <text><![CDATA[<p></p><p></p><!--[if !supportAnnotations]-->
@@ -7089,7 +5970,7 @@ if (msoBrowserCheck())
 
 </div><p> </p>
 
-<p><b>Задание</b></p>
+<p><b>Задание 1</b></p>
 
 <p></p><!--[if !supportAnnotations]-->
 
@@ -7181,404 +6062,7 @@ if (msoBrowserCheck())
 обуви третья пара – в подарок!» родителям понравились ботинки по цене 2700
 рублей за пару, а в магазине «Б», где предлагают обувь по акции «Каждому
 купившему пару обуви вторая пара – за полцены», стоимость одной пары обуви
-равна 2130 рублей за пару.</p><div><div><div id="_com_1" language="JavaScript" onmouseover="msoCommentShow('_anchor_1','_com_1')" onmouseout="msoCommentHide('_com_1')">
-
-<p>&nbsp;</p></div></div></div><p></p>
-
-<p class="desktop-hidden">По указанию учителя прикрепите файл с вашим решением или вставьте ссылку на решение в онлайн-таблицах (OneDrive или Google Docs) с доступом на просмотр.</p>]]></text>
-    </questiontext>
-    <generalfeedback format="html">
-      <text></text>
-    </generalfeedback>
-    <defaultgrade>1.0000000</defaultgrade>
-    <penalty>0.0000000</penalty>
-    <hidden>0</hidden>
-    <responseformat>plain</responseformat>
-    <responserequired>0</responserequired>
-    <responsefieldlines>5</responsefieldlines>
-    <attachments>1</attachments>
-    <attachmentsrequired>0</attachmentsrequired>
-    <graderinfo format="html">
-      <text></text>
-    </graderinfo>
-    <responsetemplate format="html">
-      <text></text>
-    </responsetemplate>
-    <tags>
-      <tag><text>Инф: 2. Алгоритмизация и программирование</text>
-</tag>
-      <tag><text>Кл: 1. 5-6</text>
-</tag>
-      <tag><text>Тип: 2. Ручная</text>
-</tag>
-      <tag><text>Ур: 2. Повышенный</text>
-</tag>
-      <tag><text>Фин: 1. Расходы</text>
-</tag>
-    </tags>
-  </question>
-
-<!-- question: 1029  -->
-  <question type="essay">
-    <name>
-      <text>1.2.1.4.02 Сезонная распродажа обуви</text>
-    </name>
-    <questiontext format="html">
-      <text><![CDATA[<p></p><p></p><!--[if !supportAnnotations]-->
-
-<script language="JavaScript"><!--
-function msoCommentShow(anchor_id, com_id)
-{
-	if(msoBrowserCheck()) 
-		{
-		c = document.all(com_id);
-		a = document.all(anchor_id);
-		if (null != c && null == c.length && null != a && null == a.length)
-			{
-			var cw = c.offsetWidth;
-			var ch = c.offsetHeight;
-			var aw = a.offsetWidth;
-			var ah = a.offsetHeight;
-			var x  = a.offsetLeft;
-			var y  = a.offsetTop;
-			var el = a;
-			while (el.tagName != "BODY") 
-				{
-				el = el.offsetParent;
-				x = x + el.offsetLeft;
-				y = y + el.offsetTop;
-				}
-			var bw = document.body.clientWidth;
-			var bh = document.body.clientHeight;
-			var bsl = document.body.scrollLeft;
-			var bst = document.body.scrollTop;
-			if (x + cw + ah / 2 > bw + bsl && x + aw - ah / 2 - cw >= bsl ) 
-				{ c.style.left = x + aw - ah / 2 - cw; }
-			else 
-				{ c.style.left = x + ah / 2; }
-			if (y + ch + ah / 2 > bh + bst && y + ah / 2 - ch >= bst ) 
-				{ c.style.top = y + ah / 2 - ch; }
-			else 
-				{ c.style.top = y + ah / 2; }
-			c.style.visibility = "visible";
-}	}	}
-function msoCommentHide(com_id) 
-{
-	if(msoBrowserCheck())
-		{
-		c = document.all(com_id);
-		if (null != c && null == c.length)
-		{
-		c.style.visibility = "hidden";
-		c.style.left = -1000;
-		c.style.top = -1000;
-		} } 
-}
-function msoBrowserCheck()
-{
-	ms = navigator.appVersion.indexOf("MSIE");
-	vers = navigator.appVersion.substring(ms + 5, ms + 6);
-	ie4 = (ms > 0) && (parseInt(vers) >= 4);
-	return ie4;
-}
-if (msoBrowserCheck())
-{
-	document.styleSheets.dynCom.addRule(".msocomanchor","background: infobackground");
-	document.styleSheets.dynCom.addRule(".msocomoff","display: none");
-	document.styleSheets.dynCom.addRule(".msocomtxt","visibility: hidden");
-	document.styleSheets.dynCom.addRule(".msocomtxt","position: absolute");
-	document.styleSheets.dynCom.addRule(".msocomtxt","top: -1000");
-	document.styleSheets.dynCom.addRule(".msocomtxt","left: -1000");
-	document.styleSheets.dynCom.addRule(".msocomtxt","width: 33%");
-	document.styleSheets.dynCom.addRule(".msocomtxt","background: infobackground");
-	document.styleSheets.dynCom.addRule(".msocomtxt","color: infotext");
-	document.styleSheets.dynCom.addRule(".msocomtxt","border-top: 1pt solid threedlightshadow");
-	document.styleSheets.dynCom.addRule(".msocomtxt","border-right: 2pt solid threedshadow");
-	document.styleSheets.dynCom.addRule(".msocomtxt","border-bottom: 2pt solid threedshadow");
-	document.styleSheets.dynCom.addRule(".msocomtxt","border-left: 1pt solid threedlightshadow");
-	document.styleSheets.dynCom.addRule(".msocomtxt","padding: 3pt 3pt 3pt 3pt");
-	document.styleSheets.dynCom.addRule(".msocomtxt","z-index: 100");
-}
-// --></script>
-<!--[endif]-->
-
-
-
-
-
-
-
-<p>Многодетная
-семья с тремя детьми планирует купить детскую обувь в период распродаж,
-потратив на это не более <span lang="EN-US">S</span>
-рублей (бюджет покупки). </p>
-
-<p>Родители
-хотят купить по паре обуви каждому ребенку, но не исключают возможности покупки
-б<b><i>о</i></b>льшего
-количества обуви в пределах указанного бюджета.</p>
-
-В магазине «А», где
-проводится акция «Каждому купившему две пары обуви, третья пара – в подарок!»
-родителям понравились ботинки по цене <span lang="EN-US">A</span> рублей за пару. В
-магазине «Б», где предлагают обувь по акции «Каждому купившему пару обуви,
-вторая пара – за полцены!» стоимость одной пары обуви&nbsp;составляет&nbsp;&nbsp;<span lang="EN-US">B</span> рублей за пару
-
-<div><!--[if !supportAnnotations]-->
-
-<br><div><div id="_com_1" language="JavaScript" onmouseover="msoCommentShow('_anchor_1','_com_1')" onmouseout="msoCommentHide('_com_1')">
-
-<!--[if !supportAnnotations]--></div>
-
-<!--[endif]--></div>
-
-</div><p> </p>
-
-<p><b>Задание</b><br></p>
-
-<p></p><!--[if !supportAnnotations]-->
-
-<script language="JavaScript"><!--
-function msoCommentShow(anchor_id, com_id)
-{
-	if(msoBrowserCheck()) 
-		{
-		c = document.all(com_id);
-		a = document.all(anchor_id);
-		if (null != c && null == c.length && null != a && null == a.length)
-			{
-			var cw = c.offsetWidth;
-			var ch = c.offsetHeight;
-			var aw = a.offsetWidth;
-			var ah = a.offsetHeight;
-			var x  = a.offsetLeft;
-			var y  = a.offsetTop;
-			var el = a;
-			while (el.tagName != "BODY") 
-				{
-				el = el.offsetParent;
-				x = x + el.offsetLeft;
-				y = y + el.offsetTop;
-				}
-			var bw = document.body.clientWidth;
-			var bh = document.body.clientHeight;
-			var bsl = document.body.scrollLeft;
-			var bst = document.body.scrollTop;
-			if (x + cw + ah / 2 > bw + bsl && x + aw - ah / 2 - cw >= bsl ) 
-				{ c.style.left = x + aw - ah / 2 - cw; }
-			else 
-				{ c.style.left = x + ah / 2; }
-			if (y + ch + ah / 2 > bh + bst && y + ah / 2 - ch >= bst ) 
-				{ c.style.top = y + ah / 2 - ch; }
-			else 
-				{ c.style.top = y + ah / 2; }
-			c.style.visibility = "visible";
-}	}	}
-function msoCommentHide(com_id) 
-{
-	if(msoBrowserCheck())
-		{
-		c = document.all(com_id);
-		if (null != c && null == c.length)
-		{
-		c.style.visibility = "hidden";
-		c.style.left = -1000;
-		c.style.top = -1000;
-		} } 
-}
-function msoBrowserCheck()
-{
-	ms = navigator.appVersion.indexOf("MSIE");
-	vers = navigator.appVersion.substring(ms + 5, ms + 6);
-	ie4 = (ms > 0) && (parseInt(vers) >= 4);
-	return ie4;
-}
-if (msoBrowserCheck())
-{
-	document.styleSheets.dynCom.addRule(".msocomanchor","background: infobackground");
-	document.styleSheets.dynCom.addRule(".msocomoff","display: none");
-	document.styleSheets.dynCom.addRule(".msocomtxt","visibility: hidden");
-	document.styleSheets.dynCom.addRule(".msocomtxt","position: absolute");
-	document.styleSheets.dynCom.addRule(".msocomtxt","top: -1000");
-	document.styleSheets.dynCom.addRule(".msocomtxt","left: -1000");
-	document.styleSheets.dynCom.addRule(".msocomtxt","width: 33%");
-	document.styleSheets.dynCom.addRule(".msocomtxt","background: infobackground");
-	document.styleSheets.dynCom.addRule(".msocomtxt","color: infotext");
-	document.styleSheets.dynCom.addRule(".msocomtxt","border-top: 1pt solid threedlightshadow");
-	document.styleSheets.dynCom.addRule(".msocomtxt","border-right: 2pt solid threedshadow");
-	document.styleSheets.dynCom.addRule(".msocomtxt","border-bottom: 2pt solid threedshadow");
-	document.styleSheets.dynCom.addRule(".msocomtxt","border-left: 1pt solid threedlightshadow");
-	document.styleSheets.dynCom.addRule(".msocomtxt","padding: 3pt 3pt 3pt 3pt");
-	document.styleSheets.dynCom.addRule(".msocomtxt","z-index: 100");
-}
-// --></script>
-<!--[endif]-->
-
-
-
-
-
-
-
-<p>Создайте таблицу и заполните ее для бюджета от 15&nbsp;000
-рублей до 30&nbsp;000 рублей.</p><p></p>
-
-<p class="desktop-hidden">По указанию учителя прикрепите файл с вашим решением или вставьте ссылку на решение в онлайн-таблицах (OneDrive или Google Docs) с доступом на просмотр.</p>]]></text>
-    </questiontext>
-    <generalfeedback format="html">
-      <text></text>
-    </generalfeedback>
-    <defaultgrade>1.0000000</defaultgrade>
-    <penalty>0.0000000</penalty>
-    <hidden>0</hidden>
-    <responseformat>plain</responseformat>
-    <responserequired>0</responserequired>
-    <responsefieldlines>5</responsefieldlines>
-    <attachments>1</attachments>
-    <attachmentsrequired>0</attachmentsrequired>
-    <graderinfo format="html">
-      <text></text>
-    </graderinfo>
-    <responsetemplate format="html">
-      <text></text>
-    </responsetemplate>
-    <tags>
-      <tag><text>Инф: 2. Алгоритмизация и программирование</text>
-</tag>
-      <tag><text>Кл: 1. 5-6</text>
-</tag>
-      <tag><text>Тип: 2. Ручная</text>
-</tag>
-      <tag><text>Ур: 2. Повышенный</text>
-</tag>
-      <tag><text>Фин: 1. Расходы</text>
-</tag>
-    </tags>
-  </question>
-
-<!-- question: 1030  -->
-  <question type="essay">
-    <name>
-      <text>1.2.1.4.03 Сезонная распродажа обуви</text>
-    </name>
-    <questiontext format="html">
-      <text><![CDATA[<p></p><p></p><!--[if !supportAnnotations]-->
-
-<script language="JavaScript"><!--
-function msoCommentShow(anchor_id, com_id)
-{
-	if(msoBrowserCheck()) 
-		{
-		c = document.all(com_id);
-		a = document.all(anchor_id);
-		if (null != c && null == c.length && null != a && null == a.length)
-			{
-			var cw = c.offsetWidth;
-			var ch = c.offsetHeight;
-			var aw = a.offsetWidth;
-			var ah = a.offsetHeight;
-			var x  = a.offsetLeft;
-			var y  = a.offsetTop;
-			var el = a;
-			while (el.tagName != "BODY") 
-				{
-				el = el.offsetParent;
-				x = x + el.offsetLeft;
-				y = y + el.offsetTop;
-				}
-			var bw = document.body.clientWidth;
-			var bh = document.body.clientHeight;
-			var bsl = document.body.scrollLeft;
-			var bst = document.body.scrollTop;
-			if (x + cw + ah / 2 > bw + bsl && x + aw - ah / 2 - cw >= bsl ) 
-				{ c.style.left = x + aw - ah / 2 - cw; }
-			else 
-				{ c.style.left = x + ah / 2; }
-			if (y + ch + ah / 2 > bh + bst && y + ah / 2 - ch >= bst ) 
-				{ c.style.top = y + ah / 2 - ch; }
-			else 
-				{ c.style.top = y + ah / 2; }
-			c.style.visibility = "visible";
-}	}	}
-function msoCommentHide(com_id) 
-{
-	if(msoBrowserCheck())
-		{
-		c = document.all(com_id);
-		if (null != c && null == c.length)
-		{
-		c.style.visibility = "hidden";
-		c.style.left = -1000;
-		c.style.top = -1000;
-		} } 
-}
-function msoBrowserCheck()
-{
-	ms = navigator.appVersion.indexOf("MSIE");
-	vers = navigator.appVersion.substring(ms + 5, ms + 6);
-	ie4 = (ms > 0) && (parseInt(vers) >= 4);
-	return ie4;
-}
-if (msoBrowserCheck())
-{
-	document.styleSheets.dynCom.addRule(".msocomanchor","background: infobackground");
-	document.styleSheets.dynCom.addRule(".msocomoff","display: none");
-	document.styleSheets.dynCom.addRule(".msocomtxt","visibility: hidden");
-	document.styleSheets.dynCom.addRule(".msocomtxt","position: absolute");
-	document.styleSheets.dynCom.addRule(".msocomtxt","top: -1000");
-	document.styleSheets.dynCom.addRule(".msocomtxt","left: -1000");
-	document.styleSheets.dynCom.addRule(".msocomtxt","width: 33%");
-	document.styleSheets.dynCom.addRule(".msocomtxt","background: infobackground");
-	document.styleSheets.dynCom.addRule(".msocomtxt","color: infotext");
-	document.styleSheets.dynCom.addRule(".msocomtxt","border-top: 1pt solid threedlightshadow");
-	document.styleSheets.dynCom.addRule(".msocomtxt","border-right: 2pt solid threedshadow");
-	document.styleSheets.dynCom.addRule(".msocomtxt","border-bottom: 2pt solid threedshadow");
-	document.styleSheets.dynCom.addRule(".msocomtxt","border-left: 1pt solid threedlightshadow");
-	document.styleSheets.dynCom.addRule(".msocomtxt","padding: 3pt 3pt 3pt 3pt");
-	document.styleSheets.dynCom.addRule(".msocomtxt","z-index: 100");
-}
-// --></script>
-<!--[endif]-->
-
-
-
-
-
-
-
-<p>Многодетная
-семья с тремя детьми планирует купить детскую обувь в период распродаж,
-потратив на это не более <span lang="EN-US">S</span>
-рублей (бюджет покупки). </p>
-
-<p>Родители
-хотят купить по паре обуви каждому ребенку, но не исключают возможности покупки
-б<b><i>о</i></b>льшего
-количества обуви в пределах указанного бюджета.</p>
-
-В магазине «А», где
-проводится акция «Каждому купившему две пары обуви, третья пара – в подарок!»
-родителям понравились ботинки по цене <span lang="EN-US">A</span> рублей за пару. В
-магазине «Б», где предлагают обувь по акции «Каждому купившему пару обуви,
-вторая пара – за полцены!» стоимость одной пары обуви &nbsp;составляет&nbsp;&nbsp;<span lang="EN-US">B</span> рублей за пару
-
-<div><!--[if !supportAnnotations]-->
-
-<br><div><div id="_com_1" language="JavaScript" onmouseover="msoCommentShow('_anchor_1','_com_1')" onmouseout="msoCommentHide('_com_1')">
-
-<!--[if !supportAnnotations]--></div>
-
-<!--[endif]--></div>
-
-</div><p> </p>
-
-<p><b>Задание</b><br></p>
-
-<p><!--[if !supportLists]--></p><p>Составьте
-буквенные формулы расчета количества обуви, которое можно купить в каждом из
-магазинов в зависимости от типа акции, бюджетного ограничения <span lang="EN-US">S</span> рублей и стоимости одной пары обуви в
-первом магазине <span lang="EN-US">A</span>
-рублей, стоимости одной пары обуви во втором магазине <span lang="EN-US">B</span> рублей.</p><p> </p><br><p></p>
+равна 2130 рублей за пару.</p><div><div><div id="_com_1" language="JavaScript" onmouseover="msoCommentShow('_anchor_1','_com_1')" onmouseout="msoCommentHide('_com_1')"><p><p><b>Задание 2</b><br></p><p></p><p>Создайте таблицу и заполните ее для бюджета от 15&nbsp;000 рублей до 30&nbsp;000 рублей.</p><p><b>Задание 3</b><br></p><p></p><p>Составьте буквенные формулы расчета количества обуви, которое можно купить в каждом из магазинов в зависимости от типа акции, бюджетного ограничения&nbsp;<span lang="EN-US">S</span>&nbsp;рублей и стоимости одной пары обуви в первом магазине&nbsp;<span lang="EN-US">A</span>&nbsp;рублей, стоимости одной пары обуви во втором магазине&nbsp;<span lang="EN-US">B</span>&nbsp;рублей.</p><br></p></div></div></div><p></p>
 
 <p class="desktop-hidden">По указанию учителя прикрепите файл с вашим решением или вставьте ссылку на решение в онлайн-таблицах (OneDrive или Google Docs) с доступом на просмотр.</p>]]></text>
     </questiontext>
@@ -7616,7 +6100,7 @@ if (msoBrowserCheck())
 <!-- question: 1042  -->
   <question type="essay">
     <name>
-      <text>1.2.2.12.01 Автомобиль по цене болтов</text>
+      <text>1.2.2.12 Автомобиль по цене болтов</text>
     </name>
     <questiontext format="html">
       <text><![CDATA[<p></p><p></p><!--[if !supportAnnotations]-->
@@ -7714,7 +6198,7 @@ if (msoBrowserCheck())
 <p>У автомобиля Петра 6 болтов для каждого колеса. Болтами
 крепятся 4 колеса.</p>
 
-<p><b>Задание&nbsp;</b></p>
+<p><b>Задание 1</b></p>
 
 <p>Продумайте структуру таблицы, в которую будет введена
 информация о стоимости одного болта, двух болтов и т.д. Создайте и заполните
@@ -7727,68 +6211,7 @@ if (msoBrowserCheck())
 
 <div><!--[if !supportAnnotations]-->
 
-<br><div><div id="_com_1" language="JavaScript" onmouseover="msoCommentShow('_anchor_1','_com_1')" onmouseout="msoCommentHide('_com_1')">
-
-<!--[if !supportAnnotations]--></div>
-
-<!--[endif]--></div>
-
-</div><br><p></p>
-
-<p class="desktop-hidden">По указанию учителя прикрепите файл с вашим решением или вставьте ссылку на решение в онлайн-таблицах (OneDrive или Google Docs) с доступом на просмотр.</p>]]></text>
-    </questiontext>
-    <generalfeedback format="html">
-      <text></text>
-    </generalfeedback>
-    <defaultgrade>1.0000000</defaultgrade>
-    <penalty>0.0000000</penalty>
-    <hidden>0</hidden>
-    <responseformat>plain</responseformat>
-    <responserequired>0</responserequired>
-    <responsefieldlines>5</responsefieldlines>
-    <attachments>1</attachments>
-    <attachmentsrequired>0</attachmentsrequired>
-    <graderinfo format="html">
-      <text></text>
-    </graderinfo>
-    <responsetemplate format="html">
-      <text></text>
-    </responsetemplate>
-    <tags>
-      <tag><text>Инф: 2. Алгоритмизация и программирование</text>
-</tag>
-      <tag><text>Кл: 1. 5-6</text>
-</tag>
-      <tag><text>Тип: 2. Ручная</text>
-</tag>
-      <tag><text>Ур: 3. Высокий</text>
-</tag>
-      <tag><text>Фин: 2. Доходы</text>
-</tag>
-    </tags>
-  </question>
-
-<!-- question: 1043  -->
-  <question type="essay">
-    <name>
-      <text>1.2.2.12.02 Автомобиль по цене болтов</text>
-    </name>
-    <questiontext format="html">
-      <text><![CDATA[<p></p><p>Петр продавал подержанный автомобиль за 150 000 рублей, а
-покупатель не соглашался, говоря, что он таких денег не стоит. Тогда Петр
-предложил другие условия: «Если, по-твоему, цена автомобиля высока, то купи
-только болты, которыми крепятся колеса, а автомобиль получишь в подарок. За
-первый болт дай мне всего 1 копейку, за второй – 2 копейки, за третий – 4
-копейки и так далее, удваивая плату каждый раз». Покупатель, рассчитывая
-получить автомобиль практически даром, принял условия Петра.</p>
-
-<p>У автомобиля Петра 6 болтов для каждого колеса. Болтами
-крепятся 4 колеса.</p>
-
-<p><b>Задание</b><br></p>
-
-<p>Составьте алгоритм для вычисления стоимости автомобиля.
-Алгоритм представьте в форме блок-схемы.</p><br><p></p>
+<p><b>Задание 2</b><br></p><p>Составьте алгоритм для вычисления стоимости автомобиля. Алгоритм представьте в форме блок-схемы.</p></div><p></p>
 
 <p class="desktop-hidden">По указанию учителя прикрепите файл с вашим решением или вставьте ссылку на решение в онлайн-таблицах (OneDrive или Google Docs) с доступом на просмотр.</p>]]></text>
     </questiontext>
@@ -10872,7 +9295,7 @@ if (msoBrowserCheck())
 <!-- question: 1062  -->
   <question type="essay">
     <name>
-      <text>2.2.1.5.1 Стоимость электричества</text>
+      <text>2.2.1.5 Стоимость электричества</text>
     </name>
     <questiontext format="html">
       <text><![CDATA[<p></p><p>Счётчики электроэнергии бывают трёх типов: однотарифные,
@@ -10894,7 +9317,7 @@ if (msoBrowserCheck())
 кВт·ч</p>
 
 <p>Полупиковая зона (Т3): 311,9 кВт·ч; 260,1 кВт·ч; 5,38 руб.
-за кВт·ч</p><p><b>Задание</b><br></p><p><span></span></p><p style="">Напишите программу, которая получает на вход в одной строке
+за кВт·ч</p><p><b>Задание 1</b><br></p><p><span></span></p><p style="">Напишите программу, которая получает на вход в одной строке
 через пробел три числа: показания счетчика на начало месяца, показания счетчика
 на конец месяца, стоимость одного кВт·ч электроэнергии в рублях.</p>
 
@@ -10903,225 +9326,7 @@ if (msoBrowserCheck())
 это количество электроэнергии по данному тарифу.</p>
 
 <p style="">Дополнительно*: вывод ответа организовать в формате N руб. K
-коп.</p>
-<p class="desktop-hidden">По указанию учителя прикрепите файл с вашим решением или вставьте ссылку на решение в онлайн-таблицах (OneDrive или Google Docs) с доступом на просмотр.</p>]]></text>
-    </questiontext>
-    <generalfeedback format="html">
-      <text></text>
-    </generalfeedback>
-    <defaultgrade>1.0000000</defaultgrade>
-    <penalty>0.0000000</penalty>
-    <hidden>0</hidden>
-    <responseformat>plain</responseformat>
-    <responserequired>0</responserequired>
-    <responsefieldlines>5</responsefieldlines>
-    <attachments>1</attachments>
-    <attachmentsrequired>0</attachmentsrequired>
-    <graderinfo format="html">
-      <text></text>
-    </graderinfo>
-    <responsetemplate format="html">
-      <text></text>
-    </responsetemplate>
-    <tags>
-      <tag><text>Инф: 2. Алгоритмизация и программирование</text>
-</tag>
-      <tag><text>Кл: 2. 7-9</text>
-</tag>
-      <tag><text>Тип: 2. Ручная</text>
-</tag>
-      <tag><text>Ур: 2. Повышенный</text>
-</tag>
-      <tag><text>Фин: 1. Расходы</text>
-</tag>
-    </tags>
-  </question>
-
-<!-- question: 1063  -->
-  <question type="essay">
-    <name>
-      <text>2.2.1.5.2 Стоимость электричества</text>
-    </name>
-    <questiontext format="html">
-      <text><![CDATA[<p></p><p>Счётчики электроэнергии бывают трёх типов: однотарифные,
-двухтарифные и многотарифные (трёхтарифные). Для владельцев однотарифных
-счётчиков нет разницы, в какое время тратится электричество – тариф один. Для
-владельцев двухтарифных счётчиков есть дневной тариф Т1 и ночной – Т2. Счётчик
-измеряет, сколько электричества тратится в каждый из периодов, то есть две
-величины. Трёхтарифные счётчики разбивают сутки на периоды трёх типов и
-подсчитывают три величины.&nbsp;&nbsp; </p>
-
-<p>Показания трёхтарифного счётчика на конец текущего,
-предыдущего месяца и тариф на электроэнергию для каждой зоны могут выглядеть
-следующим образом: </p>
-
-<p>Пиковая зона (Т1): 294,2 кВт·ч; 226 кВт·ч; 6,46 руб. за
-кВт·ч</p>
-
-<p>Ночная зона (Т2): 118,4 кВт·ч; 100,8 кВт·ч; 1,79 руб. за
-кВт·ч</p>
-
-<p>Полупиковая зона (Т3): 311,9 кВт·ч; 260,1 кВт·ч; 5,38 руб.
-за кВт·ч</p><b>Задание</b><br><p></p><p></p><p>Напишите программу, которая получает на вход в одной строке
-через пробел три числа: показания счетчика по тарифу Т1 на начало месяца,
-показания счетчика по этому тарифу на конец месяца, стоимость в рублях одного
-кВт·ч электроэнергии по тарифу Т1, в следующей строке через пробел три числа:
-показания счетчика по тарифу Т2 на начало месяца, показания счетчика по этому
-тарифу на конец месяца, стоимость в рублях одного кВт·ч электроэнергии по
-тарифу Т2.</p>
-
-<p>Программа выводит в первой строке количество потребленной
-электроэнергии в кВт·ч по каждому тарифу, во второй строке сумму, которую
-требуется заплатить за количество электроэнергии по каждому тарифу.</p>
-
-<p>В третьей строке – общую сумму счета за электроэнергию.</p>
-
-<p>Дополнительно*: вывод ответа организовать в формате <span lang="EN-US">N</span><span lang="EN-US"> </span>руб.
-<span lang="EN-US">K</span><span lang="EN-US"> </span>коп.</p>
-<p class="desktop-hidden">По указанию учителя прикрепите файл с вашим решением или вставьте ссылку на решение в онлайн-таблицах (OneDrive или Google Docs) с доступом на просмотр.</p>]]></text>
-    </questiontext>
-    <generalfeedback format="html">
-      <text></text>
-    </generalfeedback>
-    <defaultgrade>1.0000000</defaultgrade>
-    <penalty>0.0000000</penalty>
-    <hidden>0</hidden>
-    <responseformat>plain</responseformat>
-    <responserequired>0</responserequired>
-    <responsefieldlines>5</responsefieldlines>
-    <attachments>1</attachments>
-    <attachmentsrequired>0</attachmentsrequired>
-    <graderinfo format="html">
-      <text></text>
-    </graderinfo>
-    <responsetemplate format="html">
-      <text></text>
-    </responsetemplate>
-    <tags>
-      <tag><text>Инф: 2. Алгоритмизация и программирование</text>
-</tag>
-      <tag><text>Кл: 2. 7-9</text>
-</tag>
-      <tag><text>Тип: 2. Ручная</text>
-</tag>
-      <tag><text>Ур: 2. Повышенный</text>
-</tag>
-      <tag><text>Фин: 1. Расходы</text>
-</tag>
-    </tags>
-  </question>
-
-<!-- question: 1064  -->
-  <question type="essay">
-    <name>
-      <text>2.2.1.5.3 Стоимость электричества</text>
-    </name>
-    <questiontext format="html">
-      <text><![CDATA[<p></p><p>Счётчики электроэнергии бывают трёх типов: однотарифные,
-двухтарифные и многотарифные (трёхтарифные). Для владельцев однотарифных
-счётчиков нет разницы, в какое время тратится электричество – тариф один. Для
-владельцев двухтарифных счётчиков есть дневной тариф Т1 и ночной – Т2. Счётчик
-измеряет, сколько электричества тратится в каждый из периодов, то есть две
-величины. Трёхтарифные счётчики разбивают сутки на периоды трёх типов и
-подсчитывают три величины.&nbsp;&nbsp; </p>
-
-<p>Показания трёхтарифного счётчика на конец текущего,
-предыдущего месяца и тариф на электроэнергию для каждой зоны могут выглядеть
-следующим образом: </p>
-
-<p>Пиковая зона (Т1): 294,2 кВт·ч; 226 кВт·ч; 6,46 руб. за
-кВт·ч</p>
-
-<p>Ночная зона (Т2): 118,4 кВт·ч; 100,8 кВт·ч; 1,79 руб. за
-кВт·ч</p>
-
-<p>Полупиковая зона (Т3): 311,9 кВт·ч; 260,1 кВт·ч; 5,38 руб.
-за кВт·ч</p><p><b>Задание</b><br></p><p><span></span></p><p style="">Напишите программу, которая получает на вход в одной строке
-через пробел три числа: показания счетчика по тарифу Т1 на начало месяца,
-показания счетчика по этому тарифу на конец месяца, стоимость в рублях одного
-кВт·ч электроэнергии по тарифу Т1. В следующей строке через пробел три числа:
-показания счетчика по тарифу Т2 на начало месяца, показания счетчика по этому
-тарифу на конец месяца, стоимость в рублях одного кВт·ч электроэнергии по
-тарифу Т2, в следующей строке через пробел три числа: показания счетчика по
-тарифу Т3 на начало месяца, показания счетчика по этому тарифу на конец месяца,
-стоимость в рублях одного кВт·ч электроэнергии по тарифу Т3.</p>
-
-<p style="">Программа выводит в первой строке количество потребленной
-электроэнергии в кВт·ч по каждому тарифу, во второй строке сумму, которую
-требуется заплатить за количество электроэнергии по каждому тарифу.</p>
-
-<p style="">В третьей строке – общую сумму счета за электроэнергию в
-рублях</p>
-
-<p style="">Дополнительно*: вывод ответа организовать в формате <span lang="EN-US">N</span><span lang="EN-US"> </span>руб.
-<span lang="EN-US">K</span><span lang="EN-US"> </span>коп.</p>
-<p class="desktop-hidden">По указанию учителя прикрепите файл с вашим решением или вставьте ссылку на решение в онлайн-таблицах (OneDrive или Google Docs) с доступом на просмотр.</p>]]></text>
-    </questiontext>
-    <generalfeedback format="html">
-      <text></text>
-    </generalfeedback>
-    <defaultgrade>1.0000000</defaultgrade>
-    <penalty>0.0000000</penalty>
-    <hidden>0</hidden>
-    <responseformat>plain</responseformat>
-    <responserequired>0</responserequired>
-    <responsefieldlines>5</responsefieldlines>
-    <attachments>1</attachments>
-    <attachmentsrequired>0</attachmentsrequired>
-    <graderinfo format="html">
-      <text></text>
-    </graderinfo>
-    <responsetemplate format="html">
-      <text></text>
-    </responsetemplate>
-    <tags>
-      <tag><text>Инф: 2. Алгоритмизация и программирование</text>
-</tag>
-      <tag><text>Кл: 2. 7-9</text>
-</tag>
-      <tag><text>Тип: 2. Ручная</text>
-</tag>
-      <tag><text>Ур: 2. Повышенный</text>
-</tag>
-      <tag><text>Фин: 1. Расходы</text>
-</tag>
-    </tags>
-  </question>
-
-<!-- question: 1065  -->
-  <question type="essay">
-    <name>
-      <text>2.2.1.5.4 Стоимость электричества</text>
-    </name>
-    <questiontext format="html">
-      <text><![CDATA[<p></p><p>Счётчики электроэнергии бывают трёх типов: однотарифные,
-двухтарифные и многотарифные (трёхтарифные). Для владельцев однотарифных
-счётчиков нет разницы, в какое время тратится электричество – тариф один. Для
-владельцев двухтарифных счётчиков есть дневной тариф Т1 и ночной – Т2. Счётчик
-измеряет, сколько электричества тратится в каждый из периодов, то есть две
-величины. Трёхтарифные счётчики разбивают сутки на периоды трёх типов и
-подсчитывают три величины.&nbsp;&nbsp; </p>
-
-<p>Показания трёхтарифного счётчика на конец текущего,
-предыдущего месяца и тариф на электроэнергию для каждой зоны могут выглядеть
-следующим образом: </p>
-
-<p>Пиковая зона (Т1): 294,2 кВт·ч; 226 кВт·ч; 6,46 руб. за
-кВт·ч</p>
-
-<p>Ночная зона (Т2): 118,4 кВт·ч; 100,8 кВт·ч; 1,79 руб. за
-кВт·ч</p>
-
-<p>Полупиковая зона (Т3): 311,9 кВт·ч; 260,1 кВт·ч; 5,38 руб.
-за кВт·ч</p><p><b>Задание</b><br></p><p><span></span></p><p style="">Напишите программу «Калькулятор месячной стоимости
-энергопотребления». На вход программе подается количество величин,
-подсчитываемых счётчиком. Далее в<span lang="EN-US" style="">&nbsp;</span>строках по 3 вещественных числа --&nbsp;показание по тарифу в текущем месяце в кВт·ч,
-показание по тарифу в предыдущем месяце кВт·ч и стоимость одного кВт·ч в
-рублях, соответственно, для каждого из тарифов. </p>
-
-<p style="">В первой строке выведите через пробел стоимость
-электроэнергии по каждому из тарифов, во второй – месячную стоимость
-энергопотребления.</p>
+коп.</p><p style=""><p><b>Задание 2</b></p><p>Напишите программу, которая получает на вход в одной строке через пробел три числа: показания счетчика по тарифу Т1 на начало месяца, показания счетчика по этому тарифу на конец месяца, стоимость в рублях одного кВт·ч электроэнергии по тарифу Т1, в следующей строке через пробел три числа: показания счетчика по тарифу Т2 на начало месяца, показания счетчика по этому тарифу на конец месяца, стоимость в рублях одного кВт·ч электроэнергии по тарифу Т2.</p><p>Программа выводит в первой строке количество потребленной электроэнергии в кВт·ч по каждому тарифу, во второй строке сумму, которую требуется заплатить за количество электроэнергии по каждому тарифу.</p><p>В третьей строке – общую сумму счета за электроэнергию.</p><p>Дополнительно*: вывод ответа организовать в формате&nbsp;<span lang="EN-US">N</span><span lang="EN-US"></span>руб.<span lang="EN-US">K</span><span lang="EN-US"></span>коп.</p><p><b>Задание 3</b></p><p>Напишите программу, которая получает на вход в одной строке через пробел три числа: показания счетчика по тарифу Т1 на начало месяца, показания счетчика по этому тарифу на конец месяца, стоимость в рублях одного кВт·ч электроэнергии по тарифу Т1. В следующей строке через пробел три числа: показания счетчика по тарифу Т2 на начало месяца, показания счетчика по этому тарифу на конец месяца, стоимость в рублях одного кВт·ч электроэнергии по тарифу Т2, в следующей строке через пробел три числа: показания счетчика по тарифу Т3 на начало месяца, показания счетчика по этому тарифу на конец месяца, стоимость в рублях одного кВт·ч электроэнергии по тарифу Т3.</p><p>Программа выводит в первой строке количество потребленной электроэнергии в кВт·ч по каждому тарифу, во второй строке сумму, которую требуется заплатить за количество электроэнергии по каждому тарифу.</p><p>В третьей строке – общую сумму счета за электроэнергию в рублях</p><p>Дополнительно*: вывод ответа организовать в формате&nbsp;<span lang="EN-US">N</span><span lang="EN-US"></span>руб.<span lang="EN-US">K</span><span lang="EN-US"></span>коп.</p><p><b>Задание 4</b></p><p></p><p>Напишите программу «Калькулятор месячной стоимости энергопотребления». На вход программе подается количество величин, подсчитываемых счётчиком. Далее в<span lang="EN-US">&nbsp;</span>строках по 3 вещественных числа --&nbsp;показание по тарифу в текущем месяце в кВт·ч, показание по тарифу в предыдущем месяце кВт·ч и стоимость одного кВт·ч в рублях, соответственно, для каждого из тарифов.&nbsp;</p><p>В первой строке выведите через пробел стоимость электроэнергии по каждому из тарифов, во второй – месячную стоимость энергопотребления.</p></p>
 <p class="desktop-hidden">По указанию учителя прикрепите файл с вашим решением или вставьте ссылку на решение в онлайн-таблицах (OneDrive или Google Docs) с доступом на просмотр.</p>]]></text>
     </questiontext>
     <generalfeedback format="html">
@@ -11158,118 +9363,15 @@ if (msoBrowserCheck())
 <!-- question: 1066  -->
   <question type="essay">
     <name>
-      <text>2.2.1.6.01 Поездка на такси: калькулятор стоимости поездки</text>
+      <text>2.2.1.6 Поездка на такси: калькулятор стоимости поездки</text>
     </name>
     <questiontext format="html">
       <text><![CDATA[<p></p><p>Поэтапно напишите калькулятор, вычисляющий наименьшую
 возможную стоимость поездки исходя из характеристик поездки и данных о
-нескольких тарифах такси. Для этого выполните несколько заданий:</p><b>Задание</b><br><p></p><p><span></span></p><p style="">Напишите программу, принимающую на вход 4 целых числа <span lang="EN-US" style="">s</span>, <span lang="EN-US" style="">t</span>, <span lang="EN-US" style="">ps</span> и <span lang="EN-US" style="">pt</span>,
+нескольких тарифах такси. Для этого выполните несколько заданий:</p><b>Задание 1</b><br><p></p><p><span></span></p><p style="">Напишите программу, принимающую на вход 4 целых числа <span lang="EN-US" style="">s</span>, <span lang="EN-US" style="">t</span>, <span lang="EN-US" style="">ps</span> и <span lang="EN-US" style="">pt</span>,
 соответствующих протяженности маршрута в километрах, продолжительности поездки
 в минутах, цене одного километра и цене одной минуты. Выведите итоговую
-стоимость поездки.</p>
-<p class="desktop-hidden">По указанию учителя прикрепите файл с вашим решением или вставьте ссылку на решение в онлайн-таблицах (OneDrive или Google Docs) с доступом на просмотр.</p>]]></text>
-    </questiontext>
-    <generalfeedback format="html">
-      <text></text>
-    </generalfeedback>
-    <defaultgrade>1.0000000</defaultgrade>
-    <penalty>0.0000000</penalty>
-    <hidden>0</hidden>
-    <responseformat>plain</responseformat>
-    <responserequired>0</responserequired>
-    <responsefieldlines>5</responsefieldlines>
-    <attachments>1</attachments>
-    <attachmentsrequired>0</attachmentsrequired>
-    <graderinfo format="html">
-      <text></text>
-    </graderinfo>
-    <responsetemplate format="html">
-      <text></text>
-    </responsetemplate>
-    <tags>
-      <tag><text>Инф: 2. Алгоритмизация и программирование</text>
-</tag>
-      <tag><text>Кл: 2. 7-9</text>
-</tag>
-      <tag><text>Тип: 2. Ручная</text>
-</tag>
-      <tag><text>Ур: 2. Повышенный</text>
-</tag>
-      <tag><text>Фин: 1. Расходы</text>
-</tag>
-    </tags>
-  </question>
-
-<!-- question: 1067  -->
-  <question type="essay">
-    <name>
-      <text>2.2.1.6.02 Поездка на такси: калькулятор стоимости поездки</text>
-    </name>
-    <questiontext format="html">
-      <text><![CDATA[<p></p><p>Поэтапно напишите калькулятор, вычисляющий наименьшую
-возможную стоимость поездки исходя из характеристик поездки и данных о
-нескольких тарифах такси. Для этого выполните несколько заданий:</p><p><b>Задание</b><br></p><p>Предположим, что помимо цены одного километра и цены одной
-минуты есть стоимость подачи автомобиля. </p>
-
-<p>Напишите программу, принимающую на вход в первой строке
-целочисленные параметры <span lang="EN-US">s</span>,
-<span lang="EN-US">t</span>, соответствующие протяженности
-и продолжительности маршрута. В следующей строке целые числа <span lang="EN-US">c</span>, <span lang="EN-US">ps</span>, <span lang="EN-US">pt</span>,
-соответствующие стоимости подачи автомобиля, цене одного километра и цене одной
-минуты. Выведите итоговую стоимость поездки. </p>
-<p class="desktop-hidden">По указанию учителя прикрепите файл с вашим решением или вставьте ссылку на решение в онлайн-таблицах (OneDrive или Google Docs) с доступом на просмотр.</p>]]></text>
-    </questiontext>
-    <generalfeedback format="html">
-      <text></text>
-    </generalfeedback>
-    <defaultgrade>1.0000000</defaultgrade>
-    <penalty>0.0000000</penalty>
-    <hidden>0</hidden>
-    <responseformat>plain</responseformat>
-    <responserequired>0</responserequired>
-    <responsefieldlines>5</responsefieldlines>
-    <attachments>1</attachments>
-    <attachmentsrequired>0</attachmentsrequired>
-    <graderinfo format="html">
-      <text></text>
-    </graderinfo>
-    <responsetemplate format="html">
-      <text></text>
-    </responsetemplate>
-    <tags>
-      <tag><text>Инф: 2. Алгоритмизация и программирование</text>
-</tag>
-      <tag><text>Кл: 2. 7-9</text>
-</tag>
-      <tag><text>Тип: 2. Ручная</text>
-</tag>
-      <tag><text>Ур: 2. Повышенный</text>
-</tag>
-      <tag><text>Фин: 1. Расходы</text>
-</tag>
-    </tags>
-  </question>
-
-<!-- question: 1068  -->
-  <question type="essay">
-    <name>
-      <text>2.2.1.6.3 Поездка на такси: калькулятор стоимости поездки</text>
-    </name>
-    <questiontext format="html">
-      <text><![CDATA[<p></p><p>Поэтапно напишите калькулятор, вычисляющий наименьшую
-возможную стоимость поездки исходя из характеристик поездки и данных о
-нескольких тарифах такси. Для этого выполните несколько заданий:</p><b>Задание</b><br><p></p><p><span></span></p><p style="">Предположим, что в стоимость подачи автомобиля включены первые
-минуты и километры поездки. Тарификация по километрам и минутам начинается
-после того, как включенные в стоимость подачи такси километры и минуты
-соответственно израсходованы. Возврат неизрасходованных минут и километров не
-осуществляется. </p>
-
-<p style="">Напишите программу, принимающую на вход в первой строке
-целочисленные параметры s, t, соответствующие протяженности и продолжительности
-маршрута. В следующей строке целые числа c, fs, ft, ps, pt, соответствующие
-стоимости подачи автомобиля, количеству включенных километров, количеству включенных
-минут, цене одного километра и цене одной минуты. Выведите итоговую стоимость
-поездки. </p>
+стоимость поездки.</p><p style=""><p><b>Задание 2</b><br></p><p>Предположим, что помимо цены одного километра и цены одной минуты есть стоимость подачи автомобиля.&nbsp;</p><p>Напишите программу, принимающую на вход в первой строке целочисленные параметры&nbsp;<span lang="EN-US">s</span>,&nbsp;<span lang="EN-US">t</span>, соответствующие протяженности и продолжительности маршрута. В следующей строке целые числа&nbsp;<span lang="EN-US">c</span>,&nbsp;<span lang="EN-US">ps</span>,&nbsp;<span lang="EN-US">pt</span>, соответствующие стоимости подачи автомобиля, цене одного километра и цене одной минуты. Выведите итоговую стоимость поездки.</p><b>Задание 3</b><br><p></p><p></p><p>Предположим, что в стоимость подачи автомобиля включены первые минуты и километры поездки. Тарификация по километрам и минутам начинается после того, как включенные в стоимость подачи такси километры и минуты соответственно израсходованы. Возврат неизрасходованных минут и километров не осуществляется.&nbsp;</p><p>Напишите программу, принимающую на вход в первой строке целочисленные параметры s, t, соответствующие протяженности и продолжительности маршрута. В следующей строке целые числа c, fs, ft, ps, pt, соответствующие стоимости подачи автомобиля, количеству включенных километров, количеству включенных минут, цене одного километра и цене одной минуты. Выведите итоговую стоимость поездки.</p><br></p>
 <p class="desktop-hidden">По указанию учителя прикрепите файл с вашим решением или вставьте ссылку на решение в онлайн-таблицах (OneDrive или Google Docs) с доступом на просмотр.</p>]]></text>
     </questiontext>
     <generalfeedback format="html">
@@ -11306,7 +9408,7 @@ if (msoBrowserCheck())
 <!-- question: 1069  -->
   <question type="essay">
     <name>
-      <text>2.2.1.7.1 Стоимость скважины</text>
+      <text>2.2.1.7 Стоимость скважины</text>
     </name>
     <questiontext format="html">
       <text><![CDATA[<p></p><p>Бурение скважины глубиной до 12 метров для обеспечения водой
@@ -11317,7 +9419,7 @@ if (msoBrowserCheck())
 <p>Если в ходе бурения не встречен водонасыщенный слой (не
 более 17 метров), то дальнейшие работы прекращаются, скважина консервируется
 (заливается бетоном). В этом случае произведенное бурение оплачивается исходя
-из тарифа 1200 рублей за каждый пробуренный метр.</p><b>Задание</b><br><p></p><p><span></span></p><p style="">Программа получает на вход фиксированную стоимость в рублях
+из тарифа 1200 рублей за каждый пробуренный метр.</p><b>Задание 1</b><br><p></p><p><span></span></p><p style="">Программа получает на вход фиксированную стоимость в рублях
 а водоносной скважины глубиной не более 12 метров, стоимость в рублях <span lang="EN-US" style="">b</span> каждого следующего метра
 бурения до 17 метров включительно и глубину в метрах <span lang="EN-US" style="">h</span><span lang="EN-US" style=""> </span>водоносной
 скважины в метрах. Вычислите стоимость бурения данной водоносной скважины.</p>
@@ -11343,162 +9445,7 @@ if (msoBrowserCheck())
   <p>33000</p>
   </td>
  </tr>
-</tbody></table><br><p></p><p style=""><br></p>
-<p class="desktop-hidden">По указанию учителя прикрепите файл с вашим решением или вставьте ссылку на решение в онлайн-таблицах (OneDrive или Google Docs) с доступом на просмотр.</p>]]></text>
-    </questiontext>
-    <generalfeedback format="html">
-      <text></text>
-    </generalfeedback>
-    <defaultgrade>1.0000000</defaultgrade>
-    <penalty>0.0000000</penalty>
-    <hidden>0</hidden>
-    <responseformat>plain</responseformat>
-    <responserequired>0</responserequired>
-    <responsefieldlines>5</responsefieldlines>
-    <attachments>1</attachments>
-    <attachmentsrequired>0</attachmentsrequired>
-    <graderinfo format="html">
-      <text></text>
-    </graderinfo>
-    <responsetemplate format="html">
-      <text></text>
-    </responsetemplate>
-    <tags>
-      <tag><text>Инф: 2. Алгоритмизация и программирование</text>
-</tag>
-      <tag><text>Кл: 2. 7-9</text>
-</tag>
-      <tag><text>Тип: 2. Ручная</text>
-</tag>
-      <tag><text>Ур: 2. Повышенный</text>
-</tag>
-      <tag><text>Фин: 1. Расходы</text>
-</tag>
-    </tags>
-  </question>
-
-<!-- question: 1070  -->
-  <question type="essay">
-    <name>
-      <text>2.2.1.7.2 Стоимость скважины</text>
-    </name>
-    <questiontext format="html">
-      <text><![CDATA[<p></p><p>Бурение скважины глубиной до 12 метров для обеспечения водой
-загородного дома стоит 30&nbsp;000 рублей, а глубиной более 12 метров&nbsp;–
-дополнительно 1500 рублей за каждый пробуренный метр. Максимальная глубина
-скважины данной конструкции составляет не более 17 метров.</p>
-
-<p>Если в ходе бурения не встречен водонасыщенный слой (не
-более 17 метров), то дальнейшие работы прекращаются, скважина консервируется
-(заливается бетоном). В этом случае произведенное бурение оплачивается исходя
-из тарифа 1200 рублей за каждый пробуренный метр.</p><b>Задание</b><br><p></p><p><span></span></p><p style="">Программа получает на вход фиксированную стоимость в рублях
-а водоносной скважины глубиной не более 12 метров, стоимость в рублях <span lang="EN-US" style="">b</span> каждого следующего метра
-бурения до 17 метров включительно, если вода найдена, стоимость в рублях с
-каждого метра бурения, если вода не найдена и глубину <span lang="EN-US" style="">h</span><span lang="EN-US" style=""> </span>&nbsp;скважины в метрах. Далее программа запрашивает
-информацию о том, найден ли водоносный слой в виде: 1 – вода есть; 0 – воды
-нет. Вычислите стоимость бурения данной водоносной скважины.</p>
-
-<p style="">Программа получает на вход пять целых чисел, каждое в
-отдельной строке. Выводит одно число – стоимость скважины. Единицы измерения
-указывать не требуется.</p>
-
-<p style="">Пример входных данных 1</p><table border="1" cellspacing="0" cellpadding="0" width="546">
- <tbody><tr>
-  <td width="272" valign="top">
-  <p>Ввод</p>
-  </td>
-  <td width="274" valign="top">
-  <p>Вывод</p>
-  </td>
- </tr>
- <tr>
-  <td width="272" valign="top">
-  <p>30000</p>
-  <p>1500</p>
-  <p>1200</p>
-  <p>14</p>
-  <p>1</p>
-  </td>
-  <td width="274" valign="top">
-  <p>33000</p>
-  </td>
- </tr>
-</tbody></table><br><p></p><p><span></span></p><p>Пример входных данных 2</p><table border="1" cellspacing="0" cellpadding="0">
- <tbody><tr>
-  <td width="271" valign="top">
-  <p>Ввод</p>
-  </td>
-  <td width="272" valign="top">
-  <p>Вывод</p>
-  </td>
- </tr>
- <tr>
-  <td width="271" valign="top">
-  <p>30000</p>
-  <p>1500</p>
-  <p>1200</p>
-  <p>14</p>
-  <p>0</p>
-  </td>
-  <td width="272" valign="top">
-  <p>16800</p>
-  </td>
- </tr>
-</tbody></table><br><p></p>
-<p class="desktop-hidden">По указанию учителя прикрепите файл с вашим решением или вставьте ссылку на решение в онлайн-таблицах (OneDrive или Google Docs) с доступом на просмотр.</p>]]></text>
-    </questiontext>
-    <generalfeedback format="html">
-      <text></text>
-    </generalfeedback>
-    <defaultgrade>1.0000000</defaultgrade>
-    <penalty>0.0000000</penalty>
-    <hidden>0</hidden>
-    <responseformat>plain</responseformat>
-    <responserequired>0</responserequired>
-    <responsefieldlines>5</responsefieldlines>
-    <attachments>1</attachments>
-    <attachmentsrequired>0</attachmentsrequired>
-    <graderinfo format="html">
-      <text></text>
-    </graderinfo>
-    <responsetemplate format="html">
-      <text></text>
-    </responsetemplate>
-    <tags>
-      <tag><text>Инф: 2. Алгоритмизация и программирование</text>
-</tag>
-      <tag><text>Кл: 2. 7-9</text>
-</tag>
-      <tag><text>Тип: 2. Ручная</text>
-</tag>
-      <tag><text>Ур: 2. Повышенный</text>
-</tag>
-      <tag><text>Фин: 1. Расходы</text>
-</tag>
-    </tags>
-  </question>
-
-<!-- question: 1071  -->
-  <question type="essay">
-    <name>
-      <text>2.2.1.7.3 Стоимость скважины</text>
-    </name>
-    <questiontext format="html">
-      <text><![CDATA[<p></p><p>Бурение скважины глубиной до 12 метров для обеспечения водой
-загородного дома стоит 30&nbsp;000 рублей, а глубиной более 12 метров&nbsp;–
-дополнительно 1500 рублей за каждый пробуренный метр. Максимальная глубина
-скважины данной конструкции составляет не более 17 метров.</p>
-
-<p>Если в ходе бурения не встречен водонасыщенный слой (не
-более 17 метров), то дальнейшие работы прекращаются, скважина консервируется
-(заливается бетоном). В этом случае произведенное бурение оплачивается исходя
-из тарифа 1200 рублей за каждый пробуренный метр.</p><p><b>Задание</b><br></p><p>Программа получает на вход фиксированную стоимость в рублях
-а водоносной скважины глубиной не более 12 метров, стоимость в рублях <span lang="EN-US">b</span> каждого следующего метра
-бурения до 17 метров включительно, если вода найдена, стоимость в рублях с
-каждого метра бурения, если вода не найдена и глубину <span lang="EN-US">h</span><span lang="EN-US"> </span>&nbsp;скважины в метрах. Далее программа запрашивает
-информацию о том, найден ли водоносный слой в виде: 1 – вода есть; 0 – воды
-нет. Вычислите стоимость бурения данной водоносной скважины.</p><p>* Продумайте решение задачи без использования условного
-оператора.</p>
+</tbody></table><br><p></p><p style=""><b>Задание 2</b><br><p></p><p></p><p>Программа получает на вход фиксированную стоимость в рублях а водоносной скважины глубиной не более 12 метров, стоимость в рублях&nbsp;<span lang="EN-US">b</span>&nbsp;каждого следующего метра бурения до 17 метров включительно, если вода найдена, стоимость в рублях с каждого метра бурения, если вода не найдена и глубину&nbsp;<span lang="EN-US">h</span><span lang="EN-US">&nbsp;</span>&nbsp;скважины в метрах. Далее программа запрашивает информацию о том, найден ли водоносный слой в виде: 1 – вода есть; 0 – воды нет. Вычислите стоимость бурения данной водоносной скважины.</p><p>Программа получает на вход пять целых чисел, каждое в отдельной строке. Выводит одно число – стоимость скважины. Единицы измерения указывать не требуется.</p><p>Пример входных данных 1</p><table border="1" cellspacing="0" cellpadding="0" width="546"><tbody><tr><td width="272" valign="top"><p>Ввод</p></td><td width="274" valign="top"><p>Вывод</p></td></tr><tr><td width="272" valign="top"><p>30000</p><p>1500</p><p>1200</p><p>14</p><p>1</p></td><td width="274" valign="top"><p>33000</p></td></tr></tbody></table><br><p></p><p></p><p>Пример входных данных 2</p><table border="1" cellspacing="0" cellpadding="0"><tbody><tr><td width="271" valign="top"><p>Ввод</p></td><td width="272" valign="top"><p>Вывод</p></td></tr><tr><td width="271" valign="top"><p>30000</p><p>1500</p><p>1200</p><p>14</p><p>0</p></td><td width="272" valign="top"><p>16800</p></td></tr></tbody></table><br><p></p><p><b>Задание 3</b><br></p><p>Программа получает на вход фиксированную стоимость в рублях а водоносной скважины глубиной не более 12 метров, стоимость в рублях&nbsp;<span lang="EN-US">b</span>&nbsp;каждого следующего метра бурения до 17 метров включительно, если вода найдена, стоимость в рублях с каждого метра бурения, если вода не найдена и глубину&nbsp;<span lang="EN-US">h</span><span lang="EN-US">&nbsp;</span>&nbsp;скважины в метрах. Далее программа запрашивает информацию о том, найден ли водоносный слой в виде: 1 – вода есть; 0 – воды нет. Вычислите стоимость бурения данной водоносной скважины.</p><p>* Продумайте решение задачи без использования условного оператора.</p><p><br></p></p>
 <p class="desktop-hidden">По указанию учителя прикрепите файл с вашим решением или вставьте ссылку на решение в онлайн-таблицах (OneDrive или Google Docs) с доступом на просмотр.</p>]]></text>
     </questiontext>
     <generalfeedback format="html">
@@ -11535,7 +9482,7 @@ if (msoBrowserCheck())
 <!-- question: 1072  -->
   <question type="essay">
     <name>
-      <text>2.2.1.8.1 Бурение на воду</text>
+      <text>2.2.1.8 Бурение на воду</text>
     </name>
     <questiontext format="html">
       <text><![CDATA[<p></p><p>Бурение скважины глубиной до 12 метров для обеспечения водой
@@ -11546,7 +9493,7 @@ if (msoBrowserCheck())
 <p>Если в ходе бурения не встречен водонасыщенный слой (не
 более 17 метров), то дальнейшие работы прекращаются, скважина консервируется
 (заливается бетоном). В этом случае произведенное бурение оплачивается исходя
-из тарифа 1200 рублей за каждый пробуренный метр.</p><b>Задание</b><br><p></p><p><span></span></p><p style="">Программа получает на вход фиксированную стоимость в рублях
+из тарифа 1200 рублей за каждый пробуренный метр.</p><b>Задание 1</b><br><p></p><p><span></span></p><p style="">Программа получает на вход фиксированную стоимость в рублях
 а водоносной скважины глубиной не более 12 метров, стоимость в рублях <span lang="EN-US" style="">b</span> каждого следующего метра
 бурения до 17 метров включительно, если вода найдена, стоимость в рублях с
 каждого метра бурения. Далее программа запрашивает информацию о том, найден ли
@@ -11639,66 +9586,8 @@ if (msoBrowserCheck())
   <p>&nbsp;</p>
   </td>
  </tr>
-</tbody></table>
+</tbody></table><p><b>Задание 2</b><br></p><p>Программа получает на вход фиксированную стоимость в рублях а водоносной скважины глубиной не более 12 метров, стоимость в рублях&nbsp;<span lang="EN-US">b</span>&nbsp;каждого следующего метра бурения до 17 метров включительно, если вода найдена, стоимость в рублях с каждого метра бурения. Далее программа запрашивает информацию о том, найден ли водоносный слой в виде: 1 – вода есть; 0 – воды нет. Вычислите стоимость бурения данной водоносной скважины для глубины скважины от 5 до 17 метров.</p><p>Программа получает на вход четыре целых чисел, каждое в отдельной строке. Выводит таблицу стоимостей скважины в формате: глубина скважины в метрах – стоимость в рублях. Единицы измерения указывать не требуется.</p><p>Предложите решение задачи без использования условного оператора при вычислении стоимости водоносной скважины.</p><br>
 <p class="desktop-hidden">По указанию учителя прикрепите файл с вашим решением или вставьте ссылку на решение в онлайн-таблицах (OneDrive или Google Docs) с доступом на просмотр.</p>]]></text>
-    </questiontext>
-    <generalfeedback format="html">
-      <text></text>
-    </generalfeedback>
-    <defaultgrade>1.0000000</defaultgrade>
-    <penalty>0.0000000</penalty>
-    <hidden>0</hidden>
-    <responseformat>plain</responseformat>
-    <responserequired>0</responserequired>
-    <responsefieldlines>5</responsefieldlines>
-    <attachments>1</attachments>
-    <attachmentsrequired>0</attachmentsrequired>
-    <graderinfo format="html">
-      <text></text>
-    </graderinfo>
-    <responsetemplate format="html">
-      <text></text>
-    </responsetemplate>
-    <tags>
-      <tag><text>Инф: 2. Алгоритмизация и программирование</text>
-</tag>
-      <tag><text>Кл: 2. 7-9</text>
-</tag>
-      <tag><text>Тип: 2. Ручная</text>
-</tag>
-      <tag><text>Ур: 2. Повышенный</text>
-</tag>
-      <tag><text>Фин: 1. Расходы</text>
-</tag>
-    </tags>
-  </question>
-
-<!-- question: 1073  -->
-  <question type="essay">
-    <name>
-      <text>2.2.1.8.2 Бурение на воду</text>
-    </name>
-    <questiontext format="html">
-      <text><![CDATA[<p></p><p>Бурение скважины глубиной до 12 метров для обеспечения водой
-загородного дома стоит 30&nbsp;000 рублей, а глубиной более 12 метров&nbsp;–
-дополнительно 1500 рублей за каждый пробуренный метр. Максимальная глубина
-скважины данной конструкции составляет не более 17 метров.</p>
-
-<p>Если в ходе бурения не встречен водонасыщенный слой (не
-более 17 метров), то дальнейшие работы прекращаются, скважина консервируется
-(заливается бетоном). В этом случае произведенное бурение оплачивается исходя
-из тарифа 1200 рублей за каждый пробуренный метр.</p><p><b>Задание</b><br></p><p>Программа получает на вход фиксированную стоимость в рублях
-а водоносной скважины глубиной не более 12 метров, стоимость в рублях <span lang="EN-US">b</span> каждого следующего метра
-бурения до 17 метров включительно, если вода найдена, стоимость в рублях с
-каждого метра бурения. Далее программа запрашивает информацию о том, найден ли
-водоносный слой в виде: 1 – вода есть; 0 – воды нет. Вычислите стоимость
-бурения данной водоносной скважины для глубины скважины от 5 до 17 метров.</p>
-
-<p>Программа получает на вход четыре целых чисел, каждое в
-отдельной строке. Выводит таблицу стоимостей скважины в формате: глубина
-скважины в метрах – стоимость в рублях. Единицы измерения указывать не
-требуется.</p><p>Предложите решение задачи без использования условного оператора
-при вычислении стоимости водоносной скважины.</p><br><p></p>]]></text>
     </questiontext>
     <generalfeedback format="html">
       <text></text>
@@ -12549,7 +10438,7 @@ B рублей за каждый пробуренный метр. Максима
 <!-- question: 1084  -->
   <question type="essay">
     <name>
-      <text>2.3.3.3.1 Влияние изменения доходов и расходов на денежные средства</text>
+      <text>2.3.3.3 Влияние изменения доходов и расходов на денежные средства</text>
     </name>
     <questiontext format="html">
       <text><![CDATA[<p></p><p>Мария три года назад закончила
@@ -12565,7 +10454,7 @@ B рублей за каждый пробуренный метр. Максима
 структурировать информацию о доходах и расходах в виде таблиц (см. рисунки
 ниже).</p>
 
-<div><!--[if !supportFootnotes]--><b>Задание</b></div><div><span><p style="">Заполните таблицу, в которой
+<div><!--[if !supportFootnotes]--><b>Задание 1</b></div><div><span><p style="">Заполните таблицу, в которой
 Мария сделала предположение о том, что ее расходы и доходы одновременно
 увеличатся на 40%, 30 %, 20%, 10%. Образец таблицы на рисунке ниже. Запишите
 формулу вычисления разницы доходов и расходов, если количество процентов
@@ -12644,7 +10533,7 @@ B рублей за каждый пробуренный метр. Максима
   <p>&nbsp;</p>
   </td>
  </tr>
-</tbody></table><div id="ftn1"><p><br></p><p>При планировании бюджета как правило рассматривают различные варианты изменения доходов и расходов и соответственно рассчитывают величину остатка денежных средств для каждого из вариантов. Если точное изменение доходов и расходов неизвестно, то при планировании применяется их изменение в процентном выражении.</p></div><p>По указанию учителя прикрепите файл с вашим решением или вставьте ссылку на решение в онлайн-таблицах (OneDrive или Google Docs) с доступом на просмотр.</p><br clear="all"></span>
+</tbody></table><div id="ftn1"><p><br></p><p>При планировании бюджета как правило рассматривают различные варианты изменения доходов и расходов и соответственно рассчитывают величину остатка денежных средств для каждого из вариантов. Если точное изменение доходов и расходов неизвестно, то при планировании применяется их изменение в процентном выражении.</p><p><div><b>Задание 2</b></div><div><span><p>Заполните таблицу, в которой Мария сделала предположение о том, что ее расходы и доходы уменьшатся на 40%, 30 %, 20%, 10%. Образец таблицы на рисунке ниже. Запишите формулу вычисления разницы доходов и расходов, если количество процентов обозначить буквенной переменной А.</p><table border="1" cellspacing="0" cellpadding="0"><tbody><tr><td width="156" valign="top"><p>Проценты<span lang="EN-US">&nbsp;A%</span><span lang="EN-US"></span></p></td><td width="156" valign="top"><p>Доходы 78&nbsp;000 руб.</p></td><td width="156" valign="top"><p>Расходы 55&nbsp;000 руб.</p></td><td width="155" valign="top"><p>Разница, руб.</p></td></tr><tr><td width="156" valign="top"><p><span lang="EN-US">-</span>40<span lang="EN-US">%</span><span lang="EN-US"></span></p></td><td width="156" valign="top"><p>&nbsp;</p></td><td width="156" valign="top"><p>&nbsp;</p></td><td width="155" valign="top"><p>&nbsp;</p></td></tr><tr><td width="156" valign="top"><p><span lang="EN-US">-</span>30<span lang="EN-US">%</span><span lang="EN-US"></span></p></td><td width="156" valign="top"><p>&nbsp;</p></td><td width="156" valign="top"><p>&nbsp;</p></td><td width="155" valign="top"><p>&nbsp;</p></td></tr><tr><td width="156" valign="top"><p><span lang="EN-US">-</span>20<span lang="EN-US">%</span><span lang="EN-US"></span></p></td><td width="156" valign="top"><p>&nbsp;</p></td><td width="156" valign="top"><p>&nbsp;</p></td><td width="155" valign="top"><p>&nbsp;</p></td></tr><tr><td width="156" valign="top"><p><span lang="EN-US">-</span>10<span lang="EN-US">%</span><span lang="EN-US"></span></p></td><td width="156" valign="top"><p>&nbsp;</p></td><td width="156" valign="top"><p>&nbsp;</p></td><td width="155" valign="top"><p>&nbsp;</p></td></tr></tbody></table></span></div><br></p><p><p><b>Задание 3</b></p><p>Изучите структуру таблицы, представленной на рисунке ниже. Объясните смысл числа, которое должно быть записано в ячейке на пересечении столбца 10% и строки -20%. Что означает это число для Марии с точки зрения ее планов? Заполните таблицу.</p><img src="http://finformatika.ru/images/2333.png" alt="" width="779" height="244" role="presentation"><br><br><p>Вопросы:</p><p>Объясните, почему заполненную таблицу Мария может считать моделью чувствительности личного бюджета. Каким образом эта модель может помочь Марии в принятии решения о приобретении квартиры с использованием заемных средств? Выскажите предположение, для каких еще жизненных ситуаций применим алгоритм планирования, который использовала Мария?</p><br></p></div><p>По указанию учителя прикрепите файл с вашим решением или вставьте ссылку на решение в онлайн-таблицах (OneDrive или Google Docs) с доступом на просмотр.</p><br clear="all"></span>
 
 <hr align="left" size="1" width="33%">
 
@@ -12657,232 +10546,7 @@ B рублей за каждый пробуренный метр. Максима
 денежных средств, рассчитываемая как разница доходов и расходов, под влиянием
 этих двух факторов. </p>
 
-<p><br></p></div></div>]]></text>
-    </questiontext>
-    <generalfeedback format="html">
-      <text></text>
-    </generalfeedback>
-    <defaultgrade>1.0000000</defaultgrade>
-    <penalty>0.0000000</penalty>
-    <hidden>0</hidden>
-    <responseformat>plain</responseformat>
-    <responserequired>0</responserequired>
-    <responsefieldlines>5</responsefieldlines>
-    <attachments>1</attachments>
-    <attachmentsrequired>0</attachmentsrequired>
-    <graderinfo format="html">
-      <text></text>
-    </graderinfo>
-    <responsetemplate format="html">
-      <text></text>
-    </responsetemplate>
-    <tags>
-      <tag><text>Инф: 3. Моделирование и формализация</text>
-</tag>
-      <tag><text>Кл: 2. 7-9</text>
-</tag>
-      <tag><text>Тип: 2. Ручная</text>
-</tag>
-      <tag><text>Ур: 2. Повышенный</text>
-</tag>
-      <tag><text>Фин: 3. Семейный бюджет</text>
-</tag>
-    </tags>
-  </question>
-
-<!-- question: 1085  -->
-  <question type="essay">
-    <name>
-      <text>2.3.3.3.2 Влияние изменения доходов и расходов на денежные средства</text>
-    </name>
-    <questiontext format="html">
-      <text><![CDATA[<p></p><p>Мария три года назад закончила
-университет, работает инженером в авиационной компании и задумывается о
-приобретении квартиры за счет заемных средств. Сейчас ее ежемесячный доход
-равен 78&nbsp;000 рублей, при этом Мария посчитала, что ее ежемесячные расходы
-составляют 55&nbsp;000 рублей.</p>
-
-<p>Перед принятием серьезного
-решения о долгосрочных финансовых обязательствах, Мария решила проанализировать
-возможные ситуации с точки зрения чувствительности<a href="#_ftn1" name="_ftnref1" title=""><!--[if !supportFootnotes]-->[1]<!--[endif]--></a>
-своего бюджета к изменению доходов и расходов. Для удобства Мария придумала
-структурировать информацию о доходах и расходах в виде таблиц (см. рисунки
-ниже).</p>
-
-<div><!--[if !supportFootnotes]--><b>Задание</b></div><div><span><p style="">Заполните таблицу, в которой
-Мария сделала предположение о том, что ее расходы и доходы уменьшатся на 40%,
-30 %, 20%, 10%. Образец таблицы на рисунке ниже. Запишите формулу вычисления
-разницы доходов и расходов, если количество процентов обозначить буквенной
-переменной А.</p><table border="1" cellspacing="0" cellpadding="0">
- <tbody><tr>
-  <td width="156" valign="top">
-  <p>Проценты<span lang="EN-US"> A%</span><span lang="EN-US"></span></p>
-  </td>
-  <td width="156" valign="top">
-  <p>Доходы
-  78&nbsp;000 руб.</p>
-  </td>
-  <td width="156" valign="top">
-  <p>Расходы
-  55&nbsp;000 руб.</p>
-  </td>
-  <td width="155" valign="top">
-  <p>Разница,
-  руб.</p>
-  </td>
- </tr>
- <tr>
-  <td width="156" valign="top">
-  <p><span lang="EN-US">-</span>40<span lang="EN-US">%</span><span lang="EN-US"></span></p>
-  </td>
-  <td width="156" valign="top">
-  <p>&nbsp;</p>
-  </td>
-  <td width="156" valign="top">
-  <p>&nbsp;</p>
-  </td>
-  <td width="155" valign="top">
-  <p>&nbsp;</p>
-  </td>
- </tr>
- <tr>
-  <td width="156" valign="top">
-  <p><span lang="EN-US">-</span>30<span lang="EN-US">%</span><span lang="EN-US"></span></p>
-  </td>
-  <td width="156" valign="top">
-  <p>&nbsp;</p>
-  </td>
-  <td width="156" valign="top">
-  <p>&nbsp;</p>
-  </td>
-  <td width="155" valign="top">
-  <p>&nbsp;</p>
-  </td>
- </tr>
- <tr>
-  <td width="156" valign="top">
-  <p><span lang="EN-US">-</span>20<span lang="EN-US">%</span><span lang="EN-US"></span></p>
-  </td>
-  <td width="156" valign="top">
-  <p>&nbsp;</p>
-  </td>
-  <td width="156" valign="top">
-  <p>&nbsp;</p>
-  </td>
-  <td width="155" valign="top">
-  <p>&nbsp;</p>
-  </td>
- </tr>
- <tr>
-  <td width="156" valign="top">
-  <p><span lang="EN-US">-</span>10<span lang="EN-US">%</span><span lang="EN-US"></span></p>
-  </td>
-  <td width="156" valign="top">
-  <p>&nbsp;</p>
-  </td>
-  <td width="156" valign="top">
-  <p>&nbsp;</p>
-  </td>
-  <td width="155" valign="top">
-  <p>&nbsp;</p>
-  </td>
- </tr>
-</tbody></table><br><p><br></p>По указанию учителя прикрепите файл с вашим решением или вставьте ссылку на решение в онлайн-таблицах (OneDrive или Google Docs) с доступом на просмотр.</span></div><div><br><div id="ftn1">
-<p><a href="#_ftnref1" name="_ftn1" title=""><!--[if !supportFootnotes]-->[1]<!--[endif]--></a> Примечание: Чувствительностью бюджета (или
-чувствительностью остатка денежных средств) называется величина изменения остатка
-денежных средств, рассчитываемая как разница доходов и расходов, под влиянием
-этих двух факторов. </p>
-
-<p>При планировании бюджета
-как правило рассматривают различные варианты изменения доходов и расходов и
-соответственно рассчитывают величину остатка денежных средств для каждого из
-вариантов. Если точное изменение доходов и расходов неизвестно, то при
-планировании применяется их изменение в процентном выражении.</p>
-
-</div></div>]]></text>
-    </questiontext>
-    <generalfeedback format="html">
-      <text></text>
-    </generalfeedback>
-    <defaultgrade>1.0000000</defaultgrade>
-    <penalty>0.0000000</penalty>
-    <hidden>0</hidden>
-    <responseformat>plain</responseformat>
-    <responserequired>0</responserequired>
-    <responsefieldlines>5</responsefieldlines>
-    <attachments>1</attachments>
-    <attachmentsrequired>0</attachmentsrequired>
-    <graderinfo format="html">
-      <text></text>
-    </graderinfo>
-    <responsetemplate format="html">
-      <text></text>
-    </responsetemplate>
-    <tags>
-      <tag><text>Инф: 3. Моделирование и формализация</text>
-</tag>
-      <tag><text>Кл: 2. 7-9</text>
-</tag>
-      <tag><text>Тип: 2. Ручная</text>
-</tag>
-      <tag><text>Ур: 2. Повышенный</text>
-</tag>
-      <tag><text>Фин: 3. Семейный бюджет</text>
-</tag>
-    </tags>
-  </question>
-
-<!-- question: 1086  -->
-  <question type="essay">
-    <name>
-      <text>2.3.3.3.3 Влияние изменения доходов и расходов на денежные средства</text>
-    </name>
-    <questiontext format="html">
-      <text><![CDATA[<p></p><p>Мария три года назад закончила
-университет, работает инженером в авиационной компании и задумывается о
-приобретении квартиры за счет заемных средств. Сейчас ее ежемесячный доход
-равен 78&nbsp;000 рублей, при этом Мария посчитала, что ее ежемесячные расходы
-составляют 55&nbsp;000 рублей.</p>
-
-<p>Перед принятием серьезного
-решения о долгосрочных финансовых обязательствах, Мария решила проанализировать
-возможные ситуации с точки зрения чувствительности<a href="#_ftn1" name="_ftnref1" title=""><!--[if !supportFootnotes]-->[1]<!--[endif]--></a>
-своего бюджета к изменению доходов и расходов. Для удобства Мария придумала
-структурировать информацию о доходах и расходах в виде таблиц (см. рисунки
-ниже).</p>
-
-<div><!--[if !supportFootnotes]--><b>Задание</b></div><div><span><p style="">Изучите структуру таблицы,
-представленной на рисунке ниже. Объясните смысл числа, которое должно быть
-записано в ячейке на пересечении столбца 10% и строки -20%. Что означает это
-число для Марии с точки зрения ее планов? Заполните таблицу.</p><img src="http://finformatika.ru/images/2333.png" alt="" width="779" height="244" role="presentation" class="img-responsive atto_image_button_text-bottom"><br><br><p>Вопросы:</p>
-
-<p>Объясните, почему заполненную
-таблицу Мария может считать моделью чувствительности личного бюджета. Каким
-образом эта модель может помочь Марии в принятии решения о приобретении
-квартиры с использованием заемных средств? Выскажите предположение, для каких еще
-жизненных ситуаций применим алгоритм планирования, который использовала Мария? </p><br clear="all"></span>
-<p class="desktop-hidden">По указанию учителя прикрепите файл с вашим решением или вставьте ссылку на решение в онлайн-таблицах (OneDrive или Google Docs) с доступом на просмотр.</p>
-
-<hr align="left" size="1" width="33%">
-
-<!--[endif]-->
-
-<div id="ftn1">
-
-<p><a href="#_ftnref1" name="_ftn1" title=""><!--[if !supportFootnotes]-->[1]<!--[endif]--></a> Примечание: Чувствительностью бюджета (или
-чувствительностью остатка денежных средств) называется величина изменения остатка
-денежных средств, рассчитываемая как разница доходов и расходов, под влиянием
-этих двух факторов. </p>
-
-<p>При планировании бюджета
-как правило рассматривают различные варианты изменения доходов и расходов и
-соответственно рассчитывают величину остатка денежных средств для каждого из
-вариантов. Если точное изменение доходов и расходов неизвестно, то при
-планировании применяется их изменение в процентном выражении.</p>
-
-</div>
-
-</div><br><p></p>]]></text>
+<p>При планировании бюджета как правило рассматривают различные варианты изменения доходов и расходов и соответственно рассчитывают величину остатка денежных средств для каждого из вариантов. Если точное изменение доходов и расходов неизвестно, то при планировании применяется их изменение в процентном выражении.<br></p></div></div>]]></text>
     </questiontext>
     <generalfeedback format="html">
       <text></text>
@@ -13926,10 +11590,10 @@ B рублей за каждый пробуренный метр. Максима
 <!-- question: 1112  -->
   <question type="essay">
     <name>
-      <text>2.4.1.23.1 Энергопотребление бытовых приборов</text>
+      <text>2.4.1.23 Энергопотребление бытовых приборов</text>
     </name>
     <questiontext format="html">
-      <text><![CDATA[<p></p><p>Откройте <a href="http://finformatika.ru/files/7-9/task_data/4/24123.xlsx">таблицу</a> с исходными данными.</p><b>Задание</b><br><p></p><p><span></span></p><p style="">В электронную таблицу введена информация о бытовых
+      <text><![CDATA[<p></p><p>Откройте <a href="http://finformatika.ru/files/7-9/task_data/4/24123.xlsx">таблицу</a> с исходными данными.</p><b>Задание 1</b><br><p></p><p><span></span></p><p style="">В электронную таблицу введена информация о бытовых
 холодильниках с объемом холодильной камеры от 130 до 250 литров, объемом
 морозильного отделения от 30 до 100 литров. Кроме того, в таблице указан класс
 энергоэффективности прибора (А+++, А++, А+, А, В) и информация производителя о
@@ -13947,191 +11611,7 @@ B рублей за каждый пробуренный метр. Максима
 <p><!--[if !supportLists]-->3.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <!--[endif]-->Годовое энергопотребление каждого холодильника
 класса В в пересчете на 100 литров полезного объема. Формулу для вычисления
-этой величины для первого прибора запишите в ячейку G7.</p><p class="desktop-hidden">По указанию учителя прикрепите файл с вашим решением или вставьте ссылку на решение в онлайн-таблицах (OneDrive или Google Docs) с доступом на просмотр.</p>]]></text>
-    </questiontext>
-    <generalfeedback format="html">
-      <text></text>
-    </generalfeedback>
-    <defaultgrade>1.0000000</defaultgrade>
-    <penalty>0.0000000</penalty>
-    <hidden>0</hidden>
-    <responseformat>plain</responseformat>
-    <responserequired>0</responserequired>
-    <responsefieldlines>5</responsefieldlines>
-    <attachments>1</attachments>
-    <attachmentsrequired>0</attachmentsrequired>
-    <graderinfo format="html">
-      <text></text>
-    </graderinfo>
-    <responsetemplate format="html">
-      <text></text>
-    </responsetemplate>
-    <tags>
-      <tag><text>Инф: 4. Электр.таблицы/Информация вокруг нас (5-6)</text>
-</tag>
-      <tag><text>Кл: 2. 7-9</text>
-</tag>
-      <tag><text>Тип: 2. Ручная</text>
-</tag>
-      <tag><text>Ур: 3. Высокий</text>
-</tag>
-      <tag><text>Фин: 1. Расходы</text>
-</tag>
-    </tags>
-  </question>
-
-<!-- question: 1113  -->
-  <question type="essay">
-    <name>
-      <text>2.4.1.23.2 Энергопотребление бытовых приборов</text>
-    </name>
-    <questiontext format="html">
-      <text><![CDATA[<p></p><p>Откройте <a href="http://finformatika.ru/files/7-9/task_data/4/24123.xlsx">таблицу</a> с исходными данными.</p><b>Задание</b><br><p></p><p><span></span></p><p style="">В электронную таблицу введена информация о бытовых
-холодильниках с объемом холодильной камеры от 130 до 250 литров, объемом морозильного
-отделения от 30 до 100 литров. Кроме того, в таблице указан класс
-энергоэффективности прибора (А+++, А++, А+, А, В) и информация производителя о
-годовом энергопотреблении. Всего в таблице 125 записей.</p><p style=""><img src="http://finformatika.ru/images/energyparams2.png" alt="" width="924" height="413" role="presentation" class="img-responsive atto_image_button_text-bottom"><br></p><p>На основании данных таблицы найдите:</p>
-
-<p>А) Годовое энергопотребление каждого прибора класса А в
-пересчете на 100 литров полезного объема. Формулу для вычисления этой величины
-для первого холодильника данного класса в списке запишите в ячейку <span lang="EN-US">G</span>5.</p>
-
-<p><span lang="EN-US">B</span>) Найдите
-наименьшую стоимость прибора класса А с наименьшим годовым энергопотреблением в
-пересчете на 100 литров полезного объема. Ответ запишите в ячейку G6.</p>
-
-<p><span lang="EN-US">C</span>) Найдите
-количество холодильников в классе А, годовое электропотребление которых в
-пересчете на 100 литров полезного объема отличается от наименьшего не более,
-чем на 10%. Ответ запишите в ячейку <span lang="EN-US">G</span>7.</p>
-<p class="desktop-hidden">По указанию учителя прикрепите файл с вашим решением или вставьте ссылку на решение в онлайн-таблицах (OneDrive или Google Docs) с доступом на просмотр.</p>]]></text>
-    </questiontext>
-    <generalfeedback format="html">
-      <text></text>
-    </generalfeedback>
-    <defaultgrade>1.0000000</defaultgrade>
-    <penalty>0.0000000</penalty>
-    <hidden>0</hidden>
-    <responseformat>plain</responseformat>
-    <responserequired>0</responserequired>
-    <responsefieldlines>5</responsefieldlines>
-    <attachments>1</attachments>
-    <attachmentsrequired>0</attachmentsrequired>
-    <graderinfo format="html">
-      <text></text>
-    </graderinfo>
-    <responsetemplate format="html">
-      <text></text>
-    </responsetemplate>
-    <tags>
-      <tag><text>Инф: 4. Электр.таблицы/Информация вокруг нас (5-6)</text>
-</tag>
-      <tag><text>Кл: 2. 7-9</text>
-</tag>
-      <tag><text>Тип: 2. Ручная</text>
-</tag>
-      <tag><text>Ур: 3. Высокий</text>
-</tag>
-      <tag><text>Фин: 1. Расходы</text>
-</tag>
-    </tags>
-  </question>
-
-<!-- question: 1114  -->
-  <question type="essay">
-    <name>
-      <text>2.4.1.23.3 Энергопотребление бытовых приборов</text>
-    </name>
-    <questiontext format="html">
-      <text><![CDATA[<p></p><p>Откройте<a href="http://finformatika.ru/files/7-9/task_data/4/24123.xlsx"> таблицу</a> с исходными данными.</p><p><b>Задание</b></p>
-
-<p>В электронную таблицу введена информация о бытовых
-холодильниках с объемом холодильной камеры от 130 до 250 литров, объемом
-морозильного отделения от 30 до 100 литров. Кроме того, в таблице указан класс
-энергоэффективности прибора (А+++, А++, А+, А, В) и информация производителя о
-годовом энергопотреблении. Всего в таблице 125 записей.</p><p><img src="http://finformatika.ru/images/energyparams3.png" alt="" width="924" height="413" role="presentation" class="img-responsive atto_image_button_text-bottom"><br></p><p>На основании данных таблицы найдите:</p>
-
-<p><!--[if !supportLists]-->1.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<!--[endif]-->Сколько электроэнергии потребляет каждый прибор
-за один час. Ответом на вопрос должны быть соответствующие для каждого прибора
-значения в столбце данной таблицы. Количество дней в году считаем равным 365. В
-тетрадь запишите формулу для вычисления искомой величины для первого прибора в
-списке.</p>
-
-<p><!--[if !supportLists]-->2.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<!--[endif]-->Найдите сумму ежедневной оплаты за
-электроэнергию, потребляемую каждым холодильником при условии, что в квартире
-установлен счетчик, для которого действует:</p>
-
-<table border="0" cellspacing="0" cellpadding="0">
- <tbody><tr>
-  <td width="403" valign="top">
-  <p>- одноставочный тариф на
-  электроэнергию</p>
-  </td>
-  <td width="142" valign="top">
-  <p>4.04 руб. за 1 кВт.ч</p>
-  </td>
- </tr>
- <tr>
-  <td width="403" valign="top">
-  <p>- тариф, дифференцированный по
-  двум зонам суток</p>
-  <p>дневная зона (с 7 до 23 часов)</p>
-  </td>
-  <td width="142" valign="top">
-  <p>&nbsp;</p>
-  <p>4.65 руб. за 1 кВт.ч</p>
-  </td>
- </tr>
- <tr>
-  <td width="403" valign="top">
-  <p>ночная зона (с 23 до 7 часов)</p>
-  </td>
-  <td width="142" valign="top">
-  <p>1.26 руб. за 1 кВт.ч</p>
-  </td>
- </tr>
- <tr>
-  <td width="403" valign="top">
-  <p>- тариф на электроэнергию,
-  дифференцированный по трём зонам суток</p>
-  </td>
-  <td width="142" valign="top">
-  <p>&nbsp;</p>
-  </td>
- </tr>
- <tr>
-  <td width="403" valign="top">
-  <p>пиковая зона (с 7 до 10 и с 17
-  до 21 часа)</p>
-  </td>
-  <td width="142" valign="top">
-  <p>4.85 руб. за 1 кВт.ч</p>
-  </td>
- </tr>
- <tr>
-  <td width="403" valign="top">
-  <p>полупиковая зона (с 10 до 17 и
-  с 21 до 23 часов)</p>
-  </td>
-  <td width="142" valign="top">
-  <p>4.04 руб. за 1 кВт.ч</p>
-  </td>
- </tr>
- <tr>
-  <td width="403" valign="top">
-  <p>ночная зона (с 23 до 7 часов)</p>
-  </td>
-  <td width="142" valign="top">
-  <p>1.26 руб. за 1 кВт.ч</p>
-  </td>
- </tr>
-</tbody></table>
-
-<p>Ответ запишите в денежном
-формате, денежная единица –российский рубль.</p><br><p></p>
-<p class="desktop-hidden">По указанию учителя прикрепите файл с вашим решением или вставьте ссылку на решение в онлайн-таблицах (OneDrive или Google Docs) с доступом на просмотр.</p>]]></text>
+этой величины для первого прибора запишите в ячейку G7.</p><p class="desktop-hidden"><b>Задание 2</b><br><p></p><p><span></span></p><p>В электронную таблицу введена информация о бытовых холодильниках с объемом холодильной камеры от 130 до 250 литров, объемом морозильного отделения от 30 до 100 литров. Кроме того, в таблице указан класс энергоэффективности прибора (А+++, А++, А+, А, В) и информация производителя о годовом энергопотреблении. Всего в таблице 125 записей.</p><p><img src="http://finformatika.ru/images/energyparams2.png" alt="" width="924" height="413" role="presentation"><br></p><p>На основании данных таблицы найдите:</p><p>А) Годовое энергопотребление каждого прибора класса А в пересчете на 100 литров полезного объема. Формулу для вычисления этой величины для первого холодильника данного класса в списке запишите в ячейку&nbsp;<span lang="EN-US">G</span>5.</p><p><span lang="EN-US">B</span>) Найдите наименьшую стоимость прибора класса А с наименьшим годовым энергопотреблением в пересчете на 100 литров полезного объема. Ответ запишите в ячейку G6.</p><p><span lang="EN-US">C</span>) Найдите количество холодильников в классе А, годовое электропотребление которых в пересчете на 100 литров полезного объема отличается от наименьшего не более, чем на 10%. Ответ запишите в ячейку&nbsp;<span lang="EN-US">G</span>7.</p><p><b>Задание 3</b></p><p>В электронную таблицу введена информация о бытовых холодильниках с объемом холодильной камеры от 130 до 250 литров, объемом морозильного отделения от 30 до 100 литров. Кроме того, в таблице указан класс энергоэффективности прибора (А+++, А++, А+, А, В) и информация производителя о годовом энергопотреблении. Всего в таблице 125 записей.</p><p><img src="http://finformatika.ru/images/energyparams3.png" alt="" width="924" height="413" role="presentation"><br></p><p>На основании данных таблицы найдите:</p><p>1.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Сколько электроэнергии потребляет каждый прибор за один час. Ответом на вопрос должны быть соответствующие для каждого прибора значения в столбце данной таблицы. Количество дней в году считаем равным 365. В тетрадь запишите формулу для вычисления искомой величины для первого прибора в списке.</p><p>2.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Найдите сумму ежедневной оплаты за электроэнергию, потребляемую каждым холодильником при условии, что в квартире установлен счетчик, для которого действует:</p><table border="0" cellspacing="0" cellpadding="0"><tbody><tr><td width="403" valign="top"><p>- одноставочный тариф на электроэнергию</p></td><td width="142" valign="top"><p>4.04 руб. за 1 кВт.ч</p></td></tr><tr><td width="403" valign="top"><p>- тариф, дифференцированный по двум зонам суток</p><p>дневная зона (с 7 до 23 часов)</p></td><td width="142" valign="top"><p>&nbsp;</p><p>4.65 руб. за 1 кВт.ч</p></td></tr><tr><td width="403" valign="top"><p>ночная зона (с 23 до 7 часов)</p></td><td width="142" valign="top"><p>1.26 руб. за 1 кВт.ч</p></td></tr><tr><td width="403" valign="top"><p>- тариф на электроэнергию, дифференцированный по трём зонам суток</p></td><td width="142" valign="top"><p>&nbsp;</p></td></tr><tr><td width="403" valign="top"><p>пиковая зона (с 7 до 10 и с 17 до 21 часа)</p></td><td width="142" valign="top"><p>4.85 руб. за 1 кВт.ч</p></td></tr><tr><td width="403" valign="top"><p>полупиковая зона (с 10 до 17 и с 21 до 23 часов)</p></td><td width="142" valign="top"><p>4.04 руб. за 1 кВт.ч</p></td></tr><tr><td width="403" valign="top"><p>ночная зона (с 23 до 7 часов)</p></td><td width="142" valign="top"><p>1.26 руб. за 1 кВт.ч</p></td></tr></tbody></table><p>Ответ запишите в денежном формате, денежная единица – российский рубль.</p><br></p><p class="desktop-hidden">По указанию учителя прикрепите файл с вашим решением или вставьте ссылку на решение в онлайн-таблицах (OneDrive или Google Docs) с доступом на просмотр.</p>]]></text>
     </questiontext>
     <generalfeedback format="html">
       <text></text>
@@ -18304,7 +15784,7 @@ B рублей за каждый пробуренный метр. Максима
 <!-- question: 1135  -->
   <question type="essay">
     <name>
-      <text>3.2.4.6.1 Валидность номера карты</text>
+      <text>3.2.4.6 Валидность номера карты</text>
     </name>
     <questiontext format="html">
       <text><![CDATA[<p></p><p>Чтобы при переводах на карту люди реже ошибались в номере,
@@ -18335,11 +15815,11 @@ B рублей за каждый пробуренный метр. Максима
 <!--[endif]-->Если остаток от деления на 10 равен нулю, то
 номер карты корректный (валидный).&nbsp; </p>
 
-<p><b>Задание</b></p>
+<p><b>Задание 1</b></p>
 
 <p>Проверьте карту (см. рисунок) на валидность. Как можно изменить
 её последнюю цифру,
-чтобы она стала валидной?</p><p><img src="http://finformatika.ru/images/Credit_card_1.png" alt="" width="433" height="273" role="presentation" class="img-responsive atto_image_button_text-bottom"><br></p>
+чтобы она стала валидной?</p><p><img src="http://finformatika.ru/images/Credit_card_1.png" alt="" width="433" height="273" role="presentation" class="img-responsive atto_image_button_text-bottom"><br></p><p><p><b>Задание 2</b><br></p><p><ol><li>Согласно данному алгоритму составьте программу, проверяющую валидность карты по её номеру.&nbsp;<br></li><li>Вычислите при помощи программы,сколько&nbsp;16-значныхномеров,&nbsp;начинающихсяс54693801 и заканчивающихся на 1,&nbsp;могутбытьномеромчьей-либокарты?&nbsp;<br></li><li>Объясните полученный результат.</li></ol></p></p>
 <p class="desktop-hidden">По указанию учителя прикрепите файл с вашим решением или вставьте ссылку на решение в онлайн-таблицах (OneDrive или Google Docs) с доступом на просмотр.</p>]]></text>
     </questiontext>
     <generalfeedback format="html">
@@ -18353,84 +15833,6 @@ B рублей за каждый пробуренный метр. Максима
     <responsefieldlines>5</responsefieldlines>
     <attachments>1</attachments>
     <attachmentsrequired>0</attachmentsrequired>
-    <graderinfo format="html">
-      <text></text>
-    </graderinfo>
-    <responsetemplate format="html">
-      <text></text>
-    </responsetemplate>
-    <tags>
-      <tag><text>Инф: 2. Алгоритмизация и программирование</text>
-</tag>
-      <tag><text>Кл: 3. 10-11</text>
-</tag>
-      <tag><text>Тип: 2. Ручная</text>
-</tag>
-      <tag><text>Ур: 3. Высокий</text>
-</tag>
-      <tag><text>Фин: 5. Платежи и расчёты</text>
-</tag>
-    </tags>
-  </question>
-
-<!-- question: 1136  -->
-  <question type="essay">
-    <name>
-      <text>3.2.4.6.2 Валидность номера карты</text>
-    </name>
-    <questiontext format="html">
-      <text><![CDATA[<p></p><p>Чтобы при переводах на карту люди реже ошибались в номере,
-эти номера карт не имеют сквозную нумерацию. Номера подчиняются алгоритму Луна,
-который определяет ошибки ввода одной неправильной цифры, а также почти все
-перестановки соседних цифр, за исключением перестановки 09-90 или обратной
-90-09.</p>
-
-<p>Для того чтобы определить контрольную сумму в соответствии с
-алгоритмом Луна необходимо:</p>
-
-<p><!--[if !supportLists]-->1.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<!--[endif]-->Пронумеровать все цифры справа налево, начиная с
-0.</p>
-
-<p><!--[if !supportLists]-->2.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<!--[endif]-->Все цифры, стоящие на четных позициях (0, 2, 4
-...), просуммировать.</p>
-
-<p><!--[if !supportLists]-->3.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<!--[endif]-->Все цифры, стоящие на нечетных позициях,
-умножить на 2. Если произведение двузначное, то вычесть 9. Просуммировать их.</p>
-
-<p><!--[if !supportLists]-->4.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<!--[endif]-->Сложить суммы из пунктов 2 и 3.</p>
-
-<p><!--[if !supportLists]-->5.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<!--[endif]-->Если остаток от деления на 10 равен нулю, то
-номер карты корректный (валидный).&nbsp; </p><p></p><p><b>&nbsp;Задание</b></p>
-
-<p><!--[if !supportLists]-->1.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<!--[endif]-->Согласно данному алгоритму составьте программу,
-проверяющую валидность карты по её номеру. </p>
-
-<p><!--[if !supportLists]-->2.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<!--[endif]-->Вычислите при помощи программы, сколько 16-значных номеров, начинающихся
-с 54693801 и заканчивающихся
-на 1, могут быть номером чьей-либо карты? </p>
-
-<p><!--[if !supportLists]-->3.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<!--[endif]-->Объясните полученный результат.</p>
-<p class="desktop-hidden">По указанию учителя прикрепите файл с вашим решением или вставьте ссылку на решение в онлайн-таблицах (OneDrive или Google Docs) с доступом на просмотр.</p>]]></text>
-    </questiontext>
-    <generalfeedback format="html">
-      <text></text>
-    </generalfeedback>
-    <defaultgrade>1.0000000</defaultgrade>
-    <penalty>0.0000000</penalty>
-    <hidden>0</hidden>
-    <responseformat>plain</responseformat>
-    <responserequired>0</responserequired>
-    <responsefieldlines>5</responsefieldlines>
-    <attachments>1</attachments>
-    <attachmentsrequired>1</attachmentsrequired>
     <graderinfo format="html">
       <text></text>
     </graderinfo>
@@ -22860,14 +20262,14 @@ x Налоговая ставка</p>
 <!-- question: 1149  -->
   <question type="essay">
     <name>
-      <text>3.3.5.8.1 Пополняемый вклад</text>
+      <text>3.3.5.8 Пополняемый вклад</text>
     </name>
     <questiontext format="html">
       <text><![CDATA[<p></p><p>Некоторые банки предоставляют возможность пополнять вклад
 клиенту и начисляют проценты, в том числе на дополнительно вложенные суммы.
 Допустим, что дополнительный вклад клиент может сделать в конце предыдущего
 месяца, проценты по вкладу начисляются за месяц и капитализируются
-(прибавляются к сумме вклада).</p><p><b>Задание</b></p>
+(прибавляются к сумме вклада).</p><p><b>Задание 1</b></p>
 
 <p>Напишите функцию, которая вычисляет остаток средств на счете
 по истечении месяца, если дана сумма вклада на начало месяца <span lang="EN-US">m</span><span lang="EN-US"> </span>и процент
@@ -22875,63 +20277,7 @@ x Налоговая ставка</p>
 
 <p>Проверьте работу функции для суммы вклада 20&nbsp;000
 рублей, ставки по вкладу 12,5% годовых. Сколько будет средств на счете через 1
-месяц?</p>
-<p class="desktop-hidden">По указанию учителя прикрепите файл с вашим решением или вставьте ссылку на решение в онлайн-таблицах (OneDrive или Google Docs) с доступом на просмотр.</p>]]></text>
-    </questiontext>
-    <generalfeedback format="html">
-      <text></text>
-    </generalfeedback>
-    <defaultgrade>1.0000000</defaultgrade>
-    <penalty>0.0000000</penalty>
-    <hidden>0</hidden>
-    <responseformat>plain</responseformat>
-    <responserequired>0</responserequired>
-    <responsefieldlines>5</responsefieldlines>
-    <attachments>1</attachments>
-    <attachmentsrequired>0</attachmentsrequired>
-    <graderinfo format="html">
-      <text></text>
-    </graderinfo>
-    <responsetemplate format="html">
-      <text></text>
-    </responsetemplate>
-    <tags>
-      <tag><text>Инф: 3. Моделирование и формализация</text>
-</tag>
-      <tag><text>Кл: 3. 10-11</text>
-</tag>
-      <tag><text>Тип: 2. Ручная</text>
-</tag>
-      <tag><text>Ур: 2. Повышенный</text>
-</tag>
-      <tag><text>Фин: 4. Сбережения и инвестиции</text>
-</tag>
-    </tags>
-  </question>
-
-<!-- question: 1150  -->
-  <question type="essay">
-    <name>
-      <text>3.3.5.8.2 Пополняемый вклад</text>
-    </name>
-    <questiontext format="html">
-      <text><![CDATA[<p></p><p>Некоторые банки предоставляют возможность пополнять вклад
-клиенту и начисляют проценты, в том числе на дополнительно вложенные суммы.
-Допустим, что дополнительный вклад клиент может сделать в конце предыдущего
-месяца, проценты по вкладу начисляются за месяц и капитализируются
-(прибавляются к сумме вклада).</p><p><b>Задание</b></p>
-
-<p>Напишите программу, вычисляющую остаток средств на счете для
-<span lang="EN-US">k</span> месяцев, если
-известна начальная сумма вклада <span lang="EN-US">m</span>,
-годовой процент <span lang="EN-US">q</span>, суммы
-пополнения вкладов <span lang="EN-US">n</span><sub>1</sub>
-n<sub>2</sub> n<sub>3</sub> n<sub>4</sub> …nк. Используйте функцию варианта 1. Для
-разделения столбцов таблицы используйте символ табуляции.</p>
-
-<p>Проверьте работу программы для 6 месяцев, начальной суммы
-вклада 20&nbsp;000 рублей, ставки по вкладу 12,5% годовых, сумм пополнения
-вклада за 6 месяцев 5000; 3000; 0; 1000; 2000.</p>
+месяц?</p><p><p><b>Задание 2</b></p><p>Напишите программу, вычисляющую остаток средств на счете для<span lang="EN-US">k</span>месяцев, если известна начальная сумма вклада&nbsp;<span lang="EN-US">m</span>, годовой процент&nbsp;<span lang="EN-US">q</span>, суммы пополнения вкладов&nbsp;<span lang="EN-US">n</span><sub>1</sub>n<sub>2</sub>n<sub>3</sub>n<sub>4</sub>…nк. Используйте функцию варианта 1. Для разделения столбцов таблицы используйте символ табуляции.</p><p>Проверьте работу программы для 6 месяцев, начальной суммы вклада 20&nbsp;000 рублей, ставки по вкладу 12,5% годовых, сумм пополнения вклада за 6 месяцев 5000; 3000; 0; 1000; 2000.</p></p>
 <p class="desktop-hidden">По указанию учителя прикрепите файл с вашим решением или вставьте ссылку на решение в онлайн-таблицах (OneDrive или Google Docs) с доступом на просмотр.</p>]]></text>
     </questiontext>
     <generalfeedback format="html">
@@ -24337,7 +21683,7 @@ n<sub>2</sub> n<sub>3</sub> n<sub>4</sub> …nк. Используйте фун�
 <!-- question: 1171  -->
   <question type="essay">
     <name>
-      <text>3.4.2.3.1 Транспортный налог на автомобиль</text>
+      <text>3.4.2.3 Транспортный налог на автомобиль</text>
     </name>
     <questiontext format="html">
       <text><![CDATA[<p></p><p>В таблице представлены ставки налога на автомобили,
@@ -24432,66 +21778,11 @@ n<sub>2</sub> n<sub>3</sub> n<sub>4</sub> …nк. Используйте фун�
 
 <p>* л.&nbsp;с. — лошадиная сила</p>
 
-<p><b>Задание</b></p>
+<p><b>Задание 1</b></p>
 
 <p>Используя электронную таблицу, создайте модель, определяющую
 ставку налога (в рублях за 1&nbsp;л.&nbsp;с.) на автомобиль с двигателем
-заданной мощности М в&nbsp;л.&nbsp;с. и рассчитывающую размер этого налога Н.</p>
-<p class="desktop-hidden">По указанию учителя прикрепите файл с вашим решением или вставьте ссылку на решение в онлайн-таблицах (OneDrive или Google Docs) с доступом на просмотр.</p>]]></text>
-    </questiontext>
-    <generalfeedback format="html">
-      <text></text>
-    </generalfeedback>
-    <defaultgrade>1.0000000</defaultgrade>
-    <penalty>0.0000000</penalty>
-    <hidden>0</hidden>
-    <responseformat>plain</responseformat>
-    <responserequired>0</responserequired>
-    <responsefieldlines>5</responsefieldlines>
-    <attachments>1</attachments>
-    <attachmentsrequired>0</attachmentsrequired>
-    <graderinfo format="html">
-      <text></text>
-    </graderinfo>
-    <responsetemplate format="html">
-      <text></text>
-    </responsetemplate>
-    <tags>
-      <tag><text>Инф: 4. Электр.таблицы/Информация вокруг нас (5-6)</text>
-</tag>
-      <tag><text>Кл: 3. 10-11</text>
-</tag>
-      <tag><text>Тип: 2. Ручная</text>
-</tag>
-      <tag><text>Ур: 1. Базовый</text>
-</tag>
-      <tag><text>Фин: 2. Доходы</text>
-</tag>
-    </tags>
-  </question>
-
-<!-- question: 1172  -->
-  <question type="essay">
-    <name>
-      <text>3.4.2.3.2 Транспортный налог на автомобиль</text>
-    </name>
-    <questiontext format="html">
-      <text><![CDATA[<p></p><p>Сумма транспортного налога за период владения транспортным
-средством рассчитывается по формуле:<br></p>
-
-<p>Н=Бн*Ст*(М/12), где:</p>
-
-<p>Н – сумма транспортного налога к уплате, Бн – мощность
-двигателя транспортного средства (база налогообложения) в л.с., Ст – ставка
-налога за 1 лошадиную&nbsp;силу; М – количество месяцев владения. Ставка налога
-определяется по таблице, приведенной выше.</p>
-
-<p><b>Задание</b> </p>
-
-<p>В электронной таблице составьте модель на основе приведенной
-формулы, позволяющей рассчитать сумму налога транспортного средства, исходя из
-мощности двигателя транспортного средства и количество месяцев владения
-транспортным средством. </p>
+заданной мощности М в&nbsp;л.&nbsp;с. и рассчитывающую размер этого налога Н.</p><p><p><b>Задание 2</b></p><p>В электронной таблице составьте модель на основе приведенной формулы, позволяющей рассчитать сумму налога транспортного средства, исходя из мощности двигателя транспортного средства и количество месяцев владения транспортным средством.</p><br></p>
 <p class="desktop-hidden">По указанию учителя прикрепите файл с вашим решением или вставьте ссылку на решение в онлайн-таблицах (OneDrive или Google Docs) с доступом на просмотр.</p>]]></text>
     </questiontext>
     <generalfeedback format="html">

@@ -222,17 +222,24 @@ def questions_from_file(f):
     # print('Tts: {}'.format(len([q for q in qs if q['task_type'] == 'Тип: Excel-задача'])))
     # print('Ts: {}'.format(len([q for q in qs if q['type'] == 'excel'])))
 
-    idx = 1
+    bs = BeautifulSoup(q['text'], 'lxml')
+    for img in bs.find_all('img'):
+        for attr in img.attrs.keys():
+            if attr in ('width', 'height', 'class'):
+                del img[attr]
+
+    ftn_idx = 1
     for q in qs:
         res = q['text']
+
         if 'ftn1' in q['text']:
-            res = res.replace('ftn1', 'ftn{}'.format(idx))
-            res = res.replace('ftnref1', 'ftnref{}'.format(idx))
-            idx += 1
+            res = res.replace('ftn1', 'ftn{}'.format(ftn_idx))
+            res = res.replace('ftnref1', 'ftnref{}'.format(ftn_idx))
+            ftn_idx += 1
             if 'ftn2' in q['text']:
-                res = res.replace('ftn2', 'ftn{}'.format(idx))
-                res = res.replace('ftnref2', 'ftnref{}'.format(idx))
-                idx += 1
+                res = res.replace('ftn2', 'ftn{}'.format(ftn_idx))
+                res = res.replace('ftnref2', 'ftnref{}'.format(ftn_idx))
+                ftn_idx += 1
             q['text'] = res
 
     return qs
@@ -290,40 +297,40 @@ if __name__ == '__main__':
     #print('Outputting index file to {}'.format('questions_index.json'))
     #json_to_file(gen_index(qs), 'questions_index.json', indent=None)
 
-    # for q in qs:
-    # # Block for visual error searching
-    #     imgs = bs.find_all('a')
-    #     for img in imgs:
-    #         print(img)
-    #     links = bs.find_all(href=True)
-    #     for link in links:
-    #         if 'assets' in link['href']:
-    #             print(link)
-    #     for link in links:
-    #         href = link['href']
-    #         if 'assets' in link['href']:
-    #             try:
-    #                 open('../' + href).close()
-    #             except Exception as e:
-    #                 print(e)
-    # # Auto-search
-    #     if q['code'].count('.') >= 4 and q['code'][-2] != '0':
-    #         print('No leading zero + 4 x .:', q['code'])
-    #     if q['code'].count('.') >= 4 and q['code'][-2] == '0' and (q['type'] == 'essay' or q['task_type'] == 'Тип: Ручная'):
-    #         print('Non-auto and 4 x .:', q['code'], q['type'], q['task_type'])
-    #     if q['code'].count('.') >= 4:
-    #         pre = '.'.join(q['code'].split('.')[:4])
-    #         if all(not pre in qq['code'] for qq in qs):
-    #             print('No parent task:', q['code'])
-    #     if len(q['grade']) != 1:
-    #         print('Wrong grades qty: ', q['code'], q['grade'])
-    #     if len(q['topics_finances']) != 1:
-    #         print('Wrong topics_finances qty: ', q['code'], q['topics_finances'])
-    #     if len(q['topics_informatics']) != 1:
-    #         print('Wrong topics_informatics qty: ', q['code'], q['topics_informatics'])
-    #     if '1drv' in q['text']:
-    #         print('1drv detected: {code} {name}'.format(**q))
-    #     bs = BeautifulSoup(q['text'], 'lxml')
+    for q in qs:
+        # Block for visual error searching
+        bs = BeautifulSoup(q['text'], 'lxml')
+        imgs = bs.find_all('img')
+        for img in imgs:
+            print(img['src'])
+        links = bs.find_all(href=True)
+        for link in links:
+            if 'assets' in link['href']:
+                print(link)
+        for link in links:
+            href = link['href']
+            if 'assets' in link['href']:
+                try:
+                    open('../' + href).close()
+                except Exception as e:
+                    print(e)
+        # Auto-search
+        if q['code'].count('.') >= 4 and q['code'][-2] != '0':
+            print(' !!! No leading zero + 4 x .:', q['code'])
+        if q['code'].count('.') >= 4 and q['code'][-2] == '0' and (q['type'] == 'essay' or q['task_type'] == 'Тип: Ручная'):
+            print(' !!! Non-auto and 4 x .:', q['code'], q['type'], q['task_type'])
+        if q['code'].count('.') >= 4:
+            pre = '.'.join(q['code'].split('.')[:4])
+            if all(not pre in qq['code'] for qq in qs):
+                print(' !!! No parent task:', q['code'])
+        if len(q['grade']) != 1:
+            print(' !!! Wrong grades qty: ', q['code'], q['grade'])
+        if len(q['topics_finances']) != 1:
+            print(' !!! Wrong topics_finances qty: ', q['code'], q['topics_finances'])
+        if len(q['topics_informatics']) != 1:
+            print(' !!! Wrong topics_informatics qty: ', q['code'], q['topics_informatics'])
+        if '1drv' in q['text']:
+            print(' !!! 1drv detected: {code} {name}'.format(**q))
 
 
     # for q in qs:

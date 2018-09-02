@@ -107,6 +107,10 @@
   transform: rotate(-45deg);
 }
 
+.demo-box img {
+  width: 100%;
+}
+
 .is-open .demo-box {
   display: block;
   animation: demo-box-fade-in .2s cubic-bezier(0, .20, .20, .96);
