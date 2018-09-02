@@ -131,54 +131,12 @@ def parse_question(q, _id=None):
     return question
 
 
-links_dict = {
-    'https://1drv.ms/x/s!AkwppQEzBB-Yi3LqyPZ0Z2BQmju9': 'energopotreb_priborov.xlsx', 
-    'https://1drv.ms/x/s!AkwppQEzBB-Yi3MeyO-YKsZ5iUrC': 'testo_dlya_piccy.xlsx', 
-    'https://1drv.ms/x/s!AkwppQEzBB-Yi3QlRj2rMgZ2HEp1': 'izmenenie_cen_smartfon.xlsx', 
-    'https://1drv.ms/t/s!AkwppQEzBB-Yi3U-vbgkBZSwW0qX': 'pokupka_grechki.txt', 
-    'https://1drv.ms/x/s!AkwppQEzBB-Yi3Zn97c2fOh1R9Vv': 'cvet_i_cena_mobilnogo.xlsx', 
-    'https://1drv.ms/x/s!AkwppQEzBB-Yi3fD_QnLtW0sOwPP': 'keshbek_po_karte.xlsx', 
-    'https://1drv.ms/x/s!AkwppQEzBB-Yi3gmwz48_DiT1f20': 'poezdka_moskva_spb.xlsx', 
-    'https://1drv.ms/x/s!AkwppQEzBB-Yi3lwM9b5IziSabwb': 'poezdka_v_otpusk.xlsx', 
-    'https://1drv.ms/x/s!AkwppQEzBB-Yi3rVrqN0UkDTKCM4': 'pokupka_bu_avto.xlsx', 
-    'https://1drv.ms/x/s!AkwppQEzBB-Yi3veWX7YSmm-AsPn': 'cena_poezdki_na_taksi.xlsx', 
-    'https://1drv.ms/x/s!AkwppQEzBB-Yi3ww8Z4VhRLLo2vx': 'salon_krasoty.xlsx', 
-    'https://1drv.ms/x/s!AkwppQEzBB-Yi37qmEITegev1co6': 'nalog_na_imushchestvo.xlsx', 
-    'https://1drv.ms/x/s!AkwppQEzBB-Yi31STRw4W97_Vw16': 'ndfl_sotrudnikov.xlsx', 
-    'https://1drv.ms/x/s!AkwppQEzBB-Yi38DvKbGd-_1j1X6': 'analiz_byudzheta_semi.xlsx', 
-    'https://1drv.ms/x/s!AkwppQEzBB-YjAAQSlWGOZzWx98G': 'ocenka_budzhet_god.xlsx', 
-    'https://1drv.ms/x/s!AkwppQEzBB-YjAHnJSTqRHKmvTi5': 'ocenka_budzhet_10_let.xlsx',
-    'https://1drv.ms/x/s!AkwppQEzBB-YjAToanPYNUGTJYxj': 'prognoz_byudzheta.xlsx', 
-    'https://1drv.ms/x/s!AkwppQEzBB-YjAKi1W_bjwbH_St1': 'kassovyi_razryv_bez_zayma.xlsx', 
-    'https://1drv.ms/x/s!AkwppQEzBB-YjANfNHRSB5fmY0Bh': 'kassovyi_razryv_s_zaymom.xlsx', 
-    'https://1drv.ms/x/s!AkwppQEzBB-YjAXyvOcm0bTIHynH': 'stavki_depozit_rub_usd.xlsx', 
-    'https://1drv.ms/x/s!AkwppQEzBB-YjAZrWqIKDrFDR2nu': 'vlozheniya_v_akcii.xlsx', 
-    'https://1drv.ms/x/s!AkwppQEzBB-YjAlPE6bX2pcu4ur8': 'dohodnost_po_akciyam.xlsx', 
-    'https://1drv.ms/x/s!AkwppQEzBB-YjAcByU2MRGrR2ZXv': 'dohod_ot_investicii.xlsx', 
-    'https://1drv.ms/x/s!AkwppQEzBB-YjAig3acx222V2pJf': 'investicii_v_valyutu.xlsx', 
-    'https://1drv.ms/x/s!AkwppQEzBB-YjAuJrBNeaZVROkyi': 'stoimost_bigmaka.xlsx', 
-    'https://1drv.ms/x/s!AkwppQEzBB-YjAqX7mhze_7OjFqp': 'dinamika_kursa.xlsx', 
-    'https://1drv.ms/x/s!AkwppQEzBB-YjAzekhJpNMX0HP32': 'usloviya_mikrokredita.xlsx', 
-    'https://1drv.ms/x/s!AkwppQEzBB-YjA2oYKsitj8wWRCj': 'polzovanie_kreditkoy.xlsx', 
-    'https://1drv.ms/x/s!AkwppQEzBB-YjBE0ijXL6iNj0Byt': 'nakopit_strahov_na_dozhitie.xlsx', 
-    'https://1drv.ms/x/s!AkwppQEzBB-YjA5-9k4hrYGM5ycZ': 'kalkulyator_osago.xlsx', 
-    'https://1drv.ms/x/s!AkwppQEzBB-YjBIMAxHCHMY_oAI9': 'koeff_bonus_malus.xlsx', 
-    'https://1drv.ms/x/s!AkwppQEzBB-YjA9RiTz8ylRbyO_e': 'proveryaem_po_tablice.xlsx'
-}
-
 def parse_questions(xml):
-    for link, fname in links_dict.items():
-        # if link in xml:
-        #     print('1drv detected! {}'.format(fname))
-        new_link = 'assets/finformatika.ru/attachments/{}'.format(fname)
-        xml = xml.replace(link, new_link)
     # xml = xml.replace('src="http://finformatika.ru/images/', 'src="/images/')
     # xml = xml.replace('src="/images/', 'src="assets/finformatika.ru/images/')
     # xml.replace('href="http://finformatika.ru/files', 'href="/attachments')
-    # xml = xml.replace('href="/attachments/', 'href="assets/finformatika.ru/attachments/')
     xml = xml.replace('href="http://finformatika.ru/', 'download href="assets/finformatika.ru/')
     xml = xml.replace('src="http://finformatika.ru/', 'src="assets/finformatika.ru/')
-    xml = xml.replace('src="/images/', 'src="http://finformatika.ru/images/')
     soup = BeautifulSoup(xml, 'xml')
 
     soup_comments = [c.strip()for c in soup.findAll(text=lambda text: isinstance(text, Comment))
@@ -329,18 +287,43 @@ if __name__ == '__main__':
 
     json_to_file(qs, 'moodle_data.json')
 
-    print('Outputting index file to {}'.format('questions_index.json'))
-    json_to_file(gen_index(qs), 'questions_index.json', indent=None)
+    #print('Outputting index file to {}'.format('questions_index.json'))
+    #json_to_file(gen_index(qs), 'questions_index.json', indent=None)
 
     # for q in qs:
-    #     bs = BeautifulSoup(q['text'], 'lxml')
-    #     imgs = bs.find_all('img')
+    # # Block for visual error searching
+    #     imgs = bs.find_all('a')
     #     for img in imgs:
-    #         print(img['src'])
-
-    for q in qs:
-        if '1drv' in q['text']:
-            print('1drv detected: {code} {name}'.format(**q))
+    #         print(img)
+    #     links = bs.find_all(href=True)
+    #     for link in links:
+    #         if 'assets' in link['href']:
+    #             print(link)
+    #     for link in links:
+    #         href = link['href']
+    #         if 'assets' in link['href']:
+    #             try:
+    #                 open('../' + href).close()
+    #             except Exception as e:
+    #                 print(e)
+    # # Auto-search
+    #     if q['code'].count('.') >= 4 and q['code'][-2] != '0':
+    #         print('No leading zero + 4 x .:', q['code'])
+    #     if q['code'].count('.') >= 4 and q['code'][-2] == '0' and (q['type'] == 'essay' or q['task_type'] == 'Тип: Ручная'):
+    #         print('Non-auto and 4 x .:', q['code'], q['type'], q['task_type'])
+    #     if q['code'].count('.') >= 4:
+    #         pre = '.'.join(q['code'].split('.')[:4])
+    #         if all(not pre in qq['code'] for qq in qs):
+    #             print('No parent task:', q['code'])
+    #     if len(q['grade']) != 1:
+    #         print('Wrong grades qty: ', q['code'], q['grade'])
+    #     if len(q['topics_finances']) != 1:
+    #         print('Wrong topics_finances qty: ', q['code'], q['topics_finances'])
+    #     if len(q['topics_informatics']) != 1:
+    #         print('Wrong topics_informatics qty: ', q['code'], q['topics_informatics'])
+    #     if '1drv' in q['text']:
+    #         print('1drv detected: {code} {name}'.format(**q))
+    #     bs = BeautifulSoup(q['text'], 'lxml')
 
 
     # for q in qs:
