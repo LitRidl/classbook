@@ -1,7 +1,6 @@
 const { ipcRenderer, clipboard, remote } = require('electron');
 const Excel = require('exceljs');
 const searchInPage = require('electron-in-page-search').default;
-require('pdfmake');
 const settings = require('electron-settings');
 
 
@@ -590,7 +589,6 @@ const generatePdf = (momentStr, uuid) => {
 
 document.getElementById('button-report').addEventListener('click', (event) => {
   spinner.style.display = 'block';
-  console.log('f');
   pdfMake.fonts = {
     fas: {
       normal: 'fas.ttf',
