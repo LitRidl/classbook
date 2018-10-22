@@ -302,11 +302,13 @@ if __name__ == '__main__':
         bs = BeautifulSoup(q['text'], 'lxml')
         imgs = bs.find_all('img')
         for img in imgs:
-            print(img['src'])
+            # print(img['src'])
+            pass
         links = bs.find_all(href=True)
         for link in links:
             if 'assets' in link['href']:
-                print(link)
+                # print(link)
+                pass
         for link in links:
             href = link['href']
             if 'assets' in link['href']:

@@ -382,3 +382,7 @@
 .totals-block {
   margin-top: 10px;
 }
+
+.justify-text {
+  text-align: justify !important;
+}

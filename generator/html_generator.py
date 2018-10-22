@@ -12,7 +12,7 @@ def minify(html):
     return htmlmin.minify(html, remove_comments=True, remove_empty_space=False, 
                           remove_all_empty_space=False, pre_tags=(u'pre', u'textarea'))
 
-DATA_VERSION = '00.00.11'
+DATA_VERSION = '00.00.12'
 
 difficulty_icons = {
     "Базовый уровень":    '<span title="Базовая"    class="difficulty-icon"><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></span>',
@@ -284,9 +284,9 @@ if __name__ == '__main__':
 #                                       for e in glossary_entries))
 #         f.write(g)
 
-#     textbook = load_template('textbook.html')
-#     with open('../sections/materials/textbook.html', 'w') as f:
-#         f.write(textbook)
+    # textbook = load_template('textbook.html')
+    # with open('../sections/materials/textbook.html', 'w') as f:
+    #     f.write(minify(textbook))
 
 
 # def old2():
