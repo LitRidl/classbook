@@ -12,7 +12,7 @@ def minify(html):
     return htmlmin.minify(html, remove_comments=True, remove_empty_space=False, 
                           remove_all_empty_space=False, pre_tags=(u'pre', u'textarea'))
 
-DATA_VERSION = '00.00.14'
+DATA_VERSION = '00.00.17'
 
 difficulty_icons = {
     "Базовый уровень":    '<span title="Базовая"    class="difficulty-icon"><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></span>',
@@ -202,6 +202,12 @@ def code_to_filename(code):
     return ''.join(code.split('.')[:4])
 
 
+def template_to_html(src, dst):
+    tpl = load_template(src)
+    with open(dst, 'w') as f:
+        f.write(minify(tpl))
+
+
 if __name__ == '__main__':
     questions = questions_from_file('moodle_data/moodle_export_1.xml')
     order = lambda q: (grade_order(q['grade']), len(q['grade']), difficulty_order(q['difficulty']), q['topics_informatics'], q['topics_finances'], q['name'], q['task_type'])
@@ -226,9 +232,16 @@ if __name__ == '__main__':
         question_idx_str = json.dumps(question_idx, ensure_ascii=False, indent=None, separators=(',',':'))
         f.write('window.questionsData={}\n'.format(question_idx_str))
     
+
+    # DO NOT auto-generate glossary (implemented in old1())! It's template is empty!
+    # Here -- generation by minification, without altering contents
+    template_to_html('textbook.html', '../sections/materials/textbook.html')
+    template_to_html('usermanual.html', '../sections/materials/usermanual.html')
+    template_to_html('glossary_manual.html', '../sections/materials/glossary.html')
+    template_to_html('contacts.html', '../sections/contacts.html')
+    template_to_html('index.html', '../index.html')
+
     # old2()
-
-
 
 
 ##### OLD DEFUNCT SECTIONS OF MAIN #####

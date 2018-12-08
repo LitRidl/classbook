@@ -7778,10 +7778,10 @@ if (msoBrowserCheck())
     <questiontext format="html">
       <text><![CDATA[<p></p><p><p>Вы наблюдаете, как
 родители покупают что-то в интернете. Они собираются оплатить покупку картой,
-которая выглядит так:</p></p><img src="http://finformatika.ru/images/Credit_card_1.png" alt="" width="317" height="200" role="presentation" class="img-responsive atto_image_button_text-bottom"><img src="http://finformatika.ru/images/Credit_card_2.png" alt="" width="317" height="200" role="presentation" class="img-responsive atto_image_button_text-bottom"><p></p><p></p><p></p><p><p>Родители наполнили корзину
+которая выглядит так:</p></p><img src="http://finformatika.ru/images/Credit_card_1.png" alt="" role="presentation" class="img-responsive atto_image_button_text-bottom"><img src="http://finformatika.ru/images/Credit_card_2.png" alt="" role="presentation" class="img-responsive atto_image_button_text-bottom"><p></p><p></p><p></p><p><p>Родители наполнили корзину
 и приступили к оформлению заказа: ввели свои данные, адрес доставки, выбрали
 способ оплаты&nbsp;— картой, и на сайте появилась форма для оплаты, в которую
-надо ввести данные банковской карты:</p></p><img src="http://finformatika.ru/images/Credit_card_3.png" alt="" width="660" height="300" role="presentation" class="img-responsive atto_image_button_text-bottom"><br><p></p><p><!--[if !supportAnnotations]-->
+надо ввести данные банковской карты:</p></p><img src="http://finformatika.ru/images/Credit_card_3.png" alt="" role="presentation" class="img-responsive atto_image_button_text-bottom"><br><p></p><p><!--[if !supportAnnotations]-->
 
 <script language="JavaScript"><!--
 function msoCommentShow(anchor_id, com_id)

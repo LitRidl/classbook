@@ -56,6 +56,7 @@ html {
   overflow: hidden; /* Prevents rubber-band scrolling of the whole "page" */
   color: var(--color);
   background-color: #fff; /* To cover OSes with no default background color */
+  /* scroll-behavior: smooth; */
 }
 
 body {
