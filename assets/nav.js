@@ -14,7 +14,7 @@ const buttonTop = document.getElementById('button-top');
 const buttonReport = document.getElementById('button-report');
 const buttonSearch = document.getElementById('button-search');
 const spinner = document.getElementById('spinner');
-const searchWindow = document.getElementsByClassName('electron-in-page-search-window')[0];
+// const searchWindow = document.getElementsByClassName('electron-in-page-search-window')[0];
 
 
 textbook_.addEventListener('scroll', (event) => {
@@ -60,9 +60,9 @@ function handleSectionTrigger(event) {
     buttonSearch.style.display = 'none';
     buttonReport.style.display = 'none';
     spinner.style.display = 'none';
-    if (window.inPageSearch) {
-      window.inPageSearch.closeSearchWindow();
-    }
+    // if (window.inPageSearch) {
+    //   window.inPageSearch.closeSearchWindow();
+    // }
     const tocbotOptions = {
       collapseDepth: 3,
       scrollSmooth: true,
@@ -104,9 +104,9 @@ function handleSectionTrigger(event) {
     buttonSearch.style.display = 'none';
     buttonReport.style.display = 'none';
     spinner.style.display = 'none';
-    if (window.inPageSearch) {
-      window.inPageSearch.closeSearchWindow();
-    }
+    // if (window.inPageSearch) {
+    //   window.inPageSearch.closeSearchWindow();
+    // }
   }
 
   // Save currently active button in localStorage

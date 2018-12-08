@@ -1,6 +1,7 @@
 const { ipcRenderer, clipboard, remote } = require('electron');
 const Excel = require('exceljs');
-const searchInPage = require('electron-in-page-search').default;
+// const searchInPage = require('electron-in-page-search').default;
+const searchInPage = require('./search').default;
 const settings = require('electron-settings');
 
 
@@ -348,19 +349,27 @@ for (let i = 0; i < checkerInput.length; ++i) {
 // /////////////////////////////////////// //
 // SEARCH BOX
 
-window.inPageSearch = searchInPage(remote.getCurrentWebContents());
-const searchWindowHandler = () => {
-  if (settings.get('activeSectionButtonId') === 'button-questions') {
-    window.inPageSearch.openSearchWindow();
-  }
-};
-document.getElementById('button-search').addEventListener('click', searchWindowHandler);
-ipcRenderer.on('pressedCtrlF', searchWindowHandler);
-
+// window.inPageSearch = searchInPage(remote.getCurrentWebContents());
+// const searchWindowHandler = () => {
+//   if (settings.get('activeSectionButtonId') === 'button-questions') {
+//     window.inPageSearch.openSearchWindow();
+//   }
+// };
+// document.getElementById('button-search').addEventListener('click', searchWindowHandler);
+// ipcRenderer.on('pressedCtrlF', searchWindowHandler);
 
 ipcRenderer.on('hideSpinner', () => {
   spinner.style.display = 'none';
 });
+
+
+window.inPageSearch = searchInPage(remote.getCurrentWebContents());
+window.onload = function () {
+  window.inPageSearch.openSearchWindow();
+};
+
+// document.getElementById('button-search').addEventListener('click', searchWindowHandler);
+// ipcRenderer.on('pressedCtrlF', searchWindowHandler);
 
 
 // /////////////////////////////////////// //

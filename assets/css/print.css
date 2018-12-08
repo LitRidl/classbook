@@ -22,7 +22,7 @@
     display: none;
   }
 
-  .search-active {
+  .search-active, .searchbar {
     display: none;
   }
 

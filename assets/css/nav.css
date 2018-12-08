@@ -14,7 +14,7 @@
 .button-top {
   display: none;
   position: fixed;
-  top: 10px;
+  top: calc(10px + 36px);
   right: 20px;
   outline: none;
   border: none;
