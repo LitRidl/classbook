@@ -8,35 +8,36 @@ document.body.addEventListener('click', (event) => {
 
 const textbook_ = document.getElementById('textbook-section');
 const glossary_ = document.getElementById('glossary-section');
+const questions_ = document.getElementById('questions-section');
+const usermanual_ = document.getElementById('usermanual-section');
 
 const buttonPdf = document.getElementById('button-pdf');
 const buttonTop = document.getElementById('button-top');
 const buttonReport = document.getElementById('button-report');
-const buttonSearch = document.getElementById('button-search');
+// const buttonSearch = document.getElementById('button-search');
 const spinner = document.getElementById('spinner');
 // const searchWindow = document.getElementsByClassName('electron-in-page-search-window')[0];
 
+const fixButtonTopFor = (el) => {
+  buttonTop.style.display = (el.scrollTop > 20)? 'block' : 'none';
+};
 
-textbook_.addEventListener('scroll', (event) => {
-  if (textbook_.scrollTop > 20) {
-    buttonTop.style.display = 'block';
-  } else {
-    buttonTop.style.display = 'none';
-  }
-});
+const registerScrollButtonTop = (el) => {
+  el.addEventListener('scroll', (event) => fixButtonTopFor(el));
+};
 
-glossary_.addEventListener('scroll', (event) => {
-  if (glossary_.scrollTop > 20) {
-    buttonTop.style.display = 'block';
-  } else {
-    buttonTop.style.display = 'none';
-  }
-});
+registerScrollButtonTop(textbook_);
+registerScrollButtonTop(glossary_);
+registerScrollButtonTop(questions_);
+registerScrollButtonTop(usermanual_);
+registerScrollButtonTop(textbook_);
 
 // When the user clicks on the button, scroll to the top of the document
 buttonTop.addEventListener('click', (event) => {
   textbook_.scrollTop = 0;
   glossary_.scrollTop = 0;
+  questions_.scrollTop = 0;
+  usermanual_.scrollTop = 0;
 });
 
 
@@ -51,13 +52,14 @@ function handleSectionTrigger(event) {
   document.getElementById(sectionId).classList.add('is-shown');
 
   if (sectionId === 'questions-section') {
+    fixButtonTopFor(questions_);
     buttonTop.style.display = '';
     buttonPdf.style.display = '';
     buttonReport.style.display = '';
-    buttonSearch.style.display = '';
+    // buttonSearch.style.display = '';
   } else if (sectionId === 'usermanual-section' || sectionId === 'textbook-section' || sectionId === 'glossary-section') {
     buttonPdf.style.display = '';
-    buttonSearch.style.display = 'none';
+    // buttonSearch.style.display = 'none';
     buttonReport.style.display = 'none';
     spinner.style.display = 'none';
     // if (window.inPageSearch) {
@@ -77,18 +79,16 @@ function handleSectionTrigger(event) {
       extraListClasses: '',
       listItemClass: 'toc-list-item',
     };
-    if (sectionId === 'usermanual-section') { buttonTop.style.display = ''; }
+    if (sectionId === 'usermanual-section') { fixButtonTopFor(usermanual_); }
     else if (sectionId === 'textbook-section') {
-      if (textbook_.scrollTop < 20) { buttonTop.style.display = ''; }
-      else { buttonTop.style.display = 'block'; }
+      fixButtonTopFor(textbook_);
       tocbot.init(Object.assign(tocbotOptions, {
         tocSelector: '#toc-textbook',
         contentSelector: '#textbook-section',
         headingSelector: '.h1-good, h2',
       }));
     } else if (sectionId === 'glossary-section') {
-      if (glossary_.scrollTop < 20) { buttonTop.style.display = ''; }
-      else { buttonTop.style.display = 'block'; }
+      fixButtonTopFor(glossary_);
       tocbot.init(Object.assign(tocbotOptions, {
         tocbotOptions,
         tocSelector: '#toc-glossary',
@@ -101,7 +101,7 @@ function handleSectionTrigger(event) {
   } else {
     buttonTop.style.display = '';
     buttonPdf.style.display = 'none';
-    buttonSearch.style.display = 'none';
+    // buttonSearch.style.display = 'none';
     buttonReport.style.display = 'none';
     spinner.style.display = 'none';
     // if (window.inPageSearch) {

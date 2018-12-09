@@ -11,6 +11,11 @@
     font-size: 22px;
   }
   
+  #main-container {
+    border-top: none !important;
+    margin-top: 0px !important;
+  }
+
   .button-pdf, 
   .button-search,
   .button-report,
@@ -18,7 +23,7 @@
     display: none !important;
   }
 
-  .toc-bar {
+  .toc-header {
     display: none;
   }
 
@@ -51,7 +56,7 @@
     overflow: visible !important;
   }
 
-  .section-header {
+  .filters-header {
     display: none;
   }
 

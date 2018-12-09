@@ -5,8 +5,9 @@ const search_button = document.querySelector('.inpage-search-button');
 const matches = document.querySelector('.inpage-search-matches');
 const back_button = document.querySelector('.inpage-search-back');
 const forward_button = document.querySelector('.inpage-search-forward');
-const close_button = document.querySelector('.inpage-search-close');
+// const close_button = document.querySelector('.inpage-search-close');
 const search_input = document.querySelector('.inpage-search-input');
+const search_clear_button = document.getElementById('button-search-clear');
 let in_composition = false;
 if (search_button !== null) {
     search_button.addEventListener('click', () => {
@@ -27,16 +28,23 @@ if (forward_button !== null) {
         electron_1.ipcRenderer.sendToHost('electron-in-page-search:forward', search_input.value);
     });
 }
-close_button.addEventListener('click', () => {
+search_clear_button.addEventListener('click', () => {
     electron_1.ipcRenderer.sendToHost('electron-in-page-search:close');
 });
-search_input.addEventListener('keydown', e => {
+search_input.addEventListener('keyup', e => {
     if (in_composition) {
+        console.log('Keydown skipped!!')
         return;
+    }
+    if (search_input.value === '') {
+        search_clear_button.style.display = '';
     }
     switch (e.code) {
         case 'Enter':
         case 'NumpadEnter':
+            if (search_input.value === '') {
+                electron_1.ipcRenderer.sendToHost('electron-in-page-search:close');
+            }
             if (e.shiftKey) {
                 electron_1.ipcRenderer.sendToHost('electron-in-page-search:back', search_input.value);
             }
@@ -53,9 +61,11 @@ search_input.addEventListener('keydown', e => {
             }
             break;
         default:
+            if (search_input.value != '') {
+                search_clear_button.style.display = 'block';
+            }
             return;
     }
-    console.log('Keydown:', e);
 });
 search_input.addEventListener('compositionstart', () => {
     in_composition = true;
@@ -64,8 +74,9 @@ search_input.addEventListener('compositionend', () => {
     in_composition = false;
 });
 electron_1.ipcRenderer.on('electron-in-page-search:focus', () => {
-    console.log('Focus on input');
-    search_input.focus();
+    // console.log('Focus on input');
+    // search_input.focus();
+    window.setTimeout(function () {  search_input.focus();  }, 10); 
 });
 electron_1.ipcRenderer.on('electron-in-page-search:result', (_, nth, all) => {
     matches.innerText = `${nth}/${all}`;
@@ -74,5 +85,7 @@ electron_1.ipcRenderer.on('electron-in-page-search:result', (_, nth, all) => {
 electron_1.ipcRenderer.on('electron-in-page-search:close', () => {
     search_input.value = '';
     matches.innerText = '0/0';
+    search_clear_button.style.display = '';
+    window.setTimeout(function () {  search_input.focus();  }, 10); 
 });
 //# sourceMappingURL=search-window.js.map

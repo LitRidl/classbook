@@ -6,11 +6,12 @@
   </head>
   <body>
     <div class="inpage-search-body">
-      <input class="inpage-search-input" type="search" placeholder="Введите текст, который хотите найти..." autocomplete="off" autofocus></input>
+      <input class="inpage-search-input" type="search" placeholder="Введите искомый текст и нажмите Enter..." autocomplete="off" autofocus></input>
+      <a id="button-search-clear" class="button-search-clear inpage-search-close" title="Сбросить запрос"><i class="fas fa-times-circle"></i></a>
+      <!-- <a id="button-search" class="button-search inpage-search-button" title="Поиск"><i class="fas fa-search"></i></a> -->
       <div class="inpage-search-matches">0/0</div>
-      <div class="inpage-search-back">&lt;</div>
-      <div class="inpage-search-forward">&gt;</div>
-      <div class="inpage-search-close">✕</div>
+      <a id="button-search-back" class="button-search-back inpage-search-back" title="Предыдущее совпадение"><i class="fas fa-arrow-circle-left"></i></a>
+      <a id="button-search-next" class="button-search-next inpage-search-forward" title="Следующее совпадение"><i class="fas fa-arrow-circle-right"></i></a>
     </div>
   </body>
   <script>var exports = {}</script>

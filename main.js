@@ -6,8 +6,8 @@ const { app, BrowserWindow, ipcMain, shell, dialog } = require('electron');
 const electronLocalshortcut = require('electron-localshortcut');
 const settings = require('electron-settings');
 
-const debug = /--debug/.test(process.argv[2]);
-const enableDevTools = true;
+const debug = false; // /--debug/.test(process.argv[2]);
+const enableDevTools = false;
 
 app.setName('Сборник задач по финансовой грамотности в информатике');
 
@@ -54,7 +54,12 @@ function initialize() {
     splash = new BrowserWindow({ transparent: true, frame: false, alwaysOnTop: true });
     splash.loadURL(`file://${__dirname}/assets/img/loading.svg`);
 
-    mainWindow.once('ready-to-show', () => {
+    // mainWindow.once('did-finish-load', () => {
+    mainWindow.webContents.on('did-finish-load', () => {
+      // setTimeout(() => {
+      //   splash.destroy();
+      //   mainWindow.show();
+      // }, 1000);
       splash.destroy();
       mainWindow.show();
     });

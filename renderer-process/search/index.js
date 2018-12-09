@@ -32,9 +32,9 @@ var InPageSearch = /** @class */ (function (_super) {
         _this.activeIdx = 0;
         _this.maxIdx = 0;
         _this.initialized = false;
-        if (preload) {
+        // if (preload) {
             _this.initialize();
-        }
+        // }
         return _this;
     }
     InPageSearch.prototype.openSearchWindow = function () {
@@ -109,7 +109,7 @@ var InPageSearch = /** @class */ (function (_super) {
             this.closeSearchWindow();
             return;
         }
-        if (!this.isSearching() || this.prevQuery !== text) {
+        if (!this.isSearching() || this.prevQuersy !== text) {
             this.startToFind(text);
         }
         else {
@@ -274,8 +274,9 @@ function fixPathSlashes(p) {
 }
 function injectScriptToWebView(target, opts) {
     var injected_script = fixPathSlashes(path.join(__dirname, 'search-window.js'));
+    var fa = fixPathSlashes(path.join(__dirname, 'font-awesome.js'));
     var css = fixPathSlashes(opts.customCssPath || path.join(__dirname, 'default-style.css'));
-    var script = "(function(){\n        const l = document.createElement('link');\n        l.rel = 'stylesheet';\n        l.href = '" + css + "';\n        document.head.appendChild(l);\n        const s = document.createElement('script');\n        s.src = 'file://" + injected_script + "';\n        document.body.appendChild(s);\n    })()";
+    var script = "(function(){\n        const l = document.createElement('link');\n        l.rel = 'stylesheet';\n        l.href = '" + css + "';\n        document.head.appendChild(l);\n        const s = document.createElement('script');\n        s.src = 'file://" + injected_script + "';\n        document.body.appendChild(s);\n    const s2 = document.createElement('script');\n        s2.src = 'file://" + fa + "';\n        document.body.appendChild(s2);\n    })()";
     // XXX:
     // Before <webview> completes to load its web contents, .getWebContents()
     // (and some other APIs) have some 'statuses'.

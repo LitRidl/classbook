@@ -2034,7 +2034,7 @@ else:
 отдельной строке. Выводит одно число&nbsp;— стоимость скважины. Единицы
 измерения указывать не требуется.</p><p></p>
 
-<p><p>Пример работы программы 1:</p></p>
+<p></p><p>Пример работы программы 1:</p><p></p>
 
 <table border="1" cellspacing="0" cellpadding="0" width="546">
  <tbody><tr>
@@ -2061,7 +2061,7 @@ else:
 
 <p>&nbsp;</p>
 
-<p><p>Пример работы программы 2:</p></p>
+<p></p><p>Пример работы программы 2:</p><p></p>
 
 <table border="1" cellspacing="0" cellpadding="0">
  <tbody><tr>
@@ -2214,6 +2214,27 @@ else:
                 <text>HIDE</text>
       </display>
     </testcase>
+      <testcase testtype="0" useasexample="0" hiderestiffail="0" mark="1.0000000" >
+      <testcode>
+                <text></text>
+      </testcode>
+      <stdin>
+                <text>30000
+1500
+1200
+17
+0</text>
+      </stdin>
+      <expected>
+                <text>20400</text>
+      </expected>
+      <extra>
+                <text></text>
+      </extra>
+      <display>
+                <text>HIDE</text>
+      </display>
+    </testcase>
     </testcases>
     <tags>
       <tag><text>Инф: 2. Алгоритмизация и программирование</text>
@@ -2344,6 +2365,69 @@ print(w * (a + b * (h - 12)) + ((w + 1) % 2) * (h * c))
                 <text>SHOW</text>
       </display>
     </testcase>
+      <testcase testtype="0" useasexample="0" hiderestiffail="0" mark="1.0000000" >
+      <testcode>
+                <text></text>
+      </testcode>
+      <stdin>
+                <text>30000
+1500
+1200
+11
+0</text>
+      </stdin>
+      <expected>
+                <text>13200</text>
+      </expected>
+      <extra>
+                <text></text>
+      </extra>
+      <display>
+                <text>HIDE</text>
+      </display>
+    </testcase>
+      <testcase testtype="0" useasexample="0" hiderestiffail="0" mark="1.0000000" >
+      <testcode>
+                <text></text>
+      </testcode>
+      <stdin>
+                <text>30000
+1500
+1200
+11
+1</text>
+      </stdin>
+      <expected>
+                <text>28500</text>
+      </expected>
+      <extra>
+                <text></text>
+      </extra>
+      <display>
+                <text>HIDE</text>
+      </display>
+    </testcase>
+      <testcase testtype="0" useasexample="0" hiderestiffail="0" mark="1.0000000" >
+      <testcode>
+                <text></text>
+      </testcode>
+      <stdin>
+                <text>30000
+1500
+1200
+17
+0</text>
+      </stdin>
+      <expected>
+                <text>20400</text>
+      </expected>
+      <extra>
+                <text></text>
+      </extra>
+      <display>
+                <text>HIDE</text>
+      </display>
+    </testcase>
     </testcases>
     <tags>
       <tag><text>Инф: 2. Алгоритмизация и программирование</text>
@@ -2446,7 +2530,7 @@ print(w * (a + b * (h - 12)) + ((w + 1) % 2) * (h * c))
 
 <p>&nbsp;</p>
 
-<p><p>Пример работы программы 2:</p></p>
+<p></p><p>Пример работы программы 2:</p><p></p>
 
 <table border="1" cellspacing="0" cellpadding="0">
  <tbody><tr>
@@ -2594,6 +2678,103 @@ else:
       </extra>
       <display>
                 <text>SHOW</text>
+      </display>
+    </testcase>
+      <testcase testtype="0" useasexample="0" hiderestiffail="0" mark="1.0000000" >
+      <testcode>
+                <text></text>
+      </testcode>
+      <stdin>
+                <text>30000
+1500
+2000
+1</text>
+      </stdin>
+      <expected>
+                <text>5 30000
+6 30000
+7 30000
+8 30000
+9 30000
+10 30000
+11 30000
+12 30000
+13 31500
+14 33000
+15 34500
+16 36000
+17 37500
+</text>
+      </expected>
+      <extra>
+                <text></text>
+      </extra>
+      <display>
+                <text>HIDE</text>
+      </display>
+    </testcase>
+      <testcase testtype="0" useasexample="0" hiderestiffail="0" mark="1.0000000" >
+      <testcode>
+                <text></text>
+      </testcode>
+      <stdin>
+                <text>30000
+1500
+2000
+0</text>
+      </stdin>
+      <expected>
+                <text>5 10000
+6 12000
+7 14000
+8 16000
+9 18000
+10 20000
+11 22000
+12 24000
+13 26000
+14 28000
+15 30000
+16 32000
+17 34000</text>
+      </expected>
+      <extra>
+                <text></text>
+      </extra>
+      <display>
+                <text>HIDE</text>
+      </display>
+    </testcase>
+      <testcase testtype="0" useasexample="0" hiderestiffail="0" mark="1.0000000" >
+      <testcode>
+                <text></text>
+      </testcode>
+      <stdin>
+                <text>0
+1500
+2000
+0</text>
+      </stdin>
+      <expected>
+                <text>5 10000
+6 12000
+7 14000
+8 16000
+9 18000
+10 20000
+11 22000
+12 24000
+13 26000
+14 28000
+15 30000
+16 32000
+17 34000</text>
+      </expected>
+      <extra>
+                <text></text>
+      </extra>
+      <display>
+                <text>HIDE</text>
       </display>
     </testcase>
     </testcases>
@@ -2756,6 +2937,103 @@ else:
                 <text>HIDE</text>
       </display>
     </testcase>
+      <testcase testtype="0" useasexample="0" hiderestiffail="0" mark="1.0000000" >
+      <testcode>
+                <text></text>
+      </testcode>
+      <stdin>
+                <text>30000
+1500
+2000
+1</text>
+      </stdin>
+      <expected>
+                <text>5 30000
+6 30000
+7 30000
+8 30000
+9 30000
+10 30000
+11 30000
+12 30000
+13 31500
+14 33000
+15 34500
+16 36000
+17 37500
+</text>
+      </expected>
+      <extra>
+                <text></text>
+      </extra>
+      <display>
+                <text>SHOW</text>
+      </display>
+    </testcase>
+      <testcase testtype="0" useasexample="0" hiderestiffail="0" mark="1.0000000" >
+      <testcode>
+                <text></text>
+      </testcode>
+      <stdin>
+                <text>30000
+1500
+2000
+0</text>
+      </stdin>
+      <expected>
+                <text>5 10000
+6 12000
+7 14000
+8 16000
+9 18000
+10 20000
+11 22000
+12 24000
+13 26000
+14 28000
+15 30000
+16 32000
+17 34000</text>
+      </expected>
+      <extra>
+                <text></text>
+      </extra>
+      <display>
+                <text>SHOW</text>
+      </display>
+    </testcase>
+      <testcase testtype="0" useasexample="0" hiderestiffail="0" mark="1.0000000" >
+      <testcode>
+                <text></text>
+      </testcode>
+      <stdin>
+                <text>0
+1500
+2000
+0</text>
+      </stdin>
+      <expected>
+                <text>5 10000
+6 12000
+7 14000
+8 16000
+9 18000
+10 20000
+11 22000
+12 24000
+13 26000
+14 28000
+15 30000
+16 32000
+17 34000</text>
+      </expected>
+      <extra>
+                <text></text>
+      </extra>
+      <display>
+                <text>SHOW</text>
+      </display>
+    </testcase>
     </testcases>
     <tags>
       <tag><text>Инф: 2. Алгоритмизация и программирование</text>
@@ -2774,7 +3052,7 @@ else:
 <!-- question: 1255  -->
   <question type="coderunner">
     <name>
-      <text>2.2.1.9.02 Калькулятор стоимости скважины C++</text>
+      <text>2.2.1.9.02 Калькулятор стоимости скважины Python</text>
     </name>
     <questiontext format="html">
       <text><![CDATA[<p></p><p></p><p>Бурение скважины глубиной до <span lang="EN-US">N</span> метров для обеспечения водой
@@ -2800,7 +3078,7 @@ C рублей за каждый фактически пробуренный м�
     <defaultgrade>1.0000000</defaultgrade>
     <penalty>0.0000000</penalty>
     <hidden>0</hidden>
-    <coderunnertype>cpp_program</coderunnertype>
+    <coderunnertype>python3</coderunnertype>
     <prototypetype>0</prototypetype>
     <allornothing>0</allornothing>
     <penaltyregime>10, 20, ...</penaltyregime>
@@ -2814,24 +3092,23 @@ C рублей за каждый фактически пробуренный м�
     <template></template>
     <iscombinatortemplate></iscombinatortemplate>
     <allowmultiplestdins></allowmultiplestdins>
-    <answer><![CDATA[#include <iostream>
-#include <algorithm>
+    <answer><![CDATA[N = int(input())
+A = int(input())
+B = int(input())
+L = int(input())
+C = int(input())
+H = int(input())
 
-using namespace std;
+if (H <= L):
+    if (H > N):
+        S = A + B * (H - N)
+    else:
+        S = A
+else:
+     S = C * H
 
-int main()
-{
-    int a, b, n, l, c, h;
-    cin >> n >> a >> b >> l >> c >> h;
-    
-    if (l < h) {
-        cout << "No " << c * l << endl;
-    } else {
-        cout << "Yes " << a + b * max(h - n, 0) << endl;
-    }
-    
-    return 0;
-}]]></answer>
+print(S)
+]]></answer>
     <validateonsave>1</validateonsave>
     <testsplitterre></testsplitterre>
     <language></language>
@@ -2859,7 +3136,7 @@ int main()
 4</text>
       </stdin>
       <expected>
-                <text>Yes 1000</text>
+                <text>1000</text>
       </expected>
       <extra>
                 <text></text>
@@ -2881,7 +3158,7 @@ int main()
 7</text>
       </stdin>
       <expected>
-                <text>Yes 1200</text>
+                <text>1200</text>
       </expected>
       <extra>
                 <text></text>
@@ -2903,7 +3180,7 @@ int main()
 20</text>
       </stdin>
       <expected>
-                <text>Yes 2500</text>
+                <text>2500</text>
       </expected>
       <extra>
                 <text></text>
@@ -2925,7 +3202,29 @@ int main()
 25</text>
       </stdin>
       <expected>
-                <text>No 200</text>
+                <text>250</text>
+      </expected>
+      <extra>
+                <text></text>
+      </extra>
+      <display>
+                <text>HIDE</text>
+      </display>
+    </testcase>
+      <testcase testtype="0" useasexample="0" hiderestiffail="0" mark="1.0000000" >
+      <testcode>
+                <text></text>
+      </testcode>
+      <stdin>
+                <text>30
+1000
+100
+20
+10
+25</text>
+      </stdin>
+      <expected>
+                <text>250</text>
       </expected>
       <extra>
                 <text></text>
@@ -3134,6 +3433,27 @@ Ones: 0</text>
                 <text>HIDE</text>
       </display>
     </testcase>
+      <testcase testtype="0" useasexample="0" hiderestiffail="0" mark="1.0000000" >
+      <testcode>
+                <text></text>
+      </testcode>
+      <stdin>
+                <text>1 3 10 2 27</text>
+      </stdin>
+      <expected>
+                <text>Tens: 1
+Fives: 3
+Twoes: 1
+Ones: 0
+</text>
+      </expected>
+      <extra>
+                <text></text>
+      </extra>
+      <display>
+                <text>HIDE</text>
+      </display>
+    </testcase>
     </testcases>
     <tags>
       <tag><text>Инф: 2. Алгоритмизация и программирование</text>
@@ -3247,6 +3567,84 @@ end.</answer>
                 <text>SHOW</text>
       </display>
     </testcase>
+      <testcase testtype="0" useasexample="0" hiderestiffail="0" mark="1.0000000" >
+      <testcode>
+                <text></text>
+      </testcode>
+      <stdin>
+                <text>1000
+12.5
+2.5</text>
+      </stdin>
+      <expected>
+                <text> 1.31250000000000000000E+0003
+</text>
+      </expected>
+      <extra>
+                <text></text>
+      </extra>
+      <display>
+                <text>HIDE</text>
+      </display>
+    </testcase>
+      <testcase testtype="0" useasexample="0" hiderestiffail="0" mark="1.0000000" >
+      <testcode>
+                <text></text>
+      </testcode>
+      <stdin>
+                <text>1000
+10
+1.5</text>
+      </stdin>
+      <expected>
+                <text> 1.15000000000000000000E+0003</text>
+      </expected>
+      <extra>
+                <text></text>
+      </extra>
+      <display>
+                <text>HIDE</text>
+      </display>
+    </testcase>
+      <testcase testtype="0" useasexample="0" hiderestiffail="0" mark="1.0000000" >
+      <testcode>
+                <text></text>
+      </testcode>
+      <stdin>
+                <text>5000
+10.5
+1.5</text>
+      </stdin>
+      <expected>
+                <text> 5.78750000000000000000E+0003</text>
+      </expected>
+      <extra>
+                <text></text>
+      </extra>
+      <display>
+                <text>HIDE</text>
+      </display>
+    </testcase>
+      <testcase testtype="0" useasexample="0" hiderestiffail="0" mark="1.0000000" >
+      <testcode>
+                <text></text>
+      </testcode>
+      <stdin>
+                <text>5000
+10.5
+5</text>
+      </stdin>
+      <expected>
+                <text> 7.62500000000000000000E+0003
+</text>
+      </expected>
+      <extra>
+                <text></text>
+      </extra>
+      <display>
+                <text>HIDE</text>
+      </display>
+    </testcase>
     </testcases>
     <tags>
       <tag><text>Инф: 2. Алгоритмизация и программирование</text>
@@ -3277,7 +3675,7 @@ end.</answer>
 <p>Программа должна вывести одно число: количество средств на
 счете через указанное количество лет.</p>
 
-<p>Пример:</p><p><table border="1" cellspacing="0" cellpadding="0">
+<p>Пример:</p><p></p><table border="1" cellspacing="0" cellpadding="0">
  <tbody><tr>
   <td width="305" valign="top">
   <p>Входные данные</p>
@@ -3296,7 +3694,7 @@ end.</answer>
   <p><span lang="EN-US">1265</span>,<span lang="EN-US">62</span></p>
   </td>
  </tr>
-</tbody></table></p><br><p></p><p></p>]]></text>
+</tbody></table><p></p><br><p></p><p></p>]]></text>
     </questiontext>
     <generalfeedback format="html">
       <text></text>
@@ -3358,6 +3756,82 @@ end.</answer>
                 <text>SHOW</text>
       </display>
     </testcase>
+      <testcase testtype="0" useasexample="0" hiderestiffail="0" mark="1.0000000" >
+      <testcode>
+                <text></text>
+      </testcode>
+      <stdin>
+                <text>1000
+10
+2.5</text>
+      </stdin>
+      <expected>
+                <text>1.26905870628588337190E+0003</text>
+      </expected>
+      <extra>
+                <text></text>
+      </extra>
+      <display>
+                <text>HIDE</text>
+      </display>
+    </testcase>
+      <testcase testtype="0" useasexample="0" hiderestiffail="0" mark="1.0000000" >
+      <testcode>
+                <text></text>
+      </testcode>
+      <stdin>
+                <text>1000
+10
+2</text>
+      </stdin>
+      <expected>
+                <text>1.21000000000000000000E+0003</text>
+      </expected>
+      <extra>
+                <text></text>
+      </extra>
+      <display>
+                <text>HIDE</text>
+      </display>
+    </testcase>
+      <testcase testtype="0" useasexample="0" hiderestiffail="0" mark="1.0000000" >
+      <testcode>
+                <text></text>
+      </testcode>
+      <stdin>
+                <text>5000
+10
+2</text>
+      </stdin>
+      <expected>
+                <text>6.05000000000000000000E+0003</text>
+      </expected>
+      <extra>
+                <text></text>
+      </extra>
+      <display>
+                <text>HIDE</text>
+      </display>
+    </testcase>
+      <testcase testtype="0" useasexample="0" hiderestiffail="0" mark="1.0000000" >
+      <testcode>
+                <text></text>
+      </testcode>
+      <stdin>
+                <text>5000
+2
+2</text>
+      </stdin>
+      <expected>
+                <text>5.20199999999999999956E+0003</text>
+      </expected>
+      <extra>
+                <text></text>
+      </extra>
+      <display>
+                <text>HIDE</text>
+      </display>
+    </testcase>
     </testcases>
     <tags>
       <tag><text>Инф: 2. Алгоритмизация и программирование</text>
@@ -3412,8 +3886,7 @@ end.</answer>
 числа: стоимость одного сырка, количество сырков в упаковке каждого вида (<span lang="EN-US">m</span> и <span lang="EN-US">n</span> штук) и количество денег, выделенных
 на покупку сырков. Программа должна вывести наибольшее количество сырков (в
 зависимости от упаковки<!--[if !msEquation]-->
- 
-<!--[endif]-->&nbsp;и <!--[if !msEquation]-->
+&nbsp;<!--[if !msEquation]-->
  
 <!--[endif]-->) при заданной цене сырка <!--[if !msEquation]-->
  
@@ -3591,6 +4064,57 @@ print(max_count)</answer>
                 <text>HIDE</text>
       </display>
     </testcase>
+      <testcase testtype="0" useasexample="0" hiderestiffail="0" mark="1.0000000" >
+      <testcode>
+                <text></text>
+      </testcode>
+      <stdin>
+                <text>21 330 6 8</text>
+      </stdin>
+      <expected>
+                <text>14</text>
+      </expected>
+      <extra>
+                <text></text>
+      </extra>
+      <display>
+                <text>HIDE</text>
+      </display>
+    </testcase>
+      <testcase testtype="0" useasexample="0" hiderestiffail="0" mark="1.0000000" >
+      <testcode>
+                <text></text>
+      </testcode>
+      <stdin>
+                <text>17 270 4 6</text>
+      </stdin>
+      <expected>
+                <text>14</text>
+      </expected>
+      <extra>
+                <text></text>
+      </extra>
+      <display>
+                <text>HIDE</text>
+      </display>
+    </testcase>
+      <testcase testtype="0" useasexample="0" hiderestiffail="0" mark="1.0000000" >
+      <testcode>
+                <text></text>
+      </testcode>
+      <stdin>
+                <text>20 270 4 6</text>
+      </stdin>
+      <expected>
+                <text>12</text>
+      </expected>
+      <extra>
+                <text></text>
+      </extra>
+      <display>
+                <text>HIDE</text>
+      </display>
+    </testcase>
     </testcases>
     <tags>
       <tag><text>Инф: 2. Алгоритмизация и программирование</text>
@@ -3640,8 +4164,8 @@ print(max_count)</answer>
 
 <p><!--[if !supportLists]-->5.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <!--[endif]-->Если остаток от деления равен нулю, то номер
-карты корректный (валидный).&nbsp; </p><p> </p><p><b>&nbsp;Задание</b></p><p><!--[if !supportLists]--><!--[endif]--><p>&nbsp;<!--[endif]-->Согласно данному алгоритму составьте программу,
-проверяющую валидность карты по ее номеру. </p> </p><br><p></p>]]></text>
+карты корректный (валидный).&nbsp; </p><p> </p><p><b>&nbsp;Задание</b></p><p><!--[if !supportLists]--><!--[endif]--></p><p>&nbsp;<!--[endif]-->Согласно данному алгоритму составьте программу,
+проверяющую валидность карты по ее номеру. </p> <p></p><br><p></p>]]></text>
     </questiontext>
     <generalfeedback format="html">
       <text></text>
@@ -3772,6 +4296,40 @@ int main()
                 <text>HIDE</text>
       </display>
     </testcase>
+      <testcase testtype="0" useasexample="0" hiderestiffail="0" mark="1.0000000" >
+      <testcode>
+                <text></text>
+      </testcode>
+      <stdin>
+                <text>0000000000000000</text>
+      </stdin>
+      <expected>
+                <text>Valid number!</text>
+      </expected>
+      <extra>
+                <text></text>
+      </extra>
+      <display>
+                <text>HIDE</text>
+      </display>
+    </testcase>
+      <testcase testtype="0" useasexample="0" hiderestiffail="0" mark="1.0000000" >
+      <testcode>
+                <text></text>
+      </testcode>
+      <stdin>
+                <text>000000000000000</text>
+      </stdin>
+      <expected>
+                <text>Wrong length!</text>
+      </expected>
+      <extra>
+                <text></text>
+      </extra>
+      <display>
+                <text>HIDE</text>
+      </display>
+    </testcase>
     </testcases>
     <tags>
       <tag><text>Инф: 2. Алгоритмизация и программирование</text>
@@ -3808,14 +4366,28 @@ int main()
 <p>Используя изучаемый язык программирования, напишите
 программу, позволяющую Анатолию определить:</p>
 
-<p><!--[if !supportLists]-->1.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<!--[endif]-->может ли он позволить себе купить машину при заданных
-<span lang="EN-US">X</span>, <span lang="EN-US">Y</span>, <span lang="EN-US">Z</span> и <span lang="EN-US">Q</span>;</p>
 
-<p><!--[if !supportLists]-->2.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<!--[endif]-->сколько времени (в месяцах) ему потребуется на
-погашение кредита и сколько всего денег Анатолий уплатит за автомобиль с учетом
-выплат по кредиту.</p><p></p><br><p></p>]]></text>
+
+<p><!--[if !supportLists]--><p><!--[if !supportLists]-->
+<!--[endif]-->За какой минимальный срок (в месяцах) Анатолий
+сможет погасить кредит и сколько всего денег он уплатит за автомобиль с учетом
+выплат процентов по кредиту и первоначального взноса.</p>
+
+<p>На вход программа получает стоимость автомобиля –
+целое положительное число, не превышающее 3&nbsp;000&nbsp;000, вещественное
+положительное число – процентная ставка по кредиту (0 &lt; Y &lt; 30),
+минимальный размер первоначального взноса Z – целое положительное число, не
+превышающее 3&nbsp;000&nbsp;000, максимальный срок погашения кредита Q лет –
+целое положительное число, не превышающее 20.</p>
+
+<p>Программа должна вывести два числа: количество
+месяцев, которое потребуется на погашение кредита и общую стоимость автомобиля
+с учетом процентов и первоначального взноса.</p>
+
+<p>В ходе решения задачи не надо учитывать обязательные
+в случае автокредита ежегодные расходы на КАСКО, однако в реальной жизни для
+принятия решения о покупке автомобиля с использованием заемных средств
+обязательное условие ежегодного оформления КАСКО является существенным.</p></p><p></p><br><p></p>]]></text>
     </questiontext>
     <generalfeedback format="html">
       <text></text>
@@ -3937,6 +4509,47 @@ else:
                 <text>HIDE</text>
       </display>
     </testcase>
+      <testcase testtype="0" useasexample="0" hiderestiffail="0" mark="1.0000000" >
+      <testcode>
+                <text></text>
+      </testcode>
+      <stdin>
+                <text>500000
+10
+15
+5</text>
+      </stdin>
+      <expected>
+                <text>24
+534428.16</text>
+      </expected>
+      <extra>
+                <text></text>
+      </extra>
+      <display>
+                <text>HIDE</text>
+      </display>
+    </testcase>
+      <testcase testtype="0" useasexample="0" hiderestiffail="0" mark="1.0000000" >
+      <testcode>
+                <text></text>
+      </testcode>
+      <stdin>
+                <text>500000
+10
+21
+3</text>
+      </stdin>
+      <expected>
+                <text>can't buy</text>
+      </expected>
+      <extra>
+                <text></text>
+      </extra>
+      <display>
+                <text>HIDE</text>
+      </display>
+    </testcase>
     </testcases>
     <tags>
       <tag><text>Инф: 2. Алгоритмизация и программирование</text>
@@ -3958,11 +4571,11 @@ else:
       <text>3.3.5.8.01 Пополняемый вклад Python</text>
     </name>
     <questiontext format="html">
-      <text><![CDATA[<p></p><p><p>Некоторые банки предоставляют клиенту возможность пополнять вклад,
+      <text><![CDATA[<p></p><p></p><p>Некоторые банки предоставляют клиенту возможность пополнять вклад,
 дополнительно вложенные суммы прибавляются к первоначальной сумме вклада, и на
 них также начисляют проценты. Если клиент делает дополнительный взнос на вклад
 в конце месяца, проценты по вкладу начисляются на всю сумму в конце следующего
-месяца и капитализируются (прибавляются к сумме вклада).</p></p>
+месяца и капитализируются (прибавляются к сумме вклада).</p><p></p>
 
 <p><br></p>
 
@@ -4066,7 +4679,43 @@ print (a1)</answer>
                 <text></text>
       </extra>
       <display>
-                <text>SHOW</text>
+                <text>HIDE</text>
+      </display>
+    </testcase>
+      <testcase testtype="0" useasexample="0" hiderestiffail="0" mark="1.0000000" >
+      <testcode>
+                <text></text>
+      </testcode>
+      <stdin>
+                <text>20000
+12.5</text>
+      </stdin>
+      <expected>
+                <text>20208.333333333336</text>
+      </expected>
+      <extra>
+                <text></text>
+      </extra>
+      <display>
+                <text>HIDE</text>
+      </display>
+    </testcase>
+      <testcase testtype="0" useasexample="0" hiderestiffail="0" mark="1.0000000" >
+      <testcode>
+                <text></text>
+      </testcode>
+      <stdin>
+                <text>100000
+6.9</text>
+      </stdin>
+      <expected>
+                <text>100574.99999999999</text>
+      </expected>
+      <extra>
+                <text></text>
+      </extra>
+      <display>
+                <text>HIDE</text>
       </display>
     </testcase>
     </testcases>
@@ -4212,34 +4861,34 @@ print (a1)</answer>
     </name>
     <questiontext format="html">
       <text><![CDATA[<p></p><p>Мама
-записала показания счетчика электроэнергии на конец месяца (Рисунок 1) и
-попросила сына заполнить форму счета на оплату электроэнергии. </p><img src="http://finformatika.ru/images/paper_tariffs.png" alt="" width="237" height="255" role="presentation" class="img-responsive atto_image_button_text-bottom"><p><p>Рисунок
+записала показания счетчика электроэнергии&nbsp;на конец предыдущего и текущего месяцев (Рисунок 1) и
+попросила сына заполнить форму счета на оплату электроэнергии. </p><img src="http://finformatika.ru/images/paper_tariffs.png" alt="" role="presentation" class="img-responsive atto_image_button_text-bottom" width="237" height="255"><p></p><p>Рисунок
 1. Показания счетчика</p><p>Вычислив
 количество и стоимость потребленной электроэнергии, сын построил две круговые
 диаграммы (см. рисунки ниже), но забыл подписать, какой сектор соответствует
 какому тарифу.</p><p></p><b><table>
 <caption style="caption-side: top"></caption>
 <thead>
-<tr><th scope="col"><div><table cellspacing="0" cellpadding="0" hspace="0" vspace="0" align="right"><tbody><tr><td valign="top" align="left"><p>Диаграмма 1. Количество потребленной электроэнергии</p></td></tr></tbody></table></div><br></th>
-<th scope="col"><div><table cellspacing="0" cellpadding="0" hspace="0" vspace="0" align="right"><tbody><tr><td valign="top" align="left"><p>Диаграмма 2. Стоимость потребленной электроэнергии</p></td></tr></tbody></table></div></th>
+<tr><th scope="col"><div><table vspace="0" hspace="0" cellspacing="0" cellpadding="0" align="right"><tbody><tr><td valign="top" align="left"><p>Диаграмма 1. Количество потребленной электроэнергии</p></td></tr></tbody></table></div><br></th>
+<th scope="col"><div><table vspace="0" hspace="0" cellspacing="0" cellpadding="0" align="right"><tbody><tr><td valign="top" align="left"><p>Диаграмма 2. Стоимость потребленной электроэнергии</p></td></tr></tbody></table></div></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><img src="http://finformatika.ru/images/diag1.png" alt="" width="384" height="264" role="presentation" class="img-responsive atto_image_button_text-bottom"></td>
-<td><img src="http://finformatika.ru/images/diag2.png" alt="" width="384" height="266" role="presentation" class="img-responsive atto_image_button_text-bottom"></td>
+<td><img src="http://finformatika.ru/images/diag1.png" alt="" role="presentation" class="img-responsive atto_image_button_text-bottom" width="384" height="264"></td>
+<td><img src="http://finformatika.ru/images/diag2.png" alt="" role="presentation" class="img-responsive atto_image_button_text-bottom" width="384" height="266"></td>
 </tr>
 </tbody>
 </table><b>
-</b><p></p></b><p><b>Задание:</b></p><p><span></span></p><p style=""><p>Введите
-данные, записанные мамой, в таблицу и выполните вычисления.</p> </p><table border="1" cellspacing="0" cellpadding="0" width="608">
+</b><p></p></b><p><b>Задание:</b></p><p><span></span></p><p style=""></p><p>Введите
+данные, записанные мамой, в таблицу и выполните вычисления.</p> <p></p><table width="608" cellspacing="0" cellpadding="0" border="1">
  <thead>
   <tr>
-   <td width="144" rowspan="2" valign="top">
+   <td rowspan="2" width="144" valign="top">
    <p align="center">Тарифная зона</p>
    <p align="right">&nbsp;</p>
    </td>
-   <td width="159" colspan="2" valign="top">
+   <td colspan="2" width="159" valign="top">
    <p align="center">Показания счетчика (кВт*ч)</p>
    </td>
    <td width="110" valign="top">
@@ -4357,15 +5006,15 @@ print (a1)</answer>
   <p align="right">&nbsp;</p>
   </td>
  </tr>
-</tbody></table><p><p><br></p><p>Установите, какой тарифной зоне (тарифу) соответствует
+</tbody></table><p></p><p><br></p><p>Установите, какой тарифной зоне (тарифу) соответствует
 каждый сектор диаграммы (см. рисунок выше). Результаты по обеим диаграммам
-внесите в таблицу ниже.</p><br></p><table border="1" cellspacing="0" cellpadding="0" align="right">
+внесите в таблицу ниже.</p><br><p></p><table cellspacing="0" cellpadding="0" border="1" align="right">
  <tbody><tr>
-  <td width="287" colspan="2" valign="top">
+  <td colspan="2" width="287" valign="top">
   <p>Диаграмма 1. Количество потребленной
   электроэнергии</p>
   </td>
-  <td width="288" colspan="2" valign="top">
+  <td colspan="2" width="288" valign="top">
   <p>Диаграмма 2. Стоимость потребленной
   электроэнергии</p>
   </td>
@@ -4427,7 +5076,7 @@ print (a1)</answer>
   </td>
  </tr>
 </tbody></table><br><p></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p>
-<p class="desktop-hidden">По указанию учителя прикрепите файл с вашим решением или вставьте ссылку на решение в онлайн-таблицах (OneDrive или Google Docs) с доступом на просмотр.</p></p>]]></text>
+<p class="desktop-hidden">По указанию учителя прикрепите файл с вашим решением или вставьте ссылку на решение в онлайн-таблицах (OneDrive или Google Docs) с доступом на просмотр.</p><p></p>]]></text>
     </questiontext>
     <generalfeedback format="html">
       <text></text>
@@ -4466,9 +5115,9 @@ print (a1)</answer>
       <text>1.1.1.3 Счет за электроэнергию</text>
     </name>
     <questiontext format="html">
-      <text><![CDATA[<p></p><p><p>Представьте, что родители поручили вам заполнить счет для оплаты
+      <text><![CDATA[<p></p><p></p><p>Представьте, что родители поручили вам заполнить счет для оплаты
 электроэнергии. Папа оставил вам записку с показаниями вашего двухтарифного
-счетчика (Т1&nbsp;— дневная зона, Т2&nbsp;— ночная).</p></p><img src="http://finformatika.ru/images/paper_tariffs2.png" alt="" width="689" height="147" role="presentation" class="img-responsive atto_image_button_text-bottom"><br><p></p><p><!--[if !supportAnnotations]-->
+счетчика&nbsp;на конец предыдущего и текущего месяцев (Т1&nbsp;— дневная зона, Т2&nbsp;— ночная).</p><p></p><img src="http://finformatika.ru/images/paper_tariffs2.png" alt="" role="presentation" class="img-responsive atto_image_button_text-bottom" width="689" height="147"><br><p></p><p><!--[if !supportAnnotations]-->
 
 <script language="JavaScript"><!--
 function msoCommentShow(anchor_id, com_id)
@@ -4558,15 +5207,15 @@ if (msoBrowserCheck())
 <!--[endif]-->Откройте файл&nbsp;<a href="http://finformatika.ru/files/5-6/task_data/1/1113.docx">«Счет за электроэнергию-2» </a>со
 следующей таблицей</p>
 
-<table border="1" cellspacing="0" cellpadding="0" width="598">
+<table width="598" cellspacing="0" cellpadding="0" border="1">
  <thead>
   <tr>
-   <td width="134" rowspan="2" valign="top">
+   <td rowspan="2" width="134" valign="top">
    <p align="center">Тарифная
    зона</p>
    <p align="right">&nbsp;</p>
    </td>
-   <td width="159" colspan="2" valign="top">
+   <td colspan="2" width="159" valign="top">
    <p align="center">Показания
    счетчика (кВт*ч)</p>
    </td>
@@ -4665,9 +5314,9 @@ if (msoBrowserCheck())
  </tr>
 </tbody></table>
 
-<p><i><p><i>Примечание: в таблице указана стоимость электроэнергии в
+<p><i></i></p><p><i><i>Примечание: в таблице указана стоимость электроэнергии в
 жилых помещениях с газовыми плитами, действовавшая в Москве с 1 января по 30
-июня 2018 г.</i></p></i></p>
+июня 2018 г.</i></i></p><p></p>
 
 <p><!--[if !supportLists]--></p><p><!--[if !supportLists]-->2.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <!--[endif]-->Внесите в таблицу показания счетчика, оставленные
@@ -4681,9 +5330,9 @@ if (msoBrowserCheck())
 <!--[endif]-->Файл с выполненной работой сохраните и сдайте на
 проверку учителю.</p><p></p>
 
-<p><i><p><i>В
+<p><i></i></p><p><i><i>В
 случае отправки работы по электронной почте обязательно указывайте тему письма
-«Проверочная работа _дата», используйте деловой стиль электронного письма.</i></p></i></p><p></p>
+«Проверочная работа _дата», используйте деловой стиль электронного письма.</i></i></p><p></p><p></p>
 <p class="desktop-hidden">По указанию учителя прикрепите файл с вашим решением или вставьте ссылку на решение в онлайн-таблицах (OneDrive или Google Docs) с доступом на просмотр.</p>]]></text>
     </questiontext>
     <generalfeedback format="html">
@@ -7393,8 +8042,8 @@ if (msoBrowserCheck())
       <text>1.4.1.4 Изменение цен на смартфон (для подготовки к олимпиадам по информатике)</text>
     </name>
     <questiontext format="html">
-      <text><![CDATA[<p></p><p align="left"></p><p align="left"><p align="left">По данным сайта
-компании «Аналитик М», динамика цен на один из популярных смартфонов в городе <span lang="EN-US">N</span> составляла (см. таблицу ниже):</p></p><table border="0" cellspacing="0" cellpadding="0" width="732">
+      <text><![CDATA[<p></p><p align="left"></p><p align="left"></p><p align="left">По данным сайта
+компании «Аналитик М», динамика цен на один из популярных смартфонов в городе <span lang="EN-US">N</span> составляла (см. таблицу ниже):</p><p></p><table width="732" cellspacing="0" cellpadding="0" border="0">
  <tbody><tr>
   <td width="75">
   <p align="center">Параметр</p>
@@ -7719,17 +8368,17 @@ if (msoBrowserCheck())
 <p>На
 основании данных таблицы определите, верны ли следующие утверждения:</p>
 
-<p><!--[if !supportLists]-->1.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <!--[endif]-->Самая высокая цена была в начале продаж
+<p><!--[if !supportLists]-->1. <!--[endif]-->Самая высокая цена была в начале продаж
 (сентябрь 2016).</p>
 
-<p><!--[if !supportLists]-->2.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <!--[endif]-->Разница между максимальной и минимальной ценой
+<p><!--[if !supportLists]-->2. <!--[endif]-->Разница между максимальной и минимальной ценой
 не превышала 40&nbsp;000 рублей на протяжении всего периода продаж.</p>
 
-<p><!--[if !supportLists]-->3.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <!--[endif]-->Увеличение или уменьшение количества проданных
-смартфонов всегда совпадает с направлением изменения максимальной цены.</p>
+<p><!--[if !supportLists]-->3. <!--[endif]-->В те месяцы, когда количество проданных
+смартфонов увеличивалось максимальная цена продажи тоже росла.</p>
 
-<p><!--[if !supportLists]-->4.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <!--[endif]-->Направление изменения минимальной цены не
-всегда совпадает с направлением изменения максимальной цены.</p><p></p><div><div><div id="_com_2" language="JavaScript" onmouseover="msoCommentShow('_anchor_2','_com_2')" onmouseout="msoCommentHide('_com_2')">
+<p><!--[if !supportLists]-->4. <!--[endif]-->В случае уменьшения максимальной цены,
+происходит уменьшение минимальной цены.</p><p></p><p></p><div><div><div id="_com_2" language="JavaScript" onmouseover="msoCommentShow('_anchor_2','_com_2')" onmouseout="msoCommentHide('_com_2')">
 
 <!--[if !supportAnnotations]--></div>
 
@@ -12558,7 +13207,7 @@ C рублей за каждый фактически пробуренный м�
 60&nbsp;рублей. Кроме того, водители платят автопарку арендную плату в размере
 1000&nbsp;рублей за рабочую смену (независимо от количества поездок). Водители установили
 разную плату за поездку в одну сторону, при этом за смену им удается совершить различное
-количество поездок:</p><p></p><table border="1" cellspacing="0" cellpadding="0" width="624">
+количество поездок:</p><p></p><table width="624" cellspacing="0" cellpadding="0" border="1">
  <tbody><tr>
   <td width="198" valign="top">
   <p align="center">Водитель</p>
@@ -12598,21 +13247,32 @@ C рублей за каждый фактически пробуренный м�
 
 <p>Используя электронные таблицы:</p>
 
-<p><!--[if !supportLists]-->1.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<!--[endif]-->исходя из среднего количества поездок, рассчитайте
-доходы Ларионова и Кутько за вычетом расходов;</p>
+<p><!--[if !supportLists]--></p><p><!--[if !supportLists]-->1.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<!--[endif]-->вычислите доход каждого водителя за смену (за
+вычетом расходов), если Ларионов в среднем делает 4 поездки за смену и
+устанавливает плату за поездку в размере 420 руб., а водитель Кутько за смену
+делает в среднем 10 поездок и него плата за одну поездку составляет 270 руб.</p>
 
 <p><!--[if !supportLists]-->2.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<!--[endif]-->напишите формулу зависимости количества поездок
-от установленной платы, исходя из предположения, что эта зависимость линейна;</p>
+<!--[endif]-->на основании данных таблицы из условия задачи, постройте
+точечную диаграмму зависимости количества поездок от стоимости одной поездки,
+считая, что эта зависимость является линейной функцией.<s></s></p>
 
 <p><!--[if !supportLists]-->3.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<!--[endif]-->считая, что зависимость количества поездок от
+цены за одну поездку является линейной функций, составьте уравнение линии,
+изображенной на диаграмме из пункта 2 . (Коэффициенты <span lang="EN-US">k</span><span lang="EN-US"> </span>и <span lang="EN-US">b</span><span lang="EN-US"> </span>линейной
+функции <span lang="EN-US">y</span> = <span lang="EN-US">k</span>*<span lang="EN-US">x</span> + <span lang="EN-US">b</span> вычислите с помощью электронных таблиц. </p>
+
+<p><!--[if !supportLists]-->4.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <!--[endif]-->используя полученную формулу, составьте таблицу
 изменения количества поездок при изменении установленной платы в пределах от
 120&nbsp;руб. до 520&nbsp;руб. с шагом в 50&nbsp;рублей;</p>
 
-по таблице определите, какое число поездок приносит
-максимальный заработок<p> </p>
+<p><!--[if !supportLists]-->5.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<!--[endif]-->с помощью таблицы из предыдущего пункта
+определите, какую стоимость поездки требуется установить водителям, чтобы за
+одну смены получать максимальный доход (за вычетом расходов). </p><p> </p>
 <p class="desktop-hidden">По указанию учителя прикрепите файл с вашим решением или вставьте ссылку на решение в онлайн-таблицах (OneDrive или Google Docs) с доступом на просмотр.</p>]]></text>
     </questiontext>
     <generalfeedback format="html">
@@ -15623,7 +16283,7 @@ C рублей за каждый фактически пробуренный м�
 <p><b>Задание</b></p>
 
 <p>Напишите программу, которая получает на вход две тройки
-чисел: первую тройку для автомобиля с бензиновым двигателем, вторую&nbsp;— для
+вещественных чисел: первую тройку для автомобиля с бензиновым двигателем, вторую&nbsp;— для
 автомобиля с дизельным. В каждой тройке первое число&nbsp;— цена нового
 автомобиля в рублях, второе&nbsp;— расход топлива на 100 км, третье&nbsp;— стоимость
 топлива за литр.&nbsp; Программа должна
@@ -16155,7 +16815,7 @@ V (0≤V≤10)
 
 <p>Проверьте карту (см. рисунок) на валидность. Как можно изменить
 ее последнюю цифру,
-чтобы она стала валидной?</p><p></p><p><img src="http://finformatika.ru/images/Credit_card_1.png" alt="" width="433" height="273" role="presentation" class="img-responsive atto_image_button_text-bottom"><br></p><p></p><p><b></b></p><p><b>Вариант 2</b></p>
+чтобы она стала валидной?</p><p></p><p><img src="http://finformatika.ru/images/Credit_card_1.png" alt="" role="presentation" class="img-responsive atto_image_button_text-bottom"><br></p><p></p><p><b></b></p><p><b>Вариант 2</b></p>
 
 <p><!--[if !supportLists]-->1.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <!--[endif]-->Согласно данному алгоритму составьте программу,
@@ -16219,17 +16879,43 @@ V (0≤V≤10)
 
 <p><b>Задание</b></p>
 
-<p>Используя изучаемый язык программирования, напишите
+<p></p><p></p><p>Используя изучаемый язык программирования, напишите
 программу, позволяющую Анатолию определить:</p>
 
 <p><!--[if !supportLists]-->1.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<!--[endif]-->может ли он позволить себе купить машину при заданных
+<!--[endif]-->Может ли он позволить себе купить машину при заданных
 <span lang="EN-US">X</span>, <span lang="EN-US">Y</span>, <span lang="EN-US">Z</span> и <span lang="EN-US">Q</span>;</p>
 
+<p>На вход программа получает стоимость автомобиля –
+целое положительное число, не превышающее 3&nbsp;000&nbsp;000, вещественное
+положительное число – процентная ставка по кредиту (0 &lt; Y &lt; 30),
+минимальный размер первоначального взноса Z – целое положительное число, не
+превышающее 3&nbsp;000&nbsp;000, максимальный срок погашения кредита Q лет –
+целое положительное число, не превышающее 20.</p>
+
+<p>Программа должна вывести сообщение «Да», если
+условия для получения кредита выполнены или «Нет» в противном случае.</p>
+
 <p><!--[if !supportLists]-->2.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<!--[endif]-->сколько времени (в месяцах) ему потребуется на
-погашение кредита и сколько всего денег Анатолий уплатит за автомобиль с учетом
-выплат по кредиту.</p><p></p>
+<!--[endif]-->За какой минимальный срок (в месяцах) Анатолий
+сможет погасить кредит и сколько всего денег он уплатит за автомобиль с учетом
+выплат процентов по кредиту и первоначального взноса.</p>
+
+<p>На вход программа получает стоимость автомобиля –
+целое положительное число, не превышающее 3&nbsp;000&nbsp;000, вещественное
+положительное число – процентная ставка по кредиту (0 &lt; Y &lt; 30),
+минимальный размер первоначального взноса Z – целое положительное число, не
+превышающее 3&nbsp;000&nbsp;000, максимальный срок погашения кредита Q лет –
+целое положительное число, не превышающее 20.</p>
+
+<p>Программа должна вывести два числа: количество
+месяцев, которое потребуется на погашение кредита и общую стоимость автомобиля
+с учетом процентов и первоначального взноса.</p>
+
+<p>В ходе решения задачи не надо учитывать обязательные
+в случае автокредита ежегодные расходы на КАСКО, однако в реальной жизни для
+принятия решения о покупке автомобиля с использованием заемных средств
+обязательное условие ежегодного оформления КАСКО является существенным.</p><p></p><p></p><p></p>
 
 <p class="desktop-hidden">По указанию учителя прикрепите файл с вашим решением или вставьте ссылку на решение в онлайн-таблицах (OneDrive или Google Docs) с доступом на просмотр.</p>]]></text>
     </questiontext>
@@ -33894,11 +34580,17 @@ if (msoBrowserCheck())
 <p>Используя изучаемый язык программирования, напишите
 программу, позволяющую Анатолию определить:</p>
 
-<p><!--[if !supportLists]-->1.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<!--[endif]-->может ли он позволить себе купить машину при заданных
+<p><!--[if !supportLists]--></p><p><!--[if !supportLists]--><!--[endif]-->Может ли он позволить себе купить машину при заданных
 <span lang="EN-US">X</span>, <span lang="EN-US">Y</span>, <span lang="EN-US">Z</span> и <span lang="EN-US">Q</span>;</p>
 
-<p><!--[if !supportLists]-->2.&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</p><p>Сколько в сумме заплатит Анатолий для следующих входных данных:</p><p>299000 15.1 30 5</p><p>Ответ укажите с точностью до десятых долей<br></p><p></p>]]></text>
+<p>На вход программа получает стоимость автомобиля –
+целое положительное число, не превышающее 3&nbsp;000&nbsp;000, вещественное
+положительное число – процентная ставка по кредиту (0 &lt; Y &lt; 30),
+минимальный размер первоначального взноса Z – целое положительное число, не
+превышающее 3&nbsp;000&nbsp;000, максимальный срок погашения кредита Q лет –
+целое положительное число, не превышающее 20.</p>
+
+<p><br></p><p></p><p>Сколько в сумме заплатит Анатолий для следующих входных данных:</p><p>299000 15.1 30 5</p><p>Ответ укажите с точностью до десятых долей<br></p><p></p>]]></text>
     </questiontext>
     <generalfeedback format="html">
       <text></text>
@@ -41317,7 +42009,7 @@ if (msoBrowserCheck())
     <penalty>0.3333333</penalty>
     <hidden>0</hidden>
     <answer fraction="100" format="moodle_auto_format">
-      <text>567</text>
+      <text>540</text>
       <feedback format="html">
         <text></text>
       </feedback>

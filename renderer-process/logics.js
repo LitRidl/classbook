@@ -350,27 +350,27 @@ for (let i = 0; i < checkerInput.length; ++i) {
 // SEARCH BOX
 
 // window.inPageSearch = searchInPage(remote.getCurrentWebContents());
-// const searchWindowHandler = () => {
-//   if (settings.get('activeSectionButtonId') === 'button-questions') {
-//     window.inPageSearch.openSearchWindow();
-//   }
-// };
+const searchWindowHandler = () => {
+  window.inPageSearch.focusOnInput();
+};
+ipcRenderer.on('pressedCtrlF', searchWindowHandler);
 // document.getElementById('button-search').addEventListener('click', searchWindowHandler);
-// ipcRenderer.on('pressedCtrlF', searchWindowHandler);
+
+// spinner.style.display = 'block';
+
+// window.setTimeout(() => {
+//   spinner.style.display = 'none';
+// }, 1000);
 
 ipcRenderer.on('hideSpinner', () => {
   spinner.style.display = 'none';
 });
 
 
-window.inPageSearch = searchInPage(remote.getCurrentWebContents());
+window.inPageSearch = searchInPage(remote.getCurrentWebContents()); // , { openDevToolsOfSearchWindow: true }
 window.onload = function () {
   window.inPageSearch.openSearchWindow();
 };
-
-// document.getElementById('button-search').addEventListener('click', searchWindowHandler);
-// ipcRenderer.on('pressedCtrlF', searchWindowHandler);
-
 
 // /////////////////////////////////////// //
 // ToC block
