@@ -71,6 +71,10 @@ function initialize() {
       require('devtron').install();
     }
 
+    mainWindow.on('page-title-updated', function (e) {
+      e.preventDefault()
+    });
+
     mainWindow.on('closed', () => {
       mainWindow = null;
     });

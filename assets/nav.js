@@ -40,7 +40,6 @@ buttonTop.addEventListener('click', (event) => {
   usermanual_.scrollTop = 0;
 });
 
-
 function handleSectionTrigger(event) {
   hideAllSectionsAndDeselectButtons();
 

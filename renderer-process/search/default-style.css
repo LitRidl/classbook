@@ -60,6 +60,8 @@ input[type="search"]::-webkit-search-cancel-button {
 
 .inpage-search-matches {
   color: #999;
+  margin-bottom: 2px;
+  margin-right: 1px;
   font-size: 0.8em;
 }
 
