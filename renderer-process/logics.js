@@ -5,6 +5,12 @@ const searchInPage = require('./search').default;
 const settings = require('electron-settings');
 
 
+
+window.inPageSearch = searchInPage(remote.getCurrentWebContents()); // , { openDevToolsOfSearchWindow: true }
+window.onload = function () {
+  window.inPageSearch.openSearchWindow();
+};
+
 /* ------------- */
 /* Common logics */
 /* ------------- */
@@ -366,11 +372,6 @@ ipcRenderer.on('hideSpinner', () => {
   spinner.style.display = 'none';
 });
 
-
-window.inPageSearch = searchInPage(remote.getCurrentWebContents()); // , { openDevToolsOfSearchWindow: true }
-window.onload = function () {
-  window.inPageSearch.openSearchWindow();
-};
 
 // /////////////////////////////////////// //
 // ToC block

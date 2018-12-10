@@ -1,4 +1,6 @@
 const settings = require('electron-settings');
+// const searchInPage = require('../renderer-process/search').default;
+// const { remote } = require('electron');
 
 document.body.addEventListener('click', (event) => {
   if (event.target.dataset.section) {
@@ -30,7 +32,6 @@ registerScrollButtonTop(textbook_);
 registerScrollButtonTop(glossary_);
 registerScrollButtonTop(questions_);
 registerScrollButtonTop(usermanual_);
-registerScrollButtonTop(textbook_);
 
 // When the user clicks on the button, scroll to the top of the document
 buttonTop.addEventListener('click', (event) => {
@@ -52,7 +53,7 @@ function handleSectionTrigger(event) {
 
   if (sectionId === 'questions-section') {
     fixButtonTopFor(questions_);
-    buttonTop.style.display = '';
+    // buttonTop.style.display = '';
     buttonPdf.style.display = '';
     buttonReport.style.display = '';
     // buttonSearch.style.display = '';
@@ -108,6 +109,16 @@ function handleSectionTrigger(event) {
     // }
   }
 
+  const searchWindow = document.getElementById('search-container');
+  const mainContainer = document.getElementById('main-container');
+  if (sectionId.includes('-schoolbook-section')) {
+    searchWindow.style.display = 'none';
+    mainContainer.classList.remove('main-container-down');
+  } else {
+    searchWindow.style.display = 'block';
+    mainContainer.classList.add('main-container-down');
+  }
+
   // Save currently active button in localStorage
   const buttonId = event.target.getAttribute('id');
   settings.set('activeSectionButtonId', buttonId);
@@ -134,7 +145,9 @@ function hideAllSectionsAndDeselectButtons() {
     button.classList.remove('is-selected');
   });
 
-  tocbot.destroy();
+  if (tocbot) {
+    tocbot.destroy();
+  }
 }
 
 

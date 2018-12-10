@@ -323,6 +323,6 @@ function searchInPage(searchTarget, options) {
             });
         }
     }
-    return new InPageSearch(options.searchWindowWebview, options.searchWindowParent || document.body, searchTarget, !!options.preloadSearchWindow);
+    return new InPageSearch(options.searchWindowWebview, options.searchWindowParent || document.getElementById('search-container'), searchTarget, !!options.preloadSearchWindow);
 }
 exports["default"] = searchInPage;

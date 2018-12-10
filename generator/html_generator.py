@@ -12,7 +12,7 @@ def minify(html):
     return htmlmin.minify(html, remove_comments=True, remove_empty_space=False, 
                           remove_all_empty_space=False, pre_tags=(u'pre', u'textarea'))
 
-DATA_VERSION = '00.00.21'
+DATA_VERSION = '00.00.22'
 
 difficulty_icons = {
     "Базовый уровень":    '<span title="Базовая"    class="difficulty-icon"><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></span>',

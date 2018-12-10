@@ -1,34 +1,37 @@
 
 /* SEARCHBOX */
 .electron-in-page-search-window {
-    position: fixed;
-    top: 0;
-    /* right: 0; */
-    left: 298px;
-    /* border: solid grey 1px; */
-    background-color: var(--color-bg);
-    width: calc(100% - 298px);
-    height: 33px;
-  }
-  
-  /*
-   * .search-inactive is added to search window <webview> when the window
-   * is inactive.
-   */
-  .search-inactive {
-    visibility: hidden;
-  }
+  position: fixed;
+  top: 0;
+  /* right: 0; */
+  left: 298px;
+  /* border: solid grey 1px; */
+  background-color: var(--color-bg);
+  width: calc(100% - 298px);
+  height: 33px;
+}
 
-  #main-container {
-    border-top: 1px solid var(--color-border);
-    margin-top: 33px;
-  }
-  
-  /*
-   * .search-inactive is added to search window <webview> when the window
-   * is active.
-   */
-  .search-active {
-    visibility: visible;
-  }
-  
+/*
+  * .search-inactive is added to search window <webview> when the window
+  * is inactive.
+  */
+.search-inactive {
+  visibility: hidden;
+}
+
+.main-container-down {
+  border-top: 1px solid var(--color-border);
+  margin-top: 33px;
+}
+
+#search-container {
+  /* display: none; */
+}
+
+/*
+  * .search-inactive is added to search window <webview> when the window
+  * is active.
+  */
+.search-active {
+  visibility: visible;
+}

@@ -7,7 +7,7 @@ const electronLocalshortcut = require('electron-localshortcut');
 const settings = require('electron-settings');
 
 const debug = false; // /--debug/.test(process.argv[2]);
-const enableDevTools = false;
+const enableDevTools = true;
 
 app.setName('Сборник задач по финансовой грамотности в информатике');
 
